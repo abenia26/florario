@@ -1,0 +1,2 @@
+# Los .ics llevan CRLF (RFC 5545): se guardan tal cual, sin convertir finales de línea
+*.ics -text
