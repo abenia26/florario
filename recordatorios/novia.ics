@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de la Novia
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:novia@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de la Novia: Rosas
+DESCRIPTION:Viene del National Girlfriend Day estadounidense y en redes fun
+ ciona como un segundo San Valentín. No es oficial en ningún país\, pero
+  las florerías ya lo tienen marcado. Dónde: México\, Perú\, Ecuador\, 
+ Costa Rica. Guía: https://www.calendariodeflores.com/dia-de-la-novia/
+URL:https://www.calendariodeflores.com/dia-de-la-novia/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Novia. Encarga rosas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

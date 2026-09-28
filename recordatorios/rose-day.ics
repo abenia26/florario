@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Rose Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Rosas
+DESCRIPTION:Abre la Valentine’s Week: los siete días previos a San Valen
+ tín tienen tema propio y el primero se dedica a regalar rosas. Muy presen
+ te en edits y reels de Bollywood. Dónde: India. Guía: https://www.calend
+ ariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Rose Day. Encarga rosas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

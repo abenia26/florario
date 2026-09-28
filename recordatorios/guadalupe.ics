@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Virgen de Guadalupe
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:guadalupe@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Virgen de Guadalupe: Rosas
+DESCRIPTION:Según la tradición\, en 1531 Juan Diego llevó rosas del cerr
+ o del Tepeyac en su tilma\, en pleno diciembre. Por eso cada 12 de diciemb
+ re millones de personas llevan rosas a la Basílica. Dónde: México. Guí
+ a: https://www.calendariodeflores.com/rosa/
+URL:https://www.calendariodeflores.com/rosa/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Virgen de Guadalupe. Encarga rosas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

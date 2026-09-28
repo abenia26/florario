@@ -271,3 +271,43 @@ Método: búsquedas de las consultas reales que responden los medios y florister
 - **Después de publicar:** dar de alta el dominio en Google Search Console, enviar `sitemap.xml` y pedir la indexación de las guías. Conviene publicar o actualizar cada guía unas semanas antes de su fecha (flores amarillas a principios de septiembre y marzo, azules a mediados de septiembre, moradas a mediados de octubre).
 
 **Verificación.** Capturas con Chrome sin interfaz: escritorio a 1280 px, móvil a 390 px (en iframe) y modo oscuro. Un script comprobó que no hay enlaces locales ni anclas rotas, que los 9 bloques JSON-LD son JSON válido y que cada página tiene un solo `h1`. Se corrigieron dos fallos: el botón del índice heredaba el contador de los enlaces, y la tabla del Día de la Madre desbordaba la columna en móvil.
+
+---
+
+## Fase 10 · SEO para “calendario de flores” (28 sep 2026)
+
+**Problema de partida.** La web no aparecía en el top 10 de Google para “calendario de flores”. La portada estaba orientada a “fechas para regalar flores”, la lista de fechas solo existía dentro del JavaScript, no había contenido de flores de temporada (la otra intención de esa búsqueda), ni páginas por mes o por flor, ni señales de confianza (autor, contacto, páginas legales).
+
+### Qué se hizo
+
+| Área | Cambio |
+|---|---|
+| **Palabra clave** | Title “Calendario de flores 2026: qué flor regalar y cuándo \| Florario” (63 caracteres) y H1 “Calendario de flores: qué flor regalar en cada fecha del año”. |
+| **Contenido rastreable** | La portada incluye en HTML estático la tabla completa de fechas (fecha con `<time datetime>`, flor, color, países y por qué), la tabla **Calendario de flores de temporada** (12 meses × España, México y Centroamérica, Argentina/Chile/Uruguay), descargas, países, guías, flores y FAQ. |
+| **Nuevas páginas** | 12 meses (`/enero/`…`/diciembre/`), 14 flores (`/rosa/`, `/girasol/`, `/tulipan/`, `/peonia/`, `/clavel/`, `/margarita/`, `/lilium/`, `/hortensia/`, `/violeta/`, `/crisantemo/`, `/cempasuchil/`, `/mimosa/`, `/lirio-de-los-valles/`, `/nochebuena/`), 9 guías nuevas (8M, Día del Padre, Día del Maestro, 21 de marzo, Día de la Novia, Nochebuena, cumpleaños, aniversarios, condolencias), 6 países con hreflang y 3 índices (`/meses/`, `/flores/`, `/guias/`). Todas las de mes y flor superan las 600 palabras. |
+| **Nuevas fechas** | Día del Padre (19 de marzo y 3.er domingo de junio) y Día del Maestro (15 de mayo, México y Colombia): 26 fechas en total. |
+| **FAQ** | Preguntas frecuentes visibles y en `FAQPage` en la portada y en cada guía, flor, mes y país. |
+| **Imágenes** | AVIF y WebP en 960/480 px y miniatura de 160 px, nombres descriptivos (`girasol-amarillo-960.avif`), `alt` con la flor y su contexto en todas las imágenes, `srcset`/`sizes` y carga diferida. |
+| **Datos estructurados** | `Organization` (con logo), `WebSite`, `BreadcrumbList`, `FAQPage`, `ItemList` de `Event` en la portada, `Event` por fecha en meses, países y guías, `Article` con autor (`Person`) y `dateModified`, `CollectionPage` en índices y `AboutPage`/`ContactPage`. |
+| **Países** | `/espana/`, `/mexico/`, `/argentina/`, `/colombia/`, `/chile/`, `/peru/` con `hreflang` es-ES, es-MX, es-AR, es-CO, es-CL, es-PE, `es` y `x-default` (la portada), recíprocos en todas. |
+| **Sitemap** | 56 URLs con `lastmod` e `image:image`. |
+| **Confianza y marca** | Sobre Florario (método de investigación), Contacto, Política de privacidad y Aviso legal; firma del autor y fecha de actualización en cada página; marca “Florario – Calendario de flores” en `og:site_name`, cabecera, pie y JSON-LD; favicon SVG y logo PNG. |
+| **Navegación** | Cabecera fija con menú Fechas · Por mes · Por flor · Colores · Guías, y pie con enlaces a todos los meses, flores, guías, países y páginas legales. |
+| **Captación** | “Recuérdamelo”: `.ics` por fecha con aviso 3 días antes (se repite cada año) y calendario completo suscribible; enlace a Google Calendar. PDF del calendario 2026 y 2027 (A4, 2 páginas). Imágenes de Pinterest en `marketing/pines/` y plan de enlaces, prensa, Pinterest, TikTok y newsletter en `marketing/PLAN-SEO-Y-CAPTACION.md`. |
+
+### Arquitectura
+Se sustituyó la edición a mano por un generador (`_build/build.py`) con una sola fuente de datos (`_build/datos.py`). Las 8 guías existentes se migraron automáticamente a fragmentos (`_build/paginas/`) conservando su texto. El `EVENTS` del JavaScript de la portada se inyecta desde los mismos datos, así la parte interactiva, las tablas estáticas, los PDF, los `.ics` y el sitemap no pueden contradecirse.
+
+### Decisiones
+- **Title:** el propuesto (“…qué flor regalar cada fecha y de temporada | Florario”) superaba los 80 caracteres; se acortó a 63 manteniendo la palabra clave al principio. “De temporada” va en el H2 de la sección y en la descripción. En las demás páginas la marca solo se añade si el title cabe en ~65 caracteres.
+- **Hreflang:** se hizo con páginas por país con contenido propio (fechas de ese país) en lugar de duplicar la web por idioma, que habría generado contenido duplicado.
+- **Nochebuena:** la guía del 8 de diciembre y la página de la flor son la misma URL (`/nochebuena/`) para no competir entre sí.
+- **Event:** Google no muestra resultados enriquecidos de eventos para fechas festivas; el marcado se incluye porque ayuda a entender las fechas, sin esperar rich snippets.
+- **Newsletter:** no se activó porque necesita un proveedor de correo y actualizar la privacidad; mientras, los `.ics` cubren el “Recuérdamelo”.
+
+### Pendiente (necesita al titular)
+- Rellenar autor, titular, NIF, dirección y correo en `SITE` (`_build/datos.py`). El build avisa mientras falten.
+- Search Console, Bing, Pinterest, TikTok, prensa y enlaces: pasos en `marketing/PLAN-SEO-Y-CAPTACION.md`.
+
+### Verificación
+El build comprueba en las 56 páginas: enlaces internos y anclas, JSON-LD válido, un solo H1 y `alt` en todas las imágenes (sin errores). Capturas con Chrome sin interfaz de portada, ficha de fecha, mes, guía, aviso legal y móvil a 390 px (en iframe), y revisión de los dos PDF.

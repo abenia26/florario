@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Sant Jordi
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:sant-jordi@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Sant Jordi: Una rosa roja y un libro
+DESCRIPTION:Según la leyenda\, de la sangre del dragón que venció Sant J
+ ordi brotó un rosal. Barcelona se llena de puestos de rosas y libros\; el
+  libro se sumó en el siglo XX y coincide con el Día Internacional del Li
+ bro. Dónde: Cataluña. Guía: https://www.calendariodeflores.com/sant-jor
+ di/
+URL:https://www.calendariodeflores.com/sant-jordi/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Sant Jordi. Encarga una rosa roja y un libro.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

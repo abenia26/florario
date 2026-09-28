@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Flores moradas
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:moradas@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores moradas: Violetas o cualquier flor morada
+DESCRIPTION:La canción cuenta que alguien enviaba violetas a una mujer cad
+ a 9 de noviembre\, sin tarjeta\; al final era su propio marido. En TikTok 
+ se regalan a tu “persona morada”: alguien que llegó hace poco y ya es
+  imprescindible. Dónde: México\, Perú\, Colombia\, España. Guía: http
+ s://www.calendariodeflores.com/flores-moradas/
+URL:https://www.calendariodeflores.com/flores-moradas/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores moradas. Encarga violetas o cualquier flor m
+ orada.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

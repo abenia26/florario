@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día del Padre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:padre-es@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Padre: Girasoles o una planta
+DESCRIPTION:Coincide con San José\, padre de Jesús en la tradición crist
+ iana. Las flores no son el regalo más típico\, pero cada vez más gente 
+ regala girasoles o una planta que dure: es un detalle que no se marchita e
+ n una semana. Dónde: España\, Portugal\, Italia\, Bolivia y Honduras. Gu
+ ía: https://www.calendariodeflores.com/dia-del-padre/
+URL:https://www.calendariodeflores.com/dia-del-padre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Padre. Encarga girasoles o una planta.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de la Madre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-ar@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=3SU
+SUMMARY:🌷 Día de la Madre: Rosas y liliums
+DESCRIPTION:Argentina celebra a las madres en primavera\, el tercer domingo
+  de octubre\, así que coincide con la mejor época de flores del hemisfer
+ io sur. Dónde: Argentina. Guía: https://www.calendariodeflores.com/dia-d
+ e-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga rosas y liliums.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

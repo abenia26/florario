@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día del Maestro
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:maestro@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Maestro: Margaritas\, girasoles o una planta pequeña
+DESCRIPTION:México celebra a sus docentes cada 15 de mayo desde 1918\, y C
+ olombia el mismo día en recuerdo de San Juan Bautista de La Salle\, patro
+ no de los educadores. Una flor con una nota escrita a mano es el detalle m
+ ás repetido en las aulas. Dónde: México y Colombia. Guía: https://www.
+ calendariodeflores.com/dia-del-maestro/
+URL:https://www.calendariodeflores.com/dia-del-maestro/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Maestro. Encarga margaritas\, girasoles o 
+ una planta pequeña.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

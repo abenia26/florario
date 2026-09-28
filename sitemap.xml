@@ -1,57 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.calendariodeflores.com/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.calendariodeflores.com/flores-amarillas/</loc>
+    <loc>https://www.calendariodeflores.com/abril/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.calendariodeflores.com/flores-moradas/</loc>
+    <loc>https://www.calendariodeflores.com/agosto/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.calendariodeflores.com/flores-azules/</loc>
+    <loc>https://www.calendariodeflores.com/argentina/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lilium.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.calendariodeflores.com/san-valentin/</loc>
+    <loc>https://www.calendariodeflores.com/aviso-legal/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/cempasuchil/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/cempasuchil.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/chile/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/clavel/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/clavel.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/colombia/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/clavel.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/contacto/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/crisantemo/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/crisantemo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/dia-de-la-madre/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/dia-de-la-mujer/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/mimosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/dia-de-la-novia/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/dia-del-maestro/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/dia-del-padre/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/diciembre/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/nochebuena.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/enero/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/espana/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/febrero/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-amarillas-21-de-marzo/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-amarillas/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-azules/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-moradas/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-para-aniversario/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-para-condolencias/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lilium.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-para-cumpleanos/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/girasol/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/hortensia/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/julio/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/junio/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/lilium/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lilium.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/lirio-de-los-valles/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/muguet.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/margarita/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/marzo/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/mimosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/mayo/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/mexico/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/cempasuchil.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/mimosa/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/mimosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/nochebuena/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/nochebuena.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/noviembre/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/cempasuchil.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/octubre/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/peonia/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/peru/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/politica-de-privacidad/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/rosa/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/san-valentin/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/sant-jordi/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/</loc>
+    <loc>https://www.calendariodeflores.com/septiembre/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/significado-colores-flores/</loc>
     <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/sobre-florario/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/cempasuchil.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/tulipan/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/violeta/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/meses/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/guias/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
   </url>
 </urlset>

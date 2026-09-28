@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día del Padre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:padre-junio@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270621
+RRULE:FREQ=YEARLY;BYMONTH=6;BYDAY=3SU
+SUMMARY:🌷 Día del Padre: Girasoles\, flores azules o una planta
+DESCRIPTION:La fecha de EE. UU.\, que se extendió a casi toda Latinoaméri
+ ca. Las flores para papá ganan terreno gracias al trend de “ellos tambi
+ én merecen flores”: girasoles\, tonos azules o una planta para la ofici
+ na. Dónde: México\, Argentina\, Chile\, Colombia\, Perú\, Venezuela\, E
+ E. UU. y más. Guía: https://www.calendariodeflores.com/dia-del-padre/
+URL:https://www.calendariodeflores.com/dia-del-padre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Padre. Encarga girasoles\, flores azules o
+  una planta.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

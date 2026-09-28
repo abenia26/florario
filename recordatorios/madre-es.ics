@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de la Madre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-es@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270502
+DTEND;VALUE=DATE:20270503
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=1SU
+SUMMARY:🌷 Día de la Madre: Claveles\, rosas o peonías
+DESCRIPTION:En España se celebra el primer domingo de mayo\, el mes que la
+  tradición católica dedica a la Virgen. Claveles y peonías son los clá
+ sicos. Dónde: España y Portugal. Guía: https://www.calendariodeflores.c
+ om/dia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga claveles\, rosas o peoní
+ as.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

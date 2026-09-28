@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Muguet du 1er mai
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:muguet@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Muguet du 1er mai: Lirio de los valles (muguet)
+DESCRIPTION:Desde el rey Carlos IX (1561) se regala un ramito de muguet el 
+ 1 de mayo para desear suerte. Ese día la venta callejera de muguet está 
+ tolerada sin licencia. Dónde: Francia. Guía: https://www.calendariodeflo
+ res.com/lirio-de-los-valles/
+URL:https://www.calendariodeflores.com/lirio-de-los-valles/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Muguet du 1er mai. Encarga lirio de los valles (mug
+ uet).
+END:VALARM
+END:VEVENT
+END:VCALENDAR

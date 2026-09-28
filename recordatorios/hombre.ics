@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día Internacional del Hombre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:hombre@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Internacional del Hombre: Flores azules\, girasoles o Hot
+  Wheels
+DESCRIPTION:Se celebra desde 1999. En redes se popularizó la idea de que e
+ llos también merecen flores: rosas azules\, girasoles o ramos de Hot Whee
+ ls para romper la costumbre de que solo se regalan a mujeres. Dónde: Lati
+ noamérica\, sobre todo en redes. Guía: https://www.calendariodeflores.co
+ m/flores-azules/
+URL:https://www.calendariodeflores.com/flores-azules/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Internacional del Hombre. Encarga flores azule
+ s\, girasoles o hot wheels.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

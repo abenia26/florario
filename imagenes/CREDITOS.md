@@ -21,4 +21,10 @@ Todas las fotos vienen de [Wikimedia Commons](https://commons.wikimedia.org/) y 
 | `nochebuena.jpg` | Nochebuena | Vengolis | CC BY-SA 4.0 | [Euphorbia pulcherrima 0111.jpg](https://commons.wikimedia.org/wiki/File:Euphorbia_pulcherrima_0111.jpg) |
 | `ramo-silvestre.jpg` | Ramo de flores silvestres | Petro Stelte | CC BY-SA 4.0 | [Flower-bouquet-wild-flowers](https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg) |
 
-Para añadir una foto nueva: guárdala aquí, añade su entrada en `IMAGES` dentro de `index.html` (con autor, licencia y enlace) y ponle `img: "<nombre-sin-.jpg>"` a la fecha que la use.
+
+
+## Versiones web (`imagenes/web/`)
+
+Desde septiembre de 2026 la web usa copias optimizadas de estas fotos, con nombres descriptivos: `<nombre>-960` y `<nombre>-480` en AVIF y WebP, y `<nombre>-160.webp` recortada en cuadrado para miniaturas (por ejemplo, `girasol-amarillo-960.avif`). La correspondencia entre la foto original y su nombre web está en `IMAGES` dentro de `_build/datos.py`. Los `.jpg` originales se mantienen para las vistas previas en redes (`og:image`).
+
+Para añadir una foto nueva: guárdala aquí en `.jpg`, genera sus versiones web (AVIF/WebP a 960 y 480 px y la miniatura de 160 px), añade su entrada en `IMAGES` de `_build/datos.py` con autor, licencia y enlace, y vuelve a generar la web con `python _build/build.py`.

@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día Nacional de la Nochebuena
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:nochebuena@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Nacional de la Nochebuena: Flor de Nochebuena (cuetlaxóc
+ hitl)
+DESCRIPTION:La flor de Navidad es mexicana: en náhuatl se llama cuetlaxóc
+ hitl. El 8 de diciembre se celebra su origen y arranca la temporada de reg
+ alarla y decorar con ella. Dónde: México. Guía: https://www.calendariod
+ eflores.com/nochebuena/
+URL:https://www.calendariodeflores.com/nochebuena/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Nacional de la Nochebuena. Encarga flor de noc
+ hebuena (cuetlaxóchitl).
+END:VALARM
+END:VEVENT
+END:VCALENDAR

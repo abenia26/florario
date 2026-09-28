@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Dia dos Namorados
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:namorados@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Dia dos Namorados: Rosas rojas
+DESCRIPTION:El San Valentín brasileño cae en la víspera de San Antonio\,
+  el santo casamentero. Se popularizó en 1949 con una campaña publicitari
+ a y hoy es una de las fechas más fuertes del año allí. Dónde: Brasil. 
+ Guía: https://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Dia dos Namorados. Encarga rosas rojas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

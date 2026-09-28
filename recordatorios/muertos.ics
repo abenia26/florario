@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de Muertos
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:muertos@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de Muertos: Cempasúchil
+DESCRIPTION:El color y el olor del cempasúchil marcan el camino de las alm
+ as hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visual
+ es de la celebración. Dónde: México. Guía: https://www.calendariodeflo
+ res.com/todos-los-santos-dia-de-muertos/
+URL:https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de Muertos. Encarga cempasúchil.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

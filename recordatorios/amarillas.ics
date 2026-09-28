@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Flores amarillas
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:amarillas@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270921
+DTEND;VALUE=DATE:20270922
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores amarillas: Girasoles\, tulipanes o rosas amarillas
+DESCRIPTION:En Floricienta\, la serie argentina de 2004\, la protagonista s
+ ueña con que alguien le regale flores amarillas. En septiembre de 2021 Ti
+ kTok recuperó la canción para recibir la primavera del hemisferio sur y 
+ el trend no ha parado desde entonces. Dónde: Toda Latinoamérica · empez
+ ó en Argentina\, Chile\, Perú y Uruguay. Guía: https://www.calendariode
+ flores.com/flores-amarillas/
+URL:https://www.calendariodeflores.com/flores-amarillas/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores amarillas. Encarga girasoles\, tulipanes o r
+ osas amarillas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

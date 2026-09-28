@@ -1,0 +1,531 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario – Calendario de flores
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Rosas
+DESCRIPTION:Abre la Valentine’s Week: los siete días previos a San Valen
+ tín tienen tema propio y el primero se dedica a regalar rosas. Muy presen
+ te en edits y reels de Bollywood. Dónde: India. Guía: https://www.calend
+ ariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Rose Day. Encarga rosas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:galentines@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Galentine’s Day: Ramos para tus amigas
+DESCRIPTION:Nació en 2010 en la serie Parks and Recreation: Leslie Knope c
+ elebra a sus amigas el día antes de San Valentín. Las redes lo convirtie
+ ron en plan real con desayuno\, ramos compartidos y foto en grupo. Dónde:
+  Global\, sobre todo en redes. Guía: https://www.calendariodeflores.com/s
+ an-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Galentine’s Day. Encarga ramos para tus amigas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:san-valentin@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 San Valentín: Rosas rojas
+DESCRIPTION:La fecha que más flores mueve en el año. La rosa roja es el c
+ ódigo universal de “me gustas”\; en varios países de Latinoamérica 
+ también se celebra la amistad\, así que vale regalar a amigos. Dónde: G
+ lobal · en México y otros países\, Día del Amor y la Amistad. Guía: h
+ ttps://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: San Valentín. Encarga rosas rojas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:8m@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Internacional de la Mujer: Mimosa o tulipanes
+DESCRIPTION:En Italia se regala una rama de mimosa desde 1946\; en Rusia y 
+ Europa del Este son típicos los tulipanes. En España y Latinoamérica el
+  8M es sobre todo una jornada de reivindicación: si regalas flores\, que 
+ sea como reconocimiento y no en lugar de escuchar. Dónde: Italia\, Rusia 
+ y Europa del Este. Guía: https://www.calendariodeflores.com/dia-de-la-muj
+ er/
+URL:https://www.calendariodeflores.com/dia-de-la-mujer/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Internacional de la Mujer. Encarga mimosa o tu
+ lipanes.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:padre-es@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Padre: Girasoles o una planta
+DESCRIPTION:Coincide con San José\, padre de Jesús en la tradición crist
+ iana. Las flores no son el regalo más típico\, pero cada vez más gente 
+ regala girasoles o una planta que dure: es un detalle que no se marchita e
+ n una semana. Dónde: España\, Portugal\, Italia\, Bolivia y Honduras. Gu
+ ía: https://www.calendariodeflores.com/dia-del-padre/
+URL:https://www.calendariodeflores.com/dia-del-padre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Padre. Encarga girasoles o una planta.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amarillas-marzo@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores amarillas (primavera norte): Girasoles\, tulipanes o ro
+ sas amarillas
+DESCRIPTION:El trend del 21 de septiembre se duplicó: con la llegada de la
+  primavera al hemisferio norte\, en México se adoptó un segundo día de 
+ flores amarillas. Misma canción\, misma idea\, otra estación. Dónde: M
+ éxico y Centroamérica\, cada vez más en Perú. Guía: https://www.calen
+ dariodeflores.com/flores-amarillas-21-de-marzo/
+URL:https://www.calendariodeflores.com/flores-amarillas-21-de-marzo/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores amarillas (primavera norte). Encarga girasol
+ es\, tulipanes o rosas amarillas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sant-jordi@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Sant Jordi: Una rosa roja y un libro
+DESCRIPTION:Según la leyenda\, de la sangre del dragón que venció Sant J
+ ordi brotó un rosal. Barcelona se llena de puestos de rosas y libros\; el
+  libro se sumó en el siglo XX y coincide con el Día Internacional del Li
+ bro. Dónde: Cataluña. Guía: https://www.calendariodeflores.com/sant-jor
+ di/
+URL:https://www.calendariodeflores.com/sant-jordi/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Sant Jordi. Encarga una rosa roja y un libro.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:muguet@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Muguet du 1er mai: Lirio de los valles (muguet)
+DESCRIPTION:Desde el rey Carlos IX (1561) se regala un ramito de muguet el 
+ 1 de mayo para desear suerte. Ese día la venta callejera de muguet está 
+ tolerada sin licencia. Dónde: Francia. Guía: https://www.calendariodeflo
+ res.com/lirio-de-los-valles/
+URL:https://www.calendariodeflores.com/lirio-de-los-valles/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Muguet du 1er mai. Encarga lirio de los valles (mug
+ uet).
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-es@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270502
+DTEND;VALUE=DATE:20270503
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=1SU
+SUMMARY:🌷 Día de la Madre: Claveles\, rosas o peonías
+DESCRIPTION:En España se celebra el primer domingo de mayo\, el mes que la
+  tradición católica dedica a la Virgen. Claveles y peonías son los clá
+ sicos. Dónde: España y Portugal. Guía: https://www.calendariodeflores.c
+ om/dia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga claveles\, rosas o peoní
+ as.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-mx@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de las Madres: Rosas y claveles
+DESCRIPTION:En México es fecha fija desde 1922\, cuando el periódico Exc
+ élsior impulsó la celebración. Serenata\, comida familiar y un ramo que
+  no puede faltar. Dónde: México\, Guatemala y El Salvador. Guía: https:
+ //www.calendariodeflores.com/dia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de las Madres. Encarga rosas y claveles.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-mayo2@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270509
+DTEND;VALUE=DATE:20270510
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=2SU
+SUMMARY:🌷 Día de la Madre: Claveles
+DESCRIPTION:Anna Jarvis impulsó la fecha en EE. UU. en 1908 y eligió el c
+ lavel\, la flor favorita de su madre. Desde ahí se extendió a buena part
+ e de América y Europa. Dónde: EE. UU.\, Colombia\, Perú\, Chile\, Venez
+ uela\, Brasil\, Italia y más. Guía: https://www.calendariodeflores.com/d
+ ia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga claveles.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:rose-day-kr@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Rosas
+DESCRIPTION:En Corea cada día 14 del mes tiene un tema para parejas. El de
+  mayo es el de las rosas: si sigues K-dramas o K-pop\, ya te sonará. Dón
+ de: Corea del Sur. Guía: https://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Rose Day. Encarga rosas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:maestro@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Maestro: Margaritas\, girasoles o una planta pequeña
+DESCRIPTION:México celebra a sus docentes cada 15 de mayo desde 1918\, y C
+ olombia el mismo día en recuerdo de San Juan Bautista de La Salle\, patro
+ no de los educadores. Una flor con una nota escrita a mano es el detalle m
+ ás repetido en las aulas. Dónde: México y Colombia. Guía: https://www.
+ calendariodeflores.com/dia-del-maestro/
+URL:https://www.calendariodeflores.com/dia-del-maestro/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Maestro. Encarga margaritas\, girasoles o 
+ una planta pequeña.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:namorados@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Dia dos Namorados: Rosas rojas
+DESCRIPTION:El San Valentín brasileño cae en la víspera de San Antonio\,
+  el santo casamentero. Se popularizó en 1949 con una campaña publicitari
+ a y hoy es una de las fechas más fuertes del año allí. Dónde: Brasil. 
+ Guía: https://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Dia dos Namorados. Encarga rosas rojas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:padre-junio@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270621
+RRULE:FREQ=YEARLY;BYMONTH=6;BYDAY=3SU
+SUMMARY:🌷 Día del Padre: Girasoles\, flores azules o una planta
+DESCRIPTION:La fecha de EE. UU.\, que se extendió a casi toda Latinoaméri
+ ca. Las flores para papá ganan terreno gracias al trend de “ellos tambi
+ én merecen flores”: girasoles\, tonos azules o una planta para la ofici
+ na. Dónde: México\, Argentina\, Chile\, Colombia\, Perú\, Venezuela\, E
+ E. UU. y más. Guía: https://www.calendariodeflores.com/dia-del-padre/
+URL:https://www.calendariodeflores.com/dia-del-padre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Padre. Encarga girasoles\, flores azules o
+  una planta.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:novia@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de la Novia: Rosas
+DESCRIPTION:Viene del National Girlfriend Day estadounidense y en redes fun
+ ciona como un segundo San Valentín. No es oficial en ningún país\, pero
+  las florerías ya lo tienen marcado. Dónde: México\, Perú\, Ecuador\, 
+ Costa Rica. Guía: https://www.calendariodeflores.com/dia-de-la-novia/
+URL:https://www.calendariodeflores.com/dia-de-la-novia/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Novia. Encarga rosas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amor-amistad-co@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270919
+RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=3SA
+SUMMARY:🌷 Amor y Amistad: Rosas y girasoles
+DESCRIPTION:Colombia celebra su San Valentín en septiembre desde los años
+  sesenta. Vale para pareja y para amigos\, con amigo secreto incluido. Dó
+ nde: Colombia. Guía: https://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Amor y Amistad. Encarga rosas y girasoles.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amarillas@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270921
+DTEND;VALUE=DATE:20270922
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores amarillas: Girasoles\, tulipanes o rosas amarillas
+DESCRIPTION:En Floricienta\, la serie argentina de 2004\, la protagonista s
+ ueña con que alguien le regale flores amarillas. En septiembre de 2021 Ti
+ kTok recuperó la canción para recibir la primavera del hemisferio sur y 
+ el trend no ha parado desde entonces. Dónde: Toda Latinoamérica · empez
+ ó en Argentina\, Chile\, Perú y Uruguay. Guía: https://www.calendariode
+ flores.com/flores-amarillas/
+URL:https://www.calendariodeflores.com/flores-amarillas/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores amarillas. Encarga girasoles\, tulipanes o r
+ osas amarillas.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:novio@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Novio: Flores azules o un ramo de Hot Wheels
+DESCRIPTION:Nació en 2014 como #NationalBoyfriendDay y en Latinoamérica s
+ e volvió la respuesta a las flores amarillas: flores azules y ramos hecho
+ s con carritos Hot Wheels entre papel y listones. Dónde: México\, Perú\
+ , Chile\, Colombia\, España. Guía: https://www.calendariodeflores.com/fl
+ ores-azules/
+URL:https://www.calendariodeflores.com/flores-azules/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Novio. Encarga flores azules o un ramo de 
+ hot wheels.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-ar@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=3SU
+SUMMARY:🌷 Día de la Madre: Rosas y liliums
+DESCRIPTION:Argentina celebra a las madres en primavera\, el tercer domingo
+  de octubre\, así que coincide con la mejor época de flores del hemisfer
+ io sur. Dónde: Argentina. Guía: https://www.calendariodeflores.com/dia-d
+ e-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga rosas y liliums.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:todos-santos@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Todos los Santos: Crisantemos
+DESCRIPTION:Las familias limpian y adornan las tumbas de sus seres queridos
+ . El crisantemo es la flor de esta fecha: llevarlo es una forma de decir q
+ ue se les recuerda. Dónde: España y buena parte de Latinoamérica. Guía
+ : https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+URL:https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Todos los Santos. Encarga crisantemos.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:muertos@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de Muertos: Cempasúchil
+DESCRIPTION:El color y el olor del cempasúchil marcan el camino de las alm
+ as hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visual
+ es de la celebración. Dónde: México. Guía: https://www.calendariodeflo
+ res.com/todos-los-santos-dia-de-muertos/
+URL:https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de Muertos. Encarga cempasúchil.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:moradas@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores moradas: Violetas o cualquier flor morada
+DESCRIPTION:La canción cuenta que alguien enviaba violetas a una mujer cad
+ a 9 de noviembre\, sin tarjeta\; al final era su propio marido. En TikTok 
+ se regalan a tu “persona morada”: alguien que llegó hace poco y ya es
+  imprescindible. Dónde: México\, Perú\, Colombia\, España. Guía: http
+ s://www.calendariodeflores.com/flores-moradas/
+URL:https://www.calendariodeflores.com/flores-moradas/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores moradas. Encarga violetas o cualquier flor m
+ orada.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hombre@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Internacional del Hombre: Flores azules\, girasoles o Hot
+  Wheels
+DESCRIPTION:Se celebra desde 1999. En redes se popularizó la idea de que e
+ llos también merecen flores: rosas azules\, girasoles o ramos de Hot Whee
+ ls para romper la costumbre de que solo se regalan a mujeres. Dónde: Lati
+ noamérica\, sobre todo en redes. Guía: https://www.calendariodeflores.co
+ m/flores-azules/
+URL:https://www.calendariodeflores.com/flores-azules/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Internacional del Hombre. Encarga flores azule
+ s\, girasoles o hot wheels.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nochebuena@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Nacional de la Nochebuena: Flor de Nochebuena (cuetlaxóc
+ hitl)
+DESCRIPTION:La flor de Navidad es mexicana: en náhuatl se llama cuetlaxóc
+ hitl. El 8 de diciembre se celebra su origen y arranca la temporada de reg
+ alarla y decorar con ella. Dónde: México. Guía: https://www.calendariod
+ eflores.com/nochebuena/
+URL:https://www.calendariodeflores.com/nochebuena/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Nacional de la Nochebuena. Encarga flor de noc
+ hebuena (cuetlaxóchitl).
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:guadalupe@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Virgen de Guadalupe: Rosas
+DESCRIPTION:Según la tradición\, en 1531 Juan Diego llevó rosas del cerr
+ o del Tepeyac en su tilma\, en pleno diciembre. Por eso cada 12 de diciemb
+ re millones de personas llevan rosas a la Basílica. Dónde: México. Guí
+ a: https://www.calendariodeflores.com/rosa/
+URL:https://www.calendariodeflores.com/rosa/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Virgen de Guadalupe. Encarga rosas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Flores amarillas (primavera norte)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:amarillas-marzo@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Flores amarillas (primavera norte): Girasoles\, tulipanes o ro
+ sas amarillas
+DESCRIPTION:El trend del 21 de septiembre se duplicó: con la llegada de la
+  primavera al hemisferio norte\, en México se adoptó un segundo día de 
+ flores amarillas. Misma canción\, misma idea\, otra estación. Dónde: M
+ éxico y Centroamérica\, cada vez más en Perú. Guía: https://www.calen
+ dariodeflores.com/flores-amarillas-21-de-marzo/
+URL:https://www.calendariodeflores.com/flores-amarillas-21-de-marzo/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Flores amarillas (primavera norte). Encarga girasol
+ es\, tulipanes o rosas amarillas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

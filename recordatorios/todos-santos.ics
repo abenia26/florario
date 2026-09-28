@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Todos los Santos
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:todos-santos@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Todos los Santos: Crisantemos
+DESCRIPTION:Las familias limpian y adornan las tumbas de sus seres queridos
+ . El crisantemo es la flor de esta fecha: llevarlo es una forma de decir q
+ ue se les recuerda. Dónde: España y buena parte de Latinoamérica. Guía
+ : https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+URL:https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Todos los Santos. Encarga crisantemos.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

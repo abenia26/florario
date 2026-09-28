@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Galentine’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:galentines@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Galentine’s Day: Ramos para tus amigas
+DESCRIPTION:Nació en 2010 en la serie Parks and Recreation: Leslie Knope c
+ elebra a sus amigas el día antes de San Valentín. Las redes lo convirtie
+ ron en plan real con desayuno\, ramos compartidos y foto en grupo. Dónde:
+  Global\, sobre todo en redes. Guía: https://www.calendariodeflores.com/s
+ an-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Galentine’s Day. Encarga ramos para tus amigas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

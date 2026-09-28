@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día Internacional de la Mujer
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:8m@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día Internacional de la Mujer: Mimosa o tulipanes
+DESCRIPTION:En Italia se regala una rama de mimosa desde 1946\; en Rusia y 
+ Europa del Este son típicos los tulipanes. En España y Latinoamérica el
+  8M es sobre todo una jornada de reivindicación: si regalas flores\, que 
+ sea como reconocimiento y no en lugar de escuchar. Dónde: Italia\, Rusia 
+ y Europa del Este. Guía: https://www.calendariodeflores.com/dia-de-la-muj
+ er/
+URL:https://www.calendariodeflores.com/dia-de-la-mujer/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día Internacional de la Mujer. Encarga mimosa o tu
+ lipanes.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

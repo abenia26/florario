@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · San Valentín
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:san-valentin@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 San Valentín: Rosas rojas
+DESCRIPTION:La fecha que más flores mueve en el año. La rosa roja es el c
+ ódigo universal de “me gustas”\; en varios países de Latinoamérica 
+ también se celebra la amistad\, así que vale regalar a amigos. Dónde: G
+ lobal · en México y otros países\, Día del Amor y la Amistad. Guía: h
+ ttps://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: San Valentín. Encarga rosas rojas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

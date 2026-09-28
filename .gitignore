@@ -1,2 +1,4 @@
 .vercel
 .env*
+_build/salida/
+__pycache__/

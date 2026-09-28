@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de las Madres
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-mx@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día de las Madres: Rosas y claveles
+DESCRIPTION:En México es fecha fija desde 1922\, cuando el periódico Exc
+ élsior impulsó la celebración. Serenata\, comida familiar y un ramo que
+  no puede faltar. Dónde: México\, Guatemala y El Salvador. Guía: https:
+ //www.calendariodeflores.com/dia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de las Madres. Encarga rosas y claveles.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

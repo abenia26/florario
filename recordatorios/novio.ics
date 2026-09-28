@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día del Novio
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:novio@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Día del Novio: Flores azules o un ramo de Hot Wheels
+DESCRIPTION:Nació en 2014 como #NationalBoyfriendDay y en Latinoamérica s
+ e volvió la respuesta a las flores amarillas: flores azules y ramos hecho
+ s con carritos Hot Wheels entre papel y listones. Dónde: México\, Perú\
+ , Chile\, Colombia\, España. Guía: https://www.calendariodeflores.com/fl
+ ores-azules/
+URL:https://www.calendariodeflores.com/flores-azules/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día del Novio. Encarga flores azules o un ramo de 
+ hot wheels.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

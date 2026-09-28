@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Día de la Madre
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-mayo2@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270509
+DTEND;VALUE=DATE:20270510
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=2SU
+SUMMARY:🌷 Día de la Madre: Claveles
+DESCRIPTION:Anna Jarvis impulsó la fecha en EE. UU. en 1908 y eligió el c
+ lavel\, la flor favorita de su madre. Desde ahí se extendió a buena part
+ e de América y Europa. Dónde: EE. UU.\, Colombia\, Perú\, Chile\, Venez
+ uela\, Brasil\, Italia y más. Guía: https://www.calendariodeflores.com/d
+ ia-de-la-madre/
+URL:https://www.calendariodeflores.com/dia-de-la-madre/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Día de la Madre. Encarga claveles.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,164 @@
+/* Piezas comunes a todas las páginas: cabecera fija con menú, pie con enlaces internos,
+   tablas de fechas y temporada, firma del autor y recordatorios. Usa los tokens de
+   index.html o guia.css. */
+
+/* ---------- Cabecera fija ---------- */
+.site-head {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  margin: 0 -20px;
+  padding: 10px 20px;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+.site-head-in { display: flex; align-items: center; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; line-height: 1.05; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.brand b { display: block; font-weight: 800; font-size: 1.2rem; letter-spacing: -.02em; }
+.brand small { display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.site-nav ul { display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.site-nav a {
+  display: block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .92rem;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.site-nav a:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.site-nav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+@media (max-width: 720px) {
+  .site-head { padding-block: 8px 6px; }
+  .site-nav { width: 100%; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { padding: 6px 10px; font-size: .88rem; }
+}
+@media (max-width: 520px) { .site-head { margin: 0 -16px; padding-inline: 16px; } }
+
+/* ---------- Firma y fecha ---------- */
+.byline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 16px 0 0; font-size: .88rem; color: var(--muted); }
+.byline a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line); }
+.byline .dot { opacity: .5; }
+.author-box {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 4px 14px;
+  align-items: center;
+  margin-top: 40px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  font-size: .94rem;
+}
+.author-box svg { grid-row: span 2; width: 48px; height: 48px; }
+.author-box p { margin: 0; color: var(--muted); }
+.author-box b { color: var(--ink); }
+
+/* ---------- Recuérdamelo ---------- */
+.remind {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  border: 1px dashed color-mix(in srgb, var(--fc, #EE7FA8) 60%, var(--line));
+  background: color-mix(in srgb, var(--fc, #EE7FA8) calc(var(--tint) * .6), var(--surface));
+}
+.remind h2, .remind h3 { margin: 0; font-size: 1.15rem; letter-spacing: -.02em; }
+.remind p { margin: 0; color: var(--muted); font-size: .94rem; }
+.remind-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Tabla de fechas (portada, meses, países) ---------- */
+.dtable-wrap { margin-top: 16px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); overflow: hidden; }
+.dtable { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.dtable caption { padding: 12px 16px 4px; text-align: left; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.dtable th, .dtable td { padding: 11px 14px; text-align: left; vertical-align: top; }
+.dtable thead th { font-family: var(--mono); font-size: .7rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.dtable tbody tr + tr > * { border-top: 1px solid var(--line); }
+.dtable tbody tr.mhead > * { padding: 16px 14px 6px; border-top: 0; }
+.dtable tbody tr.mhead + tr > * { border-top: 0; }
+.dtable .mhead th { font-size: 1.05rem; font-weight: 800; letter-spacing: -.02em; }
+.dtable .mhead a { color: inherit; text-underline-offset: 3px; text-decoration-color: var(--line); }
+.dtable td.when { font-family: var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dtable td.when small { display: block; color: var(--muted); font-size: .74rem; }
+.dtable .ev-name { font-weight: 700; }
+.dtable .ev-name a { color: inherit; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--dc, var(--ink)) 70%, var(--line)); text-decoration-thickness: 2px; }
+.dtable .why { color: var(--muted); font-size: .88rem; margin: 2px 0 0; }
+.dtable .swatch { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.dtable .swatch::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--dc); box-shadow: 0 0 0 1px var(--petal-edge) inset; }
+@media (max-width: 760px) {
+  .dtable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .dtable, .dtable tbody, .dtable tr, .dtable td, .dtable th, .dtable caption { display: block; }
+  .dtable caption { width: auto; padding-bottom: 0; }
+  .dtable tbody tr { padding: 12px 14px; }
+  .dtable tbody tr.mhead { padding: 14px 14px 0; }
+  .dtable th, .dtable td { padding: 0; }
+  .dtable tbody tr + tr > * { border-top: 0; }
+  .dtable tbody tr + tr:not(.mhead) { border-top: 1px solid var(--line); }
+  .dtable tbody tr.mhead + tr { border-top: 0; }
+  .dtable td + td { margin-top: 3px; }
+  .dtable td.when { font-size: .82rem; color: var(--muted); }
+  .dtable td[data-label]::before { content: attr(data-label) ": "; font-family: var(--mono); font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+}
+
+/* ---------- Tabla de temporada ---------- */
+.season-wrap { margin-top: 16px; overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.season { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem; }
+.season th, .season td { padding: 10px 14px; text-align: left; vertical-align: top; }
+.season thead th { font-family: var(--mono); font-size: .7rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); }
+.season tbody tr + tr > * { border-top: 1px solid var(--line); }
+.season tbody th { white-space: nowrap; }
+.season tbody th a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 700; text-underline-offset: 3px; text-decoration-color: var(--line); }
+.season tbody th a::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--mc); }
+.season td a { color: inherit; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--mc) 70%, var(--line)); text-decoration-thickness: 2px; }
+.season tr.now { background: color-mix(in srgb, var(--mc) 12%, var(--surface)); }
+.season-note { margin: 10px 2px 0; font-size: .86rem; color: var(--muted); }
+
+/* ---------- Descargas y países ---------- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 16px; }
+.tile {
+  display: grid; gap: 2px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--tc, var(--line)) 45%, var(--line));
+  background: color-mix(in srgb, var(--tc, var(--surface)) var(--tint), var(--surface));
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.tile b { font-size: 1.02rem; }
+.tile small { font-size: .84rem; color: var(--muted); }
+.tile .k { font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- Pie ---------- */
+.site-foot {
+  display: grid;
+  gap: 26px;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: .88rem;
+  color: var(--muted);
+}
+.foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px 28px; }
+.foot-grid .foot-about { grid-column: 1 / -1; display: grid; gap: 8px; max-width: 62ch; }
+.site-foot h2 { margin: 0 0 8px; font-family: var(--mono); font-size: .72rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.site-foot p { margin: 0; }
+.site-foot ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+.site-foot a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line); }
+.site-foot a:hover { text-decoration-color: var(--ink); }
+.site-foot a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+.site-foot .foot-inline { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.site-foot details summary { cursor: pointer; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.site-foot details ul { margin-top: 10px; gap: 4px; }
+.foot-legal { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .82rem; }
+
+/* ---------- Imágenes ---------- */
+picture { display: contents; }

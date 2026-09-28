@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Calendario de flores//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Rose Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day-kr@calendariodeflores.com
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Rosas
+DESCRIPTION:En Corea cada día 14 del mes tiene un tema para parejas. El de
+  mayo es el de las rosas: si sigues K-dramas o K-pop\, ya te sonará. Dón
+ de: Corea del Sur. Guía: https://www.calendariodeflores.com/san-valentin/
+URL:https://www.calendariodeflores.com/san-valentin/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:En 3 días: Rose Day. Encarga rosas.
+END:VALARM
+END:VEVENT
+END:VCALENDAR
