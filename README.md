@@ -12,7 +12,11 @@ Calendario interactivo con todas las fechas del año en las que es tradición (o
 |---|---|
 | `index.html` | La página completa (HTML, CSS y JS, sin frameworks). |
 | `imagenes/` | Fotos de las flores. Autores y licencias en `imagenes/CREDITOS.md`. |
+| `404.html` | Página de error personalizada ("Esta página se ha marchitado"). |
+| `sitemap.xml`, `robots.txt` | Para que Google encuentre e indexe la web. |
 | `DOCUMENTACION.md` | Investigación, decisiones de diseño y cambios del proyecto. |
+
+Web publicada: <https://www.calendariodeflores.com/>
 
 Para verla en local basta con abrir `index.html` en el navegador.
 
