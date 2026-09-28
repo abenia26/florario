@@ -1,0 +1,1441 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Florario · Calendario de fechas para regalar flores</title>
+<meta name="description" content="Todas las fechas del año en las que se regalan flores: San Valentín, Sant Jordi, Día de la Madre, flores amarillas, flores moradas, Día del Novio y más trends de TikTok. Qué flor se regala, dónde y por qué.">
+<meta name="theme-color" content="#F2C230">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Florario · Calendario de fechas para regalar flores">
+<meta property="og:description" content="Tradiciones de siempre y trends de TikTok en un solo calendario: qué flor se regala cada fecha, dónde y por qué.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-12 -12 24 24'%3E%3Cg fill='%23F2C230'%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(45)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(90)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(135)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(180)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(225)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(270)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='2.8' fill='%232A2F25'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --bg: #F6F4EC;
+    --surface: #FFFFFF;
+    --ink: #1B2118;
+    --muted: #5F685A;
+    --line: #DCDDD0;
+    --soft: #EEEDE3;
+    --stem: #2F6B45;
+    --petal-edge: rgba(27, 33, 24, .32);
+    --pistil: #2A2F25;
+    --shadow: 0 1px 2px rgba(27, 33, 24, .06), 0 8px 24px rgba(27, 33, 24, .07);
+    --c-clasico: #2F6B45;
+    --c-trend: #B0306A;
+    --c-memoria: #8A5A12;
+    --blob-1: rgba(238, 127, 168, .34);
+    --blob-2: rgba(242, 194, 48, .34);
+    --blob-3: rgba(138, 79, 216, .16);
+    --blob-4: rgba(43, 179, 163, .16);
+    --tint: 16%;
+    --font: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "DM Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+    --radius: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10130F;
+      --surface: #181C16;
+      --ink: #ECF0E6;
+      --muted: #A2AA9B;
+      --line: #2C3229;
+      --soft: #20251E;
+      --stem: #7FC495;
+      --petal-edge: rgba(0, 0, 0, .5);
+      --pistil: #151812;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .28);
+      --c-clasico: #7FC495;
+      --c-trend: #F08BB8;
+      --c-memoria: #E0B060;
+      --blob-1: rgba(238, 127, 168, .16);
+      --blob-2: rgba(242, 194, 48, .12);
+      --blob-3: rgba(138, 79, 216, .16);
+      --blob-4: rgba(43, 179, 163, .10);
+      --tint: 20%;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10130F;
+    --surface: #181C16;
+    --ink: #ECF0E6;
+    --muted: #A2AA9B;
+    --line: #2C3229;
+    --soft: #20251E;
+    --stem: #7FC495;
+    --petal-edge: rgba(0, 0, 0, .5);
+    --pistil: #151812;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .28);
+    --c-clasico: #7FC495;
+    --c-trend: #F08BB8;
+    --c-memoria: #E0B060;
+    --blob-1: rgba(238, 127, 168, .16);
+    --blob-2: rgba(242, 194, 48, .12);
+    --blob-3: rgba(138, 79, 216, .16);
+    --blob-4: rgba(43, 179, 163, .10);
+    --tint: 20%;
+    color-scheme: dark;
+  }
+
+  /* ---------- Base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(42rem 30rem at 4% -4%, var(--blob-1), transparent 70%),
+      radial-gradient(38rem 28rem at 96% 2%, var(--blob-2), transparent 70%),
+      radial-gradient(34rem 26rem at 70% 36rem, var(--blob-3), transparent 70%),
+      radial-gradient(40rem 30rem at 0% 60rem, var(--blob-4), transparent 70%),
+      var(--bg);
+    background-repeat: no-repeat;
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 20px 56px;
+  }
+  button { font: inherit; color: inherit; }
+  img { display: block; max-width: 100%; }
+  :focus-visible { outline: 2px solid var(--stem); outline-offset: 3px; border-radius: 6px; }
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .eyebrow {
+    margin: 0 0 12px;
+    font-family: var(--mono);
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- Top bar ---------- */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 4px 12px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -.02em;
+  }
+  .year-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  .year-nav button {
+    width: 32px; height: 32px;
+    border: 0; border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .year-nav button:hover { background: var(--soft); }
+  .year-nav output { font-family: var(--mono); font-size: .9rem; min-width: 3.2em; text-align: center; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: center;
+    padding-block: 12px 24px;
+  }
+  @media (min-width: 880px) {
+    .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 40px; }
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #E8475F, #F28C1B 50%, #E0A400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .lede {
+    max-width: 44ch;
+    margin: 18px 0 0;
+    font-size: 1.08rem;
+    color: var(--muted);
+  }
+  .hero-actions { margin-top: 26px; display: grid; gap: 12px; justify-items: start; max-width: 480px; }
+  .next {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2px 16px;
+    align-items: center;
+    width: 100%;
+    padding: 16px 16px 16px 20px;
+    border: 1px solid color-mix(in srgb, var(--fc, #F2C230) 45%, var(--line));
+    border-radius: 20px;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--fc, #F2C230) 30%, var(--surface)), var(--surface) 78%);
+    box-shadow: var(--shadow);
+    text-align: left;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .next:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 16px 32px rgba(0,0,0,.1); }
+  .next-num {
+    grid-row: span 2;
+    font-size: 3.4rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    font-variant-numeric: tabular-nums;
+  }
+  .next-label { font-size: .82rem; color: var(--muted); }
+  .next-name { font-weight: 700; font-size: 1.15rem; line-height: 1.2; }
+  .next-photo {
+    grid-row: span 2;
+    grid-column: 3;
+    grid-row-start: 1;
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 2px var(--fc, #F2C230);
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface); cursor: pointer; font-size: .92rem; text-decoration: none; color: var(--ink);
+    transition: border-color .15s, background .15s, transform .15s;
+  }
+  .btn:hover { border-color: var(--muted); }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn.random:hover svg { transform: rotate(72deg); }
+  .btn.random svg { transition: transform .4s cubic-bezier(.2, .9, .3, 1.3); }
+
+  /* ---------- Wheel ---------- */
+  .wheel-wrap { position: relative; width: 100%; max-width: 560px; margin-inline: auto; }
+  #wheel { display: block; width: 100%; height: auto; max-width: 100%; overflow: visible; }
+  .w-guide { fill: none; stroke: var(--line); }
+  .w-tick { stroke: var(--line); stroke-width: 1; }
+  .w-tick.m { stroke: var(--muted); stroke-width: 1.2; }
+  .w-arc { fill-opacity: .22; cursor: pointer; transition: fill-opacity .2s; outline: none; }
+  .w-arc:hover, .w-arc:focus-visible { fill-opacity: .42; }
+  .w-arc.on { fill-opacity: .6; }
+  .w-arc:focus-visible { stroke: var(--ink); stroke-width: 1.2; }
+  .w-month { fill: var(--ink); font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
+  .w-stem { stroke: var(--stem); stroke-width: 1; opacity: .55; }
+  .w-year { fill: var(--ink); font-family: var(--font); font-weight: 800; font-size: 46px; text-anchor: middle; letter-spacing: -2px; }
+  .w-sub { fill: var(--muted); font-family: var(--mono); font-size: 9px; text-anchor: middle; letter-spacing: .06em; }
+  .w-today { fill: var(--stem); }
+  .petal { stroke: var(--petal-edge); stroke-width: .7; }
+  .pistil { fill: var(--pistil); }
+  .ev { cursor: pointer; outline: none; }
+  .ev .hit { fill: transparent; }
+  .ev .fl { transform-box: fill-box; transform-origin: center; transition: transform .18s ease, opacity .2s; animation: bloom .7s cubic-bezier(.2, .9, .3, 1.3) both; animation-delay: calc(var(--i) * 28ms); }
+  .ev:hover .fl, .ev:focus-visible .fl { transform: scale(1.45); }
+  .ev:focus-visible .hit { stroke: var(--stem); stroke-width: 1.4; }
+  .ev.dim .fl { opacity: .16; }
+  .w-stem.dim { opacity: .12; }
+  @keyframes bloom { from { transform: scale(.5) rotate(-40deg); } to { transform: scale(1) rotate(0); } }
+
+  #tip {
+    position: fixed;
+    z-index: 20;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 6px 12px 6px 6px;
+    border-radius: 14px;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: .85rem;
+    line-height: 1.3;
+    max-width: 260px;
+    box-shadow: var(--shadow);
+  }
+  #tip[hidden] { display: none; }
+  #tip img { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; }
+  #tip b { display: block; }
+  #tip span { font-family: var(--mono); font-size: .75rem; opacity: .8; }
+
+  /* ---------- Ticker ---------- */
+  .ticker {
+    margin-top: 4px;
+    padding-block: 12px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+  .ticker-track { display: flex; width: max-content; animation: marquee 80s linear infinite; }
+  .ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
+  .ticker-group { display: flex; gap: 10px; padding-right: 10px; align-items: center; }
+  .ticker-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-inline: 8px 4px; white-space: nowrap; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  .tk {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 5px 16px 5px 5px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--fc) 40%, var(--line));
+    background: color-mix(in srgb, var(--fc) var(--tint), var(--surface));
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: left;
+    transition: transform .15s;
+  }
+  .tk:hover { transform: translateY(-2px); }
+  .tk img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+  .tk span { display: grid; line-height: 1.2; }
+  .tk b { font-weight: 700; font-size: .9rem; }
+  .tk small { font-family: var(--mono); color: var(--muted); font-size: .72rem; }
+
+  /* ---------- Filters ---------- */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+    margin-top: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    box-shadow: var(--shadow);
+  }
+  .chips, .swatches { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cc, var(--ink)); }
+  .chip[data-type="all"]::before { background: conic-gradient(#E8475F, #F2C230, #2BB3A3, #3F72E0, #8A4FD8, #E8475F); }
+  .chip[data-type="saved"]::before { display: none; }
+  .chip:hover { border-color: var(--cc, var(--muted)); }
+  .chip[aria-pressed="true"] { background: var(--cc, var(--ink)); color: var(--surface); border-color: var(--cc, var(--ink)); }
+  .chip[aria-pressed="true"]::before { background: var(--surface); }
+  .chip[data-type="all"][aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chip[data-type="clasico"] { --cc: var(--c-clasico); }
+  .chip[data-type="trend"] { --cc: var(--c-trend); }
+  .chip[data-type="memoria"] { --cc: var(--c-memoria); }
+  .chip .n { font-family: var(--mono); font-size: .75rem; opacity: .65; }
+  .sw {
+    width: 34px; height: 34px;
+    display: grid; place-items: center;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 0;
+    transition: transform .15s;
+  }
+  .sw:hover { transform: rotate(20deg); }
+  .sw[aria-pressed="true"] { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; background: var(--soft); }
+  .sw svg { width: 22px; height: 22px; }
+  .filters-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+
+  /* ---------- Explorer ---------- */
+  .explorer { padding-top: 28px; scroll-margin-top: 12px; }
+  .months { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; }
+  .mo {
+    display: grid; justify-items: center; gap: 5px;
+    padding: 10px 2px 8px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    cursor: pointer;
+    transition: transform .15s, border-color .15s, background .2s;
+  }
+  .mo:hover { border-color: var(--mc); transform: translateY(-2px); }
+  .mo b { font-family: var(--mono); font-size: .78rem; letter-spacing: .06em; font-weight: 500; }
+  .mo .dots { display: flex; gap: 3px; height: 8px; }
+  .mo .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 1px var(--petal-edge) inset; }
+  .mo .cnt { font-family: var(--mono); font-size: .68rem; color: var(--muted); line-height: 1; }
+  .mo.empty b, .mo.empty .cnt { opacity: .5; }
+  .mo[aria-selected="true"] { background: var(--mc); border-color: var(--mc); color: var(--on); box-shadow: 0 6px 18px color-mix(in srgb, var(--mc) 45%, transparent); }
+  .mo[aria-selected="true"] .cnt { color: inherit; opacity: .8; }
+  .mo[aria-selected="true"] .dots i { box-shadow: 0 0 0 1.5px var(--on); }
+  @media (max-width: 860px) {
+    .months {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+      margin-inline: -16px; padding: 4px 16px 8px;
+    }
+    .months::-webkit-scrollbar { display: none; }
+    .mo { flex: 0 0 62px; scroll-snap-align: center; }
+  }
+
+  .panel {
+    position: relative;
+    margin-top: 12px;
+    padding: 22px;
+    border-radius: 26px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--mc) var(--tint), var(--surface));
+    border: 1px solid color-mix(in srgb, var(--mc) 40%, var(--line));
+    touch-action: pan-y;
+    transition: background .35s, border-color .35s;
+  }
+  .panel::before {
+    content: "";
+    position: absolute;
+    right: -120px; bottom: -160px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--mc) 45%, transparent), transparent 68%);
+    pointer-events: none;
+  }
+  .panel-head { position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .panel-head .grow { flex: 1; min-width: 0; }
+  .panel-head h2 { margin: 0; font-size: clamp(1.8rem, 4.4vw, 2.6rem); font-weight: 800; letter-spacing: -.035em; line-height: 1; }
+  .panel-head h2 span { font-weight: 500; color: var(--muted); }
+  .panel-head p { margin: 6px 0 0; color: var(--muted); font-size: .9rem; }
+  .pn {
+    width: 42px; height: 42px; flex: none;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--mc) 50%, var(--line));
+    background: var(--surface);
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition: transform .15s;
+  }
+  .pn:hover { transform: scale(1.08); }
+  .panel-body { position: relative; display: grid; gap: 22px; }
+  @media (min-width: 880px) { .panel-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 28px; } }
+  .panel-body.from-right { animation: slideR .35s cubic-bezier(.2, .8, .3, 1); }
+  .panel-body.from-left { animation: slideL .35s cubic-bezier(.2, .8, .3, 1); }
+  @keyframes slideR { from { opacity: 0; transform: translateX(28px); } }
+  @keyframes slideL { from { opacity: 0; transform: translateX(-28px); } }
+
+  .cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+  .wdh { text-align: center; font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; color: var(--muted); padding-bottom: 2px; }
+  .day {
+    position: relative;
+    aspect-ratio: 1;
+    display: grid; place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--surface) 72%, transparent);
+    font-family: var(--mono);
+    font-size: .82rem;
+    color: var(--muted);
+  }
+  .day.blank { background: transparent; }
+  .day.today { box-shadow: inset 0 0 0 2px var(--stem); color: var(--stem); font-weight: 500; }
+  .day.has { cursor: pointer; color: var(--ink); box-shadow: 0 2px 8px rgba(0, 0, 0, .12); transition: transform .15s, box-shadow .15s; }
+  .day.has:hover { transform: translateY(-2px) scale(1.04); z-index: 1; }
+  .day.has img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .day.has:hover img { transform: scale(1.12); }
+  .day .dn {
+    position: absolute; left: 4px; bottom: 4px;
+    padding: 1px 5px;
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: .74rem; font-weight: 500; line-height: 1.35;
+  }
+  .day.has.today .dn { box-shadow: 0 0 0 2px var(--stem); }
+  .day .more {
+    position: absolute; top: 4px; right: 4px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: var(--ink); color: var(--bg);
+    font-size: .62rem; line-height: 1.6;
+  }
+  .day.sel { box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--ink); z-index: 2; }
+  .cal-legend { grid-column: 1 / -1; margin: 6px 0 0; font-size: .8rem; color: var(--muted); }
+
+  .spot { display: grid; gap: 14px; align-content: start; }
+  .spot-photo {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--soft);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--fc) 35%, transparent);
+  }
+  .spot-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+  .spot-photo:hover img { transform: scale(1.05); }
+  .spot-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, .62)); }
+  .spot-date {
+    position: absolute; left: 12px; top: 12px; z-index: 1;
+    display: grid; justify-items: center;
+    padding: 8px 12px 7px;
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--mono);
+    line-height: 1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+  }
+  .spot-date b { font-size: 1.9rem; font-weight: 500; }
+  .spot-date small { margin-top: 5px; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .spot-photo .tag { position: absolute; right: 12px; top: 12px; z-index: 1; background: var(--surface); }
+  .spot-name {
+    position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 1;
+    color: #fff;
+    font-weight: 800; font-size: clamp(1.4rem, 3vw, 1.8rem); letter-spacing: -.025em; line-height: 1.05;
+    text-align: left;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, .35);
+  }
+  .spot-meta { margin: 0; font-size: .92rem; color: var(--muted); }
+  .spot-meta strong { color: var(--ink); }
+  .spot-story { margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .spot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .spot-actions .grow { flex: 1; }
+  .pager { display: inline-flex; align-items: center; gap: 2px; font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+  .pager button { width: 32px; height: 32px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
+  .pager button:disabled { opacity: .35; cursor: default; }
+  .pager span { min-width: 3.4em; text-align: center; }
+  .spot-empty {
+    display: grid; justify-items: center; gap: 10px;
+    padding: 36px 20px;
+    text-align: center;
+    border: 1.5px dashed color-mix(in srgb, var(--mc) 55%, var(--line));
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 60%, transparent);
+  }
+  .spot-empty svg { width: 64px; height: 64px; }
+  .spot-empty h3 { margin: 0; font-size: 1.3rem; letter-spacing: -.02em; }
+  .spot-empty p { margin: 0; color: var(--muted); max-width: 34ch; }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+  .tag.clasico { color: var(--c-clasico); }
+  .tag.trend { color: var(--c-trend); }
+  .tag.memoria { color: var(--c-memoria); }
+
+  /* ---------- Any day ---------- */
+  .anyday {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    align-items: center;
+    padding: 26px;
+    border-radius: 26px;
+    background: linear-gradient(120deg, color-mix(in srgb, #EE7FA8 var(--tint), var(--surface)), color-mix(in srgb, #F2C230 var(--tint), var(--surface)));
+    border: 1px solid color-mix(in srgb, #EE7FA8 35%, var(--line));
+  }
+  @media (min-width: 760px) { .anyday { grid-template-columns: 200px 1fr; gap: 32px; } }
+  .anyday-photo { width: 100%; max-width: 200px; aspect-ratio: 1; object-fit: cover; border-radius: 22px; transform: rotate(-3deg); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); border: 4px solid var(--surface); }
+  .anyday h2 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; text-wrap: balance; }
+  .anyday p { margin: 0; max-width: 62ch; color: var(--muted); }
+  .anyday p + p { margin-top: 8px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 12px;
+    font-size: .86rem;
+    color: var(--muted);
+  }
+  footer h3 { margin: 0; font-size: .74rem; font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; font-weight: 400; }
+  footer ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  footer a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line); }
+  footer a:hover { text-decoration-color: var(--ink); }
+  footer details summary { cursor: pointer; font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; }
+  footer details ul { margin-top: 10px; display: grid; gap: 4px; }
+
+  /* ---------- Detail dialog ---------- */
+  dialog {
+    width: min(580px, calc(100vw - 32px));
+    max-height: calc(100dvh - 48px);
+    padding: 0;
+    overflow: auto;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .3);
+  }
+  dialog[open] { animation: pop .28s cubic-bezier(.2, .9, .3, 1.2); }
+  @keyframes pop { from { opacity: 0; transform: translateY(14px) scale(.97); } }
+  dialog::backdrop { background: rgba(16, 19, 15, .5); backdrop-filter: blur(4px); }
+  .dlg-photo { position: relative; margin: 0; aspect-ratio: 16 / 10; overflow: hidden; background: var(--soft); }
+  .dlg-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .dlg-photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 40%; background: linear-gradient(transparent, rgba(0, 0, 0, .35)); pointer-events: none; }
+  .dlg-photo figcaption {
+    position: absolute; right: 10px; bottom: 8px; z-index: 1;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: .7rem;
+  }
+  .dlg-photo figcaption a { color: inherit; }
+  .dlg-close {
+    position: absolute; top: 12px; right: 12px; z-index: 2;
+    width: 38px; height: 38px;
+    border: 0; border-radius: 999px;
+    background: var(--surface);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
+    cursor: pointer; font-size: 1.2rem; line-height: 1;
+  }
+  .dlg-close:hover { transform: scale(1.08); }
+  .dlg { padding: 20px 26px 22px; display: grid; gap: 14px; border-top: 5px solid var(--fc); }
+  .dlg h2 { margin: 0; font-size: 1.9rem; line-height: 1.05; font-weight: 800; letter-spacing: -.03em; text-wrap: balance; }
+  .dlg-meta { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-size: .88rem; color: var(--muted); }
+  .dlg-when { font-family: var(--mono); font-size: .9rem; color: var(--ink); }
+  .dlg-when span { color: var(--muted); }
+  .dlg p { margin: 0; }
+  .dlg-flower { font-weight: 700; }
+  .song {
+    display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center;
+    padding: 12px 14px; border-radius: 14px;
+    background: color-mix(in srgb, var(--fc) var(--tint), var(--surface));
+  }
+  .song-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 999px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: .9rem; }
+  .song b { font-size: .95rem; }
+  .song small { color: var(--muted); font-size: .82rem; }
+  .variant { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--fc); padding-left: 12px; }
+  .dlg-actions { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; }
+  .status { font-size: .82rem; color: var(--muted); min-height: 1.2em; margin: 0; }
+  .status code { font-family: var(--mono); user-select: all; color: var(--ink); }
+
+  @media (max-width: 520px) {
+    .wrap { padding-inline: 16px; }
+    .next-num { font-size: 2.8rem; }
+    .next-photo { width: 56px; height: 56px; }
+    .panel { padding: 16px; border-radius: 22px; }
+    .cal { gap: 4px; }
+    .day { border-radius: 9px; font-size: .74rem; }
+    .day .dn { left: 2px; bottom: 2px; font-size: .64rem; padding: 0 4px; border-radius: 5px; }
+    .day .more { top: 2px; right: 2px; }
+    .dlg { padding: 18px 18px 18px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .ticker { overflow-x: auto; }
+    .ticker-group[aria-hidden="true"] { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="logo"><svg width="24" height="24" viewBox="-12 -12 24 24" aria-hidden="true" id="logo-bloom"></svg>Florario</span>
+    <div class="year-nav" aria-label="Cambiar año">
+      <button type="button" id="prev-year" aria-label="Año anterior">‹</button>
+      <output id="year-label" aria-live="polite">2026</output>
+      <button type="button" id="next-year" aria-label="Año siguiente">›</button>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="title">
+    <div class="hero-copy">
+      <p class="eyebrow" id="eyebrow">Calendario de flores</p>
+      <h1 id="title">Todas las excusas del año para <em>regalar flores</em>.</h1>
+      <p class="lede">Tradiciones de siempre y trends de TikTok en un solo calendario. Toca un mes de la rueda o una flor para ver qué se regala, dónde y por qué.</p>
+      <div class="hero-actions">
+        <button type="button" class="next" id="next"></button>
+        <button type="button" class="btn random" id="random"><svg viewBox="-12 -12 24 24" aria-hidden="true" id="random-bloom"></svg>Flor al azar</button>
+      </div>
+    </div>
+    <div class="wheel-wrap">
+      <svg id="wheel" viewBox="-216 -216 432 432" role="group" aria-label="Rueda del año con las fechas en que se regalan flores"></svg>
+    </div>
+  </section>
+
+  <section class="ticker" aria-label="Próximas fechas">
+    <div class="ticker-track" id="ticker"></div>
+  </section>
+
+  <section class="filters" aria-label="Filtros">
+    <div class="chips" id="type-chips" role="group" aria-label="Tipo de fecha"></div>
+    <div class="swatches" role="group" aria-label="Color de flor">
+      <span class="filters-label">Color</span>
+      <span id="color-swatches" class="swatches"></span>
+    </div>
+  </section>
+
+  <main class="explorer" id="explorer" aria-label="Explorar por mes">
+    <div class="months" id="months" role="tablist" aria-label="Meses"></div>
+    <div class="panel" id="panel" role="tabpanel"></div>
+  </main>
+
+  <section class="anyday" aria-labelledby="anyday-title">
+    <img class="anyday-photo" src="imagenes/ramo-silvestre.jpg" alt="Ramo de margaritas y flores silvestres en un bote de cristal" loading="lazy">
+    <div>
+      <p class="eyebrow">Fuera del calendario</p>
+      <h2 id="anyday-title">Cualquier día sirve para comprarte flores a ti</h2>
+      <p>En 2023 Miley Cyrus lanzó <strong>“Flowers”</strong> y el verso sobre comprarse flores una misma se volvió himno de amor propio en TikTok. Desde entonces, el ramo para ti no necesita fecha.</p>
+      <p>Si una fecha de esta lista no va contigo, este es el plan alternativo.</p>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Fuentes consultadas · septiembre 2026</h3>
+    <ul>
+      <li><a href="https://www.lanacion.com.ar/sociedad/por-que-se-regalan-flores-amarillas-el-21-de-septiembre-origen-significado-y-que-relacion-tiene-con-nid18092026/" target="_blank" rel="noopener">La Nación · flores amarillas</a></li>
+      <li><a href="https://www.quien.com/espectaculos/2026/09/21/flores-amarillas-21-de-marzo-o-21-de-septiembre-diferencia" target="_blank" rel="noopener">Quién · 21 de marzo o 21 de septiembre</a></li>
+      <li><a href="https://expansion.mx/tendencias/2026/09/24/dia-del-novio-2026-hot-wheels-flores-azules-octubre" target="_blank" rel="noopener">Expansión · Día del Novio</a></li>
+      <li><a href="https://www.infobae.com/mexico/2024/11/08/por-que-se-regalan-flores-moradas-el-9-de-noviembre-y-que-significa/" target="_blank" rel="noopener">Infobae · flores moradas</a></li>
+      <li><a href="https://www.elespectador.com/actualidad/por-que-se-regalan-flores-moradas-en-octubre-historia-del-trend-de-tiktok/" target="_blank" rel="noopener">El Espectador · variante 9 de octubre</a></li>
+      <li><a href="https://www.excelsior.com.mx/estilo-de-vida/cuando-es-dia-novia-2026-y-cual-es-polemico-origen" target="_blank" rel="noopener">Excélsior · Día de la Novia</a></li>
+      <li><a href="https://www.gob.mx/semarnat/articulos/dia-nacional-de-la-nochebuena-289960" target="_blank" rel="noopener">SEMARNAT · Día de la Nochebuena</a></li>
+    </ul>
+    <details>
+      <summary>Créditos de las fotos · Wikimedia Commons</summary>
+      <ul id="photo-credits"></ul>
+    </details>
+    <p style="margin:0">Las fechas móviles (Día de la Madre, Amor y Amistad) se calculan para el año que elijas arriba.</p>
+  </footer>
+</div>
+
+<div id="tip" hidden></div>
+
+<dialog id="detail" aria-labelledby="dlg-title">
+  <div id="dlg-root"></div>
+</dialog>
+
+<script>
+(() => {
+  // ---------- Datos ----------
+  const COLORS = {
+    amarillo: { hex: "#F2C230", label: "Amarillo" },
+    rojo:     { hex: "#D7263D", label: "Rojo" },
+    rosa:     { hex: "#EE7FA8", label: "Rosa" },
+    azul:     { hex: "#3F72E0", label: "Azul" },
+    morado:   { hex: "#8A4FD8", label: "Morado" },
+    naranja:  { hex: "#F28C1B", label: "Naranja" },
+    blanco:   { hex: "#F4F2EA", label: "Blanco" }
+  };
+  const TYPES = {
+    clasico: "Clásico",
+    trend:   "Trend",
+    memoria: "Memoria"
+  };
+  // Un color por mes, inspirado en la flor o la estación de ese mes
+  const MONTH_COLORS = ["#7C9CF0", "#E8475F", "#F2C230", "#F07A5A", "#EE7FA8", "#E4572E", "#2BB3A3", "#F59E6B", "#F2B705", "#3F72E0", "#8A4FD8", "#C8102E"];
+
+  // Fotos de imagenes/ (fuente y licencia en imagenes/CREDITOS.md)
+  const IMAGES = {
+    "rosa-roja":      { alt: "Rosa roja abierta", author: "Petro Stelte", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-Rose-Sitia-Crete.jpg" },
+    "rosa-rosa":      { alt: "Rosa rosa pálido en un rosal", author: "Acabashi", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pink_rose_bloom_of_a_climbing_rose_at_Boreham,_Essex,_England_1.jpg" },
+    "ramo-rosas":     { alt: "Ramo apretado de rosas rosas", author: "Jebulon", license: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Bouquet_de_roses_roses.jpg" },
+    "ramo-tulipanes": { alt: "Ramo de tulipanes de muchos colores", author: "Gábor Juhász", license: "CC0", source: "https://commons.wikimedia.org/wiki/File:Tulip-bouquet-vienna_(Unsplash).jpg" },
+    "mimosa":         { alt: "Rama de mimosa con bolitas amarillas", author: "JMK", license: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Acacia_dealbata,_blomme,_Waterberg.jpg" },
+    "girasol":        { alt: "Girasol abierto de frente", author: "Böhringer Friedrich", license: "CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG" },
+    "muguet":         { alt: "Tallo de lirio de los valles con campanitas blancas", author: "Agnes Monkelbaan", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lelietje-van-dalen_of_meiklokje_(Convallaria_majalis)._14-05-2021_(actm.)_01.jpg" },
+    "clavel":         { alt: "Claveles fucsia", author: "Andy Mabbett", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bright_pink_carnation_cultivar_-_2020-05-11_-_Andy_Mabbett_-_01.jpg" },
+    "peonia":         { alt: "Peonía rosa abierta", author: "Acabashi", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Cottage_garden_pink_peony_bloom_at_Boreham,_Essex,_England.jpg" },
+    "lilium":         { alt: "Lilium blanco y rosa", author: "Derek Ramsey (Ram-Man) · Chanticleer Garden", license: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lilium_%27Marco_Polo%27_Flower_2580px.jpg" },
+    "hortensia-azul": { alt: "Hortensia azul y violeta", author: "Subhrajyoti07", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Blue_Hydrangea_(common_names_hydrangea_or_hortensia).jpg" },
+    "crisantemo":     { alt: "Crisantemo blanco de pétalos largos", author: "阿橋 HQ", license: "CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:%E8%8F%8A%E8%8A%B1-%E7%99%BD%E9%B6%B4_Chrysanthemum_morifolium_%27White_Crane%27_-%E5%8F%B0%E5%8C%97%E5%A3%AB%E6%9E%97%E5%AE%98%E9%82%B8_Taipei,_Taiwan-_(12010293154).jpg" },
+    "cempasuchil":    { alt: "Flores de cempasúchil naranjas y amarillas", author: "Joydeep", license: "CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tagetes_erecta_30012013.jpg" },
+    "violeta":        { alt: "Violeta morada entre hojas", author: "Uoaei1", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Viola_odorata_20210226.jpg" },
+    "nochebuena":     { alt: "Plantas de nochebuena rojas", author: "Vengolis", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Euphorbia_pulcherrima_0111.jpg" },
+    "ramo-silvestre": { alt: "Ramo de margaritas y flores silvestres", author: "Petro Stelte", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg" }
+  };
+  const imgSrc = key => `imagenes/${key}.jpg`;
+
+  // m/d = fecha fija · rule = {m, wd (0=domingo), n} = n-ésimo día de la semana del mes
+  const EVENTS = [
+    { id: "rose-day", m: 2, d: 7, name: "Rose Day", flower: "Rosas", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "India",
+      story: "Abre la Valentine’s Week: los siete días previos a San Valentín tienen tema propio y el primero se dedica a regalar rosas. Muy presente en edits y reels de Bollywood." },
+    { id: "galentines", m: 2, d: 13, name: "Galentine’s Day", flower: "Ramos para tus amigas", color: "rosa", petals: 6, type: "trend", img: "ramo-tulipanes",
+      region: "Global, sobre todo en redes", tag: "galentinesday",
+      story: "Nació en 2010 en la serie Parks and Recreation: Leslie Knope celebra a sus amigas el día antes de San Valentín. Las redes lo convirtieron en plan real con desayuno, ramos compartidos y foto en grupo." },
+    { id: "san-valentin", m: 2, d: 14, name: "San Valentín", flower: "Rosas rojas", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "Global · en México y otros países, Día del Amor y la Amistad",
+      story: "La fecha que más flores mueve en el año. La rosa roja es el código universal de “me gustas”; en varios países de Latinoamérica también se celebra la amistad, así que vale regalar a amigos." },
+    { id: "8m", m: 3, d: 8, name: "Día Internacional de la Mujer", flower: "Mimosa o tulipanes", color: "amarillo", petals: 8, type: "clasico", img: "mimosa",
+      region: "Italia, Rusia y Europa del Este",
+      story: "En Italia se regala una rama de mimosa desde 1946; en Rusia y Europa del Este son típicos los tulipanes. En España y Latinoamérica el 8M es sobre todo una jornada de reivindicación: si regalas flores, que sea como reconocimiento y no en lugar de escuchar." },
+    { id: "amarillas-marzo", m: 3, d: 21, name: "Flores amarillas (primavera norte)", flower: "Girasoles, tulipanes o rosas amarillas", color: "amarillo", petals: 10, type: "trend", img: "girasol",
+      region: "México y Centroamérica, cada vez más en Perú", tag: "floresamarillas",
+      song: { title: "Flores amarillas", by: "Floricienta (Florencia Bertotti), 2004" },
+      story: "El trend del 21 de septiembre se duplicó: con la llegada de la primavera al hemisferio norte, en México se adoptó un segundo día de flores amarillas. Misma canción, misma idea, otra estación." },
+    { id: "sant-jordi", m: 4, d: 23, name: "Sant Jordi", flower: "Una rosa roja y un libro", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "Cataluña",
+      story: "Según la leyenda, de la sangre del dragón que venció Sant Jordi brotó un rosal. Barcelona se llena de puestos de rosas y libros; el libro se sumó en el siglo XX y coincide con el Día Internacional del Libro." },
+    { id: "muguet", m: 5, d: 1, name: "Muguet du 1er mai", flower: "Lirio de los valles (muguet)", color: "blanco", petals: 6, type: "clasico", img: "muguet",
+      region: "Francia",
+      story: "Desde el rey Carlos IX (1561) se regala un ramito de muguet el 1 de mayo para desear suerte. Ese día la venta callejera de muguet está tolerada sin licencia." },
+    { id: "madre-es", rule: { m: 5, wd: 0, n: 1 }, ruleText: "1.er domingo de mayo", name: "Día de la Madre", flower: "Claveles, rosas o peonías", color: "rosa", petals: 8, type: "clasico", img: "peonia",
+      region: "España y Portugal",
+      story: "En España se celebra el primer domingo de mayo, el mes que la tradición católica dedica a la Virgen. Claveles y peonías son los clásicos." },
+    { id: "madre-mx", m: 5, d: 10, name: "Día de las Madres", flower: "Rosas y claveles", color: "rosa", petals: 5, type: "clasico", img: "ramo-rosas",
+      region: "México, Guatemala y El Salvador",
+      story: "En México es fecha fija desde 1922, cuando el periódico Excélsior impulsó la celebración. Serenata, comida familiar y un ramo que no puede faltar." },
+    { id: "madre-mayo2", rule: { m: 5, wd: 0, n: 2 }, ruleText: "2.º domingo de mayo", name: "Día de la Madre", flower: "Claveles", color: "rosa", petals: 8, type: "clasico", img: "clavel",
+      region: "EE. UU., Colombia, Perú, Chile, Venezuela, Brasil, Italia y más",
+      story: "Anna Jarvis impulsó la fecha en EE. UU. en 1908 y eligió el clavel, la flor favorita de su madre. Desde ahí se extendió a buena parte de América y Europa." },
+    { id: "rose-day-kr", m: 5, d: 14, name: "Rose Day", flower: "Rosas", color: "rosa", petals: 5, type: "clasico", img: "rosa-rosa",
+      region: "Corea del Sur",
+      story: "En Corea cada día 14 del mes tiene un tema para parejas. El de mayo es el de las rosas: si sigues K-dramas o K-pop, ya te sonará." },
+    { id: "namorados", m: 6, d: 12, name: "Dia dos Namorados", flower: "Rosas rojas", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "Brasil",
+      story: "El San Valentín brasileño cae en la víspera de San Antonio, el santo casamentero. Se popularizó en 1949 con una campaña publicitaria y hoy es una de las fechas más fuertes del año allí." },
+    { id: "novia", m: 8, d: 1, name: "Día de la Novia", flower: "Rosas", color: "rosa", petals: 5, type: "trend", img: "rosa-rosa",
+      region: "México, Perú, Ecuador, Costa Rica", tag: "diadelanovia",
+      variant: "En algunos países se celebra el primer domingo de abril; el 1 de agosto es la versión que más circula en redes.",
+      story: "Viene del National Girlfriend Day estadounidense y en redes funciona como un segundo San Valentín. No es oficial en ningún país, pero las florerías ya lo tienen marcado." },
+    { id: "amor-amistad-co", rule: { m: 9, wd: 6, n: 3 }, ruleText: "3.er sábado de septiembre", name: "Amor y Amistad", flower: "Rosas y girasoles", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "Colombia",
+      story: "Colombia celebra su San Valentín en septiembre desde los años sesenta. Vale para pareja y para amigos, con amigo secreto incluido." },
+    { id: "amarillas", m: 9, d: 21, name: "Flores amarillas", flower: "Girasoles, tulipanes o rosas amarillas", color: "amarillo", petals: 10, type: "trend", img: "girasol",
+      region: "Toda Latinoamérica · empezó en Argentina, Chile, Perú y Uruguay", tag: "floresamarillas",
+      song: { title: "Flores amarillas", by: "Floricienta (Florencia Bertotti), 2004" },
+      variant: "Variante viral: el 22 para primas o tías, el 23 para mamá o abuela y el 24 para tu mejor amiga.",
+      story: "En Floricienta, la serie argentina de 2004, la protagonista sueña con que alguien le regale flores amarillas. En septiembre de 2021 TikTok recuperó la canción para recibir la primavera del hemisferio sur y el trend no ha parado desde entonces." },
+    { id: "novio", m: 10, d: 3, name: "Día del Novio", flower: "Flores azules o un ramo de Hot Wheels", color: "azul", petals: 6, type: "trend", img: "hortensia-azul",
+      region: "México, Perú, Chile, Colombia, España", tag: "diadelnovio",
+      story: "Nació en 2014 como #NationalBoyfriendDay y en Latinoamérica se volvió la respuesta a las flores amarillas: flores azules y ramos hechos con carritos Hot Wheels entre papel y listones." },
+    { id: "madre-ar", rule: { m: 10, wd: 0, n: 3 }, ruleText: "3.er domingo de octubre", name: "Día de la Madre", flower: "Rosas y liliums", color: "rosa", petals: 6, type: "clasico", img: "lilium",
+      region: "Argentina",
+      story: "Argentina celebra a las madres en primavera, el tercer domingo de octubre, así que coincide con la mejor época de flores del hemisferio sur." },
+    { id: "todos-santos", m: 11, d: 1, name: "Todos los Santos", flower: "Crisantemos", color: "blanco", petals: 12, type: "memoria", img: "crisantemo",
+      region: "España y buena parte de Latinoamérica",
+      story: "Las familias limpian y adornan las tumbas de sus seres queridos. El crisantemo es la flor de esta fecha: llevarlo es una forma de decir que se les recuerda." },
+    { id: "muertos", m: 11, d: 2, name: "Día de Muertos", flower: "Cempasúchil", color: "naranja", petals: 12, type: "memoria", img: "cempasuchil",
+      region: "México",
+      story: "El color y el olor del cempasúchil marcan el camino de las almas hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visuales de la celebración." },
+    { id: "moradas", m: 11, d: 9, name: "Flores moradas", flower: "Violetas o cualquier flor morada", color: "morado", petals: 5, type: "trend", img: "violeta",
+      region: "México, Perú, Colombia, España", tag: "floresmoradas",
+      song: { title: "Un ramito de violetas", by: "Cecilia, 1975 · versión viral de Zalo Reyes" },
+      variant: "En Colombia circula también la variante del 9 de octubre.",
+      story: "La canción cuenta que alguien enviaba violetas a una mujer cada 9 de noviembre, sin tarjeta; al final era su propio marido. En TikTok se regalan a tu “persona morada”: alguien que llegó hace poco y ya es imprescindible." },
+    { id: "hombre", m: 11, d: 19, name: "Día Internacional del Hombre", flower: "Flores azules, girasoles o Hot Wheels", color: "azul", petals: 8, type: "trend", img: "hortensia-azul",
+      region: "Latinoamérica, sobre todo en redes", tag: "diadelhombre",
+      story: "Se celebra desde 1999. En redes se popularizó la idea de que ellos también merecen flores: rosas azules, girasoles o ramos de Hot Wheels para romper la costumbre de que solo se regalan a mujeres." },
+    { id: "nochebuena", m: 12, d: 8, name: "Día Nacional de la Nochebuena", flower: "Flor de Nochebuena (cuetlaxóchitl)", color: "rojo", petals: 6, type: "clasico", img: "nochebuena",
+      region: "México",
+      story: "La flor de Navidad es mexicana: en náhuatl se llama cuetlaxóchitl. El 8 de diciembre se celebra su origen y arranca la temporada de regalarla y decorar con ella." },
+    { id: "guadalupe", m: 12, d: 12, name: "Virgen de Guadalupe", flower: "Rosas", color: "rojo", petals: 5, type: "clasico", img: "rosa-roja",
+      region: "México",
+      story: "Según la tradición, en 1531 Juan Diego llevó rosas del cerro del Tepeyac en su tilma, en pleno diciembre. Por eso cada 12 de diciembre millones de personas llevan rosas a la Basílica." }
+  ];
+
+  const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const MONTH_SHORT = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
+  const WEEKDAYS = ["L", "M", "X", "J", "V", "S", "D"];
+  const fmtWd = new Intl.DateTimeFormat("es", { weekday: "short" });
+  const fmtLong = new Intl.DateTimeFormat("es", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const fmtShort = new Intl.DateTimeFormat("es", { weekday: "short", day: "numeric", month: "short" });
+  const cap = s => s[0].toUpperCase() + s.slice(1);
+  const wd = d => fmtWd.format(d).replace(".", "");
+
+  // ---------- Estado ----------
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const state = { year: today.getFullYear(), month: today.getMonth(), sel: null, type: "all", colors: new Set(), saved: loadSaved() };
+
+  function loadSaved() {
+    try { return new Set(JSON.parse(localStorage.getItem("florario:saved") || "[]")); }
+    catch (e) { return new Set(); }
+  }
+  function persistSaved() {
+    try { localStorage.setItem("florario:saved", JSON.stringify([...state.saved])); } catch (e) { /* sin almacenamiento */ }
+  }
+
+  // ---------- Fechas ----------
+  function nthWeekday(y, m, wd, n) {
+    const first = new Date(y, m - 1, 1);
+    const offset = (wd - first.getDay() + 7) % 7;
+    return new Date(y, m - 1, 1 + offset + (n - 1) * 7);
+  }
+  function dateFor(ev, y) {
+    return ev.rule ? nthWeekday(y, ev.rule.m, ev.rule.wd, ev.rule.n) : new Date(y, ev.m - 1, ev.d);
+  }
+  function utc(d) { return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function dayDiff(a, b) { return Math.round((utc(b) - utc(a)) / 864e5); }
+  function daysInYear(y) { return (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0 ? 366 : 365; }
+  function doy(d) { return dayDiff(new Date(d.getFullYear(), 0, 1), d); }
+  function relative(d) {
+    const n = dayDiff(today, d);
+    if (n === 0) return "hoy";
+    if (n === 1) return "mañana";
+    if (n === -1) return "ayer";
+    return n > 0 ? `en ${n} días` : `hace ${-n} días`;
+  }
+  function upcoming(limit) {
+    const out = [];
+    for (const y of [today.getFullYear(), today.getFullYear() + 1]) {
+      for (const ev of EVENTS) {
+        const d = dateFor(ev, y);
+        const n = dayDiff(today, d);
+        if (n >= 0) out.push({ ev, d, n });
+      }
+    }
+    return out.sort((a, b) => a.n - b.n).slice(0, limit);
+  }
+
+  // ---------- Color ----------
+  // Texto oscuro o blanco según lo claro que sea el fondo
+  function textOn(hex) {
+    const [r, g, b] = [1, 3, 5].map(i => {
+      const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+      return c <= .03928 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4;
+    });
+    return .2126 * r + .7152 * g + .0722 * b > .3 ? "#1B2118" : "#FFFFFF";
+  }
+  const flowerHex = ev => COLORS[ev.color].hex;
+  // El blanco no se ve como acento sobre fondo claro: se usa un verde tallo suave
+  const accentHex = ev => ev.color === "blanco" ? "#9DBF9E" : flowerHex(ev);
+
+  // ---------- Flor SVG ----------
+  function petals(hex, s, count) {
+    let out = "";
+    for (let k = 0; k < count; k++) {
+      out += `<ellipse class="petal" cx="0" cy="${(-s * 0.5).toFixed(2)}" rx="${(s * (count > 8 ? 0.22 : 0.32)).toFixed(2)}" ry="${(s * 0.5).toFixed(2)}" transform="rotate(${(k * 360 / count).toFixed(1)})" fill="${hex}"/>`;
+    }
+    return out + `<circle class="pistil" r="${(s * 0.24).toFixed(2)}"/>`;
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c])); }
+  // decorative = true cuando el texto de al lado ya nombra la flor
+  function photo(ev, attrs = "", decorative = false) {
+    return `<img src="${imgSrc(ev.img)}" alt="${decorative ? "" : esc(IMAGES[ev.img].alt)}" ${attrs}>`;
+  }
+
+  // ---------- Filtros ----------
+  function matches(ev) {
+    if (state.type === "saved" && !state.saved.has(ev.id)) return false;
+    if (state.type !== "all" && state.type !== "saved" && ev.type !== state.type) return false;
+    if (state.colors.size && !state.colors.has(ev.color)) return false;
+    return true;
+  }
+  function monthItems(y, m) {
+    return EVENTS.map(ev => ({ ev, d: dateFor(ev, y) }))
+      .filter(o => o.d.getMonth() === m && matches(o.ev))
+      .sort((a, b) => a.d - b.d);
+  }
+
+  function renderChips() {
+    const counts = { all: EVENTS.length, saved: EVENTS.filter(e => state.saved.has(e.id)).length };
+    for (const t of Object.keys(TYPES)) counts[t] = EVENTS.filter(e => e.type === t).length;
+    const opts = [["all", "Todas"], ["clasico", "Clásicas"], ["trend", "Trends"], ["memoria", "Memoria"], ["saved", "♥ Guardadas"]];
+    document.getElementById("type-chips").innerHTML = opts.map(([k, label]) =>
+      `<button type="button" class="chip" data-type="${k}" aria-pressed="${state.type === k}">${label}<span class="n">${counts[k]}</span></button>`
+    ).join("");
+  }
+  function renderSwatches() {
+    const used = [...new Set(EVENTS.map(e => e.color))];
+    document.getElementById("color-swatches").innerHTML = used.map(c =>
+      `<button type="button" class="sw" data-color="${c}" aria-pressed="${state.colors.has(c)}" aria-label="${COLORS[c].label}" title="${COLORS[c].label}"><svg viewBox="-12 -12 24 24" aria-hidden="true">${petals(COLORS[c].hex, 11, 6)}</svg></button>`
+    ).join("");
+  }
+
+  // ---------- Rueda ----------
+  function polar(r, deg) {
+    const a = (deg - 90) * Math.PI / 180;
+    return [r * Math.cos(a), r * Math.sin(a)];
+  }
+  function arcPath(r1, r2, a0, a1) {
+    const large = a1 - a0 > 180 ? 1 : 0;
+    const p = (r, a) => polar(r, a).map(v => v.toFixed(2)).join(" ");
+    return `M${p(r2, a0)} A${r2} ${r2} 0 ${large} 1 ${p(r2, a1)} L${p(r1, a1)} A${r1} ${r1} 0 ${large} 0 ${p(r1, a0)}Z`;
+  }
+  function renderWheel() {
+    const y = state.year;
+    const total = daysInYear(y);
+    const ang = i => (i + 0.5) / total * 360;
+    const R_TICK = 142;
+    const RINGS = [164, 184, 204];
+    let s = "";
+
+    // Sectores de color por mes (clic = ir a ese mes)
+    for (let m = 0; m < 12; m++) {
+      const a0 = doy(new Date(y, m, 1)) / total * 360 + 0.6;
+      const a1 = (m === 11 ? total : doy(new Date(y, m + 1, 1))) / total * 360 - 0.6;
+      s += `<path class="w-arc${m === state.month ? " on" : ""}" data-month="${m}" d="${arcPath(100, 136, a0, a1)}" fill="${MONTH_COLORS[m]}" tabindex="0" role="button" aria-label="Ver ${MONTHS[m]}"/>`;
+    }
+    s += `<circle class="w-guide" r="${R_TICK}"/>`;
+
+    // Marcas de días y meses
+    for (let i = 0; i < total; i++) {
+      const d = new Date(y, 0, 1 + i);
+      const isMonth = d.getDate() === 1;
+      const [x1, y1] = polar(R_TICK - (isMonth ? 6 : 0), ang(i) - 0.5);
+      const [x2, y2] = polar(R_TICK + (isMonth ? 6 : 4), ang(i) - 0.5);
+      s += `<line class="w-tick${isMonth ? " m" : ""}" x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"/>`;
+    }
+    for (let m = 0; m < 12; m++) {
+      const mid = doy(new Date(y, m, 15));
+      const [x, yy] = polar(118, ang(mid));
+      s += `<text class="w-month" x="${x.toFixed(1)}" y="${yy.toFixed(1)}">${MONTH_SHORT[m]}</text>`;
+    }
+
+    // Hoy
+    if (y === today.getFullYear()) {
+      const [x, yy] = polar(R_TICK, ang(doy(today)));
+      s += `<circle class="w-today" cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="4"><title>Hoy</title></circle>`;
+    }
+
+    // Centro
+    s += `<text class="w-year" y="10">${y}</text>`;
+    s += `<text class="w-sub" y="32">${EVENTS.length} FECHAS CON FLORES</text>`;
+
+    // Flores: se apilan en anillos si caen a menos de 5 días de otra
+    const placed = EVENTS.map(ev => ({ ev, d: dateFor(ev, y) })).map(o => ({ ...o, i: doy(o.d) })).sort((a, b) => a.i - b.i);
+    const last = RINGS.map(() => -99);
+    let stems = "", flowers = "";
+    placed.forEach((o, idx) => {
+      let ring = last.findIndex(l => o.i - l >= 5);
+      if (ring === -1) ring = RINGS.length - 1;
+      last[ring] = o.i;
+      const r = RINGS[ring];
+      const [x, yy] = polar(r, ang(o.i));
+      const [sx, sy] = polar(R_TICK + 5, ang(o.i));
+      const [ex, ey] = polar(r - 7, ang(o.i));
+      const dim = matches(o.ev) ? "" : " dim";
+      stems += `<line class="w-stem${dim}" x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}"/>`;
+      const label = `${o.ev.name}, ${o.d.getDate()} de ${MONTHS[o.d.getMonth()]}. ${o.ev.flower}.`;
+      flowers += `<g class="ev${dim}" data-id="${o.ev.id}" transform="translate(${x.toFixed(1)} ${yy.toFixed(1)})" tabindex="0" role="button" aria-label="${esc(label)}" style="--i:${idx}">
+        <circle class="hit" r="11"/><g class="fl">${petals(flowerHex(o.ev), 8, o.ev.petals || 6)}</g></g>`;
+    });
+    document.getElementById("wheel").innerHTML = s + stems + flowers;
+  }
+
+  // ---------- Explorador por meses ----------
+  const explorer = document.getElementById("explorer");
+  const panel = document.getElementById("panel");
+
+  function renderMonths() {
+    let html = "";
+    for (let m = 0; m < 12; m++) {
+      const items = monthItems(state.year, m);
+      const mc = MONTH_COLORS[m];
+      const on = m === state.month;
+      const dots = items.slice(0, 4).map(o => `<i style="--c:${flowerHex(o.ev)}"></i>`).join("");
+      html += `<button type="button" class="mo${items.length ? "" : " empty"}" role="tab" id="tab-${m}" data-month="${m}"
+        aria-selected="${on}" aria-controls="panel" tabindex="${on ? 0 : -1}" style="--mc:${mc};--on:${textOn(mc)}"
+        aria-label="${cap(MONTHS[m])}: ${items.length} ${items.length === 1 ? "fecha" : "fechas"}">
+        <b>${MONTH_SHORT[m]}</b><span class="dots">${dots}</span><span class="cnt">${items.length}</span></button>`;
+    }
+    const strip = document.getElementById("months");
+    strip.innerHTML = html;
+    // En móvil la tira se desplaza: centra el mes activo
+    const active = strip.children[state.month];
+    if (strip.scrollWidth > strip.clientWidth) strip.scrollLeft = active.offsetLeft - strip.clientWidth / 2 + active.offsetWidth / 2;
+  }
+
+  function nextMonthWithItems(from) {
+    for (let k = 1; k <= 12; k++) {
+      const m = (from + k) % 12;
+      if (monthItems(state.year, m).length) return m;
+    }
+    return -1;
+  }
+
+  function renderPanel(dir) {
+    const y = state.year, m = state.month;
+    const items = monthItems(y, m);
+    if (!items.some(o => o.ev.id === state.sel)) {
+      const soon = items.find(o => dayDiff(today, o.d) >= 0);
+      state.sel = (soon || items[0] || {}).ev?.id || null;
+    }
+    panel.style.setProperty("--mc", MONTH_COLORS[m]);
+    panel.setAttribute("aria-labelledby", `tab-${m}`);
+
+    // Calendario: semana de lunes a domingo
+    const lead = (new Date(y, m, 1).getDay() + 6) % 7;
+    const days = new Date(y, m + 1, 0).getDate();
+    const byDay = new Map();
+    for (const o of items) {
+      const k = o.d.getDate();
+      if (!byDay.has(k)) byDay.set(k, []);
+      byDay.get(k).push(o);
+    }
+    let cal = WEEKDAYS.map(w => `<span class="wdh" aria-hidden="true">${w}</span>`).join("");
+    for (let i = 0; i < lead; i++) cal += `<span class="day blank" aria-hidden="true"></span>`;
+    for (let dd = 1; dd <= days; dd++) {
+      const isToday = y === today.getFullYear() && m === today.getMonth() && dd === today.getDate();
+      const list = byDay.get(dd);
+      if (!list) {
+        cal += `<span class="day${isToday ? " today" : ""}"${isToday ? ' title="Hoy"' : ""}>${dd}</span>`;
+        continue;
+      }
+      const first = list[0].ev;
+      const names = list.map(o => o.ev.name).join(" y ");
+      const sel = list.some(o => o.ev.id === state.sel);
+      cal += `<button type="button" class="day has${isToday ? " today" : ""}${sel ? " sel" : ""}" data-day="${dd}" data-ids="${list.map(o => o.ev.id).join(" ")}"
+        style="--fc:${accentHex(first)}" aria-label="${dd} de ${MONTHS[m]}: ${esc(names)}">
+        ${photo(first, 'loading="lazy" decoding="async"', true)}<span class="dn">${dd}</span>${list.length > 1 ? `<span class="more">+${list.length - 1}</span>` : ""}</button>`;
+    }
+
+    const count = items.length;
+    const all = EVENTS.filter(ev => dateFor(ev, y).getMonth() === m).length;
+    const sub = count
+      ? `${count} ${count === 1 ? "fecha" : "fechas"} con flores${count < all ? ` · ${all - count} ocultas por los filtros` : ""}`
+      : (all ? `${all} ${all === 1 ? "fecha oculta" : "fechas ocultas"} por los filtros` : "Mes sin fechas de flores");
+
+    panel.innerHTML = `
+      <div class="panel-head">
+        <button type="button" class="pn" data-step="-1" aria-label="Mes anterior">‹</button>
+        <div class="grow"><h2>${cap(MONTHS[m])} <span>${y}</span></h2><p>${sub}</p></div>
+        <button type="button" class="pn" data-step="1" aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="panel-body${dir ? (dir > 0 ? " from-right" : " from-left") : ""}">
+        <div class="cal">${cal}</div>
+        <div class="spot" id="spot" aria-live="polite"></div>
+      </div>`;
+    renderSpot();
+  }
+
+  function renderSpot() {
+    const spot = document.getElementById("spot");
+    if (!spot) return;
+    const items = monthItems(state.year, state.month);
+    panel.querySelectorAll(".day.has").forEach(b => b.classList.toggle("sel", b.dataset.ids.split(" ").includes(state.sel)));
+    if (!items.length) {
+      const nm = nextMonthWithItems(state.month);
+      spot.innerHTML = `<div class="spot-empty">
+        <svg viewBox="-12 -12 24 24" aria-hidden="true">${petals(MONTH_COLORS[state.month], 11, 8)}</svg>
+        <h3>${state.type === "saved" ? "Nada guardado este mes" : `${cap(MONTHS[state.month])} va sin flores`}</h3>
+        <p>${state.type === "saved" ? "Abre cualquier fecha y toca “Guardar” para tenerla aquí." : "No hay fechas que coincidan. Buen momento para comprarte un ramo a ti."}</p>
+        ${nm >= 0 ? `<button type="button" class="btn primary" data-goto="${nm}">Ir a ${MONTHS[nm]} →</button>` : `<button type="button" class="btn" data-reset>Quitar filtros</button>`}
+      </div>`;
+      return;
+    }
+    const idx = Math.max(0, items.findIndex(o => o.ev.id === state.sel));
+    const { ev, d } = items[idx];
+    const saved = state.saved.has(ev.id);
+    spot.style.setProperty("--fc", accentHex(ev));
+    spot.innerHTML = `
+      <button type="button" class="spot-photo" data-open="${ev.id}" aria-label="Ver ficha de ${esc(ev.name)}">
+        ${photo(ev)}
+        <span class="spot-date"><b>${d.getDate()}</b><small>${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${wd(d)}</small></span>
+        <span class="tag ${ev.type}">${TYPES[ev.type]}</span>
+        <span class="spot-name">${esc(ev.name)}</span>
+      </button>
+      <p class="spot-meta"><strong>${esc(ev.flower)}</strong> · ${esc(ev.region.split(" · ")[0])} · ${relative(d)}</p>
+      <p class="spot-story">${esc(ev.story)}</p>
+      <div class="spot-actions">
+        <button type="button" class="btn primary" data-open="${ev.id}">Ver ficha</button>
+        <button type="button" class="btn" data-save="${ev.id}" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
+        <span class="grow"></span>
+        ${items.length > 1 ? `<span class="pager">
+          <button type="button" data-ev-step="-1" aria-label="Fecha anterior del mes" ${idx === 0 ? "disabled" : ""}>‹</button>
+          <span>${idx + 1} / ${items.length}</span>
+          <button type="button" data-ev-step="1" aria-label="Fecha siguiente del mes" ${idx === items.length - 1 ? "disabled" : ""}>›</button>
+        </span>` : ""}
+      </div>`;
+  }
+
+  function renderExplorer(dir = 0) {
+    renderMonths();
+    renderPanel(dir);
+    document.querySelectorAll("#wheel .w-arc").forEach(a => a.classList.toggle("on", Number(a.dataset.month) === state.month));
+  }
+
+  function setMonth(m, opts = {}) {
+    const dir = opts.dir ?? Math.sign(m - state.month);
+    if (m < 0 || m > 11) {
+      state.year += m < 0 ? -1 : 1;
+      state.month = (m + 12) % 12;
+      state.sel = null;
+      renderAll(dir);
+    } else {
+      if (m !== state.month) state.sel = null;
+      state.month = m;
+      renderExplorer(dir);
+    }
+    if (opts.focusTab) document.getElementById(`tab-${state.month}`).focus();
+    if (opts.scroll) explorer.scrollIntoView({ block: "start" });
+  }
+  function selectEvent(id, opts = {}) {
+    state.sel = id;
+    renderSpot();
+    if (opts.reveal && window.innerWidth < 880) {
+      document.getElementById("spot").scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  explorer.addEventListener("click", e => {
+    const t = e.target.closest("button");
+    if (!t) return;
+    if (t.classList.contains("mo")) return setMonth(Number(t.dataset.month));
+    if (t.dataset.step) return setMonth(state.month + Number(t.dataset.step));
+    if (t.dataset.goto) return setMonth(Number(t.dataset.goto));
+    if (t.hasAttribute("data-reset")) { state.type = "all"; state.colors.clear(); return renderAll(); }
+    if (t.classList.contains("day")) {
+      // Si el día tiene varias fechas, cada toque pasa a la siguiente
+      const ids = t.dataset.ids.split(" ");
+      const k = ids.indexOf(state.sel);
+      return selectEvent(ids[(k + 1) % ids.length], { reveal: true });
+    }
+    if (t.dataset.evStep) {
+      const items = monthItems(state.year, state.month);
+      const k = items.findIndex(o => o.ev.id === state.sel) + Number(t.dataset.evStep);
+      if (items[k]) selectEvent(items[k].ev.id);
+      return;
+    }
+    if (t.dataset.open) return openDetail(t.dataset.open);
+    if (t.dataset.save) return toggleSaved(t.dataset.save);
+  });
+  // Con ratón, pasar por encima de un día ya lo muestra
+  explorer.addEventListener("pointerover", e => {
+    if (e.pointerType !== "mouse") return;
+    const t = e.target.closest(".day.has");
+    if (t && !t.dataset.ids.split(" ").includes(state.sel)) selectEvent(t.dataset.ids.split(" ")[0]);
+  });
+  document.getElementById("months").addEventListener("keydown", e => {
+    const step = { ArrowLeft: -1, ArrowRight: 1 }[e.key];
+    if (step) { e.preventDefault(); setMonth(state.month + step, { focusTab: true }); }
+    if (e.key === "Home") { e.preventDefault(); setMonth(0, { focusTab: true }); }
+    if (e.key === "End") { e.preventDefault(); setMonth(11, { focusTab: true }); }
+  });
+  // Deslizar el panel en móvil cambia de mes
+  let swipe = null;
+  panel.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") swipe = { x: e.clientX, y: e.clientY }; });
+  panel.addEventListener("pointerup", e => {
+    if (!swipe) return;
+    const dx = e.clientX - swipe.x, dy = e.clientY - swipe.y;
+    swipe = null;
+    if (Math.abs(dx) > 60 && Math.abs(dy) < 50) setMonth(state.month + (dx < 0 ? 1 : -1));
+  });
+  panel.addEventListener("pointercancel", () => { swipe = null; });
+
+  // ---------- Cinta de próximas fechas ----------
+  function renderTicker() {
+    const group = upcoming(10).map(({ ev, d, n }) =>
+      `<button type="button" class="tk" data-id="${ev.id}" data-year="${d.getFullYear()}" style="--fc:${accentHex(ev)}">
+        ${photo(ev, 'loading="lazy"', true)}<span><b>${esc(ev.name)}</b><small>${d.getDate()} ${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${n === 0 ? "hoy" : n === 1 ? "mañana" : `en ${n} días`}</small></span></button>`
+    ).join("");
+    const label = `<span class="ticker-label">Próximas</span>`;
+    // Dos copias para que el bucle no tenga salto; la segunda queda oculta a lectores de pantalla
+    document.getElementById("ticker").innerHTML =
+      `<div class="ticker-group">${label}${group}</div>` +
+      `<div class="ticker-group" aria-hidden="true">${label}${group.replaceAll("<button ", '<button tabindex="-1" ')}</div>`;
+  }
+  document.getElementById("ticker").addEventListener("click", e => {
+    const b = e.target.closest(".tk");
+    if (b) openDetail(b.dataset.id, Number(b.dataset.year));
+  });
+
+  // ---------- Próxima fecha ----------
+  function renderNext() {
+    const [nx] = upcoming(1);
+    const el = document.getElementById("next");
+    el.dataset.id = nx.ev.id;
+    el.dataset.year = nx.d.getFullYear();
+    el.style.setProperty("--fc", accentHex(nx.ev));
+    const lead = nx.n === 0 ? "Toca hoy" : nx.n === 1 ? "día para" : "días para";
+    el.innerHTML = `<span class="next-num">${nx.n === 0 ? "¡Hoy!" : nx.n}</span>
+      <span class="next-label">${lead} · ${fmtShort.format(nx.d)}</span>
+      <span class="next-name">${esc(nx.ev.name)}</span>
+      ${photo(nx.ev, 'class="next-photo"', true)}`;
+    el.setAttribute("aria-label", `Próxima fecha: ${nx.ev.name}, ${relative(nx.d)}. Ver detalles.`);
+  }
+
+  function renderAll(dir = 0) {
+    document.getElementById("year-label").textContent = state.year;
+    document.getElementById("eyebrow").textContent = `Calendario de flores · ${state.year}`;
+    renderChips();
+    renderSwatches();
+    renderWheel();
+    renderExplorer(dir);
+  }
+
+  // ---------- Guardar ----------
+  function toggleSaved(id) {
+    state.saved.has(id) ? state.saved.delete(id) : state.saved.add(id);
+    persistSaved();
+    renderChips();
+    if (state.type === "saved") renderExplorer(); else { renderMonths(); renderSpot(); }
+    if (dialog.open && current && current.ev.id === id) renderDetail();
+  }
+
+  // ---------- Detalle ----------
+  const dialog = document.getElementById("detail");
+  const dlgRoot = document.getElementById("dlg-root");
+  let current = null;
+
+  function openDetail(id, year = state.year) {
+    const ev = EVENTS.find(e => e.id === id);
+    if (!ev) return;
+    current = { ev, d: dateFor(ev, year) };
+    // El explorador de fondo salta a esa fecha
+    if (year !== state.year) { state.year = year; state.month = current.d.getMonth(); state.sel = id; renderAll(); }
+    else if (matches(ev)) { state.month = current.d.getMonth(); state.sel = id; renderExplorer(); }
+    renderDetail();
+    if (!dialog.open) dialog.showModal();
+    try { history.replaceState(null, "", "#" + id); } catch (e) { /* sin historial */ }
+  }
+  function reminderText({ ev, d }) {
+    return `${d.getDate()} de ${MONTHS[d.getMonth()]} · ${ev.name}: ${ev.flower}${ev.tag ? " #" + ev.tag : ""} (vía Florario)`;
+  }
+  function renderDetail() {
+    const { ev, d } = current;
+    const saved = state.saved.has(ev.id);
+    const im = IMAGES[ev.img];
+    const whenExtra = ev.rule ? ` · ${ev.ruleText}` : "";
+    dialog.style.setProperty("--fc", accentHex(ev));
+    dlgRoot.innerHTML = `
+      <figure class="dlg-photo">
+        ${photo(ev)}
+        <figcaption>Foto: <a href="${im.source}" target="_blank" rel="noopener">${esc(im.author)}</a> · ${im.license}</figcaption>
+        <button type="button" class="dlg-close" id="dlg-close" aria-label="Cerrar">×</button>
+      </figure>
+      <div class="dlg">
+        <div class="dlg-meta"><span class="tag ${ev.type}">${TYPES[ev.type]}</span><span>${esc(ev.region)}</span></div>
+        <h2 id="dlg-title">${esc(ev.name)}</h2>
+        <p class="dlg-when">${fmtLong.format(d)} <span>· ${relative(d)}${whenExtra}</span></p>
+        <p><span class="dlg-flower">Qué se regala:</span> ${esc(ev.flower)}</p>
+        <p>${esc(ev.story)}</p>
+        ${ev.song ? `<div class="song"><span class="song-icon" aria-hidden="true">♪</span><b>“${esc(ev.song.title)}”</b><small>${esc(ev.song.by)}</small></div>` : ""}
+        ${ev.variant ? `<p class="variant">${esc(ev.variant)}</p>` : ""}
+        <div class="dlg-actions">
+          <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
+          <button type="button" class="btn" id="dlg-copy">Copiar recordatorio</button>
+          ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">Ver #${ev.tag} ↗</a>` : ""}
+        </div>
+        <p class="status" id="dlg-status" role="status"></p>
+      </div>`;
+  }
+  dialog.addEventListener("click", e => {
+    if (e.target === dialog) { dialog.close(); return; }
+    const t = e.target.closest("button");
+    if (!t) return;
+    if (t.id === "dlg-close") dialog.close();
+    if (t.id === "dlg-save") toggleSaved(current.ev.id);
+    if (t.id === "dlg-copy") {
+      const text = reminderText(current);
+      const status = document.getElementById("dlg-status");
+      const fallback = () => { status.innerHTML = `Copia este texto: <code>${esc(text)}</code>`; };
+      try {
+        navigator.clipboard.writeText(text).then(() => { status.textContent = "Recordatorio copiado."; }, fallback);
+      } catch (err) { fallback(); }
+    }
+  });
+  dialog.addEventListener("close", () => {
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* sin historial */ }
+  });
+
+  // ---------- Tooltip de la rueda ----------
+  const tip = document.getElementById("tip");
+  function showTip(g) {
+    const ev = EVENTS.find(e => e.id === g.dataset.id);
+    const d = dateFor(ev, state.year);
+    tip.innerHTML = `${photo(ev, "", true)}<div><b>${esc(ev.name)}</b><span>${d.getDate()} ${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${esc(ev.flower)}</span></div>`;
+    tip.hidden = false;
+    const r = g.getBoundingClientRect();
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left = r.left + r.width / 2 - tw / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+    let top = r.top - th - 10;
+    if (top < 8) top = r.bottom + 10;
+    tip.style.left = left + "px";
+    tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+
+  const wheel = document.getElementById("wheel");
+  function activateWheel(target) {
+    const g = target.closest(".ev");
+    if (g) { hideTip(); openDetail(g.dataset.id); return true; }
+    const a = target.closest(".w-arc");
+    if (a) { setMonth(Number(a.dataset.month), { scroll: true }); return true; }
+    return false;
+  }
+  wheel.addEventListener("pointerover", e => { const g = e.target.closest(".ev"); if (g) showTip(g); });
+  wheel.addEventListener("pointerout", e => { const g = e.target.closest(".ev"); if (g && !g.contains(e.relatedTarget)) hideTip(); });
+  wheel.addEventListener("focusin", e => { const g = e.target.closest(".ev"); if (g) showTip(g); });
+  wheel.addEventListener("focusout", hideTip);
+  wheel.addEventListener("click", e => activateWheel(e.target));
+  wheel.addEventListener("keydown", e => {
+    if ((e.key === "Enter" || e.key === " ") && activateWheel(e.target)) e.preventDefault();
+  });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  // ---------- Controles ----------
+  document.getElementById("type-chips").addEventListener("click", e => {
+    const c = e.target.closest(".chip");
+    if (!c) return;
+    state.type = c.dataset.type;
+    renderChips(); renderWheel(); renderExplorer();
+  });
+  document.getElementById("color-swatches").addEventListener("click", e => {
+    const c = e.target.closest(".sw");
+    if (!c) return;
+    const k = c.dataset.color;
+    state.colors.has(k) ? state.colors.delete(k) : state.colors.add(k);
+    renderSwatches(); renderWheel(); renderExplorer();
+  });
+  document.getElementById("prev-year").addEventListener("click", () => { state.year--; state.sel = null; renderAll(-1); });
+  document.getElementById("next-year").addEventListener("click", () => { state.year++; state.sel = null; renderAll(1); });
+  document.getElementById("next").addEventListener("click", e => {
+    const b = e.currentTarget;
+    openDetail(b.dataset.id, Number(b.dataset.year));
+  });
+  document.getElementById("random").addEventListener("click", () => {
+    const pool = EVENTS.filter(matches);
+    const list = pool.length ? pool : EVENTS;
+    let pick;
+    do { pick = list[Math.floor(Math.random() * list.length)]; } while (list.length > 1 && current && pick.id === current.ev.id);
+    openDetail(pick.id);
+  });
+
+  // ---------- Inicio ----------
+  document.getElementById("logo-bloom").innerHTML = petals("#F2C230", 11, 10);
+  document.getElementById("random-bloom").innerHTML = petals("#EE7FA8", 11, 6);
+  document.getElementById("photo-credits").innerHTML = Object.entries(IMAGES).map(([k, im]) =>
+    `<li>${esc(im.alt)}: <a href="${im.source}" target="_blank" rel="noopener">${esc(im.author)}</a> · ${im.license}</li>`
+  ).join("");
+  renderNext();
+  renderTicker();
+  renderAll();
+  const hash = location.hash.slice(1);
+  if (hash && EVENTS.some(e => e.id === hash)) openDetail(hash);
+})();
+</script>
+</body>
+</html>
