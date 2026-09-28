@@ -23,9 +23,7 @@
 <meta property="article:modified_time" content="2026-09-28">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/imagenes/logo-florario.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/guia.css">
 <link rel="stylesheet" href="/comun.css">
 <script type="application/ld+json">
@@ -66,6 +64,7 @@
    "isPartOf": {
     "@id": "https://www.calendariodeflores.com/#website"
    },
+   "datePublished": "2026-09-28",
    "dateModified": "2026-09-28"
   },
   {
@@ -157,36 +156,48 @@
     {
      "@type": "ListItem",
      "position": 12,
+     "url": "https://www.calendariodeflores.com/amor-y-amistad/",
+     "name": "Amor y Amistad"
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
      "url": "https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/",
      "name": "Todos los Santos y Día de Muertos"
     },
     {
      "@type": "ListItem",
-     "position": 13,
+     "position": 14,
      "url": "https://www.calendariodeflores.com/nochebuena/",
      "name": "Nochebuena"
     },
     {
      "@type": "ListItem",
-     "position": 14,
+     "position": 15,
+     "url": "https://www.calendariodeflores.com/virgen-de-guadalupe/",
+     "name": "Virgen de Guadalupe"
+    },
+    {
+     "@type": "ListItem",
+     "position": 16,
      "url": "https://www.calendariodeflores.com/flores-para-cumpleanos/",
      "name": "Flores para cumpleaños"
     },
     {
      "@type": "ListItem",
-     "position": 15,
+     "position": 17,
      "url": "https://www.calendariodeflores.com/flores-para-aniversario/",
      "name": "Flores para aniversarios"
     },
     {
      "@type": "ListItem",
-     "position": 16,
+     "position": 18,
      "url": "https://www.calendariodeflores.com/flores-para-condolencias/",
      "name": "Flores de condolencias"
     },
     {
      "@type": "ListItem",
-     "position": 17,
+     "position": 19,
      "url": "https://www.calendariodeflores.com/significado-colores-flores/",
      "name": "Significado de los colores"
     }
@@ -200,8 +211,8 @@
 <div class="wrap">
   <header class="site-head">
     <div class="site-head-in">
-      <a class="brand" href="/" aria-label="Florario – Calendario de flores, ir a la portada"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
-      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/" aria-current="page">Guías</a></li></ul></nav>
+      <a class="brand" href="/"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
+      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/paises/">Países</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/" aria-current="page">Guías</a></li></ul></nav>
     </div>
   </header>
   <nav class="crumbs" aria-label="Estás aquí"><ol><li><a href="/">Calendario de flores</a></li><li aria-current="page">Guías para regalar flores</li></ol></nav>
@@ -211,44 +222,46 @@
         <p class="eyebrow">Calendario de flores · guías</p>
         <h1>Guías para <em>regalar flores</em></h1>
         <p class="lede">El origen de cada fecha y de cada trend, qué flores regalar, qué significa cada color y cómo acertar en ocasiones sin fecha fija, como cumpleaños, aniversarios o condolencias.</p>
-        <p class="byline"><span>Actualizado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
+        <p class="byline"><span>Publicado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
       </div>
     </div>
     <section class="related hub" aria-label="Guías para regalar flores">
       <div class="gcards">
-      <a class="gcard" href="/flores-amarillas/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas: Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" loading="lazy" decoding="async"><span><small>21 sep</small><b>Flores amarillas</b><i>Por qué se regalan el 21 de septiembre</i></span></a>
-<a class="gcard" href="/flores-amarillas-21-de-marzo/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas el 21 de marzo: Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" loading="lazy" decoding="async"><span><small>21 mar</small><b>Flores amarillas el 21 de marzo</b><i>La versión de primavera en México</i></span></a>
-<a class="gcard" href="/flores-azules/" style="--gc:#3F72E0"><img src="/imagenes/web/hortensia-azul-160.webp" width="160" height="160" alt="Flores azules: Hortensia azul y violeta, flor azul para el Día del Novio del 3 de octubre" loading="lazy" decoding="async"><span><small>3 oct · 19 nov</small><b>Flores azules</b><i>Día del Novio, Hot Wheels y Día del Hombre</i></span></a>
-<a class="gcard" href="/flores-moradas/" style="--gc:#8A4FD8"><img src="/imagenes/web/violeta-morada-160.webp" width="160" height="160" alt="Flores moradas: Violeta morada entre hojas, la flor del trend de flores moradas del 9 de noviembre" loading="lazy" decoding="async"><span><small>9 nov</small><b>Flores moradas</b><i>La persona morada y “Un ramito de violetas”</i></span></a>
-<a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas, un regalo clásico para San Valentín y el Día de las Madres" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
-<a class="gcard" href="/dia-de-la-mujer/" style="--gc:#F2C230"><img src="/imagenes/web/mimosa-acacia-dealbata-160.webp" width="160" height="160" alt="Día de la Mujer (8M): Ramas de mimosa con bolitas amarillas, la flor del 8 de marzo en Italia" loading="lazy" decoding="async"><span><small>8 mar</small><b>Día de la Mujer (8M)</b><i>Mimosa, tulipanes y cuándo tiene sentido regalar</i></span></a>
-<a class="gcard" href="/dia-del-padre/" style="--gc:#3F72E0"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Día del Padre: Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" loading="lazy" decoding="async"><span><small>19 mar · jun</small><b>Día del Padre</b><i>Flores para papá y la fecha en cada país</i></span></a>
-<a class="gcard" href="/sant-jordi/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Sant Jordi: Rosa roja abierta, la flor de San Valentín y de Sant Jordi" loading="lazy" decoding="async"><span><small>23 abr</small><b>Sant Jordi</b><i>Por qué se regala una rosa y un libro</i></span></a>
-<a class="gcard" href="/dia-de-la-madre/" style="--gc:#EE7FA8"><img src="/imagenes/web/peonia-rosa-160.webp" width="160" height="160" alt="Día de la Madre: Peonía rosa abierta, flor de temporada en mayo para el Día de la Madre" loading="lazy" decoding="async"><span><small>may · oct</small><b>Día de la Madre</b><i>Qué flores regalar y la fecha en cada país</i></span></a>
-<a class="gcard" href="/dia-del-maestro/" style="--gc:#F2C230"><img src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-160.webp" width="160" height="160" alt="Día del Maestro: Ramo de margaritas y flores silvestres en un bote de cristal, un regalo para cualquier día" loading="lazy" decoding="async"><span><small>15 may y más</small><b>Día del Maestro</b><i>Qué flores regalar a tu profe y cuándo es en cada país</i></span></a>
-<a class="gcard" href="/dia-de-la-novia/" style="--gc:#EE7FA8"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Día de la Novia: Rosa rosa pálido en un rosal, flor del Día de la Novia y del Rose Day coreano" loading="lazy" decoding="async"><span><small>1 ago</small><b>Día de la Novia</b><i>El segundo San Valentín de Latinoamérica</i></span></a>
-<a class="gcard" href="/todos-los-santos-dia-de-muertos/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Todos los Santos y Día de Muertos: Flores de cempasúchil naranjas y amarillas, la flor de la ofrenda del Día de Muertos" loading="lazy" decoding="async"><span><small>1 y 2 nov</small><b>Todos los Santos y Día de Muertos</b><i>Crisantemo y cempasúchil</i></span></a>
-<a class="gcard" href="/nochebuena/" style="--gc:#D7263D"><img src="/imagenes/web/flor-de-nochebuena-roja-160.webp" width="160" height="160" alt="Nochebuena: Plantas de nochebuena rojas, la flor mexicana de la Navidad que se celebra el 8 de diciembre" loading="lazy" decoding="async"><span><small>8 dic</small><b>Nochebuena</b><i>La flor mexicana de la Navidad</i></span></a>
-<a class="gcard" href="/flores-para-cumpleanos/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Flores para cumpleaños: Ramo de tulipanes de colores, típico del Galentine’s Day y de la primavera" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para cumpleaños</b><i>Qué ramo regalar según la persona</i></span></a>
-<a class="gcard" href="/flores-para-aniversario/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="Flores para aniversarios: Ramo de rosas rosas, un regalo clásico para San Valentín y el Día de las Madres" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para aniversarios</b><i>Qué flores regalar según los años juntos</i></span></a>
-<a class="gcard" href="/flores-para-condolencias/" style="--gc:#9DBF9E"><img src="/imagenes/web/lilium-blanco-y-rosa-160.webp" width="160" height="160" alt="Flores de condolencias: Lilium blanco y rosa, flor del Día de la Madre en Argentina y de los ramos de condolencias" loading="lazy" decoding="async"><span><small>Cuando hace falta</small><b>Flores de condolencias</b><i>Qué flores enviar a un funeral y qué escribir</i></span></a>
-<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores, típico del Galentine’s Day y de la primavera" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
+      <a class="gcard" href="/flores-amarillas/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas: Girasol amarillo abierto" loading="lazy" decoding="async"><span><small>21 sep</small><b>Flores amarillas</b><i>Por qué se regalan el 21 de septiembre</i></span></a>
+<a class="gcard" href="/flores-amarillas-21-de-marzo/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas el 21 de marzo: Girasol amarillo abierto" loading="lazy" decoding="async"><span><small>21 mar</small><b>Flores amarillas el 21 de marzo</b><i>La versión de primavera en México</i></span></a>
+<a class="gcard" href="/flores-azules/" style="--gc:#3F72E0"><img src="/imagenes/web/hortensia-azul-160.webp" width="160" height="160" alt="Flores azules: Hortensia azul y violeta" loading="lazy" decoding="async"><span><small>3 oct · 19 nov</small><b>Flores azules</b><i>Día del Novio, Hot Wheels y Día del Hombre</i></span></a>
+<a class="gcard" href="/flores-moradas/" style="--gc:#8A4FD8"><img src="/imagenes/web/violeta-morada-160.webp" width="160" height="160" alt="Flores moradas: Violeta morada entre hojas" loading="lazy" decoding="async"><span><small>9 nov</small><b>Flores moradas</b><i>La persona morada y “Un ramito de violetas”</i></span></a>
+<a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
+<a class="gcard" href="/dia-de-la-mujer/" style="--gc:#F2C230"><img src="/imagenes/web/mimosa-acacia-dealbata-160.webp" width="160" height="160" alt="Día de la Mujer (8M): Ramas de mimosa con bolitas amarillas" loading="lazy" decoding="async"><span><small>8 mar</small><b>Día de la Mujer (8M)</b><i>Mimosa, tulipanes y cuándo tiene sentido regalar</i></span></a>
+<a class="gcard" href="/dia-del-padre/" style="--gc:#3F72E0"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Día del Padre: Girasol amarillo abierto" loading="lazy" decoding="async"><span><small>19 mar · jun</small><b>Día del Padre</b><i>Flores para papá y la fecha en cada país</i></span></a>
+<a class="gcard" href="/sant-jordi/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Sant Jordi: Rosa roja abierta" loading="lazy" decoding="async"><span><small>23 abr</small><b>Sant Jordi</b><i>Por qué se regala una rosa y un libro</i></span></a>
+<a class="gcard" href="/dia-de-la-madre/" style="--gc:#EE7FA8"><img src="/imagenes/web/peonia-rosa-160.webp" width="160" height="160" alt="Día de la Madre: Peonía rosa abierta" loading="lazy" decoding="async"><span><small>may · oct</small><b>Día de la Madre</b><i>Qué flores regalar y la fecha en cada país</i></span></a>
+<a class="gcard" href="/dia-del-maestro/" style="--gc:#F2C230"><img src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-160.webp" width="160" height="160" alt="Día del Maestro: Ramo de margaritas y flores silvestres en un bote de cristal" loading="lazy" decoding="async"><span><small>15 may y más</small><b>Día del Maestro</b><i>Qué flores regalar a tu profe y cuándo es en cada país</i></span></a>
+<a class="gcard" href="/dia-de-la-novia/" style="--gc:#EE7FA8"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Día de la Novia: Rosa rosa pálido en un rosal" loading="lazy" decoding="async"><span><small>1 ago</small><b>Día de la Novia</b><i>El segundo San Valentín de Latinoamérica</i></span></a>
+<a class="gcard" href="/amor-y-amistad/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="Amor y Amistad: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>3.er sáb sep</small><b>Amor y Amistad</b><i>El San Valentín de Colombia, para pareja y amigos</i></span></a>
+<a class="gcard" href="/todos-los-santos-dia-de-muertos/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Todos los Santos y Día de Muertos: Flores de cempasúchil naranjas y amarillas" loading="lazy" decoding="async"><span><small>1 y 2 nov</small><b>Todos los Santos y Día de Muertos</b><i>Crisantemo y cempasúchil</i></span></a>
+<a class="gcard" href="/nochebuena/" style="--gc:#D7263D"><img src="/imagenes/web/flor-de-nochebuena-roja-160.webp" width="160" height="160" alt="Nochebuena: Plantas de nochebuena rojas" loading="lazy" decoding="async"><span><small>8 dic</small><b>Nochebuena</b><i>La flor mexicana de la Navidad</i></span></a>
+<a class="gcard" href="/virgen-de-guadalupe/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Virgen de Guadalupe: Rosa roja abierta" loading="lazy" decoding="async"><span><small>12 dic</small><b>Virgen de Guadalupe</b><i>Por qué se llevan rosas a la Basílica</i></span></a>
+<a class="gcard" href="/flores-para-cumpleanos/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Flores para cumpleaños: Ramo de tulipanes de colores" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para cumpleaños</b><i>Qué ramo regalar según la persona</i></span></a>
+<a class="gcard" href="/flores-para-aniversario/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="Flores para aniversarios: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para aniversarios</b><i>Qué flores regalar según los años juntos</i></span></a>
+<a class="gcard" href="/flores-para-condolencias/" style="--gc:#9DBF9E"><img src="/imagenes/web/lilium-blanco-y-rosa-160.webp" width="160" height="160" alt="Flores de condolencias: Lilium blanco y rosa" loading="lazy" decoding="async"><span><small>Cuando hace falta</small><b>Flores de condolencias</b><i>Qué flores enviar a un funeral y qué escribir</i></span></a>
+<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
       </div>
     </section>
-    <div class="prose hub-intro"><p>Las guías se revisan antes de cada fecha. Si echas en falta una tradición de tu país, <a href="/contacto/">cuéntanosla</a>.</p></div>
+    <div class="prose hub-intro"><p>Las guías se revisan antes de cada fecha. Si echas en falta una tradición de tu país, <a href="/contacto/">cuéntanosla</a>.</p><p>Cada guía cuenta de dónde viene la fecha (una canción, una leyenda, una ley o un hashtag), en qué países se celebra, qué flores se regalan y cuáles son una buena alternativa si no encuentras las típicas. Al pie de cada una están las fuentes consultadas: al menos dos medios de países distintos para cada trend.</p></div>
   </main>
   <footer class="site-foot">
     <div class="foot-grid">
       <div class="foot-about">
-        <h2>Florario – Calendario de flores</h2>
+        <p class="foot-h">Florario – Calendario de flores</p>
         <p>Todas las fechas del año para regalar flores en España y Latinoamérica: qué flor se regala, dónde y por qué, con flores de temporada y guías por fecha, mes y flor.</p>
       </div>
-      <nav aria-label="Calendario"><h2>Calendario</h2><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
-      <nav aria-label="Por mes"><h2>Por mes</h2><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
-      <nav aria-label="Por flor"><h2>Por flor</h2><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
-      <nav aria-label="Guías"><h2>Guías</h2><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
-      <nav aria-label="Por país"><h2>Por país</h2><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li></ul></nav>
-      <nav aria-label="Florario"><h2>Florario</h2><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
+      <nav aria-label="Calendario"><p class="foot-h">Calendario</p><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/calendario-de-flores-para-imprimir/">Calendario para imprimir</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
+      <nav aria-label="Por mes"><p class="foot-h">Por mes</p><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
+      <nav aria-label="Por flor"><p class="foot-h">Por flor</p><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
+      <nav aria-label="Guías"><p class="foot-h">Guías</p><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/amor-y-amistad/">Amor y Amistad</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/virgen-de-guadalupe/">Virgen de Guadalupe</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
+      <nav aria-label="Por país"><p class="foot-h">Por país</p><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li><li><a href="/paises/">Todos los países</a></li></ul></nav>
+      <nav aria-label="Florario"><p class="foot-h">Florario</p><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/prensa/">Prensa</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
     </div>
     
     <details><summary>Créditos de las fotos · Wikimedia Commons</summary><ul><li>Girasol amarillo abierto: <a href="https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG" target="_blank" rel="noopener">Böhringer Friedrich</a> · CC BY-SA 2.5</li><li>Hortensia azul y violeta: <a href="https://commons.wikimedia.org/wiki/File:Blue_Hydrangea_(common_names_hydrangea_or_hortensia).jpg" target="_blank" rel="noopener">Subhrajyoti07</a> · CC BY-SA 4.0</li><li>Violeta morada entre hojas: <a href="https://commons.wikimedia.org/wiki/File:Viola_odorata_20210226.jpg" target="_blank" rel="noopener">Uoaei1</a> · CC BY-SA 4.0</li><li>Ramo de rosas rosas: <a href="https://commons.wikimedia.org/wiki/File:Bouquet_de_roses_roses.jpg" target="_blank" rel="noopener">Jebulon</a> · CC BY-SA 3.0</li><li>Ramas de mimosa con bolitas amarillas: <a href="https://commons.wikimedia.org/wiki/File:Acacia_dealbata,_blomme,_Waterberg.jpg" target="_blank" rel="noopener">JMK</a> · CC BY-SA 3.0</li><li>Rosa roja abierta: <a href="https://commons.wikimedia.org/wiki/File:Red-Rose-Sitia-Crete.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</li><li>Peonía rosa abierta: <a href="https://commons.wikimedia.org/wiki/File:Cottage_garden_pink_peony_bloom_at_Boreham,_Essex,_England.jpg" target="_blank" rel="noopener">Acabashi</a> · CC BY-SA 4.0</li><li>Ramo de margaritas y flores silvestres en un bote de cristal: <a href="https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</li><li>Rosa rosa pálido en un rosal: <a href="https://commons.wikimedia.org/wiki/File:Pink_rose_bloom_of_a_climbing_rose_at_Boreham,_Essex,_England_1.jpg" target="_blank" rel="noopener">Acabashi</a> · CC BY-SA 4.0</li><li>Flores de cempasúchil naranjas y amarillas: <a href="https://commons.wikimedia.org/wiki/File:Tagetes_erecta_30012013.jpg" target="_blank" rel="noopener">Joydeep</a> · CC BY-SA 3.0</li><li>Plantas de nochebuena rojas: <a href="https://commons.wikimedia.org/wiki/File:Euphorbia_pulcherrima_0111.jpg" target="_blank" rel="noopener">Vengolis</a> · CC BY-SA 4.0</li><li>Ramo de tulipanes de colores: <a href="https://commons.wikimedia.org/wiki/File:Tulip-bouquet-vienna_(Unsplash).jpg" target="_blank" rel="noopener">Gábor Juhász</a> · CC0</li><li>Lilium blanco y rosa: <a href="https://commons.wikimedia.org/wiki/File:Lilium_%27Marco_Polo%27_Flower_2580px.jpg" target="_blank" rel="noopener">Derek Ramsey (Ram-Man) · Chanticleer Garden</a> · CC BY-SA 3.0</li></ul></details>

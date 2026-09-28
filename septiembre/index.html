@@ -23,9 +23,7 @@
 <meta property="article:modified_time" content="2026-09-28">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/imagenes/logo-florario.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/guia.css">
 <link rel="stylesheet" href="/comun.css">
 <script type="application/ld+json">
@@ -64,12 +62,17 @@
    "url": "https://www.calendariodeflores.com/sobre-florario/",
    "worksFor": {
     "@id": "https://www.calendariodeflores.com/#org"
-   }
+   },
+   "description": "Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla.",
+   "sameAs": [
+    "https://github.com/abenia26",
+    "https://www.linkedin.com/in/h%C3%A9ctor-abenia-c%C3%A1mara-3b5a5b413/"
+   ]
   },
   {
    "@type": "Article",
    "@id": "https://www.calendariodeflores.com/septiembre/#articulo",
-   "headline": "Flores de septiembre : el mes de las flores amarillas",
+   "headline": "Flores de septiembre: el mes de las flores amarillas",
    "description": "Qué flores se regalan en septiembre: flores amarillas el 21 de septiembre, Amor y Amistad en Colombia, Día del Maestro en Argentina, y las flores de temporada en cada región.",
    "image": "https://www.calendariodeflores.com/imagenes/girasol.jpg",
    "inLanguage": "es",
@@ -155,44 +158,24 @@
    ]
   },
   {
-   "@type": "Event",
-   "name": "Amor y Amistad 2027: rosas y girasoles",
-   "startDate": "2027-09-18",
-   "endDate": "2027-09-18",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Colombia",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "CO"
+   "@type": "ItemList",
+   "name": "Fechas para regalar flores: Septiembre",
+   "itemListOrder": "https://schema.org/ItemListOrderAscending",
+   "numberOfItems": 2,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "18 de septiembre de 2027: Amor y Amistad – Rosas y girasoles",
+     "url": "https://www.calendariodeflores.com/amor-y-amistad/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "21 de septiembre de 2027: Flores amarillas – Girasoles, tulipanes o rosas amarillas",
+     "url": "https://www.calendariodeflores.com/flores-amarillas/"
     }
-   },
-   "description": "Colombia celebra su San Valentín en septiembre desde los años sesenta. Vale para pareja y para amigos, con amigo secreto incluido.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/san-valentin/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Flores amarillas 2027: girasoles, tulipanes o rosas amarillas",
-   "startDate": "2027-09-21",
-   "endDate": "2027-09-21",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Toda Latinoamérica"
-   },
-   "description": "En Floricienta, la serie argentina de 2004, la protagonista sueña con que alguien le regale flores amarillas. En septiembre de 2021 TikTok recuperó la canción para recibir la primavera del hemisferio sur y el trend no ha parado desde entonces.",
-   "image": "https://www.calendariodeflores.com/imagenes/girasol.jpg",
-   "url": "https://www.calendariodeflores.com/flores-amarillas/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
+   ]
   }
  ]
 }
@@ -202,8 +185,8 @@
 <div class="wrap">
   <header class="site-head">
     <div class="site-head-in">
-      <a class="brand" href="/" aria-label="Florario – Calendario de flores, ir a la portada"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
-      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/" aria-current="page">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/">Guías</a></li></ul></nav>
+      <a class="brand" href="/"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
+      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/" aria-current="page">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/paises/">Países</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/">Guías</a></li></ul></nav>
     </div>
   </header>
   <nav class="crumbs" aria-label="Estás aquí">
@@ -217,11 +200,11 @@
           <p class="eyebrow">Calendario de flores · septiembre</p>
           <h1>Flores de <em>septiembre</em>: el mes de las flores amarillas</h1>
           <p class="lede">Septiembre es el mes del trend más grande del calendario: flores amarillas el 21. También trae Amor y Amistad en Colombia y la primavera a todo el hemisferio sur.</p>
-          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Actualizado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
+          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Publicado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
           <a class="next" href="/#amor-amistad-co" data-when="9-w6-3 9-21" data-names="Amor y Amistad|Flores amarillas" data-ids="amor-amistad-co|amarillas"><span class="next-num">18</span><span class="next-label">de septiembre de 2027</span><span class="next-name">Amor y Amistad</span><span class="next-go" aria-hidden="true">→</span></a>
         </div>
         <figure class="hero-photo">
-          <picture><source type="image/avif" srcset="/imagenes/web/girasol-amarillo-480.avif 480w, /imagenes/web/girasol-amarillo-960.avif 960w" sizes="(min-width: 880px) 380px, 90vw"><img src="/imagenes/web/girasol-amarillo-960.webp" srcset="/imagenes/web/girasol-amarillo-480.webp 480w, /imagenes/web/girasol-amarillo-960.webp 960w" sizes="(min-width: 880px) 380px, 90vw" width="960" height="960" alt="Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" fetchpriority="high"></picture>
+          <picture><source type="image/avif" srcset="/imagenes/web/girasol-amarillo-480.avif 480w, /imagenes/web/girasol-amarillo-960.avif 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))"><img src="/imagenes/web/girasol-amarillo-960.webp" srcset="/imagenes/web/girasol-amarillo-480.webp 480w, /imagenes/web/girasol-amarillo-960.webp 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))" width="960" height="960" alt="Girasol amarillo abierto" fetchpriority="high"></picture>
           <svg class="hero-bloom" viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg>
           <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG" target="_blank" rel="noopener">Böhringer Friedrich</a> · CC BY-SA 2.5</figcaption>
         </figure>
@@ -238,7 +221,7 @@
         </nav>
         <div class="prose">
         <h2 id="fechas">Fechas para regalar flores en septiembre</h2>
-<div class="dtable-wrap"><table class="dtable"><caption>Fechas con flores en septiembre de 2026</caption><thead><tr><th scope="col">Fecha 2026</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-amor-amistad-co" style="--dc:#D7263D"><td class="when"><time datetime="2026-09-19">sáb 19 sep</time><small>2027: <time datetime="2027-09-18">18 sep</time></small></td><td><span class="ev-name"><a href="/san-valentin/">Amor y Amistad</a></span><p class="why">Colombia celebra su San Valentín en septiembre desde los años sesenta. Vale para pareja y para amigos, con amigo secreto incluido.</p></td><td data-label="Flor">Rosas y girasoles</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Colombia</td></tr><tr id="f-amarillas" style="--dc:#F2C230"><td class="when"><time datetime="2026-09-21">lun 21 sep</time><small>cada año</small></td><td><span class="ev-name"><a href="/flores-amarillas/">Flores amarillas</a></span><p class="why">En Floricienta, la serie argentina de 2004, la protagonista sueña con que alguien le regale flores amarillas. En septiembre de 2021 TikTok recuperó la canción para recibir la primavera del hemisferio sur y el trend no ha parado desde entonces.</p></td><td data-label="Flor">Girasoles, tulipanes o rosas amarillas</td><td data-label="Color"><span class="swatch">Amarillo</span></td><td data-label="Dónde">Toda Latinoamérica · empezó en Argentina, Chile, Perú y Uruguay</td></tr></tbody></table></div>
+<div class="dtable-wrap"><table class="dtable"><caption>Fechas con flores en septiembre de 2027</caption><thead><tr><th scope="col">Fecha</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-amor-amistad-co" style="--dc:#D7263D"><td class="when"><time datetime="2027-09-18">sáb 18 sep 2027</time><small>3.er sábado de septiembre</small></td><td><span class="ev-name"><a href="/amor-y-amistad/">Amor y Amistad</a></span><p class="why">Colombia celebra su San Valentín en septiembre desde los años sesenta. Vale para pareja y para amigos, con amigo secreto incluido.</p></td><td data-label="Flor">Rosas y girasoles</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Colombia</td></tr><tr id="f-amarillas" style="--dc:#F2C230"><td class="when"><time datetime="2027-09-21">mar 21 sep 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/flores-amarillas/">Flores amarillas</a></span><p class="why">En Floricienta, la serie argentina de 2004, la protagonista sueña con que alguien le regale flores amarillas. En septiembre de 2021 TikTok recuperó la canción para recibir la primavera del hemisferio sur y el trend no ha parado desde entonces.</p></td><td data-label="Flor">Girasoles, tulipanes o rosas amarillas</td><td data-label="Color"><span class="swatch">Amarillo</span></td><td data-label="Dónde">Toda Latinoamérica · empezó en Argentina, Chile, Perú y Uruguay</td></tr></tbody></table></div>
 <p>El <strong>21 de septiembre</strong> es la fecha de <a href="/flores-amarillas/">flores amarillas</a>: en Floricienta, la serie argentina de 2004, la protagonista soñaba con que alguien le regalara flores amarillas, y en 2021 TikTok convirtió la canción en tradición para recibir la primavera del hemisferio sur. Hoy es una de las semanas de más venta en las floristerías de toda Latinoamérica, y cada vez más también en España. En redes circula además la cadena del 22, 23 y 24 para primas, madres y mejores amigas.</p>
 <p>En <strong>Colombia</strong>, el tercer sábado del mes es <strong>Amor y Amistad</strong>, su San Valentín, con rosas, girasoles y amigo secreto. Otras fechas por país:</p>
 <ul>
@@ -265,8 +248,9 @@
         <section class="remind" id="recuerdamelo" aria-labelledby="recuerdamelo-t">
           <h2 id="recuerdamelo-t">Recuérdamelo 3 días antes</h2>
           <p>Descarga el recordatorio y ábrelo con el calendario del móvil: se repite cada año y te avisa tres días antes para que te dé tiempo a encargar el ramo.</p>
-          <div class="remind-actions"><a class="btn primary" href="/recordatorios/amor-amistad-co.ics" download>Amor y Amistad (.ics)</a><a class="btn primary" href="/recordatorios/amarillas.ics" download>Flores amarillas (.ics)</a><a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Comprar%20flores%3A%20Amor%20y%20Amistad%20%2818%20de%20septiembre%29&amp;dates=20270915/20270916&amp;details=Rosas%20y%20girasoles.%20Colombia%20celebra%20su%20San%20Valent%C3%ADn%20en%20septiembre%20desde%20los%20a%C3%B1os%20sesenta.%20Vale%20para%20pareja%20y%20para%20amigos%2C%20con%20amigo%20secreto%20incluido.%20M%C3%A1s%20en%20https%3A//www.calendariodeflores.com/san-valentin/" target="_blank" rel="noopener">Google Calendar ↗</a></div>
+          <div class="remind-actions"><a class="btn primary" href="/recordatorios/amor-amistad-co.ics" download>Amor y Amistad (.ics)</a><a class="btn primary" href="/recordatorios/amarillas.ics" download>Flores amarillas (.ics)</a><a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Comprar%20flores%3A%20Amor%20y%20Amistad%20%2818%20de%20septiembre%29&amp;dates=20270915/20270916&amp;details=Rosas%20y%20girasoles.%20Colombia%20celebra%20su%20San%20Valent%C3%ADn%20en%20septiembre%20desde%20los%20a%C3%B1os%20sesenta.%20Vale%20para%20pareja%20y%20para%20amigos%2C%20con%20amigo%20secreto%20incluido.%20M%C3%A1s%20en%20https%3A//www.calendariodeflores.com/amor-y-amistad/" target="_blank" rel="noopener">Google Calendar ↗</a></div>
         </section>
+        <div class="share"><p>¿Conoces a alguien que siempre llega tarde a estas fechas? Pásaselo.</p><div class="share-actions"><a class="btn" href="https://wa.me/?text=Flores%20de%20septiembre%3A%20flores%20amarillas%20y%20Amor%20y%20Amistad%20https%3A//www.calendariodeflores.com/septiembre/" target="_blank" rel="noopener">Compartir por WhatsApp</a><button type="button" class="btn" data-share data-url="https://www.calendariodeflores.com/septiembre/" data-title="Flores de septiembre: flores amarillas y Amor y Amistad" hidden>Compartir</button></div><p class="share-status" role="status"></p></div>
         <section id="preguntas" aria-labelledby="preguntas-t">
           <h2 id="preguntas-t">Preguntas frecuentes</h2>
           <div class="faq">
@@ -277,19 +261,19 @@
 <details><summary>¿Por qué se agotan los girasoles en septiembre?</summary><p>Porque el 21 de septiembre todo el mundo los busca a la vez y en el hemisferio sur todavía no es su temporada natural. Encarga con varios días de margen.</p></details>
           </div>
         </section>
-        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM), apasionado de la programación y de su mujer. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
+        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
         </div>
       </div>
     </article>
     <section class="related" aria-labelledby="related-t">
       <h2 id="related-t">Sigue explorando</h2>
       <div class="gcards">
-      <a class="gcard" href="/flores-amarillas/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas: Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" loading="lazy" decoding="async"><span><small>21 sep</small><b>Flores amarillas</b><i>Por qué se regalan el 21 de septiembre</i></span></a>
-<a class="gcard" href="/girasol/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Girasol: Girasol amarillo abierto, la flor del trend de flores amarillas del 21 de septiembre" loading="lazy" decoding="async"><span><small>Por flor</small><b>Girasol</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas, un regalo clásico para San Valentín y el Día de las Madres" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
-<a class="gcard" href="/agosto/" style="--gc:#F59E6B"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Flores de agosto: Rosa rosa pálido en un rosal, flor del Día de la Novia y del Rose Day coreano" loading="lazy" decoding="async"><span><small>Por mes</small><b>Flores de agosto</b><i>1 fecha y flores de temporada</i></span></a>
-<a class="gcard" href="/octubre/" style="--gc:#3F72E0"><img src="/imagenes/web/hortensia-azul-160.webp" width="160" height="160" alt="Flores de octubre: Hortensia azul y violeta, flor azul para el Día del Novio del 3 de octubre" loading="lazy" decoding="async"><span><small>Por mes</small><b>Flores de octubre</b><i>2 fechas y flores de temporada</i></span></a>
-<a class="gcard" href="/colombia/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-160.webp" width="160" height="160" alt="Fechas de Colombia: Ramo de margaritas y flores silvestres en un bote de cristal, un regalo para cualquier día" loading="lazy" decoding="async"><span><small>Por país</small><b>Fechas de Colombia</b><i>12 fechas para regalar flores</i></span></a>
+      <a class="gcard" href="/flores-amarillas/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Flores amarillas: Girasol amarillo abierto" loading="lazy" decoding="async"><span><small>21 sep</small><b>Flores amarillas</b><i>Por qué se regalan el 21 de septiembre</i></span></a>
+<a class="gcard" href="/girasol/" style="--gc:#F2C230"><img src="/imagenes/web/girasol-amarillo-160.webp" width="160" height="160" alt="Girasol: Girasol amarillo abierto" loading="lazy" decoding="async"><span><small>Por flor</small><b>Girasol</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
+<a class="gcard" href="/agosto/" style="--gc:#F59E6B"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Flores de agosto: Rosa rosa pálido en un rosal" loading="lazy" decoding="async"><span><small>Por mes</small><b>Flores de agosto</b><i>1 fecha y flores de temporada</i></span></a>
+<a class="gcard" href="/octubre/" style="--gc:#3F72E0"><img src="/imagenes/web/hortensia-azul-160.webp" width="160" height="160" alt="Flores de octubre: Hortensia azul y violeta" loading="lazy" decoding="async"><span><small>Por mes</small><b>Flores de octubre</b><i>2 fechas y flores de temporada</i></span></a>
+<a class="gcard" href="/colombia/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-160.webp" width="160" height="160" alt="Fechas de Colombia: Ramo de margaritas y flores silvestres en un bote de cristal" loading="lazy" decoding="async"><span><small>Por país</small><b>Fechas de Colombia</b><i>12 fechas para regalar flores</i></span></a>
       </div>
     </section>
     <section class="cta" aria-labelledby="cta-t">
@@ -304,15 +288,15 @@
   <footer class="site-foot">
     <div class="foot-grid">
       <div class="foot-about">
-        <h2>Florario – Calendario de flores</h2>
+        <p class="foot-h">Florario – Calendario de flores</p>
         <p>Todas las fechas del año para regalar flores en España y Latinoamérica: qué flor se regala, dónde y por qué, con flores de temporada y guías por fecha, mes y flor.</p>
       </div>
-      <nav aria-label="Calendario"><h2>Calendario</h2><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
-      <nav aria-label="Por mes"><h2>Por mes</h2><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/" aria-current="page">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
-      <nav aria-label="Por flor"><h2>Por flor</h2><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
-      <nav aria-label="Guías"><h2>Guías</h2><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
-      <nav aria-label="Por país"><h2>Por país</h2><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li></ul></nav>
-      <nav aria-label="Florario"><h2>Florario</h2><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
+      <nav aria-label="Calendario"><p class="foot-h">Calendario</p><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/calendario-de-flores-para-imprimir/">Calendario para imprimir</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
+      <nav aria-label="Por mes"><p class="foot-h">Por mes</p><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/" aria-current="page">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
+      <nav aria-label="Por flor"><p class="foot-h">Por flor</p><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
+      <nav aria-label="Guías"><p class="foot-h">Guías</p><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/amor-y-amistad/">Amor y Amistad</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/virgen-de-guadalupe/">Virgen de Guadalupe</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
+      <nav aria-label="Por país"><p class="foot-h">Por país</p><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li><li><a href="/paises/">Todos los países</a></li></ul></nav>
+      <nav aria-label="Florario"><p class="foot-h">Florario</p><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/prensa/">Prensa</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
     </div>
     
     <details><summary>Créditos de las fotos · Wikimedia Commons</summary><ul><li>Girasol amarillo abierto: <a href="https://commons.wikimedia.org/wiki/File:Sonnenblume_Helianthus_1.JPG" target="_blank" rel="noopener">Böhringer Friedrich</a> · CC BY-SA 2.5</li><li>Ramo de rosas rosas: <a href="https://commons.wikimedia.org/wiki/File:Bouquet_de_roses_roses.jpg" target="_blank" rel="noopener">Jebulon</a> · CC BY-SA 3.0</li><li>Rosa rosa pálido en un rosal: <a href="https://commons.wikimedia.org/wiki/File:Pink_rose_bloom_of_a_climbing_rose_at_Boreham,_Essex,_England_1.jpg" target="_blank" rel="noopener">Acabashi</a> · CC BY-SA 4.0</li><li>Hortensia azul y violeta: <a href="https://commons.wikimedia.org/wiki/File:Blue_Hydrangea_(common_names_hydrangea_or_hortensia).jpg" target="_blank" rel="noopener">Subhrajyoti07</a> · CC BY-SA 4.0</li><li>Ramo de margaritas y flores silvestres en un bote de cristal: <a href="https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</li></ul></details>

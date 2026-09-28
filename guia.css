@@ -5,7 +5,7 @@
   --bg: #F6F4EC;
   --surface: #FFFFFF;
   --ink: #1B2118;
-  --muted: #5F685A;
+  --muted: #525A4D;
   --line: #DCDDD0;
   --soft: #EEEDE3;
   --stem: #2F6B45;
@@ -454,3 +454,17 @@ a.pill:hover { border-color: var(--ink); }
 .prose > * + p, .prose > * + ul, .prose > * + ol, .prose > * + .note, .prose > * + .table-wrap, .prose > * + .dtable-wrap, .prose > * + .season-wrap { margin-top: 14px; }
 .prose > h2 + * { margin-top: 0; }
 .prose .table-wrap a, .prose .dtable a, .prose .season a { text-decoration-thickness: 1px; }
+
+/* ---------- Compartir ---------- */
+.share { display: grid; gap: 10px; margin-top: 28px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.share p { margin: 0; color: var(--muted); font-size: .94rem; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.share .share-status:empty { display: none; }
+.share .share-status { color: var(--ink); overflow-wrap: anywhere; }
+
+/* ---------- Calendario para imprimir y prensa ---------- */
+.pdf-previews { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+.pdf-preview { margin: 0; }
+.pdf-preview img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow); background: #fff; }
+.pdf-preview figcaption { margin-top: 8px; font-size: .9rem; }
+.prose pre.code { margin: 12px 0; padding: 14px 16px; border-radius: 14px; background: var(--soft); overflow-x: auto; font-family: var(--mono); font-size: .8rem; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }

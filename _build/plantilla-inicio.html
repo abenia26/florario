@@ -8,7 +8,7 @@
     --bg: #F6F4EC;
     --surface: #FFFFFF;
     --ink: #1B2118;
-    --muted: #5F685A;
+    --muted: #525A4D;
     --line: #DCDDD0;
     --soft: #EEEDE3;
     --stem: #2F6B45;
@@ -360,7 +360,7 @@
   .mo .dots { display: flex; gap: 3px; height: 8px; }
   .mo .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 1px var(--petal-edge) inset; }
   .mo .cnt { font-family: var(--mono); font-size: .68rem; color: var(--muted); line-height: 1; }
-  .mo.empty b, .mo.empty .cnt { opacity: .5; }
+  .mo.empty b, .mo.empty .cnt { color: var(--muted); }
   .mo[aria-selected="true"] { background: var(--mc); border-color: var(--mc); color: var(--on); box-shadow: 0 6px 18px color-mix(in srgb, var(--mc) 45%, transparent); }
   .mo[aria-selected="true"] .cnt { color: inherit; opacity: .8; }
   .mo[aria-selected="true"] .dots i { box-shadow: 0 0 0 1.5px var(--on); }
@@ -671,7 +671,7 @@
   <section class="hero" aria-labelledby="title">
     <div class="hero-copy">
       <p class="eyebrow" id="eyebrow">Calendario de flores <!--@YEAR--></p>
-      <h1 id="title">Calendario de flores: <em>qué flor regalar</em> en cada fecha del año</h1>
+      <h1 id="title">Calendario de flores <!--@YEAR_LABEL-->: <em>qué flor regalar</em> en cada fecha</h1>
       <p class="lede">Porque «no sabía que era hoy» ya no cuela. Las <!--@N_EVENTS--> fechas para regalar flores en España y Latinoamérica, las flores de temporada de cada mes y una cuenta atrás para que llegues a tiempo. Toca un mes de la rueda o una flor para ver qué se regala, dónde y por qué.</p>
       <!--@BYLINE-->
       <div class="hero-actions">
@@ -709,9 +709,9 @@
   </section>
 
   <section class="block" id="fechas" aria-labelledby="fechas-t">
-    <p class="eyebrow">Calendario de flores <!--@YEAR--></p>
-    <h2 id="fechas-t">Todas las fechas para regalar flores en <!--@YEAR--></h2>
-    <p>La lista completa, mes a mes: qué se celebra, qué flor se regala, de qué color, en qué países y por qué. Las fechas móviles (Día de la Madre, Día del Padre, Amor y Amistad) ya están calculadas para este año y el siguiente.</p>
+    <p class="eyebrow">Calendario de flores <!--@YEAR_LABEL--></p>
+    <h2 id="fechas-t"><!--@FECHAS_T--></h2>
+    <p>Las <!--@N_EVENTS--> fechas del año, empezando por la próxima: qué se celebra, qué flor se regala, de qué color, en qué países y por qué. Las fechas móviles (Día de la Madre, Día del Padre, Amor y Amistad) ya están calculadas con su año.</p>
     <!--@FECHAS-->
   </section>
 
@@ -873,7 +873,7 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c])); }
   // small = miniatura cuadrada de 160 px (casillas, cinta, tooltip); si no, foto completa con srcset
   function photo(ev, attrs = "", small = false) {
-    const alt = esc(IMAGES[ev.img].alt);
+    const alt = esc(`${ev.name}: ${IMAGES[ev.img].alt_corto}`);
     return small
       ? `<img src="${imgSrc(ev.img, 160)}" width="160" height="160" alt="${alt}" ${attrs}>`
       : `<img src="${imgSrc(ev.img)}" srcset="${imgSet(ev.img)}" sizes="(min-width: 880px) 560px, 100vw" alt="${alt}" ${attrs}>`;
@@ -990,9 +990,8 @@
       const on = m === state.month;
       const dots = items.slice(0, 4).map(o => `<i style="--c:${flowerHex(o.ev)}"></i>`).join("");
       html += `<button type="button" class="mo${items.length ? "" : " empty"}" role="tab" id="tab-${m}" data-month="${m}"
-        aria-selected="${on}" aria-controls="panel" tabindex="${on ? 0 : -1}" style="--mc:${mc};--on:${textOn(mc)}"
-        aria-label="${cap(MONTHS[m])}: ${items.length} ${items.length === 1 ? "fecha" : "fechas"}">
-        <b>${MONTH_SHORT[m]}</b><span class="dots">${dots}</span><span class="cnt">${items.length}</span></button>`;
+        aria-selected="${on}" aria-controls="panel" tabindex="${on ? 0 : -1}" style="--mc:${mc};--on:${textOn(mc)}">
+        <b>${MONTH_SHORT[m]}</b><span class="dots">${dots}</span><span class="cnt">${items.length}<span class="sr-only"> ${items.length === 1 ? "fecha" : "fechas"}</span></span></button>`;
     }
     const strip = document.getElementById("months");
     strip.innerHTML = html;
@@ -1084,8 +1083,8 @@
     const saved = state.saved.has(ev.id);
     spot.style.setProperty("--fc", accentHex(ev));
     spot.innerHTML = `
-      <button type="button" class="spot-photo" data-open="${ev.id}" aria-label="Ver ficha de ${esc(ev.name)}">
-        ${photo(ev)}
+      <button type="button" class="spot-photo" data-open="${ev.id}">
+        ${photo(ev).replace(/alt="[^"]*"/, 'alt=""')}
         <span class="spot-date"><b>${d.getDate()}</b><small>${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${wd(d)}</small></span>
         <span class="tag ${ev.type}">${TYPES[ev.type]}</span>
         <span class="spot-name">${esc(ev.name)}</span>
@@ -1206,8 +1205,8 @@
     el.innerHTML = `<span class="next-num">${nx.n === 0 ? "¡Hoy!" : nx.n}</span>
       <span class="next-label">${lead} · ${fmtShort.format(nx.d)}</span>
       <span class="next-name">${esc(nx.ev.name)}</span>
-      ${photo(nx.ev, 'class="next-photo"', true)}`;
-    el.setAttribute("aria-label", `Próxima fecha: ${nx.ev.name}, ${relative(nx.d)}. Ver detalles.`);
+      ${photo(nx.ev, 'class="next-photo"', true).replace(/alt="[^"]*"/, 'alt=""')}`;
+
   }
 
   function renderAll(dir = 0) {
@@ -1247,6 +1246,10 @@
   function reminderText({ ev, d }) {
     return `${d.getDate()} de ${MONTHS[d.getMonth()]} · ${ev.name}: ${ev.flower}${ev.tag ? " #" + ev.tag : ""} (vía Florario)`;
   }
+  const shareUrl = ev => `${location.origin}/#${ev.id}`;
+  function shareText({ ev, d }) {
+    return `${d.getDate()} de ${MONTHS[d.getMonth()]} · ${ev.name}: ${ev.flower}. Míralo en Florario:`;
+  }
   function renderDetail() {
     const { ev, d } = current;
     const saved = state.saved.has(ev.id);
@@ -1270,6 +1273,8 @@
         <div class="dlg-actions">
           <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
           <button type="button" class="btn" id="dlg-copy">Copiar recordatorio</button>
+          <a class="btn" href="https://wa.me/?text=${encodeURIComponent(shareText(current) + " " + shareUrl(ev))}" target="_blank" rel="noopener">Compartir por WhatsApp</a>
+          <button type="button" class="btn" id="dlg-share">${navigator.share ? "Compartir" : "Copiar enlace"}</button>
           ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">Ver #${ev.tag} ↗</a>` : ""}
           <a class="btn" href="/recordatorios/${ev.id}.ics" download title="Aviso 3 días antes, cada año">Recuérdamelo</a>
           <a class="btn" href="/${ev.guia}/">${esc(GUIDE_NAMES[ev.guia] || "Leer la guía")} →</a>
@@ -1283,6 +1288,17 @@
     if (!t) return;
     if (t.id === "dlg-close") dialog.close();
     if (t.id === "dlg-save") toggleSaved(current.ev.id);
+    if (t.id === "dlg-share") {
+      const status = document.getElementById("dlg-status");
+      const url = shareUrl(current.ev);
+      if (navigator.share) {
+        navigator.share({ title: `${current.ev.name} · Florario`, text: shareText(current), url }).catch(() => {});
+      } else {
+        const fallback = () => { status.innerHTML = `Copia este enlace: <code>${esc(url)}</code>`; };
+        try { navigator.clipboard.writeText(url).then(() => { status.textContent = "Enlace copiado."; }, fallback); }
+        catch (err) { fallback(); }
+      }
+    }
     if (t.id === "dlg-copy") {
       const text = reminderText(current);
       const status = document.getElementById("dlg-status");

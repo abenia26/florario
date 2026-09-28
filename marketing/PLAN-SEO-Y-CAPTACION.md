@@ -43,12 +43,12 @@ Objetivo: 15–25 enlaces de sitios relacionados en los próximos 3 meses. Lo qu
 
 | Tipo de sitio | Cómo encontrarlos | Qué les ofreces |
 |---|---|---|
-| Floristerías locales (ES, MX, AR, CO, CL, PE) con blog | Google: `floristería blog "día de la madre"`, `florería "flores amarillas" blog` | PDF del calendario para imprimir en tienda; enlace a su guía de fecha |
+| Floristerías locales (ES, MX, AR, CO, CL, PE) con blog | Google: `floristería blog "día de la madre"`, `florería "flores amarillas" blog` | Permiso por escrito para imprimir el PDF en tienda (es de uso personal por defecto); enlace a su guía de fecha |
 | Blogs de bodas | `blog de bodas flores de temporada` | Tabla de flores de temporada por mes (`/#temporada`), páginas de peonía, lilium, hortensia |
 | Blogs de jardinería | `blog jardinería calendario floración` | Páginas de cada flor y la tabla de temporada |
 | Blogs de maternidad, educación y regalos | `ideas regalo día del maestro`, `qué regalar día del padre` | Guías de Día del Maestro, Padre, Madre, cumpleaños |
 | Medios de tendencias (Infobae, Quién, Expansión, El Espectador, La Nación…) | Periodistas que ya escribieron del trend (mira las fuentes de cada guía) | Nota de prensa con datos antes de cada fecha (sección 3) |
-| Directorios y recursos educativos | Webs de colegios, bibliotecas, efemérides escolares | Calendario PDF como recurso de aula |
+| Directorios y recursos educativos | Webs de colegios, bibliotecas, efemérides escolares | Calendario PDF como recurso de aula (con permiso por escrito) |
 
 **Correo tipo (floristerías y blogs):**
 
@@ -58,7 +58,7 @@ Objetivo: 15–25 enlaces de sitios relacionados en los próximos 3 meses. Lo qu
 >
 > Soy [tu nombre], de Florario (calendariodeflores.com), un calendario con todas las fechas del año para regalar flores en España y Latinoamérica, con las flores de temporada de cada mes.
 >
-> He visto vuestro artículo sobre [tema] y creo que a vuestros lectores les puede servir nuestro calendario en PDF (2026 y 2027), gratuito y listo para imprimir: [enlace al PDF]. Si os encaja, podéis enlazarlo o usarlo citando a Florario.
+> He visto vuestro artículo sobre [tema] y creo que a vuestros lectores les puede servir nuestro calendario de flores para imprimir (PDF A4 gratis, con portada ilustrada): https://www.calendariodeflores.com/calendario-de-flores-para-imprimir/. Si preferís algo para la web, tenemos un widget con la próxima fecha que se actualiza solo: https://www.calendariodeflores.com/prensa/#widget. Si os encaja, podéis enlazarlo. Y si queréis imprimirlo para vuestra tienda o publicarlo, decídmelo y os doy permiso por escrito.
 >
 > Un saludo,
 > [firma]
@@ -164,6 +164,7 @@ Hashtags por fecha: `#floresamarillas`, `#diadelnovio`, `#floresazules`, `#flore
 
 ## 7. Mantenimiento
 
-- **Principios de diciembre:** en `_build/datos.py` cambia `SITE["year"]` a 2027 y `SITE["updated"]` a la fecha del cambio; ejecuta `python _build/build.py --pdf`. Se regeneran title, H1, tablas, PDF (2027 y 2028), `.ics` y sitemap.
-- **Antes de cada fecha trend:** revisa la guía, actualiza lo que haya cambiado, cambia `SITE["updated"]` y regenera (así `lastmod` y `dateModified` reflejan la revisión).
+- **Una vez al mes como mínimo:** ejecuta `python _build/build.py --pdf` y publica. El año del title (desde octubre, “2026-2027”), la tabla rodante de la portada y los PDF (año actual y siguiente) se calculan solos con la fecha del build; ya no hay que tocar ningún año a mano.
+- **Antes de cada fecha trend:** revisa la guía, actualiza lo que haya cambiado y pon `"updated"` a la fecha de hoy en la cabecera de su fragmento (`_build/paginas/<guía>.html`). Solo esa página cambia su `lastmod` y su `dateModified`.
+- **Widget y prensa:** en los correos a floristerías y blogs ofrece también el widget de la próxima fecha (`/prensa/#widget`) y la página del [calendario para imprimir](https://www.calendariodeflores.com/calendario-de-flores-para-imprimir/): son lo que más fácilmente se enlaza.
 - **Cada trimestre:** busca trends nuevos; añadir una fecha es añadir un objeto a `EVENTS` en `datos.py`.

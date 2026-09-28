@@ -16,8 +16,8 @@ RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=3SA
 SUMMARY:🌷 Amor y Amistad: Rosas y girasoles
 DESCRIPTION:Colombia celebra su San Valentín en septiembre desde los años
   sesenta. Vale para pareja y para amigos\, con amigo secreto incluido. Dó
- nde: Colombia. Guía: https://www.calendariodeflores.com/san-valentin/
-URL:https://www.calendariodeflores.com/san-valentin/
+ nde: Colombia. Guía: https://www.calendariodeflores.com/amor-y-amistad/
+URL:https://www.calendariodeflores.com/amor-y-amistad/
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY

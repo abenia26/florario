@@ -23,9 +23,7 @@
 <meta property="article:modified_time" content="2026-09-28">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/imagenes/logo-florario.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/guia.css">
 <link rel="stylesheet" href="/comun.css">
 <script type="application/ld+json">
@@ -64,7 +62,12 @@
    "url": "https://www.calendariodeflores.com/sobre-florario/",
    "worksFor": {
     "@id": "https://www.calendariodeflores.com/#org"
-   }
+   },
+   "description": "Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla.",
+   "sameAs": [
+    "https://github.com/abenia26",
+    "https://www.linkedin.com/in/h%C3%A9ctor-abenia-c%C3%A1mara-3b5a5b413/"
+   ]
   },
   {
    "@type": "Article",
@@ -155,44 +158,24 @@
    ]
   },
   {
-   "@type": "Event",
-   "name": "Todos los Santos 2026: crisantemos",
-   "startDate": "2026-11-01",
-   "endDate": "2026-11-01",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "España y buena parte de Latinoamérica"
-   },
-   "description": "Las familias limpian y adornan las tumbas de sus seres queridos. El crisantemo es la flor de esta fecha: llevarlo es una forma de decir que se les recuerda.",
-   "image": "https://www.calendariodeflores.com/imagenes/crisantemo.jpg",
-   "url": "https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Día de Muertos 2026: cempasúchil",
-   "startDate": "2026-11-02",
-   "endDate": "2026-11-02",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "México",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "MX"
+   "@type": "ItemList",
+   "name": "Fechas para regalar flores: Flores de condolencias",
+   "itemListOrder": "https://schema.org/ItemListOrderAscending",
+   "numberOfItems": 2,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "1 de noviembre de 2026: Todos los Santos – Crisantemos",
+     "url": "https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "2 de noviembre de 2026: Día de Muertos – Cempasúchil",
+     "url": "https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/"
     }
-   },
-   "description": "El color y el olor del cempasúchil marcan el camino de las almas hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visuales de la celebración.",
-   "image": "https://www.calendariodeflores.com/imagenes/cempasuchil.jpg",
-   "url": "https://www.calendariodeflores.com/todos-los-santos-dia-de-muertos/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
+   ]
   }
  ]
 }
@@ -202,8 +185,8 @@
 <div class="wrap">
   <header class="site-head">
     <div class="site-head-in">
-      <a class="brand" href="/" aria-label="Florario – Calendario de flores, ir a la portada"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
-      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/" aria-current="page">Guías</a></li></ul></nav>
+      <a class="brand" href="/"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
+      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/">Por flor</a></li><li><a href="/paises/">Países</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/" aria-current="page">Guías</a></li></ul></nav>
     </div>
   </header>
   <nav class="crumbs" aria-label="Estás aquí">
@@ -217,11 +200,11 @@
           <p class="eyebrow">Ocasión · cuando hace falta</p>
           <h1>Flores de <em>condolencias</em>: qué enviar y qué escribir</h1>
           <p class="lede">Cuando no sabes qué decir, las flores ayudan. Qué flores enviar a un funeral o a la familia, qué formato elegir, qué escribir en la tarjeta y cuándo es mejor no enviar flores.</p>
-          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Actualizado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
+          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Publicado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
           <a class="next" href="/#todos-santos" data-when="11-1 11-2" data-names="Todos los Santos|Día de Muertos" data-ids="todos-santos|muertos"><span class="next-num">1</span><span class="next-label">de noviembre de 2026</span><span class="next-name">Todos los Santos</span><span class="next-go" aria-hidden="true">→</span></a>
         </div>
         <figure class="hero-photo">
-          <picture><source type="image/avif" srcset="/imagenes/web/lilium-blanco-y-rosa-480.avif 480w, /imagenes/web/lilium-blanco-y-rosa-960.avif 960w" sizes="(min-width: 880px) 380px, 90vw"><img src="/imagenes/web/lilium-blanco-y-rosa-960.webp" srcset="/imagenes/web/lilium-blanco-y-rosa-480.webp 480w, /imagenes/web/lilium-blanco-y-rosa-960.webp 960w" sizes="(min-width: 880px) 380px, 90vw" width="960" height="786" alt="Lilium blanco y rosa, flor del Día de la Madre en Argentina y de los ramos de condolencias" fetchpriority="high"></picture>
+          <picture><source type="image/avif" srcset="/imagenes/web/lilium-blanco-y-rosa-480.avif 480w, /imagenes/web/lilium-blanco-y-rosa-960.avif 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))"><img src="/imagenes/web/lilium-blanco-y-rosa-960.webp" srcset="/imagenes/web/lilium-blanco-y-rosa-480.webp 480w, /imagenes/web/lilium-blanco-y-rosa-960.webp 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))" width="960" height="786" alt="Lilium blanco y rosa" fetchpriority="high"></picture>
           <svg class="hero-bloom" viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#9DBF9E"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#9DBF9E"/><circle class="pistil" r="2.64"/></svg>
           <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Lilium_%27Marco_Polo%27_Flower_2580px.jpg" target="_blank" rel="noopener">Derek Ramsey (Ram-Man) · Chanticleer Garden</a> · CC BY-SA 3.0</figcaption>
         </figure>
@@ -279,12 +262,13 @@
 
 <h2 id="despues">Flores después del funeral</h2>
 <p>Los días posteriores al entierro suelen ser los más duros: las visitas desaparecen y la casa se queda en silencio. Un ramo o una planta una o dos semanas después, o en el primer aniversario, dice “sigo aquí” de una forma que la familia recuerda. Y cada año, en fechas como Todos los Santos, llevar flores al cementerio es una manera de mantener viva la memoria:</p>
-<div class="dtable-wrap"><table class="dtable"><thead><tr><th scope="col">Fecha 2026</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-todos-santos" style="--dc:#9DBF9E"><td class="when"><time datetime="2026-11-01">dom 1 nov</time><small>cada año</small></td><td><span class="ev-name"><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos</a></span><p class="why">Las familias limpian y adornan las tumbas de sus seres queridos. El crisantemo es la flor de esta fecha: llevarlo es una forma de decir que se les recuerda.</p></td><td data-label="Flor">Crisantemos</td><td data-label="Color"><span class="swatch">Blanco</span></td><td data-label="Dónde">España y buena parte de Latinoamérica</td></tr><tr id="f-muertos" style="--dc:#F28C1B"><td class="when"><time datetime="2026-11-02">lun 2 nov</time><small>cada año</small></td><td><span class="ev-name"><a href="/todos-los-santos-dia-de-muertos/">Día de Muertos</a></span><p class="why">El color y el olor del cempasúchil marcan el camino de las almas hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visuales de la celebración.</p></td><td data-label="Flor">Cempasúchil</td><td data-label="Color"><span class="swatch">Naranja</span></td><td data-label="Dónde">México</td></tr></tbody></table></div>
+<div class="dtable-wrap"><table class="dtable"><thead><tr><th scope="col">Fecha</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-todos-santos" style="--dc:#9DBF9E"><td class="when"><time datetime="2026-11-01">dom 1 nov 2026</time><small>cada año</small></td><td><span class="ev-name"><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos</a></span><p class="why">Las familias limpian y adornan las tumbas de sus seres queridos. El crisantemo es la flor de esta fecha: llevarlo es una forma de decir que se les recuerda.</p></td><td data-label="Flor">Crisantemos</td><td data-label="Color"><span class="swatch">Blanco</span></td><td data-label="Dónde">España y buena parte de Latinoamérica</td></tr><tr id="f-muertos" style="--dc:#F28C1B"><td class="when"><time datetime="2026-11-02">lun 2 nov 2026</time><small>cada año</small></td><td><span class="ev-name"><a href="/todos-los-santos-dia-de-muertos/">Día de Muertos</a></span><p class="why">El color y el olor del cempasúchil marcan el camino de las almas hasta la ofrenda. Sus pétalos naranjas son uno de los símbolos visuales de la celebración.</p></td><td data-label="Flor">Cempasúchil</td><td data-label="Color"><span class="swatch">Naranja</span></td><td data-label="Dónde">México</td></tr></tbody></table></div>
         <section class="remind" id="recuerdamelo" aria-labelledby="recuerdamelo-t">
           <h2 id="recuerdamelo-t">Recuérdamelo 3 días antes</h2>
           <p>Descarga el recordatorio y ábrelo con el calendario del móvil: se repite cada año y te avisa tres días antes para que te dé tiempo a encargar el ramo.</p>
           <div class="remind-actions"><a class="btn primary" href="/recordatorios/todos-santos.ics" download>Todos los Santos (.ics)</a><a class="btn primary" href="/recordatorios/muertos.ics" download>Día de Muertos (.ics)</a><a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Comprar%20flores%3A%20Todos%20los%20Santos%20%281%20de%20noviembre%29&amp;dates=20261029/20261030&amp;details=Crisantemos.%20Las%20familias%20limpian%20y%20adornan%20las%20tumbas%20de%20sus%20seres%20queridos.%20El%20crisantemo%20es%20la%20flor%20de%20esta%20fecha%3A%20llevarlo%20es%20una%20forma%20de%20decir%20que%20se%20les%20recuerda.%20M%C3%A1s%20en%20https%3A//www.calendariodeflores.com/todos-los-santos-dia-de-muertos/" target="_blank" rel="noopener">Google Calendar ↗</a></div>
         </section>
+        <div class="share"><p>¿Conoces a alguien que siempre llega tarde a estas fechas? Pásaselo.</p><div class="share-actions"><a class="btn" href="https://wa.me/?text=Flores%20de%20condolencias%3A%20qu%C3%A9%20enviar%20a%20un%20funeral%20y%20qu%C3%A9%20escribir%20https%3A//www.calendariodeflores.com/flores-para-condolencias/" target="_blank" rel="noopener">Compartir por WhatsApp</a><button type="button" class="btn" data-share data-url="https://www.calendariodeflores.com/flores-para-condolencias/" data-title="Flores de condolencias: qué enviar a un funeral y qué escribir" hidden>Compartir</button></div><p class="share-status" role="status"></p></div>
         <section id="preguntas" aria-labelledby="preguntas-t">
           <h2 id="preguntas-t">Preguntas frecuentes</h2>
           <div class="faq">
@@ -295,19 +279,19 @@
 <details><summary>¿Se pueden enviar flores días después del funeral?</summary><p>Sí, y es un gesto muy valorado. Tras el entierro la familia suele quedarse sola; un ramo o una planta una o dos semanas después recuerda que sigues ahí.</p></details>
           </div>
         </section>
-        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM), apasionado de la programación y de su mujer. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
+        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
         </div>
       </div>
     </article>
     <section class="related" aria-labelledby="related-t">
       <h2 id="related-t">Sigue explorando</h2>
       <div class="gcards">
-      <a class="gcard" href="/lilium/" style="--gc:#EE7FA8"><img src="/imagenes/web/lilium-blanco-y-rosa-160.webp" width="160" height="160" alt="Lilium (azucena): Lilium blanco y rosa, flor del Día de la Madre en Argentina y de los ramos de condolencias" loading="lazy" decoding="async"><span><small>Por flor</small><b>Lilium (azucena)</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/crisantemo/" style="--gc:#9DBF9E"><img src="/imagenes/web/crisantemo-blanco-160.webp" width="160" height="160" alt="Crisantemo: Crisantemo blanco de pétalos largos, la flor de Todos los Santos" loading="lazy" decoding="async"><span><small>Por flor</small><b>Crisantemo</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/todos-los-santos-dia-de-muertos/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Todos los Santos y Día de Muertos: Flores de cempasúchil naranjas y amarillas, la flor de la ofrenda del Día de Muertos" loading="lazy" decoding="async"><span><small>1 y 2 nov</small><b>Todos los Santos y Día de Muertos</b><i>Crisantemo y cempasúchil</i></span></a>
-<a class="gcard" href="/cempasuchil/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Cempasúchil: Flores de cempasúchil naranjas y amarillas, la flor de la ofrenda del Día de Muertos" loading="lazy" decoding="async"><span><small>Por flor</small><b>Cempasúchil</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/rosa/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Rosa: Rosa roja abierta, la flor de San Valentín y de Sant Jordi" loading="lazy" decoding="async"><span><small>Por flor</small><b>Rosa</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores, típico del Galentine’s Day y de la primavera" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
+      <a class="gcard" href="/lilium/" style="--gc:#EE7FA8"><img src="/imagenes/web/lilium-blanco-y-rosa-160.webp" width="160" height="160" alt="Lilium (azucena): Lilium blanco y rosa" loading="lazy" decoding="async"><span><small>Por flor</small><b>Lilium (azucena)</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/crisantemo/" style="--gc:#9DBF9E"><img src="/imagenes/web/crisantemo-blanco-160.webp" width="160" height="160" alt="Crisantemo: Crisantemo blanco de pétalos largos" loading="lazy" decoding="async"><span><small>Por flor</small><b>Crisantemo</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/todos-los-santos-dia-de-muertos/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Todos los Santos y Día de Muertos: Flores de cempasúchil naranjas y amarillas" loading="lazy" decoding="async"><span><small>1 y 2 nov</small><b>Todos los Santos y Día de Muertos</b><i>Crisantemo y cempasúchil</i></span></a>
+<a class="gcard" href="/cempasuchil/" style="--gc:#F28C1B"><img src="/imagenes/web/flor-de-cempasuchil-160.webp" width="160" height="160" alt="Cempasúchil: Flores de cempasúchil naranjas y amarillas" loading="lazy" decoding="async"><span><small>Por flor</small><b>Cempasúchil</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/rosa/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Rosa: Rosa roja abierta" loading="lazy" decoding="async"><span><small>Por flor</small><b>Rosa</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
       </div>
     </section>
     <section class="cta" aria-labelledby="cta-t">
@@ -322,15 +306,15 @@
   <footer class="site-foot">
     <div class="foot-grid">
       <div class="foot-about">
-        <h2>Florario – Calendario de flores</h2>
+        <p class="foot-h">Florario – Calendario de flores</p>
         <p>Todas las fechas del año para regalar flores en España y Latinoamérica: qué flor se regala, dónde y por qué, con flores de temporada y guías por fecha, mes y flor.</p>
       </div>
-      <nav aria-label="Calendario"><h2>Calendario</h2><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
-      <nav aria-label="Por mes"><h2>Por mes</h2><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
-      <nav aria-label="Por flor"><h2>Por flor</h2><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
-      <nav aria-label="Guías"><h2>Guías</h2><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/" aria-current="page">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
-      <nav aria-label="Por país"><h2>Por país</h2><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li></ul></nav>
-      <nav aria-label="Florario"><h2>Florario</h2><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
+      <nav aria-label="Calendario"><p class="foot-h">Calendario</p><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/calendario-de-flores-para-imprimir/">Calendario para imprimir</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
+      <nav aria-label="Por mes"><p class="foot-h">Por mes</p><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
+      <nav aria-label="Por flor"><p class="foot-h">Por flor</p><ul><li><a href="/rosa/">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
+      <nav aria-label="Guías"><p class="foot-h">Guías</p><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/amor-y-amistad/">Amor y Amistad</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/virgen-de-guadalupe/">Virgen de Guadalupe</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/" aria-current="page">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
+      <nav aria-label="Por país"><p class="foot-h">Por país</p><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li><li><a href="/paises/">Todos los países</a></li></ul></nav>
+      <nav aria-label="Florario"><p class="foot-h">Florario</p><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/prensa/">Prensa</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
     </div>
     
     <details><summary>Créditos de las fotos · Wikimedia Commons</summary><ul><li>Lilium blanco y rosa: <a href="https://commons.wikimedia.org/wiki/File:Lilium_%27Marco_Polo%27_Flower_2580px.jpg" target="_blank" rel="noopener">Derek Ramsey (Ram-Man) · Chanticleer Garden</a> · CC BY-SA 3.0</li><li>Crisantemo blanco de pétalos largos: <a href="https://commons.wikimedia.org/wiki/File:%E8%8F%8A%E8%8A%B1-%E7%99%BD%E9%B6%B4_Chrysanthemum_morifolium_%27White_Crane%27_-%E5%8F%B0%E5%8C%97%E5%A3%AB%E6%9E%97%E5%AE%98%E9%82%B8_Taipei,_Taiwan-_(12010293154).jpg" target="_blank" rel="noopener">阿橋 HQ</a> · CC BY-SA 2.0</li><li>Flores de cempasúchil naranjas y amarillas: <a href="https://commons.wikimedia.org/wiki/File:Tagetes_erecta_30012013.jpg" target="_blank" rel="noopener">Joydeep</a> · CC BY-SA 3.0</li><li>Rosa roja abierta: <a href="https://commons.wikimedia.org/wiki/File:Red-Rose-Sitia-Crete.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</li><li>Ramo de tulipanes de colores: <a href="https://commons.wikimedia.org/wiki/File:Tulip-bouquet-vienna_(Unsplash).jpg" target="_blank" rel="noopener">Gábor Juhász</a> · CC0</li></ul></details>

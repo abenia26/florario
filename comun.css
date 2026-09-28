@@ -2,6 +2,29 @@
    tablas de fechas y temporada, firma del autor y recordatorios. Usa los tokens de
    index.html o guia.css. */
 
+/* ---------- Fuentes (alojadas en /fuentes/, licencia OFL; solo el subconjunto latin) ---------- */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fuentes/bricolage-grotesque-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fuentes/dm-mono-400-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fuentes/dm-mono-500-latin.woff2") format("woff2");
+}
+
 /* ---------- Cabecera fija ---------- */
 .site-head {
   position: sticky;
@@ -149,7 +172,7 @@
 }
 .foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px 28px; }
 .foot-grid .foot-about { grid-column: 1 / -1; display: grid; gap: 8px; max-width: 62ch; }
-.site-foot h2 { margin: 0 0 8px; font-family: var(--mono); font-size: .72rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.site-foot .foot-h { margin: 0 0 8px; font-family: var(--mono); font-size: .72rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .site-foot p { margin: 0; }
 .site-foot ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
 .site-foot a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line); }

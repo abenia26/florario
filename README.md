@@ -4,7 +4,7 @@ Calendario interactivo con todas las fechas del año en las que es tradición (o
 
 - 26 fechas: clásicas (San Valentín, Sant Jordi, Día de la Madre, Día del Padre…), trends (flores amarillas, azules, moradas, Día de la Novia…) y fechas de memoria.
 - Rueda del año, explorador por meses, filtros por tipo y color, fechas guardadas y “Recuérdamelo” (.ics con aviso 3 días antes).
-- 56 páginas: portada, 17 guías, 14 flores, 12 meses, 6 países (con hreflang), 3 índices y 4 páginas de confianza (sobre, contacto, privacidad, aviso legal).
+- 61 páginas: portada, 19 guías, 14 flores, 12 meses, 6 países (con hreflang), 4 índices, calendario para imprimir, prensa y 4 páginas de confianza (sobre, contacto, privacidad, aviso legal), más un widget insertable (`/widget/`, noindex).
 
 Web publicada: <https://www.calendariodeflores.com/>
 
@@ -13,26 +13,31 @@ Web publicada: <https://www.calendariodeflores.com/>
 La web es HTML estático, pero las páginas se generan con un script de Python sin dependencias:
 
 ```
-python _build/build.py          # páginas, portada, sitemap, .ics
-python _build/build.py --pdf    # además, los PDF (necesita Chrome o Edge)
+python _build/build.py          # páginas, portada, sitemap, .ics, widget
+python _build/build.py --pdf    # además, los PDF y sus vistas previas JPG (necesita Chrome o Edge)
 python _build/pines.py          # imágenes para Pinterest en marketing/pines/
 ```
 
 | Archivo | Qué es |
 |---|---|
 | `_build/datos.py` | **Fuente única de datos**: fechas (`EVENTS`), fotos, flores de temporada, países, guías y datos del sitio (`SITE`, con autor y titular). |
-| `_build/paginas/*.html` | Texto de cada página (cabecera JSON con title, description, FAQ… y el cuerpo en HTML). |
+| `_build/paginas/*.html` | Texto de cada página (cabecera JSON con title, description, FAQ, `published` y `updated`… y el cuerpo en HTML). |
 | `_build/plantilla-inicio.html` | Plantilla de la portada (CSS y JS del calendario interactivo). |
 | `_build/build.py` | Generador: escribe `index.html`, las carpetas de cada página, `sitemap.xml`, `recordatorios/*.ics`, `descargas/` y comprueba enlaces, anclas, JSON-LD, `alt` y H1. |
 | `comun.css` | Cabecera fija con menú, pie con enlaces internos, tablas de fechas y temporada. |
-| `guia.css`, `guia.js` | Estilos y cuenta atrás de las páginas interiores. |
+| `guia.css`, `guia.js` | Estilos, cuenta atrás y botón de compartir de las páginas interiores. |
+| `fuentes/` | Bricolage Grotesque y DM Mono en woff2 (subconjunto latin, licencia OFL), alojadas en la propia web. |
 | `imagenes/web/` | Fotos en AVIF y WebP (960, 480 y miniatura 160). Créditos en `imagenes/CREDITOS.md`. |
-| `descargas/` | Calendario de flores 2026 y 2027 en PDF y `.ics` con todas las fechas. |
-| `vercel.json`, `.vercelignore` | Barra final en las URLs, cabeceras de `.ics` e imágenes; `_build/` y `marketing/` no se publican. |
+| `descargas/` | Calendario de flores del año y del siguiente en PDF (portada ilustrada + 2 páginas), su vista previa en JPG y `.ics` con todas las fechas. |
+| `vercel.json`, `.vercelignore` | Barra final en las URLs, redirección de `/index.html`, cabeceras de `.ics`, imágenes y fuentes; `_build/` y `marketing/` no se publican. |
 | `marketing/` | Plan de SEO, enlaces, prensa, Pinterest y TikTok, y las imágenes de los pines. |
 | `DOCUMENTACION.md` | Investigación, decisiones y cambios del proyecto. |
 
 **No edites a mano** `index.html` ni las carpetas de páginas: se sobrescriben al generar. Edita `_build/` y vuelve a ejecutar el build.
+
+**Genera y publica al menos una vez al mes.** La tabla de la portada, las de países y meses y el año del title se calculan con la fecha del build: empiezan por la próxima fecha y, desde el 1 de octubre, el title pasa a “2026-2027”. Si no se regenera, se quedan con la fecha del último build. Para probar otra fecha: `FLORARIO_HOY=2026-12-15 python _build/build.py`.
+
+**Cuando cambies el contenido de una página,** pon su `"updated"` a la fecha del día en la cabecera del fragmento. Esa fecha se usa en la firma, el JSON-LD y el `lastmod` del sitemap. El build avisa si un fragmento tiene cambios sin confirmar en git y su `updated` es anterior a hoy.
 
 Para verla en local: `python -m http.server` en la carpeta del proyecto y abrir <http://localhost:8000>.
 

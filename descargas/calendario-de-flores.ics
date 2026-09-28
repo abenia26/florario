@@ -336,8 +336,8 @@ RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=3SA
 SUMMARY:🌷 Amor y Amistad: Rosas y girasoles
 DESCRIPTION:Colombia celebra su San Valentín en septiembre desde los años
   sesenta. Vale para pareja y para amigos\, con amigo secreto incluido. Dó
- nde: Colombia. Guía: https://www.calendariodeflores.com/san-valentin/
-URL:https://www.calendariodeflores.com/san-valentin/
+ nde: Colombia. Guía: https://www.calendariodeflores.com/amor-y-amistad/
+URL:https://www.calendariodeflores.com/amor-y-amistad/
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -519,8 +519,8 @@ SUMMARY:🌷 Virgen de Guadalupe: Rosas
 DESCRIPTION:Según la tradición\, en 1531 Juan Diego llevó rosas del cerr
  o del Tepeyac en su tilma\, en pleno diciembre. Por eso cada 12 de diciemb
  re millones de personas llevan rosas a la Basílica. Dónde: México. Guí
- a: https://www.calendariodeflores.com/rosa/
-URL:https://www.calendariodeflores.com/rosa/
+ a: https://www.calendariodeflores.com/virgen-de-guadalupe/
+URL:https://www.calendariodeflores.com/virgen-de-guadalupe/
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY

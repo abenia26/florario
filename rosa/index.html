@@ -23,9 +23,7 @@
 <meta property="article:modified_time" content="2026-09-28">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/imagenes/logo-florario.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/guia.css">
 <link rel="stylesheet" href="/comun.css">
 <script type="application/ld+json">
@@ -64,7 +62,12 @@
    "url": "https://www.calendariodeflores.com/sobre-florario/",
    "worksFor": {
     "@id": "https://www.calendariodeflores.com/#org"
-   }
+   },
+   "description": "Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla.",
+   "sameAs": [
+    "https://github.com/abenia26",
+    "https://www.linkedin.com/in/h%C3%A9ctor-abenia-c%C3%A1mara-3b5a5b413/"
+   ]
   },
   {
    "@type": "Article",
@@ -155,132 +158,48 @@
    ]
   },
   {
-   "@type": "Event",
-   "name": "San Valentín 2027: rosas rojas",
-   "startDate": "2027-02-14",
-   "endDate": "2027-02-14",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Global"
-   },
-   "description": "La fecha que más flores mueve en el año. La rosa roja es el código universal de “me gustas”; en varios países de Latinoamérica también se celebra la amistad, así que vale regalar a amigos.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/san-valentin/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Sant Jordi 2027: una rosa roja y un libro",
-   "startDate": "2027-04-23",
-   "endDate": "2027-04-23",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Cataluña",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "ES"
+   "@type": "ItemList",
+   "name": "Fechas para regalar flores: Rosa",
+   "itemListOrder": "https://schema.org/ItemListOrderAscending",
+   "numberOfItems": 6,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "12 de diciembre de 2026: Virgen de Guadalupe – Rosas",
+     "url": "https://www.calendariodeflores.com/virgen-de-guadalupe/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "7 de febrero de 2027: Rose Day – Rosas",
+     "url": "https://www.calendariodeflores.com/san-valentin/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "14 de febrero de 2027: San Valentín – Rosas rojas",
+     "url": "https://www.calendariodeflores.com/san-valentin/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "23 de abril de 2027: Sant Jordi – Una rosa roja y un libro",
+     "url": "https://www.calendariodeflores.com/sant-jordi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "14 de mayo de 2027: Rose Day – Rosas",
+     "url": "https://www.calendariodeflores.com/san-valentin/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "12 de junio de 2027: Dia dos Namorados – Rosas rojas",
+     "url": "https://www.calendariodeflores.com/san-valentin/"
     }
-   },
-   "description": "Según la leyenda, de la sangre del dragón que venció Sant Jordi brotó un rosal. Barcelona se llena de puestos de rosas y libros; el libro se sumó en el siglo XX y coincide con el Día Internacional del Libro.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/sant-jordi/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Dia dos Namorados 2027: rosas rojas",
-   "startDate": "2027-06-12",
-   "endDate": "2027-06-12",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Brasil",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "BR"
-    }
-   },
-   "description": "El San Valentín brasileño cae en la víspera de San Antonio, el santo casamentero. Se popularizó en 1949 con una campaña publicitaria y hoy es una de las fechas más fuertes del año allí.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/san-valentin/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Virgen de Guadalupe 2026: rosas",
-   "startDate": "2026-12-12",
-   "endDate": "2026-12-12",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "México",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "MX"
-    }
-   },
-   "description": "Según la tradición, en 1531 Juan Diego llevó rosas del cerro del Tepeyac en su tilma, en pleno diciembre. Por eso cada 12 de diciembre millones de personas llevan rosas a la Basílica.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/rosa/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Rose Day 2027: rosas",
-   "startDate": "2027-02-07",
-   "endDate": "2027-02-07",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "India",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "IN"
-    }
-   },
-   "description": "Abre la Valentine’s Week: los siete días previos a San Valentín tienen tema propio y el primero se dedica a regalar rosas. Muy presente en edits y reels de Bollywood.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-roja.jpg",
-   "url": "https://www.calendariodeflores.com/san-valentin/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
-  },
-  {
-   "@type": "Event",
-   "name": "Rose Day 2027: rosas",
-   "startDate": "2027-05-14",
-   "endDate": "2027-05-14",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-    "@type": "Place",
-    "name": "Corea del Sur",
-    "address": {
-     "@type": "PostalAddress",
-     "addressCountry": "KR"
-    }
-   },
-   "description": "En Corea cada día 14 del mes tiene un tema para parejas. El de mayo es el de las rosas: si sigues K-dramas o K-pop, ya te sonará.",
-   "image": "https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg",
-   "url": "https://www.calendariodeflores.com/san-valentin/",
-   "organizer": {
-    "@id": "https://www.calendariodeflores.com/#org"
-   }
+   ]
   }
  ]
 }
@@ -290,8 +209,8 @@
 <div class="wrap">
   <header class="site-head">
     <div class="site-head-in">
-      <a class="brand" href="/" aria-label="Florario – Calendario de flores, ir a la portada"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
-      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/" aria-current="page">Por flor</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/">Guías</a></li></ul></nav>
+      <a class="brand" href="/"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Calendario de flores</small></span></a>
+      <nav class="site-nav" aria-label="Menú principal"><ul><li><a href="/#fechas">Fechas</a></li><li><a href="/meses/">Por mes</a></li><li><a href="/flores/" aria-current="page">Por flor</a></li><li><a href="/paises/">Países</a></li><li><a href="/significado-colores-flores/">Colores</a></li><li><a href="/guias/">Guías</a></li></ul></nav>
     </div>
   </header>
   <nav class="crumbs" aria-label="Estás aquí">
@@ -305,11 +224,11 @@
           <p class="eyebrow">Por flor · todo el año</p>
           <h1>Rosas: qué significa <em>cada color</em> y cuándo regalarlas</h1>
           <p class="lede">La flor más regalada del mundo tiene un idioma propio: el color, el número y la fecha cambian el mensaje. Aquí tienes qué dice cada rosa, cuándo toca y cómo cuidarla.</p>
-          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Actualizado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
+          <p class="byline"><span>Por <a href="/sobre-florario/" rel="author">Héctor Abenia</a></span><span class="dot">·</span><span>Publicado el <time datetime="2026-09-28">28 de septiembre de 2026</time></span></p>
           <a class="next" href="/#guadalupe" data-when="12-12 2-7 2-14 4-23 5-14 6-12" data-names="Virgen de Guadalupe|Rose Day|San Valentín|Sant Jordi|Rose Day|Dia dos Namorados" data-ids="guadalupe|rose-day|san-valentin|sant-jordi|rose-day-kr|namorados"><span class="next-num">12</span><span class="next-label">de diciembre de 2026</span><span class="next-name">Virgen de Guadalupe</span><span class="next-go" aria-hidden="true">→</span></a>
         </div>
         <figure class="hero-photo">
-          <picture><source type="image/avif" srcset="/imagenes/web/rosa-roja-480.avif 480w, /imagenes/web/rosa-roja-960.avif 960w" sizes="(min-width: 880px) 380px, 90vw"><img src="/imagenes/web/rosa-roja-960.webp" srcset="/imagenes/web/rosa-roja-480.webp 480w, /imagenes/web/rosa-roja-960.webp 960w" sizes="(min-width: 880px) 380px, 90vw" width="960" height="640" alt="Rosa roja abierta, la flor de San Valentín y de Sant Jordi" fetchpriority="high"></picture>
+          <picture><source type="image/avif" srcset="/imagenes/web/rosa-roja-480.avif 480w, /imagenes/web/rosa-roja-960.avif 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))"><img src="/imagenes/web/rosa-roja-960.webp" srcset="/imagenes/web/rosa-roja-480.webp 480w, /imagenes/web/rosa-roja-960.webp 960w" sizes="(min-width: 880px) 380px, min(300px, calc(100vw - 40px))" width="960" height="640" alt="Rosa roja abierta, la flor de San Valentín y de Sant Jordi" fetchpriority="high"></picture>
           <svg class="hero-bloom" viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#D7263D"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#D7263D"/><circle class="pistil" r="2.64"/></svg>
           <figcaption>Foto: <a href="https://commons.wikimedia.org/wiki/File:Red-Rose-Sitia-Crete.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</figcaption>
         </figure>
@@ -339,7 +258,7 @@
 
 <h2 id="fechas">Fechas en las que se regalan rosas</h2>
 <p>Ninguna flor aparece tantas veces en el calendario. Estas son las fechas en las que la rosa es la protagonista:</p>
-<div class="dtable-wrap"><table class="dtable"><thead><tr><th scope="col">Fecha 2026</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-rose-day" style="--dc:#D7263D"><td class="when"><time datetime="2026-02-07">sáb 7 feb</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Rose Day</a></span><p class="why">Abre la Valentine’s Week: los siete días previos a San Valentín tienen tema propio y el primero se dedica a regalar rosas. Muy presente en edits y reels de Bollywood.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">India</td></tr><tr id="f-san-valentin" style="--dc:#D7263D"><td class="when"><time datetime="2026-02-14">sáb 14 feb</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">San Valentín</a></span><p class="why">La fecha que más flores mueve en el año. La rosa roja es el código universal de “me gustas”; en varios países de Latinoamérica también se celebra la amistad, así que vale regalar a amigos.</p></td><td data-label="Flor">Rosas rojas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Global · en México y otros países, Día del Amor y la Amistad</td></tr><tr id="f-sant-jordi" style="--dc:#D7263D"><td class="when"><time datetime="2026-04-23">jue 23 abr</time><small>cada año</small></td><td><span class="ev-name"><a href="/sant-jordi/">Sant Jordi</a></span><p class="why">Según la leyenda, de la sangre del dragón que venció Sant Jordi brotó un rosal. Barcelona se llena de puestos de rosas y libros; el libro se sumó en el siglo XX y coincide con el Día Internacional del Libro.</p></td><td data-label="Flor">Una rosa roja y un libro</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Cataluña</td></tr><tr id="f-rose-day-kr" style="--dc:#EE7FA8"><td class="when"><time datetime="2026-05-14">jue 14 may</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Rose Day</a></span><p class="why">En Corea cada día 14 del mes tiene un tema para parejas. El de mayo es el de las rosas: si sigues K-dramas o K-pop, ya te sonará.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rosa</span></td><td data-label="Dónde">Corea del Sur</td></tr><tr id="f-namorados" style="--dc:#D7263D"><td class="when"><time datetime="2026-06-12">vie 12 jun</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Dia dos Namorados</a></span><p class="why">El San Valentín brasileño cae en la víspera de San Antonio, el santo casamentero. Se popularizó en 1949 con una campaña publicitaria y hoy es una de las fechas más fuertes del año allí.</p></td><td data-label="Flor">Rosas rojas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Brasil</td></tr><tr id="f-guadalupe" style="--dc:#D7263D"><td class="when"><time datetime="2026-12-12">sáb 12 dic</time><small>cada año</small></td><td><span class="ev-name"><a href="/rosa/">Virgen de Guadalupe</a></span><p class="why">Según la tradición, en 1531 Juan Diego llevó rosas del cerro del Tepeyac en su tilma, en pleno diciembre. Por eso cada 12 de diciembre millones de personas llevan rosas a la Basílica.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">México</td></tr></tbody></table></div>
+<div class="dtable-wrap"><table class="dtable"><thead><tr><th scope="col">Fecha</th><th scope="col">Qué se celebra y por qué</th><th scope="col">Flor</th><th scope="col">Color</th><th scope="col">Dónde</th></tr></thead><tbody><tr id="f-guadalupe" style="--dc:#D7263D"><td class="when"><time datetime="2026-12-12">sáb 12 dic 2026</time><small>cada año</small></td><td><span class="ev-name"><a href="/virgen-de-guadalupe/">Virgen de Guadalupe</a></span><p class="why">Según la tradición, en 1531 Juan Diego llevó rosas del cerro del Tepeyac en su tilma, en pleno diciembre. Por eso cada 12 de diciembre millones de personas llevan rosas a la Basílica.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">México</td></tr><tr id="f-rose-day" style="--dc:#D7263D"><td class="when"><time datetime="2027-02-07">dom 7 feb 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Rose Day</a></span><p class="why">Abre la Valentine’s Week: los siete días previos a San Valentín tienen tema propio y el primero se dedica a regalar rosas. Muy presente en edits y reels de Bollywood.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">India</td></tr><tr id="f-san-valentin" style="--dc:#D7263D"><td class="when"><time datetime="2027-02-14">dom 14 feb 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">San Valentín</a></span><p class="why">La fecha que más flores mueve en el año. La rosa roja es el código universal de “me gustas”; en varios países de Latinoamérica también se celebra la amistad, así que vale regalar a amigos.</p></td><td data-label="Flor">Rosas rojas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Global · en México y otros países, Día del Amor y la Amistad</td></tr><tr id="f-sant-jordi" style="--dc:#D7263D"><td class="when"><time datetime="2027-04-23">vie 23 abr 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/sant-jordi/">Sant Jordi</a></span><p class="why">Según la leyenda, de la sangre del dragón que venció Sant Jordi brotó un rosal. Barcelona se llena de puestos de rosas y libros; el libro se sumó en el siglo XX y coincide con el Día Internacional del Libro.</p></td><td data-label="Flor">Una rosa roja y un libro</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Cataluña</td></tr><tr id="f-rose-day-kr" style="--dc:#EE7FA8"><td class="when"><time datetime="2027-05-14">vie 14 may 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Rose Day</a></span><p class="why">En Corea cada día 14 del mes tiene un tema para parejas. El de mayo es el de las rosas: si sigues K-dramas o K-pop, ya te sonará.</p></td><td data-label="Flor">Rosas</td><td data-label="Color"><span class="swatch">Rosa</span></td><td data-label="Dónde">Corea del Sur</td></tr><tr id="f-namorados" style="--dc:#D7263D"><td class="when"><time datetime="2027-06-12">sáb 12 jun 2027</time><small>cada año</small></td><td><span class="ev-name"><a href="/san-valentin/">Dia dos Namorados</a></span><p class="why">El San Valentín brasileño cae en la víspera de San Antonio, el santo casamentero. Se popularizó en 1949 con una campaña publicitaria y hoy es una de las fechas más fuertes del año allí.</p></td><td data-label="Flor">Rosas rojas</td><td data-label="Color"><span class="swatch">Rojo</span></td><td data-label="Dónde">Brasil</td></tr></tbody></table></div>
 
 <h2 id="guadalupe">Las rosas de la Virgen de Guadalupe</h2>
 <p>Cada 12 de diciembre, millones de personas llevan rosas a la Basílica de Guadalupe, en Ciudad de México. Según la tradición, en 1531 Juan Diego subió al cerro del Tepeyac en pleno invierno, encontró rosas donde no debía haberlas y las llevó en su tilma al obispo. Al abrirla, las rosas cayeron y apareció la imagen de la Virgen. Por eso diciembre es, en México, uno de los meses con más venta de rosas del año, justo después de febrero y mayo.</p>
@@ -363,6 +282,7 @@
           <p>Descarga el recordatorio y ábrelo con el calendario del móvil: se repite cada año y te avisa tres días antes para que te dé tiempo a encargar el ramo.</p>
           <div class="remind-actions"><a class="btn primary" href="/descargas/calendario-de-flores.ics" download>Todas las fechas (.ics)</a><a class="btn" href="https://calendar.google.com/calendar/r?cid=webcal://www.calendariodeflores.com/descargas/calendario-de-flores.ics" target="_blank" rel="noopener">Suscribirme en Google Calendar ↗</a></div>
         </section>
+        <div class="share"><p>¿Conoces a alguien que siempre llega tarde a estas fechas? Pásaselo.</p><div class="share-actions"><a class="btn" href="https://wa.me/?text=Rosas%3A%20significado%20de%20cada%20color%20y%20cu%C3%A1ndo%20regalarlas%20https%3A//www.calendariodeflores.com/rosa/" target="_blank" rel="noopener">Compartir por WhatsApp</a><button type="button" class="btn" data-share data-url="https://www.calendariodeflores.com/rosa/" data-title="Rosas: significado de cada color y cuándo regalarlas" hidden>Compartir</button></div><p class="share-status" role="status"></p></div>
         <section id="preguntas" aria-labelledby="preguntas-t">
           <h2 id="preguntas-t">Preguntas frecuentes</h2>
           <div class="faq">
@@ -373,19 +293,19 @@
 <details><summary>¿Cómo hacer que las rosas duren más?</summary><p>Corta 2 o 3 cm del tallo en diagonal, quita las hojas que queden bajo el agua, cambia el agua cada dos días y aleja el jarrón del sol, la calefacción y la fruta madura.</p></details>
           </div>
         </section>
-        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM), apasionado de la programación y de su mujer. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
+        <aside class="author-box" aria-label="Sobre el autor"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><p><b>Héctor Abenia</b> · Florario</p><p>Desarrollador en formación (Desarrollo de Aplicaciones Multiplataforma). Creó Florario para reunir en un solo sitio las fechas en que se regalan flores en España y Latinoamérica, y contrasta cada fecha y cada trend con al menos dos medios de países distintos antes de publicarla. <a href="/sobre-florario/">Cómo hacemos Florario</a>.</p></aside>
         </div>
       </div>
     </article>
     <section class="related" aria-labelledby="related-t">
       <h2 id="related-t">Sigue explorando</h2>
       <div class="gcards">
-      <a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas, un regalo clásico para San Valentín y el Día de las Madres" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
-<a class="gcard" href="/sant-jordi/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Sant Jordi: Rosa roja abierta, la flor de San Valentín y de Sant Jordi" loading="lazy" decoding="async"><span><small>23 abr</small><b>Sant Jordi</b><i>Por qué se regala una rosa y un libro</i></span></a>
-<a class="gcard" href="/flores-para-aniversario/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="Flores para aniversarios: Ramo de rosas rosas, un regalo clásico para San Valentín y el Día de las Madres" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para aniversarios</b><i>Qué flores regalar según los años juntos</i></span></a>
-<a class="gcard" href="/dia-de-la-novia/" style="--gc:#EE7FA8"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Día de la Novia: Rosa rosa pálido en un rosal, flor del Día de la Novia y del Rose Day coreano" loading="lazy" decoding="async"><span><small>1 ago</small><b>Día de la Novia</b><i>El segundo San Valentín de Latinoamérica</i></span></a>
-<a class="gcard" href="/peonia/" style="--gc:#EE7FA8"><img src="/imagenes/web/peonia-rosa-160.webp" width="160" height="160" alt="Peonía: Peonía rosa abierta, flor de temporada en mayo para el Día de la Madre" loading="lazy" decoding="async"><span><small>Por flor</small><b>Peonía</b><i>Significado, temporada y cuándo regalarla</i></span></a>
-<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores, típico del Galentine’s Day y de la primavera" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
+      <a class="gcard" href="/san-valentin/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="San Valentín: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span></a>
+<a class="gcard" href="/sant-jordi/" style="--gc:#D7263D"><img src="/imagenes/web/rosa-roja-160.webp" width="160" height="160" alt="Sant Jordi: Rosa roja abierta" loading="lazy" decoding="async"><span><small>23 abr</small><b>Sant Jordi</b><i>Por qué se regala una rosa y un libro</i></span></a>
+<a class="gcard" href="/flores-para-aniversario/" style="--gc:#D7263D"><img src="/imagenes/web/ramo-de-rosas-rosas-160.webp" width="160" height="160" alt="Flores para aniversarios: Ramo de rosas rosas" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Flores para aniversarios</b><i>Qué flores regalar según los años juntos</i></span></a>
+<a class="gcard" href="/dia-de-la-novia/" style="--gc:#EE7FA8"><img src="/imagenes/web/rosa-rosa-palido-160.webp" width="160" height="160" alt="Día de la Novia: Rosa rosa pálido en un rosal" loading="lazy" decoding="async"><span><small>1 ago</small><b>Día de la Novia</b><i>El segundo San Valentín de Latinoamérica</i></span></a>
+<a class="gcard" href="/peonia/" style="--gc:#EE7FA8"><img src="/imagenes/web/peonia-rosa-160.webp" width="160" height="160" alt="Peonía: Peonía rosa abierta" loading="lazy" decoding="async"><span><small>Por flor</small><b>Peonía</b><i>Significado, temporada y cuándo regalarla</i></span></a>
+<a class="gcard" href="/significado-colores-flores/" style="--gc:#EE7FA8"><img src="/imagenes/web/ramo-de-tulipanes-de-colores-160.webp" width="160" height="160" alt="Significado de los colores: Ramo de tulipanes de colores" loading="lazy" decoding="async"><span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span></a>
       </div>
     </section>
     <section class="cta" aria-labelledby="cta-t">
@@ -400,15 +320,15 @@
   <footer class="site-foot">
     <div class="foot-grid">
       <div class="foot-about">
-        <h2>Florario – Calendario de flores</h2>
+        <p class="foot-h">Florario – Calendario de flores</p>
         <p>Todas las fechas del año para regalar flores en España y Latinoamérica: qué flor se regala, dónde y por qué, con flores de temporada y guías por fecha, mes y flor.</p>
       </div>
-      <nav aria-label="Calendario"><h2>Calendario</h2><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
-      <nav aria-label="Por mes"><h2>Por mes</h2><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
-      <nav aria-label="Por flor"><h2>Por flor</h2><ul><li><a href="/rosa/" aria-current="page">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
-      <nav aria-label="Guías"><h2>Guías</h2><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
-      <nav aria-label="Por país"><h2>Por país</h2><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li></ul></nav>
-      <nav aria-label="Florario"><h2>Florario</h2><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
+      <nav aria-label="Calendario"><p class="foot-h">Calendario</p><ul><li><a href="/#fechas">Todas las fechas</a></li><li><a href="/#temporada">Flores de temporada</a></li><li><a href="/calendario-de-flores-para-imprimir/">Calendario para imprimir</a></li><li><a href="/descargas/calendario-de-flores-2026.pdf">Calendario 2026 en PDF</a></li><li><a href="/descargas/calendario-de-flores-2027.pdf">Calendario 2027 en PDF</a></li><li><a href="/#recuerdamelo">Recuérdamelo (.ics)</a></li></ul></nav>
+      <nav aria-label="Por mes"><p class="foot-h">Por mes</p><ul><li><a href="/enero/">Enero</a></li><li><a href="/febrero/">Febrero</a></li><li><a href="/marzo/">Marzo</a></li><li><a href="/abril/">Abril</a></li><li><a href="/mayo/">Mayo</a></li><li><a href="/junio/">Junio</a></li><li><a href="/julio/">Julio</a></li><li><a href="/agosto/">Agosto</a></li><li><a href="/septiembre/">Septiembre</a></li><li><a href="/octubre/">Octubre</a></li><li><a href="/noviembre/">Noviembre</a></li><li><a href="/diciembre/">Diciembre</a></li></ul></nav>
+      <nav aria-label="Por flor"><p class="foot-h">Por flor</p><ul><li><a href="/rosa/" aria-current="page">Rosa</a></li><li><a href="/girasol/">Girasol</a></li><li><a href="/tulipan/">Tulipán</a></li><li><a href="/peonia/">Peonía</a></li><li><a href="/clavel/">Clavel</a></li><li><a href="/margarita/">Margarita</a></li><li><a href="/lilium/">Lilium (azucena)</a></li><li><a href="/hortensia/">Hortensia</a></li><li><a href="/violeta/">Violeta</a></li><li><a href="/crisantemo/">Crisantemo</a></li><li><a href="/cempasuchil/">Cempasúchil</a></li><li><a href="/mimosa/">Mimosa</a></li><li><a href="/lirio-de-los-valles/">Lirio de los valles</a></li><li><a href="/nochebuena/">Nochebuena</a></li></ul></nav>
+      <nav aria-label="Guías"><p class="foot-h">Guías</p><ul><li><a href="/flores-amarillas/">Flores amarillas</a></li><li><a href="/flores-amarillas-21-de-marzo/">Flores amarillas el 21 de marzo</a></li><li><a href="/flores-azules/">Flores azules</a></li><li><a href="/flores-moradas/">Flores moradas</a></li><li><a href="/san-valentin/">San Valentín</a></li><li><a href="/dia-de-la-mujer/">Día de la Mujer (8M)</a></li><li><a href="/dia-del-padre/">Día del Padre</a></li><li><a href="/sant-jordi/">Sant Jordi</a></li><li><a href="/dia-de-la-madre/">Día de la Madre</a></li><li><a href="/dia-del-maestro/">Día del Maestro</a></li><li><a href="/dia-de-la-novia/">Día de la Novia</a></li><li><a href="/amor-y-amistad/">Amor y Amistad</a></li><li><a href="/todos-los-santos-dia-de-muertos/">Todos los Santos y Día de Muertos</a></li><li><a href="/nochebuena/">Nochebuena</a></li><li><a href="/virgen-de-guadalupe/">Virgen de Guadalupe</a></li><li><a href="/flores-para-cumpleanos/">Flores para cumpleaños</a></li><li><a href="/flores-para-aniversario/">Flores para aniversarios</a></li><li><a href="/flores-para-condolencias/">Flores de condolencias</a></li><li><a href="/significado-colores-flores/">Significado de los colores</a></li></ul></nav>
+      <nav aria-label="Por país"><p class="foot-h">Por país</p><ul><li><a href="/espana/">España</a></li><li><a href="/mexico/">México</a></li><li><a href="/argentina/">Argentina</a></li><li><a href="/colombia/">Colombia</a></li><li><a href="/chile/">Chile</a></li><li><a href="/peru/">Perú</a></li><li><a href="/paises/">Todos los países</a></li></ul></nav>
+      <nav aria-label="Florario"><p class="foot-h">Florario</p><ul><li><a href="/sobre-florario/">Sobre Florario</a></li><li><a href="/contacto/">Contacto</a></li><li><a href="/prensa/">Prensa</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/aviso-legal/">Aviso legal</a></li></ul></nav>
     </div>
     
     <details><summary>Créditos de las fotos · Wikimedia Commons</summary><ul><li>Rosa roja abierta: <a href="https://commons.wikimedia.org/wiki/File:Red-Rose-Sitia-Crete.jpg" target="_blank" rel="noopener">Petro Stelte</a> · CC BY-SA 4.0</li><li>Ramo de rosas rosas: <a href="https://commons.wikimedia.org/wiki/File:Bouquet_de_roses_roses.jpg" target="_blank" rel="noopener">Jebulon</a> · CC BY-SA 3.0</li><li>Rosa rosa pálido en un rosal: <a href="https://commons.wikimedia.org/wiki/File:Pink_rose_bloom_of_a_climbing_rose_at_Boreham,_Essex,_England_1.jpg" target="_blank" rel="noopener">Acabashi</a> · CC BY-SA 4.0</li><li>Peonía rosa abierta: <a href="https://commons.wikimedia.org/wiki/File:Cottage_garden_pink_peony_bloom_at_Boreham,_Essex,_England.jpg" target="_blank" rel="noopener">Acabashi</a> · CC BY-SA 4.0</li><li>Ramo de tulipanes de colores: <a href="https://commons.wikimedia.org/wiki/File:Tulip-bouquet-vienna_(Unsplash).jpg" target="_blank" rel="noopener">Gábor Juhász</a> · CC0</li></ul></details>

@@ -311,3 +311,41 @@ Se sustituyó la edición a mano por un generador (`_build/build.py`) con una so
 
 ### Verificación
 El build comprueba en las 56 páginas: enlaces internos y anclas, JSON-LD válido, un solo H1 y `alt` en todas las imágenes (sin errores). Capturas con Chrome sin interfaz de portada, ficha de fecha, mes, guía, aviso legal y móvil a 390 px (en iframe), y revisión de los dos PDF.
+
+---
+
+## Fase 11 · Auditoría SEO: tabla rodante, sin `Event`, fechas por página, fuentes locales, imprimible, compartir y guías nuevas (28 sep 2026)
+
+**Punto de partida.** Una auditoría externa puso a la web un 6,7/10. La tabla de la portada estaba anclada en 2026 y empezaba en febrero, cuando ya habían pasado 18 de las 26 fechas. El marcado `Event` presentaba a Florario como organizador de festividades. Todas las páginas decían «Actualizado» con la misma fecha. Google Fonts bloqueaba el primer pintado. La autoría no mostraba experiencia en flores y la web no respondía a la búsqueda de «calendario para imprimir». Tampoco había nada que compartir o enlazar, y Amor y Amistad y la Virgen de Guadalupe no tenían guía.
+
+### Qué se hizo
+
+| Área | Cambio |
+|---|---|
+| **Tabla rodante** | `date_table(..., rolling=True)` ordena por la próxima fecha respecto a la del build (`HOY`) y cubre los 12 meses siguientes con el año real de cada fila. Se usa en la portada, los países, los meses y las guías. El H2 se calcula («Próximas fechas para regalar flores (oct 2026 – sep 2027)»). |
+| **Año automático** | Ya no hay `SITE["year"]`. Desde el 1 de octubre, title, og:title, description y H1 dicen «Calendario de flores {Y}-{Y+1}». Los PDF son siempre del año del build y del siguiente. `FLORARIO_HOY=AAAA-MM-DD` permite probar otra fecha. |
+| **Sin `Event`** | Se quitó `event_ld()`. Las fechas van como `ItemList` de `ListItem` (nombre legible y URL de la guía) en la portada, los meses, los países y las guías. `FAQPage` se mantiene. |
+| **Fechas por página** | Cada fragmento lleva `published` y `updated` (rellenados con `git log`; todo el historial es del 28 sep 2026). Se usan en la firma («Publicado el…» o «Actualizado el…»), `datePublished`/`dateModified`, `article:modified_time` y `lastmod`. Los índices toman la fecha más reciente de sus páginas y la portada, la de todo el sitio. El build avisa si un fragmento cambia y su `updated` es antiguo. |
+| **Fuentes locales** | Bricolage Grotesque (variable 400–800) y DM Mono 400/500, subconjunto latin, en `/fuentes/` con `@font-face` en `comun.css`, precarga del woff2 principal y caché de un año. Ningún HTML carga ya Google Fonts (tampoco la 404 ni el PDF). |
+| **Imágenes** | `sizes` de la foto principal ajustado al CSS real: 380 px en escritorio y `min(300px, 100vw - 40px)` en móvil. Nuevo `alt_corto` en `IMAGES` para miniaturas, tarjetas y el JS de la portada, así el `alt` ya no contradice la fecha (p. ej., el girasol del Día del Padre). |
+| **E-E-A-T** | Biografía del autor ligada al proyecto. `SITE["reviewer"]` y `SITE["author_sameAs"]` quedan como marcadores. `AUTHOR` lleva `description` y `sameAs`. Si hay revisor, la firma muestra «Revisado por…» y el JSON-LD, `reviewedBy`. /sobre-florario/ pasa a primera persona y tiene la sección «Quién revisa el contenido». |
+| **Imprimible** | El PDF tiene una portada A4 con la rueda del año (meses de color, marcas de días y una flor por fecha, con contorno para imprimir en blanco y negro) y una flor pequeña en cada mes: 3 páginas en total. `render_preview()` hace la vista previa JPG (1191 × 1685, unos 175 KB): una captura con el navegador sin interfaz, pasada a JPEG con un `<canvas>`, sin librerías. Nueva página /calendario-de-flores-para-imprimir/ con vistas previas, cómo imprimir, ideas y condiciones de uso. |
+| **Compartir** | WhatsApp (enlace `wa.me`, funciona sin JS) y «Compartir» nativo o «Copiar enlace» en todas las guías, flores, meses, países y el imprimible, y en la ficha de cada fecha de la portada. No hay `utm_source` porque la web no tiene analítica. |
+| **Widget** | `/widget/`: próxima fecha y cuenta atrás, `noindex`, fuera del sitemap, 6 KB, sin dependencias ni cookies; `?pais=mx` filtra por país. |
+| **Prensa** | /prensa/: qué es Florario, cifras sacadas de `datos.py` (tabla por país incluida), temas por fecha, logo y portadas descargables, código del widget y contacto. Enlazada desde /contacto/ y el pie. |
+| **Guías nuevas** | /amor-y-amistad/ (Radio Nacional de Colombia, El Tiempo, Infobae) y /virgen-de-guadalupe/ (Milenio, EWTN, Infobae), de más de 950 palabras cada una. Los eventos `amor-amistad-co` y `guadalupe` ya enlazan a ellas. |
+| **Países** | `og:locale` por país (`es_MX`, `es_AR`…) con `og:locale:alternate` para el resto. Nuevo índice /paises/, «Países» en el menú y la miga de pan de los países apuntando a él. |
+| **Limpieza** | Los títulos del pie son `<p class="foot-h">` (sin H2 en el pie). `strip_tags()` ya no deja espacio antes de la puntuación («Flores de octubre: …»). `--muted` pasa a `#525A4D` (4,9:1 incluso sobre la mancha rosa del fondo). Los meses vacíos usan color en lugar de opacidad. Sin `aria-label` que contradiga el texto visible (logo, pestañas de mes, «próxima fecha», foto destacada). Redirección 308 de `/index.html` y `/…/index.html`. |
+
+### Verificación
+- Build del 28 sep 2026: 61 páginas, sin «PROBLEMAS». Primera fila de la portada: Día del Novio (3 oct 2026); última: flores amarillas (21 sep 2027).
+- Simulaciones: con `FLORARIO_HOY=2026-10-05` el title es «Calendario de flores 2026-2027…»; con `2027-02-01`, «Calendario de flores 2027…».
+- Ningún `"@type": "Event"`; JSON-LD válido en todas las páginas; `og:locale` `es_MX` en /mexico/; ningún H2 en el pie; ningún headline con « :».
+- Lighthouse móvil en local: accesibilidad 100 en / y en /octubre/, sin fuentes en *render-blocking*.
+- PDF de 3 páginas; vista previa por debajo de 250 KB; menú sin scroll horizontal a 360 px (medido en iframe); widget revisado a 320 × 200.
+
+### Pendiente
+- **Titular:** rellenar `SITE["reviewer"]` cuando haya un florista que revise el contenido y `SITE["author_sameAs"]` con los perfiles públicos. El build avisa mientras queden corchetes.
+- **Fechas:** como todo el historial es del mismo día, todas las páginas tienen hoy el mismo `published` y `updated`. A partir de ahora, cada revisión debe cambiar solo el `updated` de su página.
+- **Imagen principal en móvil:** con una pantalla de 1,75× (la que emula Lighthouse), la foto de 300 px necesita unos 525 px y el navegador descarga la de 960. Lighthouse aún marca unos 40 KB en /octubre/. Se arreglaría con una variante de 640 px en AVIF y WebP, que necesita una herramienta de imágenes (por ejemplo, Pillow).
+- **Vercel (titular):** hacer que `calendariodeflores.com` redirija directamente a `https://www.` en un solo salto.

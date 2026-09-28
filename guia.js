@@ -1,4 +1,5 @@
-// Cuenta atrás de las páginas-guía. El HTML ya trae la fecha escrita; esto solo añade "faltan X días".
+// Cuenta atrás y botón de compartir de las páginas interiores. El HTML ya trae la fecha escrita;
+// esto solo añade "faltan X días".
 // data-when: una o varias fechas separadas por espacios
 //   "9-21"    → 21 de septiembre (fecha fija)
 //   "5-w0-2"  → 2.º domingo de mayo (mes-wDíaSemana-n, 0 = domingo), igual que las rule de index.html
@@ -36,6 +37,23 @@
     el.querySelector(".next-label").textContent = `${lead} · ${fmt.format(best.d)}`;
     if (names[best.k]) el.querySelector(".next-name").textContent = names[best.k];
     if (ids[best.k] && el.tagName === "A") el.href = el.getAttribute("href").replace(/#.*$/, "") + "#" + ids[best.k];
-    el.setAttribute("aria-label", `${names[best.k] || el.querySelector(".next-name").textContent}: ${best.n === 0 ? "hoy" : `faltan ${best.n} días`}. Ver en el calendario.`);
+  });
+
+  // Compartir: menú nativo del móvil si existe; si no, copiar el enlace.
+  document.querySelectorAll("[data-share]").forEach(btn => {
+    const status = btn.closest(".share")?.querySelector(".share-status");
+    btn.hidden = false;
+    if (!navigator.share) btn.textContent = "Copiar enlace";
+    btn.addEventListener("click", () => {
+      const { url, title } = btn.dataset;
+      if (navigator.share) {
+        navigator.share({ title, url }).catch(() => {});
+        return;
+      }
+      const fallback = () => { if (status) status.textContent = `Copia este enlace: ${url}`; };
+      try {
+        navigator.clipboard.writeText(url).then(() => { if (status) status.textContent = "Enlace copiado."; }, fallback);
+      } catch (e) { fallback(); }
+    });
   });
 })();

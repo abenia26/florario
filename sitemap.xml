@@ -16,6 +16,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/amor-y-amistad/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/argentina/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lilium.jpg</image:loc></image:image>
@@ -23,6 +28,11 @@
   <url>
     <loc>https://www.calendariodeflores.com/aviso-legal/</loc>
     <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/calendario-de-flores-para-imprimir/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/descargas/calendario-de-flores-2027.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/cempasuchil/</loc>
@@ -218,6 +228,10 @@
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/prensa/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/rosa/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
@@ -262,6 +276,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/virgen-de-guadalupe/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/meses/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
@@ -275,5 +294,10 @@
     <loc>https://www.calendariodeflores.com/guias/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/paises/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
   </url>
 </urlset>
