@@ -13,12 +13,15 @@ Calendario interactivo con todas las fechas del año en las que es tradición (o
 | `index.html` | La página completa (HTML, CSS y JS, sin frameworks). |
 | `imagenes/` | Fotos de las flores. Autores y licencias en `imagenes/CREDITOS.md`. |
 | `404.html` | Página de error personalizada ("Esta página se ha marchitado"). |
+| `flores-amarillas/`, `flores-moradas/`, `flores-azules/`, `san-valentin/`, `dia-de-la-madre/`, `sant-jordi/`, `todos-los-santos-dia-de-muertos/`, `significado-colores-flores/` | Páginas-guía para SEO: una por grupo de búsquedas, cada una con su `index.html`. |
+| `guia.css`, `guia.js` | Estilos y cuenta atrás compartidos por las guías. |
+| `vercel.json` | Redirige las URLs sin barra final (`/flores-amarillas` → `/flores-amarillas/`). |
 | `sitemap.xml`, `robots.txt` | Para que Google encuentre e indexe la web. |
 | `DOCUMENTACION.md` | Investigación, decisiones de diseño y cambios del proyecto. |
 
 Web publicada: <https://www.calendariodeflores.com/>
 
-Para verla en local basta con abrir `index.html` en el navegador.
+Para ver solo el calendario basta con abrir `index.html` en el navegador. Para navegar entre las guías hace falta un servidor local, por ejemplo `python -m http.server` en la carpeta del proyecto y abrir <http://localhost:8000>.
 
 ## Créditos
 

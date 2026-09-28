@@ -3,15 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Florario · Calendario de fechas para regalar flores</title>
-<meta name="description" content="Todas las fechas del año en las que se regalan flores: San Valentín, Sant Jordi, Día de la Madre, flores amarillas, flores moradas, Día del Novio y más trends de TikTok. Qué flor se regala, dónde y por qué.">
+<title>Fechas para regalar flores: calendario de todo el año · Florario</title>
+<meta name="description" content="Todas las fechas para regalar flores: flores amarillas el 21 de septiembre, azules el 3 de octubre, moradas el 9 de noviembre, San Valentín, Día de la Madre y más.">
 <meta name="theme-color" content="#F2C230">
 <link rel="canonical" href="https://www.calendariodeflores.com/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Florario">
 <meta property="og:url" content="https://www.calendariodeflores.com/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Florario · Calendario de fechas para regalar flores">
 <meta property="og:description" content="Tradiciones de siempre y trends de TikTok en un solo calendario: qué flor se regala cada fecha, dónde y por qué.">
+<meta property="og:image" content="https://www.calendariodeflores.com/imagenes/girasol.jpg">
+<meta property="og:image:width" content="960">
+<meta property="og:image:height" content="960">
+<meta property="og:image:alt" content="Girasol abierto de frente">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Florario",
+ "alternateName": "Calendario de flores",
+ "url": "https://www.calendariodeflores.com/",
+ "description": "Calendario con todas las fechas del año en las que se regalan flores: tradiciones y trends de TikTok, qué flor se regala, dónde y por qué.",
+ "inLanguage": "es"
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-12 -12 24 24'%3E%3Cg fill='%23F2C230'%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(45)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(90)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(135)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(180)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(225)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(270)'/%3E%3Cellipse cy='-5.5' rx='2.4' ry='5.5' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='2.8' fill='%232A2F25'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -576,6 +593,31 @@
   .anyday p { margin: 0; max-width: 62ch; color: var(--muted); }
   .anyday p + p { margin-top: 8px; }
 
+  /* ---------- Guías ---------- */
+  .guides { margin-top: 44px; }
+  .guides h2 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; text-wrap: balance; }
+  .guides > p { margin: 0 0 16px; max-width: 62ch; color: var(--muted); }
+  .gcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .gcard {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 8px 14px 8px 8px;
+    border-radius: 20px;
+    border: 1px solid color-mix(in srgb, var(--gc) 40%, var(--line));
+    background: color-mix(in srgb, var(--gc) var(--tint), var(--surface));
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .gcard:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .gcard img { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; }
+  .gcard span { display: grid; gap: 1px; line-height: 1.25; min-width: 0; }
+  .gcard small { font-family: var(--mono); font-size: .72rem; color: var(--muted); }
+  .gcard b { font-size: 1rem; }
+  .gcard i { font-style: normal; font-size: .84rem; color: var(--muted); }
+
   /* ---------- Footer ---------- */
   footer {
     margin-top: 48px;
@@ -721,6 +763,46 @@
     </div>
   </section>
 
+  <section class="guides" aria-labelledby="guides-title">
+    <p class="eyebrow">Guías</p>
+    <h2 id="guides-title">Por qué se regalan flores en cada fecha</h2>
+    <p>El origen de cada trend, qué significa cada color y qué flores regalar, con una página para cada fecha.</p>
+    <nav class="gcards" aria-label="Guías por fecha y color">
+      <a class="gcard" href="flores-amarillas/" style="--gc:#F2C230">
+        <img src="imagenes/girasol.jpg" alt="" width="960" height="960" loading="lazy" decoding="async">
+        <span><small>21 sep · 21 mar</small><b>Flores amarillas</b><i>Por qué se regalan y qué significan</i></span>
+      </a>
+      <a class="gcard" href="flores-moradas/" style="--gc:#8A4FD8">
+        <img src="imagenes/violeta.jpg" alt="" width="960" height="720" loading="lazy" decoding="async">
+        <span><small>9 nov</small><b>Flores moradas</b><i>La persona morada y “Un ramito de violetas”</i></span>
+      </a>
+      <a class="gcard" href="flores-azules/" style="--gc:#3F72E0">
+        <img src="imagenes/hortensia-azul.jpg" alt="" width="960" height="960" loading="lazy" decoding="async">
+        <span><small>3 oct · 19 nov</small><b>Flores azules</b><i>Día del Novio, Hot Wheels y Día del Hombre</i></span>
+      </a>
+      <a class="gcard" href="san-valentin/" style="--gc:#D7263D">
+        <img src="imagenes/ramo-rosas.jpg" alt="" width="960" height="720" loading="lazy" decoding="async">
+        <span><small>14 feb</small><b>San Valentín</b><i>Rosas rojas y los otros San Valentín del año</i></span>
+      </a>
+      <a class="gcard" href="dia-de-la-madre/" style="--gc:#EE7FA8">
+        <img src="imagenes/peonia.jpg" alt="" width="960" height="960" loading="lazy" decoding="async">
+        <span><small>may · oct</small><b>Día de la Madre</b><i>Qué flores regalar y la fecha en cada país</i></span>
+      </a>
+      <a class="gcard" href="sant-jordi/" style="--gc:#D7263D">
+        <img src="imagenes/rosa-roja.jpg" alt="" width="960" height="640" loading="lazy" decoding="async">
+        <span><small>23 abr</small><b>Sant Jordi</b><i>Por qué se regala una rosa y un libro</i></span>
+      </a>
+      <a class="gcard" href="todos-los-santos-dia-de-muertos/" style="--gc:#F28C1B">
+        <img src="imagenes/cempasuchil.jpg" alt="" width="960" height="655" loading="lazy" decoding="async">
+        <span><small>1 y 2 nov</small><b>Todos los Santos y Día de Muertos</b><i>Crisantemo y cempasúchil</i></span>
+      </a>
+      <a class="gcard" href="significado-colores-flores/" style="--gc:#EE7FA8">
+        <img src="imagenes/ramo-tulipanes.jpg" alt="" width="960" height="720" loading="lazy" decoding="async">
+        <span><small>Todo el año</small><b>Significado de los colores</b><i>Qué dice cada color y cuándo regalarlo</i></span>
+      </a>
+    </nav>
+  </section>
+
   <footer>
     <h3>Fuentes consultadas · septiembre 2026</h3>
     <ul>
@@ -786,6 +868,19 @@
     "ramo-silvestre": { alt: "Ramo de margaritas y flores silvestres", author: "Petro Stelte", license: "CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg" }
   };
   const imgSrc = key => `imagenes/${key}.jpg`;
+
+  // Página-guía de cada fecha (carpeta con su index.html). Las fechas sin guía propia van a la de colores.
+  const GUIDES = {
+    "flores-amarillas": ["amarillas", "amarillas-marzo"],
+    "flores-moradas": ["moradas"],
+    "flores-azules": ["novio", "hombre"],
+    "san-valentin": ["rose-day", "galentines", "san-valentin", "rose-day-kr", "namorados", "novia", "amor-amistad-co"],
+    "dia-de-la-madre": ["madre-es", "madre-mx", "madre-mayo2", "madre-ar"],
+    "sant-jordi": ["sant-jordi"],
+    "todos-los-santos-dia-de-muertos": ["todos-santos", "muertos"],
+    "significado-colores-flores": ["8m", "muguet", "nochebuena", "guadalupe"]
+  };
+  const guideOf = id => Object.keys(GUIDES).find(slug => GUIDES[slug].includes(id));
 
   // m/d = fecha fija · rule = {m, wd (0=domingo), n} = n-ésimo día de la semana del mes
   const EVENTS = [
@@ -1339,6 +1434,7 @@
           <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
           <button type="button" class="btn" id="dlg-copy">Copiar recordatorio</button>
           ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">Ver #${ev.tag} ↗</a>` : ""}
+          ${guideOf(ev.id) ? `<a class="btn" href="${guideOf(ev.id)}/${guideOf(ev.id) === "significado-colores-flores" ? "#" + ev.color : ""}">Leer la guía →</a>` : ""}
         </div>
         <p class="status" id="dlg-status" role="status"></p>
       </div>`;

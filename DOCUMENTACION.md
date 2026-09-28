@@ -224,3 +224,50 @@ Qué se pidió: página más dinámica, bonita y entretenida; carpeta de imágen
 **Paleta por mes**: ENE `#7C9CF0` · FEB `#E8475F` · MAR `#F2C230` · ABR `#F07A5A` · MAY `#EE7FA8` · JUN `#E4572E` · JUL `#2BB3A3` · AGO `#F59E6B` · SEP `#F2B705` · OCT `#3F72E0` · NOV `#8A4FD8` · DIC `#C8102E`. El texto sobre cada color se elige solo (oscuro o blanco) según su luminancia.
 
 **Verificación** (Chrome sin interfaz): escritorio a 1280 px, móvil a 390 px y modo oscuro revisados con capturas. Un test automático recorrió los 12 meses, el paso de diciembre a enero del año siguiente, los días con varias fechas, guardar, el filtro de guardadas, el mes vacío, el filtro por color, los sectores de la rueda, la flor al azar y el cambio de año, sin errores de JavaScript.
+
+---
+
+## Fase 9 · SEO y páginas-guía (28 sep 2026)
+
+**Problema de partida.** Toda la web era una sola URL y el contenido de cada fecha se pintaba con JavaScript dentro de una ventana. Los enlaces `#amarillas`, `#moradas`… son anclas: para Google son la misma página, así que no había ninguna URL que pudiera posicionar para "flores amarillas 21 de septiembre" o "flores moradas 9 de noviembre".
+
+**Solución.** Ocho páginas estáticas, una por grupo de palabras clave, con el mismo diseño (tokens, tipografías, manchas de color, modo oscuro). Cada una usa solo información que ya estaba en `EVENTS` o en la investigación de la Fase 1, ampliada con contexto (qué flores regalar, significado del color, preguntas frecuentes).
+
+### Mapa de palabras clave
+
+| URL | Palabra clave principal | Secundarias |
+|---|---|---|
+| `/` | calendario de flores, fechas para regalar flores | cuándo se regalan flores, días para regalar flores |
+| `/flores-amarillas/` | por qué se regalan flores amarillas el 21 de septiembre | flores amarillas 21 de marzo, cuándo se regalan flores amarillas, qué significan las flores amarillas, Floricienta flores amarillas, 22 23 24 de septiembre |
+| `/flores-moradas/` | por qué se regalan flores moradas el 9 de noviembre | persona morada, un ramito de violetas, flores moradas 9 de octubre, significado flores moradas |
+| `/flores-azules/` | flores azules 3 de octubre | día del novio, ramo de Hot Wheels, flores azules significado, 19 de noviembre día del hombre flores |
+| `/san-valentin/` | flores para San Valentín | qué flor se regala en San Valentín, Galentine's Day, Dia dos Namorados, Amor y Amistad Colombia, Día de la Novia 1 de agosto |
+| `/dia-de-la-madre/` | flores para el Día de la Madre | cuándo es el Día de la Madre 2027 (España, México, Argentina, Colombia…), clavel Día de la Madre |
+| `/sant-jordi/` | por qué se regala una rosa y un libro en Sant Jordi | leyenda de Sant Jordi, rosa de Sant Jordi, 23 de abril |
+| `/todos-los-santos-dia-de-muertos/` | flores para Todos los Santos | flores de Día de Muertos, cempasúchil, crisantemo, flores para la ofrenda |
+| `/significado-colores-flores/` | significado de los colores de las flores | qué significa regalar flores amarillas / azules / moradas / rojas / blancas |
+
+Método: búsquedas de las consultas reales que responden los medios y floristerías que ya posicionan (patrones "por qué se regalan flores X el [fecha]", "cuándo se regalan flores X", "qué significa regalar flores X") y comparación con las fechas que tiene Florario. No se añadieron fechas nuevas al calendario (por ejemplo, el "29 de febrero de flores amarillas" que citan algunos medios) para no contradecir la investigación de la Fase 1.
+
+### Qué lleva cada guía
+- `<title>` de unos 60 caracteres y `description` de 135 a 165, con la palabra clave al principio.
+- URL canónica, Open Graph con foto y `twitter:card`.
+- Datos estructurados JSON-LD: `Article`, `BreadcrumbList` y `FAQPage` (las preguntas son las mismas que se ven en la página).
+- Un solo `h1`, secciones con `h2` e índice con anclas (Google puede mostrarlas como enlaces en el resultado).
+- Cuenta atrás a la fecha (`guia.js`), que enlaza a la ficha en el calendario (`../#id`).
+- Enlaces internos: migas de pan, "Más fechas para regalar flores", pie con todas las guías y enlaces dentro del texto.
+- Créditos de las fotos usadas en esa página (lo exigen las licencias CC BY-SA).
+
+### Cambios en la portada
+- `title` y `description` orientados a "fechas para regalar flores" y "calendario de flores".
+- `og:image`, `og:site_name`, `twitter:card` y JSON-LD `WebSite`.
+- Sección **Guías** (HTML estático, rastreable) con una tarjeta por guía, entre "Fuera del calendario" y el pie.
+- En la ficha de cada fecha, botón **Leer la guía →** (mapa `GUIDES` en el `<script>`). Las fechas sin guía propia (8M, muguet, Nochebuena, Guadalupe) llevan a su color en la guía de colores.
+- `sitemap.xml` con las 9 URLs y `vercel.json` con `trailingSlash: true` para que no haya dos URLs por guía.
+
+### Mantenimiento
+- **Cada año:** la guía del Día de la Madre tiene una tabla con los dos años siguientes (2027 y 2028) y la de San Valentín cita la fecha de Amor y Amistad de 2027. Hay que actualizarlas y cambiar `lastmod` en `sitemap.xml` y la fecha de "Última revisión" de cada guía.
+- **Añadir una guía:** copiar la carpeta de una guía, cambiar textos, canónica, JSON-LD y color (`<body class="c-…">`, clases en `guia.css`), añadir su tarjeta en `index.html`, su entrada en `GUIDES` y su URL en `sitemap.xml`.
+- **Después de publicar:** dar de alta el dominio en Google Search Console, enviar `sitemap.xml` y pedir la indexación de las guías. Conviene publicar o actualizar cada guía unas semanas antes de su fecha (flores amarillas a principios de septiembre y marzo, azules a mediados de septiembre, moradas a mediados de octubre).
+
+**Verificación.** Capturas con Chrome sin interfaz: escritorio a 1280 px, móvil a 390 px (en iframe) y modo oscuro. Un script comprobó que no hay enlaces locales ni anclas rotas, que los 9 bloques JSON-LD son JSON válido y que cada página tiene un solo `h1`. Se corrigieron dos fallos: el botón del índice heredaba el contador de los enlaces, y la tabla del Día de la Madre desbordaba la columna en móvil.
