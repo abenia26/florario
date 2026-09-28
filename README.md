@@ -16,6 +16,7 @@ La web es HTML estático, pero las páginas se generan con un script de Python s
 python _build/build.py          # páginas, portada, sitemap, .ics, widget
 python _build/build.py --pdf    # además, los PDF y sus vistas previas JPG (necesita Chrome o Edge)
 python _build/pines.py          # imágenes para Pinterest en marketing/pines/
+python _build/indexnow.py       # avisa a Bing/Yandex de las URL del sitemap (IndexNow)
 ```
 
 | Archivo | Qué es |
@@ -27,7 +28,9 @@ python _build/pines.py          # imágenes para Pinterest en marketing/pines/
 | `comun.css` | Cabecera fija con menú, pie con enlaces internos, tablas de fechas y temporada. |
 | `guia.css`, `guia.js` | Estilos, cuenta atrás y botón de compartir de las páginas interiores. |
 | `fuentes/` | Bricolage Grotesque y DM Mono en woff2 (subconjunto latin, licencia OFL), alojadas en la propia web. |
-| `imagenes/web/` | Fotos en AVIF y WebP (960, 480 y miniatura 160). Créditos en `imagenes/CREDITOS.md`. |
+| `imagenes/web/` | Fotos en AVIF y WebP (960, 640, 480 y miniatura 160). Créditos en `imagenes/CREDITOS.md`. |
+| `.github/workflows/regenerar.yml` | Regeneración diaria automática (GitHub Actions): si algo cambia, commit, push (despliega en Vercel) y aviso por IndexNow. |
+| `7e8fe03e1617c657b1014097a1ffc5ae.txt` | Clave pública de IndexNow; no la borres. |
 | `descargas/` | Calendario de flores del año y del siguiente en PDF (portada ilustrada + 2 páginas), su vista previa en JPG y `.ics` con todas las fechas. |
 | `vercel.json`, `.vercelignore` | Barra final en las URLs, redirección de `/index.html`, cabeceras de `.ics`, imágenes y fuentes; `_build/` y `marketing/` no se publican. |
 | `marketing/` | Plan de SEO, enlaces, prensa, Pinterest y TikTok, y las imágenes de los pines. |
@@ -35,7 +38,7 @@ python _build/pines.py          # imágenes para Pinterest en marketing/pines/
 
 **No edites a mano** `index.html` ni las carpetas de páginas: se sobrescriben al generar. Edita `_build/` y vuelve a ejecutar el build.
 
-**Genera y publica al menos una vez al mes.** La tabla de la portada, las de países y meses y el año del title se calculan con la fecha del build: empiezan por la próxima fecha y, desde el 1 de octubre, el title pasa a “2026-2027”. Si no se regenera, se quedan con la fecha del último build. Para probar otra fecha: `FLORARIO_HOY=2026-12-15 python _build/build.py`.
+**La web se regenera sola cada día** (GitHub Actions, 06:30 UTC). La tabla de la portada, las de países y meses y el año del title se calculan con la fecha del build: empiezan por la próxima fecha y, desde el 1 de octubre, el title pasa a “2026-2027”. En enero el trabajo genera también el PDF del año nuevo. Solo hay commit cuando algo cambia, con tu identidad de git. Se puede lanzar a mano desde GitHub: *Actions → Regenerar la web → Run workflow*. Para probar otra fecha: `FLORARIO_HOY=2026-12-15 python _build/build.py`.
 
 **Cuando cambies el contenido de una página,** pon su `"updated"` a la fecha del día en la cabecera del fragmento. Esa fecha se usa en la firma, el JSON-LD y el `lastmod` del sitemap. El build avisa si un fragmento tiene cambios sin confirmar en git y su `updated` es anterior a hoy.
 

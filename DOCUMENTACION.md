@@ -347,5 +347,10 @@ El build comprueba en las 56 páginas: enlaces internos y anclas, JSON-LD válid
 ### Pendiente
 - **Titular:** rellenar `SITE["reviewer"]` cuando haya un florista que revise el contenido y `SITE["author_sameAs"]` con los perfiles públicos. El build avisa mientras queden corchetes.
 - **Fechas:** como todo el historial es del mismo día, todas las páginas tienen hoy el mismo `published` y `updated`. A partir de ahora, cada revisión debe cambiar solo el `updated` de su página.
-- **Imagen principal en móvil:** con una pantalla de 1,75× (la que emula Lighthouse), la foto de 300 px necesita unos 525 px y el navegador descarga la de 960. Lighthouse aún marca unos 40 KB en /octubre/. Se arreglaría con una variante de 640 px en AVIF y WebP, que necesita una herramienta de imágenes (por ejemplo, Pillow).
-- **Vercel (titular):** hacer que `calendariodeflores.com` redirija directamente a `https://www.` en un solo salto.
+- ~~Imagen principal en móvil~~ Hecho después: variantes de 640 px en AVIF y WebP (Pillow, desde los JPG originales) en todos los `srcset`; Lighthouse ya no marca /octubre/.
+- ~~Vercel~~ Comprobado: `calendariodeflores.com` ya redirigía con 308 a www en el proyecto `florario-wq96`. El salto previo de http a https lo hace Vercel siempre. Se borró el proyecto duplicado `florario` y `florario-wq96.vercel.app` redirige con 308 a www.
+
+### Automatización (28 sep 2026)
+- **`.github/workflows/regenerar.yml`:** GitHub Actions ejecuta el build cada día a las 06:30 UTC (con `--pdf` solo si falta el PDF de algún año). Si hay cambios, hace commit con la identidad de git del titular y push, lo que despliega en Vercel. En CI, Chrome se lanza con `--no-sandbox`.
+- **IndexNow:** `_build/indexnow.py` avisa a Bing, Yandex y otros de las URL del sitemap o de las que cambian en un commit; la clave pública está en la raíz. Google no usa IndexNow: para Google está Search Console.
+- **Widget:** el HTML estático ya no lleva la cuenta de días (la pone el JavaScript), para que la regeneración diaria no cambie el archivo cada día.

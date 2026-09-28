@@ -791,9 +791,9 @@
   // ---------- Datos ----------
   // Datos generados por _build/build.py desde _build/datos.py (no editar aquí)
 <!--@DATA_JS-->
-  // Fotos en imagenes/web/: 160 = miniatura cuadrada; 480 y 960 = foto completa
+  // Fotos en imagenes/web/: 160 = miniatura cuadrada; 480, 640 y 960 = foto completa
   const imgSrc = (key, size = 960) => `/imagenes/web/${IMAGES[key].file}-${size}.webp`;
-  const imgSet = key => `${imgSrc(key, 480)} 480w, ${imgSrc(key, 960)} 960w`;
+  const imgSet = key => [480, 640, 960].map(w => `${imgSrc(key, w)} ${w}w`).join(", ");
 
   const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
   const MONTH_SHORT = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
@@ -876,7 +876,7 @@
     const alt = esc(`${ev.name}: ${IMAGES[ev.img].alt_corto}`);
     return small
       ? `<img src="${imgSrc(ev.img, 160)}" width="160" height="160" alt="${alt}" ${attrs}>`
-      : `<img src="${imgSrc(ev.img)}" srcset="${imgSet(ev.img)}" sizes="(min-width: 880px) 560px, 100vw" alt="${alt}" ${attrs}>`;
+      : `<img src="${imgSrc(ev.img)}" srcset="${imgSet(ev.img)}" sizes="(min-width: 880px) 560px, calc(100vw - 64px)" alt="${alt}" ${attrs}>`;
   }
 
   // ---------- Filtros ----------

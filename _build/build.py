@@ -167,8 +167,8 @@ def picture(key, alt=None, sizes=HERO_SIZES, eager=False, cls=""):
     alt = im["alt_corto"] if alt is None else alt
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
-    avif = f'{img_path(key, 480, "avif")} 480w, {img_path(key, 960, "avif")} 960w'
-    webp = f'{img_path(key, 480)} 480w, {img_path(key, 960)} 960w'
+    avif = ", ".join(f'{img_path(key, w, "avif")} {w}w' for w in (480, 640, 960))
+    webp = ", ".join(f'{img_path(key, w)} {w}w' for w in (480, 640, 960))
     return (f'<picture><source type="image/avif" srcset="{avif}" sizes="{sizes}">'
             f'<img{c} src="{img_path(key, 960)}" srcset="{webp}" sizes="{sizes}" '
             f'width="{im["w"]}" height="{im["h"]}" alt="{esc(alt)}" {load}></picture>')
@@ -1204,6 +1204,12 @@ footer {{ margin-top: 3mm; font-family: "DM Mono", monospace; font-size: 7.5pt; 
 </body></html>'''
 
 
+def browser_cmd(browser, *args):
+    # En GitHub Actions (Ubuntu 24.04) el sandbox de Chrome no arranca
+    extra = ["--no-sandbox"] if os.environ.get("CI") else []
+    return [browser, "--headless=new", "--disable-gpu", *extra, *args]
+
+
 def find_browser():
     for p in [r"C:\Program Files\Google\Chrome\Application\chrome.exe",
               r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
@@ -1226,8 +1232,8 @@ def render_pdfs(print_pdf):
                 return
             out = os.path.join(ROOT, "descargas", f"calendario-de-flores-{y}.pdf")
             os.makedirs(os.path.dirname(out), exist_ok=True)
-            subprocess.run([browser, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
-                            "--virtual-time-budget=8000", f"--print-to-pdf={out}", "file:///" + src.replace("\\", "/")],
+            subprocess.run(browser_cmd(browser, "--no-pdf-header-footer",
+                                       "--virtual-time-budget=8000", f"--print-to-pdf={out}", "file:///" + src.replace("\\", "/")),
                            check=True, capture_output=True)
             pages = len(re.findall(rb"/Type\s*/Page[^s]", open(out, "rb").read()))
             if pages > 3:
@@ -1247,9 +1253,9 @@ def render_preview(browser, src, y, max_kb=250):
     import base64
     tmp = os.path.join(BUILD, "salida")
     png = os.path.join(tmp, f"portada-{y}.png")
-    subprocess.run([browser, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-                    f"--window-size={PREVIEW_CSS[0]},{PREVIEW_CSS[1]}", f"--force-device-scale-factor={PREVIEW_SCALE}",
-                    "--virtual-time-budget=8000", f"--screenshot={png}", "file:///" + src.replace("\\", "/")],
+    subprocess.run(browser_cmd(browser, "--hide-scrollbars",
+                               f"--window-size={PREVIEW_CSS[0]},{PREVIEW_CSS[1]}", f"--force-device-scale-factor={PREVIEW_SCALE}",
+                               "--virtual-time-budget=8000", f"--screenshot={png}", "file:///" + src.replace("\\", "/")),
                    check=True, capture_output=True)
     out = os.path.join(ROOT, "descargas", f"calendario-de-flores-{y}.jpg")
     for q in (.82, .74, .66, .58):
@@ -1266,8 +1272,8 @@ img.onload = () => {{
 }};
 img.src = "portada-{y}.png";
 </script></body>''')
-        res = subprocess.run([browser, "--headless=new", "--disable-gpu", "--allow-file-access-from-files",
-                              "--virtual-time-budget=8000", "--dump-dom", "file:///" + conv.replace("\\", "/")],
+        res = subprocess.run(browser_cmd(browser, "--allow-file-access-from-files",
+                                         "--virtual-time-budget=8000", "--dump-dom", "file:///" + conv.replace("\\", "/")),
                              capture_output=True, text=True)
         m = re.search(r"JPEG:data:image/jpeg;base64,([A-Za-z0-9+/=]+):(\d+)x(\d+)", res.stdout)
         if not m:
@@ -1319,8 +1325,8 @@ def render_widget():
 </head>
 <body>
 <div class="w">
-  <p class="k" id="k">{d.day} de {MONTHS[d.month - 1]}</p>
-  <div class="m"><span class="n" id="n">{(d - HOY).days}</span><span class="t" id="t">{esc(first["name"])}</span><span class="f" id="f">{esc(first["flower"])}</span></div>
+  <p class="k" id="k">Próxima fecha para regalar flores</p>
+  <div class="m"><span class="n" id="n">{d.day}</span><span class="t" id="t">{esc(first["name"])}</span><span class="f" id="f">{esc(first["flower"])}</span></div>
   <a href="{URL}/" target="_blank" rel="noopener">Calendario de flores · Florario</a>
 </div>
 <script>

@@ -164,7 +164,7 @@ Hashtags por fecha: `#floresamarillas`, `#diadelnovio`, `#floresazules`, `#flore
 
 ## 7. Mantenimiento
 
-- **Una vez al mes como mínimo:** ejecuta `python _build/build.py --pdf` y publica. El año del title (desde octubre, “2026-2027”), la tabla rodante de la portada y los PDF (año actual y siguiente) se calculan solos con la fecha del build; ya no hay que tocar ningún año a mano.
+- **Regeneración automática:** GitHub Actions regenera la web cada día y publica solo si algo cambia (año del title, tabla rodante, PDF del año nuevo en enero) y avisa a Bing por IndexNow. Si un día falla, GitHub te manda un correo: abre *Actions* y mira el error.
 - **Antes de cada fecha trend:** revisa la guía, actualiza lo que haya cambiado y pon `"updated"` a la fecha de hoy en la cabecera de su fragmento (`_build/paginas/<guía>.html`). Solo esa página cambia su `lastmod` y su `dateModified`.
 - **Widget y prensa:** en los correos a floristerías y blogs ofrece también el widget de la próxima fecha (`/prensa/#widget`) y la página del [calendario para imprimir](https://www.calendariodeflores.com/calendario-de-flores-para-imprimir/): son lo que más fácilmente se enlaza.
 - **Cada trimestre:** busca trends nuevos; añadir una fecha es añadir un objeto a `EVENTS` en `datos.py`.

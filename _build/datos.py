@@ -38,7 +38,7 @@ MONTH_COLORS = ["#7C9CF0", "#E8475F", "#F2C230", "#F07A5A", "#EE7FA8", "#E4572E"
                 "#2BB3A3", "#F59E6B", "#F2B705", "#3F72E0", "#8A4FD8", "#C8102E"]
 WEEKDAYS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 
-# Fotos de imagenes/web/ (<file>-960/-480 en AVIF y WebP, <file>-160.webp cuadrada).
+# Fotos de imagenes/web/ (<file>-960/-640/-480 en AVIF y WebP, <file>-160.webp cuadrada).
 # Los .jpg originales de imagenes/ se mantienen para og:image. Créditos en imagenes/CREDITOS.md.
 IMAGES = {
     "rosa-roja": {"file": "rosa-roja", "w": 960, "h": 640,

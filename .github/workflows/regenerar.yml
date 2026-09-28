@@ -1,0 +1,51 @@
+# Regenera la web cada día con la fecha de hoy: tabla rodante de la portada, año del title
+# (desde el 1 de octubre pasa a "2026-2027"), PDF del año nuevo en enero y .ics.
+# Solo hace commit y push si algo ha cambiado (unas pocas veces al mes, cuando pasa una fecha);
+# el push despliega en Vercel y después avisa a Bing/Yandex por IndexNow.
+# También se puede lanzar a mano: pestaña Actions → "Regenerar la web" → Run workflow.
+name: Regenerar la web
+
+on:
+  schedule:
+    - cron: "30 6 * * *"  # 06:30 UTC: 08:30 en España (07:30 en invierno), 00:30 en México
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerar
+  cancel-in-progress: false
+
+jobs:
+  regenerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Generar la web
+        run: |
+          Y=$(date -u +%Y); N=$((Y + 1))
+          # Los PDF solo se rehacen cuando falta el de algún año (en enero); si no, cambiarían a diario
+          if [ -f "descargas/calendario-de-flores-$Y.pdf" ] && [ -f "descargas/calendario-de-flores-$N.pdf" ]; then
+            python _build/build.py
+          else
+            python _build/build.py --pdf
+          fi
+
+      - name: Publicar si hay cambios
+        run: |
+          git config user.name "abenia26"
+          git config user.email "hectorabenia26@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sin cambios: nada que publicar."
+            exit 0
+          fi
+          git commit -m "Regeneración automática ($(date -u +%F))"
+          git push
+          python _build/indexnow.py --commit HEAD || true
