@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Rose Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day-kr-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Roses
+DESCRIPTION:In Korea the 14th of every month has a theme for couples. May
+ ’s is roses: if you follow K-dramas or K-pop\, it will sound familiar. W
+ here: South Korea. Guide: https://www.calendariodeflores.com/en/valentines
+ -day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Rose Day. Order roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

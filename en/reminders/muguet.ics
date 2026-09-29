@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Muguet du 1er mai
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:muguet-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Muguet du 1er mai: Lily of the valley (muguet)
+DESCRIPTION:Since King Charles IX (1561)\, a sprig of lily of the valley ha
+ s been given on May 1 to wish good luck. On that day selling muguet in the
+  street is tolerated without a license. Where: France. Guide: https://www.
+ calendariodeflores.com/en/lily-of-the-valley/
+URL:https://www.calendariodeflores.com/en/lily-of-the-valley/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Muguet du 1er mai. Order lily of the valley (muguet)
+ .
+END:VALARM
+END:VEVENT
+END:VCALENDAR

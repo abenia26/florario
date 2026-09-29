@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Father’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:padre-junio-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270621
+RRULE:FREQ=YEARLY;BYMONTH=6;BYDAY=3SU
+SUMMARY:🌷 Father’s Day: Sunflowers\, blue flowers or a plant
+DESCRIPTION:The US date\, which spread to almost all of Latin America. Flow
+ ers for dad are gaining ground thanks to the “men deserve flowers too”
+  trend: sunflowers\, blue tones or a plant for the office. Where: Mexico\,
+  Argentina\, Chile\, Colombia\, Peru\, Venezuela\, USA and more. Guide: ht
+ tps://www.calendariodeflores.com/en/fathers-day/
+URL:https://www.calendariodeflores.com/en/fathers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Father’s Day. Order sunflowers\, blue flowers or a
+  plant.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

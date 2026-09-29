@@ -146,8 +146,8 @@
   </svg>
 
   <p class="code">Error 404</p>
-  <h1>Esta página se ha <em>marchitado</em>.</h1>
-  <p class="lede">La dirección que buscas no existe o ha cambiado. Las flores siguen en el calendario, con sus fechas, su historia y su foto.</p>
+  <h1 id="title">Esta página se ha <em>marchitado</em>.</h1>
+  <p class="lede" id="lede">La dirección que buscas no existe o ha cambiado. Las flores siguen en el calendario, con sus fechas, su historia y su foto.</p>
   <div class="actions">
     <a class="btn primary" id="home" href="/">Volver al calendario</a>
     <a class="btn" id="random" href="/">Ver una flor al azar</a>
@@ -165,7 +165,18 @@
   document.getElementById("head").innerHTML = s + `<circle class="pistil" r="4"/>`;
 
   // En GitHub Pages la web vive en /florario/; en el dominio propio, en la raíz
-  const base = location.hostname.endsWith("github.io") ? "/florario/" : "/";
+  const root = location.hostname.endsWith("github.io") ? "/florario/" : "/";
+  // Si la dirección rota era de la versión inglesa (/en/…), la página se muestra en inglés
+  const en = location.pathname.startsWith(root + "en/") || location.pathname === root + "en";
+  const base = en ? root + "en/" : root;
+  if (en) {
+    document.documentElement.lang = "en";
+    document.title = "Page not found · Florario";
+    document.getElementById("title").innerHTML = "This page has <em>wilted</em>.";
+    document.getElementById("lede").textContent = "The address you’re looking for doesn’t exist or has changed. The flowers are still in the calendar, with their dates, their story and their photo.";
+    document.getElementById("home").textContent = "Back to the calendar";
+    document.getElementById("random").textContent = "See a random flower";
+  }
   const ids = ["rose-day", "galentines", "san-valentin", "8m", "amarillas-marzo", "sant-jordi", "muguet", "madre-es",
     "madre-mx", "madre-mayo2", "rose-day-kr", "namorados", "novia", "amor-amistad-co", "amarillas", "novio",
     "madre-ar", "todos-santos", "muertos", "moradas", "hombre", "nochebuena", "guadalupe"];

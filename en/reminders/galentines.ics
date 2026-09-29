@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Galentine’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:galentines-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Galentine’s Day: Bouquets for your friends
+DESCRIPTION:It was born in 2010 in the series Parks and Recreation\, when L
+ eslie Knope celebrates her friends the day before Valentine’s Day. Socia
+ l media turned it into a real plan: breakfast\, shared bouquets and a grou
+ p photo. Where: Worldwide\, especially on social media. Guide: https://www
+ .calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Galentine’s Day. Order bouquets for your friends.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

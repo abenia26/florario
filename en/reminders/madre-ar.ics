@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Mother’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-ar-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=3SU
+SUMMARY:🌷 Mother’s Day: Roses and lilies
+DESCRIPTION:Argentina celebrates mothers in spring\, on the third Sunday of
+  October\, so it coincides with the best flower season of the southern hem
+ isphere. Where: Argentina. Guide: https://www.calendariodeflores.com/en/mo
+ thers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order roses and lilies.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

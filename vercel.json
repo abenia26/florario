@@ -20,6 +20,33 @@
       ]
     },
     {
+      "source": "/en/reminders/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/calendar; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/en/downloads/flower-calendar.ics",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/calendar; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/en/downloads/(.*).jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
       "source": "/imagenes/web/(.*)",
       "headers": [
         {

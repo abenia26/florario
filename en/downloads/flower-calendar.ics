@@ -1,0 +1,535 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario – Flower calendar
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Roses
+DESCRIPTION:It opens Valentine’s Week: each of the seven days before Vale
+ ntine’s Day has its own theme\, and the first one is for giving roses. I
+ t is everywhere in Bollywood edits and reels. Where: India. Guide: https:/
+ /www.calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Rose Day. Order roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:galentines-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Galentine’s Day: Bouquets for your friends
+DESCRIPTION:It was born in 2010 in the series Parks and Recreation\, when L
+ eslie Knope celebrates her friends the day before Valentine’s Day. Socia
+ l media turned it into a real plan: breakfast\, shared bouquets and a grou
+ p photo. Where: Worldwide\, especially on social media. Guide: https://www
+ .calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Galentine’s Day. Order bouquets for your friends.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:san-valentin-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Valentine’s Day: Red roses
+DESCRIPTION:The biggest day of the year for flowers. The red rose is the un
+ iversal code for “I like you”\; in several Latin American countries fr
+ iendship is celebrated too\, so giving flowers to friends also counts. Whe
+ re: Worldwide · in Mexico and other countries\, Day of Love and Friendshi
+ p. Guide: https://www.calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Valentine’s Day. Order red roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:8m-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 International Women’s Day: Mimosa or tulips
+DESCRIPTION:In Italy a sprig of mimosa has been given since 1946\; in Russi
+ a and Eastern Europe tulips are typical. In Spain and Latin America 8M is 
+ above all a day of protest: if you give flowers\, make them a recognition\
+ , not a substitute for listening. Where: Italy\, Russia and Eastern Europe
+ . Guide: https://www.calendariodeflores.com/en/womens-day/
+URL:https://www.calendariodeflores.com/en/womens-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: International Women’s Day. Order mimosa or tulips.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:padre-es-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Father’s Day: Sunflowers or a plant
+DESCRIPTION:It falls on Saint Joseph’s Day\, the father of Jesus in Chris
+ tian tradition. Flowers are not the most typical gift\, but more and more 
+ people give sunflowers or a plant that lasts: a present that doesn’t wil
+ t in a week. Where: Spain\, Portugal\, Italy\, Bolivia and Honduras. Guide
+ : https://www.calendariodeflores.com/en/fathers-day/
+URL:https://www.calendariodeflores.com/en/fathers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Father’s Day. Order sunflowers or a plant.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amarillas-marzo-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Yellow flowers (northern spring): Sunflowers\, tulips or yello
+ w roses
+DESCRIPTION:The September 21 trend doubled: with spring arriving in the nor
+ thern hemisphere\, Mexico adopted a second yellow flowers day. Same song\,
+  same idea\, different season. Where: Mexico and Central America\, and inc
+ reasingly Peru. Guide: https://www.calendariodeflores.com/en/yellow-flower
+ s-march-21/
+URL:https://www.calendariodeflores.com/en/yellow-flowers-march-21/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Yellow flowers (northern spring). Order sunflowers\,
+  tulips or yellow roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sant-jordi-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Sant Jordi: A red rose and a book
+DESCRIPTION:Legend has it that a rosebush sprang from the blood of the drag
+ on slain by Saint George (Sant Jordi). Barcelona fills with rose and book 
+ stalls\; the book was added in the 20th century and coincides with World B
+ ook Day. Where: Catalonia. Guide: https://www.calendariodeflores.com/en/sa
+ nt-jordi/
+URL:https://www.calendariodeflores.com/en/sant-jordi/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Sant Jordi. Order a red rose and a book.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:muguet-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Muguet du 1er mai: Lily of the valley (muguet)
+DESCRIPTION:Since King Charles IX (1561)\, a sprig of lily of the valley ha
+ s been given on May 1 to wish good luck. On that day selling muguet in the
+  street is tolerated without a license. Where: France. Guide: https://www.
+ calendariodeflores.com/en/lily-of-the-valley/
+URL:https://www.calendariodeflores.com/en/lily-of-the-valley/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Muguet du 1er mai. Order lily of the valley (muguet)
+ .
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-es-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270502
+DTEND;VALUE=DATE:20270503
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=1SU
+SUMMARY:🌷 Mother’s Day: Carnations\, roses or peonies
+DESCRIPTION:In Spain it is celebrated on the first Sunday of May\, the mont
+ h Catholic tradition dedicates to the Virgin Mary. Carnations and peonies 
+ are the classics. Where: Spain and Portugal. Guide: https://www.calendario
+ deflores.com/en/mothers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order carnations\, roses or peonies.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-mx-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Mother’s Day (Día de las Madres): Roses and carnations
+DESCRIPTION:In Mexico it has been a fixed date since 1922\, when the newspa
+ per Excélsior promoted the celebration. Serenade\, family lunch and a bou
+ quet that can’t be missing. Where: Mexico\, Guatemala and El Salvador. G
+ uide: https://www.calendariodeflores.com/en/mothers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day (Día de las Madres). Order roses and
+  carnations.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-mayo2-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270509
+DTEND;VALUE=DATE:20270510
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=2SU
+SUMMARY:🌷 Mother’s Day: Carnations
+DESCRIPTION:Anna Jarvis promoted the day in the USA in 1908 and chose the c
+ arnation\, her mother’s favorite flower. From there it spread to much of
+  the Americas and Europe. Where: USA\, Colombia\, Peru\, Chile\, Venezuela
+ \, Brazil\, Italy and more. Guide: https://www.calendariodeflores.com/en/m
+ others-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order carnations.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:rose-day-kr-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Roses
+DESCRIPTION:In Korea the 14th of every month has a theme for couples. May
+ ’s is roses: if you follow K-dramas or K-pop\, it will sound familiar. W
+ here: South Korea. Guide: https://www.calendariodeflores.com/en/valentines
+ -day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Rose Day. Order roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:maestro-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Teachers’ Day: Daisies\, sunflowers or a small plant
+DESCRIPTION:Mexico has celebrated its teachers every May 15 since 1918\, an
+ d Colombia does so on the same day in memory of Saint John Baptist de La S
+ alle\, patron saint of teachers. A flower with a handwritten note is the m
+ ost common gesture in classrooms. Where: Mexico and Colombia. Guide: https
+ ://www.calendariodeflores.com/en/teachers-day/
+URL:https://www.calendariodeflores.com/en/teachers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Teachers’ Day. Order daisies\, sunflowers or a sma
+ ll plant.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:namorados-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Dia dos Namorados: Red roses
+DESCRIPTION:Brazil’s Valentine’s Day falls on the eve of Saint Anthony
+ ’s Day\, the matchmaker saint. It became popular in 1949 with an adverti
+ sing campaign and today it is one of the biggest dates of the year there. 
+ Where: Brazil. Guide: https://www.calendariodeflores.com/en/valentines-day
+ /
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Dia dos Namorados. Order red roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:padre-junio-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270621
+RRULE:FREQ=YEARLY;BYMONTH=6;BYDAY=3SU
+SUMMARY:🌷 Father’s Day: Sunflowers\, blue flowers or a plant
+DESCRIPTION:The US date\, which spread to almost all of Latin America. Flow
+ ers for dad are gaining ground thanks to the “men deserve flowers too”
+  trend: sunflowers\, blue tones or a plant for the office. Where: Mexico\,
+  Argentina\, Chile\, Colombia\, Peru\, Venezuela\, USA and more. Guide: ht
+ tps://www.calendariodeflores.com/en/fathers-day/
+URL:https://www.calendariodeflores.com/en/fathers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Father’s Day. Order sunflowers\, blue flowers or a
+  plant.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:novia-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Girlfriend Day (Día de la Novia): Roses
+DESCRIPTION:It comes from the American National Girlfriend Day and on socia
+ l media it works as a second Valentine’s Day. It isn’t official in any
+  country\, but florists already have it marked. Where: Mexico\, Peru\, Ecu
+ ador\, Costa Rica. Guide: https://www.calendariodeflores.com/en/girlfriend
+ -day/
+URL:https://www.calendariodeflores.com/en/girlfriend-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Girlfriend Day (Día de la Novia). Order roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amor-amistad-co-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270919
+RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=3SA
+SUMMARY:🌷 Amor y Amistad (Love and Friendship Day): Roses and sunflowers
+DESCRIPTION:Colombia has celebrated its own Valentine’s Day in September 
+ since the 1960s. It is for partners and friends alike\, secret Santa inclu
+ ded. Where: Colombia. Guide: https://www.calendariodeflores.com/en/amor-y-
+ amistad/
+URL:https://www.calendariodeflores.com/en/amor-y-amistad/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Amor y Amistad (Love and Friendship Day). Order rose
+ s and sunflowers.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:amarillas-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270921
+DTEND;VALUE=DATE:20270922
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Yellow flowers: Sunflowers\, tulips or yellow roses
+DESCRIPTION:In Floricienta\, the 2004 Argentine series\, the heroine dreams
+  of someone giving her yellow flowers. In September 2021 TikTok revived th
+ e song to welcome spring in the southern hemisphere\, and the trend hasn
+ ’t stopped since. Where: All of Latin America · it started in Argentina
+ \, Chile\, Peru and Uruguay. Guide: https://www.calendariodeflores.com/en/
+ yellow-flowers/
+URL:https://www.calendariodeflores.com/en/yellow-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Yellow flowers. Order sunflowers\, tulips or yellow 
+ roses.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:novio-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Boyfriend Day (Día del Novio): Blue flowers or a Hot Wheels b
+ ouquet
+DESCRIPTION:It was born in 2014 as #NationalBoyfriendDay and in Latin Ameri
+ ca it became the answer to yellow flowers: blue flowers and bouquets made 
+ of Hot Wheels cars wrapped in paper and ribbons. Where: Mexico\, Peru\, Ch
+ ile\, Colombia\, Spain. Guide: https://www.calendariodeflores.com/en/blue-
+ flowers/
+URL:https://www.calendariodeflores.com/en/blue-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Boyfriend Day (Día del Novio). Order blue flowers o
+ r a hot wheels bouquet.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:madre-ar-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=3SU
+SUMMARY:🌷 Mother’s Day: Roses and lilies
+DESCRIPTION:Argentina celebrates mothers in spring\, on the third Sunday of
+  October\, so it coincides with the best flower season of the southern hem
+ isphere. Where: Argentina. Guide: https://www.calendariodeflores.com/en/mo
+ thers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order roses and lilies.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:todos-santos-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 All Saints’ Day: Chrysanthemums
+DESCRIPTION:Families clean and decorate the graves of their loved ones. The
+  chrysanthemum is the flower of the day: bringing one is a way of saying t
+ hey are remembered. Where: Spain and much of Latin America. Guide: https:/
+ /www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+URL:https://www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: All Saints’ Day. Order chrysanthemums.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:muertos-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Day of the Dead: Cempasúchil (Mexican marigold)
+DESCRIPTION:The color and scent of cempasúchil mark the path of the souls 
+ to the altar (ofrenda). Its orange petals are one of the visual symbols of
+  the celebration. Where: Mexico. Guide: https://www.calendariodeflores.com
+ /en/all-saints-day-of-the-dead/
+URL:https://www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Day of the Dead. Order cempasúchil (mexican marigol
+ d).
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:moradas-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Purple flowers: Violets or any purple flower
+DESCRIPTION:The song tells of someone who sent violets to a woman every Nov
+ ember 9\, with no card\; in the end it was her own husband. On TikTok they
+  are given to your “purple person”: someone who arrived recently and i
+ s already essential. Where: Mexico\, Peru\, Colombia\, Spain. Guide: https
+ ://www.calendariodeflores.com/en/purple-flowers/
+URL:https://www.calendariodeflores.com/en/purple-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Purple flowers. Order violets or any purple flower.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:hombre-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 International Men’s Day: Blue flowers\, sunflowers or Hot Wh
+ eels
+DESCRIPTION:It has been celebrated since 1999. On social media the idea tha
+ t men deserve flowers too became popular: blue roses\, sunflowers or Hot W
+ heels bouquets to break the habit of only giving flowers to women. Where: 
+ Latin America\, especially on social media. Guide: https://www.calendariod
+ eflores.com/en/blue-flowers/
+URL:https://www.calendariodeflores.com/en/blue-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: International Men’s Day. Order blue flowers\, sunf
+ lowers or hot wheels.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nochebuena-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 National Poinsettia Day (Mexico): Poinsettia (cuetlaxóchitl)
+DESCRIPTION:The Christmas flower is Mexican: in Nahuatl it is called cuetla
+ xóchitl. On December 8 its origin is celebrated and the season for giving
+  and decorating with it begins. Where: Mexico. Guide: https://www.calendar
+ iodeflores.com/en/poinsettia/
+URL:https://www.calendariodeflores.com/en/poinsettia/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: National Poinsettia Day (Mexico). Order poinsettia (
+ cuetlaxóchitl).
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:guadalupe-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Our Lady of Guadalupe: Roses
+DESCRIPTION:According to tradition\, in 1531 Juan Diego carried roses from 
+ Tepeyac hill in his cloak (tilma)\, in the middle of December. That is why
+  every December 12 millions of people bring roses to the Basilica. Where: 
+ Mexico. Guide: https://www.calendariodeflores.com/en/our-lady-of-guadalupe
+ /
+URL:https://www.calendariodeflores.com/en/our-lady-of-guadalupe/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Our Lady of Guadalupe. Order roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

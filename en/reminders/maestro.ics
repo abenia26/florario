@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Teachers’ Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:maestro-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Teachers’ Day: Daisies\, sunflowers or a small plant
+DESCRIPTION:Mexico has celebrated its teachers every May 15 since 1918\, an
+ d Colombia does so on the same day in memory of Saint John Baptist de La S
+ alle\, patron saint of teachers. A flower with a handwritten note is the m
+ ost common gesture in classrooms. Where: Mexico and Colombia. Guide: https
+ ://www.calendariodeflores.com/en/teachers-day/
+URL:https://www.calendariodeflores.com/en/teachers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Teachers’ Day. Order daisies\, sunflowers or a sma
+ ll plant.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

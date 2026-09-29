@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Yellow flowers (northern spring)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:amarillas-marzo-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Yellow flowers (northern spring): Sunflowers\, tulips or yello
+ w roses
+DESCRIPTION:The September 21 trend doubled: with spring arriving in the nor
+ thern hemisphere\, Mexico adopted a second yellow flowers day. Same song\,
+  same idea\, different season. Where: Mexico and Central America\, and inc
+ reasingly Peru. Guide: https://www.calendariodeflores.com/en/yellow-flower
+ s-march-21/
+URL:https://www.calendariodeflores.com/en/yellow-flowers-march-21/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Yellow flowers (northern spring). Order sunflowers\,
+  tulips or yellow roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

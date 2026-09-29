@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Mother’s Day (Día de las Madres)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-mx-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Mother’s Day (Día de las Madres): Roses and carnations
+DESCRIPTION:In Mexico it has been a fixed date since 1922\, when the newspa
+ per Excélsior promoted the celebration. Serenade\, family lunch and a bou
+ quet that can’t be missing. Where: Mexico\, Guatemala and El Salvador. G
+ uide: https://www.calendariodeflores.com/en/mothers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day (Día de las Madres). Order roses and
+  carnations.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

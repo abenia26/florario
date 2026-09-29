@@ -354,3 +354,29 @@ El build comprueba en las 56 páginas: enlaces internos y anclas, JSON-LD válid
 - **`.github/workflows/regenerar.yml`:** GitHub Actions ejecuta el build cada día a las 06:30 UTC (con `--pdf` solo si falta el PDF de algún año). Si hay cambios, hace commit con la identidad de git del titular y push, lo que despliega en Vercel. En CI, Chrome se lanza con `--no-sandbox`.
 - **IndexNow:** `_build/indexnow.py` avisa a Bing, Yandex y otros de las URL del sitemap o de las que cambian en un commit; la clave pública está en la raíz. Google no usa IndexNow: para Google está Search Console.
 - **Widget:** el HTML estático ya no lleva la cuenta de días (la pone el JavaScript), para que la regeneración diaria no cambie el archivo cada día.
+
+---
+
+## Fase 12 · Versión en inglés (29 sep 2026)
+
+Objetivo: que la web se pueda leer en otro idioma para llegar a un público internacional.
+
+### Qué se hizo
+| Parte | Cambio |
+|---|---|
+| **Estructura** | La web se genera dos veces: español en `/` (sin cambios de URL) e inglés en `/en/`, con slugs en inglés (`/en/rose/`, `/en/valentines-day/`, `/en/months/`…). La tabla de equivalencias está en `SLUGS` de `_build/datos_en.py`. |
+| **Selector de idioma** | «ES \| EN» en la cabecera de todas las páginas; lleva a la misma página en el otro idioma. En móvil se queda junto a la marca y el menú baja a su fila. |
+| **Textos** | Las 56 páginas de `_build/paginas/` traducidas en `_build/paginas/en/`. Datos (fechas, flores, guías, meses, fotos, temporada) en `datos_en.py`. Textos fijos del generador con `T("español", "english")`; los de la portada, con `<!--es-->…<!--en-->…<!--/-->` y `t()` en el JavaScript. Inglés americano (fechas «February 14», «color», «mom»). |
+| **SEO** | `hreflang` es / en / x-default en cada página. La portada y los países mantienen su grupo es-ES, es-MX… y le suman la portada inglesa. `og:locale` en_US en inglés y `es_ES` como alternativo. JSON-LD con `inLanguage` del idioma. El sitemap incluye las 122 URL. |
+| **Descargas** | PDF, vista previa y `.ics` propios en inglés: `/en/downloads/flower-calendar-AAAA.pdf`, `/en/downloads/flower-calendar.ics` y `/en/reminders/*.ics` (UID distinto para no pisar el calendario español). El build imprime los PDF que falten aunque no se pase `--pdf`, así el inglés se genera solo en la primera ejecución y en la regeneración diaria. |
+| **Otros** | `guia.js` y la página 404 detectan el idioma (`<html lang>` o la ruta `/en/`). `vercel.json` sirve los `.ics` ingleses como `text/calendar`. El widget sigue solo en español. |
+
+### Decisiones
+- **Traducción propia y no automática** (Google Translate): una traducción automática no se indexa, falla con nombres de fechas y flores, y no daría tráfico de otros países.
+- **Nombres propios en español** donde así se conocen: Sant Jordi, Amor y Amistad, cempasúchil, «Flores amarillas», «Un ramito de violetas». Se explican entre paréntesis la primera vez.
+- **Las páginas de país en inglés no llevan `hreflang`**, porque `/mexico/`, `/espana/`… ya son las versiones es-XX de la portada y un mismo URL no puede estar en dos grupos.
+- **Aviso legal y privacidad** en inglés indican que, si hay discrepancia, prevalece la versión española.
+
+### Verificación
+- Build con `FLORARIO_HOY=2026-09-29`: 122 páginas, sin «PROBLEMAS» (enlaces, anclas, JSON-LD, `alt`, H1 y traducciones completas).
+- Las páginas españolas salen idénticas a las de antes salvo lo añadido a propósito: `hreflang`, `og:locale:alternate` en_US y el selector de idioma. El `.ics` y el HTML del PDF español no cambian.

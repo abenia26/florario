@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · All Saints’ Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:todos-santos-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 All Saints’ Day: Chrysanthemums
+DESCRIPTION:Families clean and decorate the graves of their loved ones. The
+  chrysanthemum is the flower of the day: bringing one is a way of saying t
+ hey are remembered. Where: Spain and much of Latin America. Guide: https:/
+ /www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+URL:https://www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: All Saints’ Day. Order chrysanthemums.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

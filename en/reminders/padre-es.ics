@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Father’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:padre-es-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Father’s Day: Sunflowers or a plant
+DESCRIPTION:It falls on Saint Joseph’s Day\, the father of Jesus in Chris
+ tian tradition. Flowers are not the most typical gift\, but more and more 
+ people give sunflowers or a plant that lasts: a present that doesn’t wil
+ t in a week. Where: Spain\, Portugal\, Italy\, Bolivia and Honduras. Guide
+ : https://www.calendariodeflores.com/en/fathers-day/
+URL:https://www.calendariodeflores.com/en/fathers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Father’s Day. Order sunflowers or a plant.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

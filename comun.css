@@ -55,9 +55,24 @@
 }
 .site-nav a:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
 .site-nav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+/* Selector de idioma: ES | EN, el idioma actual resaltado */
+.lang { display: inline-flex; flex: none; padding: 2px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface, transparent); }
+.lang a {
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: .74rem;
+  letter-spacing: .06em;
+  transition: background .15s, color .15s;
+}
+.lang a:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.lang a[aria-current] { background: var(--ink); color: var(--bg); }
 @media (max-width: 720px) {
   .site-head { padding-block: 8px 6px; }
-  .site-nav { width: 100%; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; }
+  /* El menú baja a su propia fila; la marca y el idioma se quedan arriba */
+  .site-nav { order: 1; width: 100%; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; }
   .site-nav::-webkit-scrollbar { display: none; }
   .site-nav a { padding: 6px 10px; font-size: .88rem; }
 }

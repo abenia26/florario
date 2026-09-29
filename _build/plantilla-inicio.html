@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="<!--es-->es<!--en-->en<!--/-->">
 <head>
 <!--@HEAD-->
 <style>
@@ -670,108 +670,108 @@
   <main>
   <section class="hero" aria-labelledby="title">
     <div class="hero-copy">
-      <p class="eyebrow" id="eyebrow">Calendario de flores <!--@YEAR--></p>
-      <h1 id="title">Calendario de flores <!--@YEAR_LABEL-->: <em>qué flor regalar</em> en cada fecha</h1>
-      <p class="lede">Porque «no sabía que era hoy» ya no cuela. Las <!--@N_EVENTS--> fechas para regalar flores en España y Latinoamérica, las flores de temporada de cada mes y una cuenta atrás para que llegues a tiempo. Toca un mes de la rueda o una flor para ver qué se regala, dónde y por qué.</p>
+      <p class="eyebrow" id="eyebrow"><!--es-->Calendario de flores<!--en-->Flower calendar<!--/--> <!--@YEAR--></p>
+      <h1 id="title"><!--es-->Calendario de flores <!--@YEAR_LABEL-->: <em>qué flor regalar</em> en cada fecha<!--en-->Flower calendar <!--@YEAR_LABEL-->: <em>which flower to give</em> on each date<!--/--></h1>
+      <p class="lede"><!--es-->Porque «no sabía que era hoy» ya no cuela. Las <!--@N_EVENTS--> fechas para regalar flores en España y Latinoamérica, las flores de temporada de cada mes y una cuenta atrás para que llegues a tiempo. Toca un mes de la rueda o una flor para ver qué se regala, dónde y por qué.<!--en-->Because “I didn’t know it was today” no longer works. The <!--@N_EVENTS--> dates for giving flowers in Spain and Latin America, the seasonal flowers of each month and a countdown so you’re never late. Tap a month on the wheel or a flower to see what is given, where and why.<!--/--></p>
       <!--@BYLINE-->
       <div class="hero-actions">
         <button type="button" class="next" id="next"></button>
         <div class="hero-row">
-          <button type="button" class="btn random" id="random"><svg viewBox="-12 -12 24 24" aria-hidden="true" id="random-bloom"></svg>Flor al azar</button>
-          <div class="year-nav" aria-label="Cambiar año del calendario">
-            <button type="button" id="prev-year" aria-label="Año anterior">‹</button>
+          <button type="button" class="btn random" id="random"><svg viewBox="-12 -12 24 24" aria-hidden="true" id="random-bloom"></svg><!--es-->Flor al azar<!--en-->Random flower<!--/--></button>
+          <div class="year-nav" aria-label="<!--es-->Cambiar año del calendario<!--en-->Change the calendar year<!--/-->">
+            <button type="button" id="prev-year" aria-label="<!--es-->Año anterior<!--en-->Previous year<!--/-->">‹</button>
             <output id="year-label" aria-live="polite"><!--@YEAR--></output>
-            <button type="button" id="next-year" aria-label="Año siguiente">›</button>
+            <button type="button" id="next-year" aria-label="<!--es-->Año siguiente<!--en-->Next year<!--/-->">›</button>
           </div>
         </div>
       </div>
     </div>
     <div class="wheel-wrap">
-      <svg id="wheel" viewBox="-216 -216 432 432" role="group" aria-label="Rueda del año con las fechas en que se regalan flores"></svg>
+      <svg id="wheel" viewBox="-216 -216 432 432" role="group" aria-label="<!--es-->Rueda del año con las fechas en que se regalan flores<!--en-->Wheel of the year with the dates on which flowers are given<!--/-->"></svg>
     </div>
   </section>
 
-  <section class="ticker" aria-label="Próximas fechas">
+  <section class="ticker" aria-label="<!--es-->Próximas fechas<!--en-->Upcoming dates<!--/-->">
     <div class="ticker-track" id="ticker"></div>
   </section>
 
-  <section class="filters" aria-label="Filtros">
-    <div class="chips" id="type-chips" role="group" aria-label="Tipo de fecha"></div>
-    <div class="swatches" role="group" aria-label="Color de flor">
+  <section class="filters" aria-label="<!--es-->Filtros<!--en-->Filters<!--/-->">
+    <div class="chips" id="type-chips" role="group" aria-label="<!--es-->Tipo de fecha<!--en-->Type of date<!--/-->"></div>
+    <div class="swatches" role="group" aria-label="<!--es-->Color de flor<!--en-->Flower color<!--/-->">
       <span class="filters-label">Color</span>
       <span id="color-swatches" class="swatches"></span>
     </div>
   </section>
 
-  <section class="explorer" id="explorer" aria-label="Explorar por mes">
-    <div class="months" id="months" role="tablist" aria-label="Meses"></div>
+  <section class="explorer" id="explorer" aria-label="<!--es-->Explorar por mes<!--en-->Explore by month<!--/-->">
+    <div class="months" id="months" role="tablist" aria-label="<!--es-->Meses<!--en-->Months<!--/-->"></div>
     <div class="panel" id="panel" role="tabpanel"></div>
   </section>
 
   <section class="block" id="fechas" aria-labelledby="fechas-t">
-    <p class="eyebrow">Calendario de flores <!--@YEAR_LABEL--></p>
+    <p class="eyebrow"><!--es-->Calendario de flores<!--en-->Flower calendar<!--/--> <!--@YEAR_LABEL--></p>
     <h2 id="fechas-t"><!--@FECHAS_T--></h2>
-    <p>Las <!--@N_EVENTS--> fechas del año, empezando por la próxima: qué se celebra, qué flor se regala, de qué color, en qué países y por qué. Las fechas móviles (Día de la Madre, Día del Padre, Amor y Amistad) ya están calculadas con su año.</p>
+    <p><!--es-->Las <!--@N_EVENTS--> fechas del año, empezando por la próxima: qué se celebra, qué flor se regala, de qué color, en qué países y por qué. Las fechas móviles (Día de la Madre, Día del Padre, Amor y Amistad) ya están calculadas con su año.<!--en-->The <!--@N_EVENTS--> dates of the year, starting with the next one: what is celebrated, which flower is given, in what color, in which countries and why. Movable dates (Mother’s Day, Father’s Day, Amor y Amistad) are already worked out with their year.<!--/--></p>
     <!--@FECHAS-->
   </section>
 
   <section class="block" id="temporada" aria-labelledby="temporada-t">
-    <p class="eyebrow">Mes a mes</p>
-    <h2 id="temporada-t">Calendario de flores de temporada</h2>
-    <p>Qué flores están en su mejor momento cada mes en España, en México y Centroamérica y en Argentina, Chile y Uruguay, donde las estaciones van al revés. Las flores de temporada son más baratas, duran más en el jarrón y viajan menos.</p>
+    <p class="eyebrow"><!--es-->Mes a mes<!--en-->Month by month<!--/--></p>
+    <h2 id="temporada-t"><!--es-->Calendario de flores de temporada<!--en-->Seasonal flower calendar<!--/--></h2>
+    <p><!--es-->Qué flores están en su mejor momento cada mes en España, en México y Centroamérica y en Argentina, Chile y Uruguay, donde las estaciones van al revés. Las flores de temporada son más baratas, duran más en el jarrón y viajan menos.<!--en-->Which flowers are at their best each month in Spain, in Mexico and Central America and in Argentina, Chile and Uruguay, where the seasons are reversed. Seasonal flowers are cheaper, last longer in the vase and travel less.<!--/--></p>
     <!--@TEMPORADA-->
   </section>
 
   <section class="block" id="recuerdamelo" aria-labelledby="recuerdamelo-t">
-    <p class="eyebrow">Para imprimir y para no olvidarte</p>
-    <h2 id="recuerdamelo-t">Descarga el calendario de flores y recuérdamelo</h2>
-    <p>El calendario completo en PDF para imprimir o pegar en la nevera y, si prefieres el móvil, un calendario que te avisa tres días antes de cada fecha. En cada fecha del calendario tienes también su propio botón “Recuérdamelo”.</p>
+    <p class="eyebrow"><!--es-->Para imprimir y para no olvidarte<!--en-->To print and never forget<!--/--></p>
+    <h2 id="recuerdamelo-t"><!--es-->Descarga el calendario de flores y recuérdamelo<!--en-->Download the flower calendar and get reminders<!--/--></h2>
+    <p><!--es-->El calendario completo en PDF para imprimir o pegar en la nevera y, si prefieres el móvil, un calendario que te avisa tres días antes de cada fecha. En cada fecha del calendario tienes también su propio botón “Recuérdamelo”.<!--en-->The full calendar as a PDF to print or stick on the fridge and, if you prefer your phone, a calendar that alerts you three days before each date. Every date in the calendar also has its own “Remind me” button.<!--/--></p>
     <!--@DESCARGAS-->
   </section>
 
   <section class="block" id="por-mes" aria-labelledby="por-mes-t">
-    <p class="eyebrow">Por mes</p>
-    <h2 id="por-mes-t">Qué flores regalar cada mes</h2>
+    <p class="eyebrow"><!--es-->Por mes<!--en-->By month<!--/--></p>
+    <h2 id="por-mes-t"><!--es-->Qué flores regalar cada mes<!--en-->Which flowers to give each month<!--/--></h2>
     <div class="tiles"><!--@MESES--></div>
   </section>
 
   <section class="block" id="paises" aria-labelledby="paises-t">
-    <p class="eyebrow">Por país</p>
-    <h2 id="paises-t">Fechas para regalar flores en tu país</h2>
-    <p>El Día de la Madre, el Día del Padre y los trends cambian de fecha según el país. Elige el tuyo para ver solo sus fechas.</p>
+    <p class="eyebrow"><!--es-->Por país<!--en-->By country<!--/--></p>
+    <h2 id="paises-t"><!--es-->Fechas para regalar flores en tu país<!--en-->Dates for giving flowers in each country<!--/--></h2>
+    <p><!--es-->El Día de la Madre, el Día del Padre y los trends cambian de fecha según el país. Elige el tuyo para ver solo sus fechas.<!--en-->Mother’s Day, Father’s Day and the trends change date from country to country. Pick one to see only its dates.<!--/--></p>
     <div class="tiles"><!--@PAISES--></div>
   </section>
 
   <section class="block guides" id="guias" aria-labelledby="guides-title">
-    <p class="eyebrow">Guías</p>
-    <h2 id="guides-title">Por qué se regalan flores en cada fecha</h2>
-    <p>El origen de cada trend, qué significa cada color y qué flores regalar, con una página para cada fecha y para las ocasiones sin fecha fija.</p>
-    <nav class="gcards" aria-label="Guías por fecha y ocasión">
+    <p class="eyebrow"><!--es-->Guías<!--en-->Guides<!--/--></p>
+    <h2 id="guides-title"><!--es-->Por qué se regalan flores en cada fecha<!--en-->Why flowers are given on each date<!--/--></h2>
+    <p><!--es-->El origen de cada trend, qué significa cada color y qué flores regalar, con una página para cada fecha y para las ocasiones sin fecha fija.<!--en-->The origin of each trend, what each color means and which flowers to give, with a page for each date and for occasions without a fixed date.<!--/--></p>
+    <nav class="gcards" aria-label="<!--es-->Guías por fecha y ocasión<!--en-->Guides by date and occasion<!--/-->">
       <!--@GUIAS-->
     </nav>
   </section>
 
   <section class="block guides" id="por-flor" aria-labelledby="flores-title">
-    <p class="eyebrow">Por flor</p>
-    <h2 id="flores-title">Significado y temporada de cada flor</h2>
-    <nav class="gcards" aria-label="Guías por flor">
+    <p class="eyebrow"><!--es-->Por flor<!--en-->By flower<!--/--></p>
+    <h2 id="flores-title"><!--es-->Significado y temporada de cada flor<!--en-->Meaning and season of each flower<!--/--></h2>
+    <nav class="gcards" aria-label="<!--es-->Guías por flor<!--en-->Guides by flower<!--/-->">
       <!--@FLORES-->
     </nav>
   </section>
 
   <section class="anyday" aria-labelledby="anyday-title">
-    <picture><source type="image/avif" srcset="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.avif"><img class="anyday-photo" src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.webp" width="480" height="320" alt="Ramo de margaritas y flores silvestres en un bote de cristal, para regalarte flores a ti cualquier día" loading="lazy" decoding="async"></picture>
+    <picture><source type="image/avif" srcset="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.avif"><img class="anyday-photo" src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.webp" width="480" height="320" alt="<!--es-->Ramo de margaritas y flores silvestres en un bote de cristal, para regalarte flores a ti cualquier día<!--en-->A bouquet of daisies and wildflowers in a glass jar, to give yourself flowers on any day<!--/-->" loading="lazy" decoding="async"></picture>
     <div>
-      <p class="eyebrow">Fuera del calendario</p>
-      <h2 id="anyday-title">Cualquier día sirve para comprarte flores a ti</h2>
-      <p>En 2023 Miley Cyrus lanzó <strong>“Flowers”</strong> y el verso sobre comprarse flores una misma se volvió himno de amor propio en TikTok. Desde entonces, el ramo para ti no necesita fecha.</p>
-      <p>Si una fecha de esta lista no va contigo, este es el plan alternativo. Y si es para otra persona, tienes guías para <a href="/flores-para-cumpleanos/">cumpleaños</a>, <a href="/flores-para-aniversario/">aniversarios</a> y <a href="/flores-para-condolencias/">condolencias</a>.</p>
+      <p class="eyebrow"><!--es-->Fuera del calendario<!--en-->Off the calendar<!--/--></p>
+      <h2 id="anyday-title"><!--es-->Cualquier día sirve para comprarte flores a ti<!--en-->Any day is a good day to buy yourself flowers<!--/--></h2>
+      <p><!--es-->En 2023 Miley Cyrus lanzó <strong>“Flowers”</strong> y el verso sobre comprarse flores una misma se volvió himno de amor propio en TikTok. Desde entonces, el ramo para ti no necesita fecha.<!--en-->In 2023 Miley Cyrus released <strong>“Flowers”</strong> and the line about buying yourself flowers became a self-love anthem on TikTok. Since then, a bouquet for yourself doesn’t need a date.<!--/--></p>
+      <p><!--es-->Si una fecha de esta lista no va contigo, este es el plan alternativo. Y si es para otra persona, tienes guías para <a href="/flores-para-cumpleanos/">cumpleaños</a>, <a href="/flores-para-aniversario/">aniversarios</a> y <a href="/flores-para-condolencias/">condolencias</a>.<!--en-->If none of the dates on this list is for you, this is the alternative plan. And if it’s for someone else, there are guides for <a href="/en/birthday-flowers/">birthdays</a>, <a href="/en/anniversary-flowers/">anniversaries</a> and <a href="/en/sympathy-flowers/">sympathy</a>.<!--/--></p>
     </div>
   </section>
 
   <section class="block" id="preguntas" aria-labelledby="preguntas-t">
-    <p class="eyebrow">Preguntas frecuentes</p>
-    <h2 id="preguntas-t">Dudas sobre el calendario de flores</h2>
+    <p class="eyebrow"><!--es-->Preguntas frecuentes<!--en-->FAQ<!--/--></p>
+    <h2 id="preguntas-t"><!--es-->Dudas sobre el calendario de flores<!--en-->Questions about the flower calendar<!--/--></h2>
     <div class="faq">
       <!--@FAQ-->
     </div>
@@ -795,14 +795,22 @@
   const imgSrc = (key, size = 960) => `/imagenes/web/${IMAGES[key].file}-${size}.webp`;
   const imgSet = key => [480, 640, 960].map(w => `${imgSrc(key, w)} ${w}w`).join(", ");
 
-  const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-  const MONTH_SHORT = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
-  const WEEKDAYS = ["L", "M", "X", "J", "V", "S", "D"];
-  const fmtWd = new Intl.DateTimeFormat("es", { weekday: "short" });
-  const fmtLong = new Intl.DateTimeFormat("es", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-  const fmtShort = new Intl.DateTimeFormat("es", { weekday: "short", day: "numeric", month: "short" });
+  // Textos de la interfaz: t("español", "english") según el idioma de la página (LANG, en los datos)
+  const t = (es, en) => LANG === "en" ? en : es;
+  const WEEKDAYS = t(["L", "M", "X", "J", "V", "S", "D"], ["M", "T", "W", "T", "F", "S", "S"]);
+  const fmtWd = new Intl.DateTimeFormat(LANG, { weekday: "short" });
+  const fmtLong = new Intl.DateTimeFormat(LANG, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const fmtShort = new Intl.DateTimeFormat(LANG, { weekday: "short", day: "numeric", month: "short" });
   const cap = s => s[0].toUpperCase() + s.slice(1);
   const wd = d => fmtWd.format(d).replace(".", "");
+  // "14 de febrero" · "February 14"
+  const dayMonth = d => t(`${d.getDate()} de ${MONTHS[d.getMonth()]}`, `${MONTHS[d.getMonth()]} ${d.getDate()}`);
+  // "14 feb" · "Feb 14"
+  const dayMonthShort = d => {
+    const m = MONTH_SHORT[d.getMonth()];
+    return t(`${d.getDate()} ${m.toLowerCase()}`, `${cap(m.toLowerCase())} ${d.getDate()}`);
+  };
+  const plural = (n, es1, esN, en1, enN) => n === 1 ? t(es1, en1) : t(esN, enN);
 
   // ---------- Estado ----------
   const today = new Date();
@@ -832,10 +840,10 @@
   function doy(d) { return dayDiff(new Date(d.getFullYear(), 0, 1), d); }
   function relative(d) {
     const n = dayDiff(today, d);
-    if (n === 0) return "hoy";
-    if (n === 1) return "mañana";
-    if (n === -1) return "ayer";
-    return n > 0 ? `en ${n} días` : `hace ${-n} días`;
+    if (n === 0) return t("hoy", "today");
+    if (n === 1) return t("mañana", "tomorrow");
+    if (n === -1) return t("ayer", "yesterday");
+    return n > 0 ? t(`en ${n} días`, `in ${n} days`) : t(`hace ${-n} días`, `${-n} days ago`);
   }
   function upcoming(limit) {
     const out = [];
@@ -895,7 +903,8 @@
   function renderChips() {
     const counts = { all: EVENTS.length, saved: EVENTS.filter(e => state.saved.has(e.id)).length };
     for (const t of Object.keys(TYPES)) counts[t] = EVENTS.filter(e => e.type === t).length;
-    const opts = [["all", "Todas"], ["clasico", "Clásicas"], ["trend", "Trends"], ["memoria", "Memoria"], ["saved", "♥ Guardadas"]];
+    const opts = [["all", t("Todas", "All")], ["clasico", t("Clásicas", "Classic")], ["trend", "Trends"],
+                  ["memoria", t("Memoria", "Remembrance")], ["saved", t("♥ Guardadas", "♥ Saved")]];
     document.getElementById("type-chips").innerHTML = opts.map(([k, label]) =>
       `<button type="button" class="chip" data-type="${k}" aria-pressed="${state.type === k}">${label}<span class="n">${counts[k]}</span></button>`
     ).join("");
@@ -929,7 +938,7 @@
     for (let m = 0; m < 12; m++) {
       const a0 = doy(new Date(y, m, 1)) / total * 360 + 0.6;
       const a1 = (m === 11 ? total : doy(new Date(y, m + 1, 1))) / total * 360 - 0.6;
-      s += `<path class="w-arc${m === state.month ? " on" : ""}" data-month="${m}" d="${arcPath(100, 136, a0, a1)}" fill="${MONTH_COLORS[m]}" tabindex="0" role="button" aria-label="Ver ${MONTHS[m]}"/>`;
+      s += `<path class="w-arc${m === state.month ? " on" : ""}" data-month="${m}" d="${arcPath(100, 136, a0, a1)}" fill="${MONTH_COLORS[m]}" tabindex="0" role="button" aria-label="${t("Ver", "See")} ${MONTHS[m]}"/>`;
     }
     s += `<circle class="w-guide" r="${R_TICK}"/>`;
 
@@ -950,12 +959,12 @@
     // Hoy
     if (y === today.getFullYear()) {
       const [x, yy] = polar(R_TICK, ang(doy(today)));
-      s += `<circle class="w-today" cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="4"><title>Hoy</title></circle>`;
+      s += `<circle class="w-today" cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="4"><title>${t("Hoy", "Today")}</title></circle>`;
     }
 
     // Centro
     s += `<text class="w-year" y="10">${y}</text>`;
-    s += `<text class="w-sub" y="32">${EVENTS.length} FECHAS CON FLORES</text>`;
+    s += `<text class="w-sub" y="32">${EVENTS.length} ${t("FECHAS CON FLORES", "FLOWER DATES")}</text>`;
 
     // Flores: se apilan en anillos si caen a menos de 5 días de otra
     const placed = EVENTS.map(ev => ({ ev, d: dateFor(ev, y) })).map(o => ({ ...o, i: doy(o.d) })).sort((a, b) => a.i - b.i);
@@ -971,7 +980,7 @@
       const [ex, ey] = polar(r - 7, ang(o.i));
       const dim = matches(o.ev) ? "" : " dim";
       stems += `<line class="w-stem${dim}" x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}"/>`;
-      const label = `${o.ev.name}, ${o.d.getDate()} de ${MONTHS[o.d.getMonth()]}. ${o.ev.flower}.`;
+      const label = `${o.ev.name}, ${dayMonth(o.d)}. ${o.ev.flower}.`;
       flowers += `<g class="ev${dim}" data-id="${o.ev.id}" transform="translate(${x.toFixed(1)} ${yy.toFixed(1)})" tabindex="0" role="button" aria-label="${esc(label)}" style="--i:${idx}">
         <circle class="hit" r="11"/><g class="fl">${petals(flowerHex(o.ev), 8, o.ev.petals || 6)}</g></g>`;
     });
@@ -991,7 +1000,7 @@
       const dots = items.slice(0, 4).map(o => `<i style="--c:${flowerHex(o.ev)}"></i>`).join("");
       html += `<button type="button" class="mo${items.length ? "" : " empty"}" role="tab" id="tab-${m}" data-month="${m}"
         aria-selected="${on}" aria-controls="panel" tabindex="${on ? 0 : -1}" style="--mc:${mc};--on:${textOn(mc)}">
-        <b>${MONTH_SHORT[m]}</b><span class="dots">${dots}</span><span class="cnt">${items.length}<span class="sr-only"> ${items.length === 1 ? "fecha" : "fechas"}</span></span></button>`;
+        <b>${MONTH_SHORT[m]}</b><span class="dots">${dots}</span><span class="cnt">${items.length}<span class="sr-only"> ${plural(items.length, "fecha", "fechas", "date", "dates")}</span></span></button>`;
     }
     const strip = document.getElementById("months");
     strip.innerHTML = html;
@@ -1033,28 +1042,29 @@
       const isToday = y === today.getFullYear() && m === today.getMonth() && dd === today.getDate();
       const list = byDay.get(dd);
       if (!list) {
-        cal += `<span class="day${isToday ? " today" : ""}"${isToday ? ' title="Hoy"' : ""}>${dd}</span>`;
+        cal += `<span class="day${isToday ? " today" : ""}"${isToday ? ` title="${t("Hoy", "Today")}"` : ""}>${dd}</span>`;
         continue;
       }
       const first = list[0].ev;
-      const names = list.map(o => o.ev.name).join(" y ");
+      const names = list.map(o => o.ev.name).join(t(" y ", " and "));
       const sel = list.some(o => o.ev.id === state.sel);
       cal += `<button type="button" class="day has${isToday ? " today" : ""}${sel ? " sel" : ""}" data-day="${dd}" data-ids="${list.map(o => o.ev.id).join(" ")}"
-        style="--fc:${accentHex(first)}" aria-label="${dd} de ${MONTHS[m]}: ${esc(names)}">
+        style="--fc:${accentHex(first)}" aria-label="${dayMonth(new Date(y, m, dd))}: ${esc(names)}">
         ${photo(first, 'loading="lazy" decoding="async"', true)}<span class="dn">${dd}</span>${list.length > 1 ? `<span class="more">+${list.length - 1}</span>` : ""}</button>`;
     }
 
     const count = items.length;
     const all = EVENTS.filter(ev => dateFor(ev, y).getMonth() === m).length;
     const sub = count
-      ? `${count} ${count === 1 ? "fecha" : "fechas"} con flores${count < all ? ` · ${all - count} ocultas por los filtros` : ""}`
-      : (all ? `${all} ${all === 1 ? "fecha oculta" : "fechas ocultas"} por los filtros` : "Mes sin fechas de flores");
+      ? `${count} ${plural(count, "fecha con flores", "fechas con flores", "flower date", "flower dates")}${count < all ? t(` · ${all - count} ocultas por los filtros`, ` · ${all - count} hidden by the filters`) : ""}`
+      : (all ? `${all} ${plural(all, "fecha oculta por los filtros", "fechas ocultas por los filtros", "date hidden by the filters", "dates hidden by the filters")}`
+             : t("Mes sin fechas de flores", "No flower dates this month"));
 
     panel.innerHTML = `
       <div class="panel-head">
-        <button type="button" class="pn" data-step="-1" aria-label="Mes anterior">‹</button>
+        <button type="button" class="pn" data-step="-1" aria-label="${t("Mes anterior", "Previous month")}">‹</button>
         <div class="grow"><h2>${cap(MONTHS[m])} <span>${y}</span></h2><p>${sub}</p></div>
-        <button type="button" class="pn" data-step="1" aria-label="Mes siguiente">›</button>
+        <button type="button" class="pn" data-step="1" aria-label="${t("Mes siguiente", "Next month")}">›</button>
       </div>
       <div class="panel-body${dir ? (dir > 0 ? " from-right" : " from-left") : ""}">
         <div class="cal">${cal}</div>
@@ -1072,9 +1082,9 @@
       const nm = nextMonthWithItems(state.month);
       spot.innerHTML = `<div class="spot-empty">
         <svg viewBox="-12 -12 24 24" aria-hidden="true">${petals(MONTH_COLORS[state.month], 11, 8)}</svg>
-        <h3>${state.type === "saved" ? "Nada guardado este mes" : `${cap(MONTHS[state.month])} va sin flores`}</h3>
-        <p>${state.type === "saved" ? "Abre cualquier fecha y toca “Guardar” para tenerla aquí." : "No hay fechas que coincidan. Buen momento para comprarte un ramo a ti."}</p>
-        ${nm >= 0 ? `<button type="button" class="btn primary" data-goto="${nm}">Ir a ${MONTHS[nm]} →</button>` : `<button type="button" class="btn" data-reset>Quitar filtros</button>`}
+        <h3>${state.type === "saved" ? t("Nada guardado este mes", "Nothing saved this month") : t(`${cap(MONTHS[state.month])} va sin flores`, `No flowers in ${MONTHS[state.month]}`)}</h3>
+        <p>${state.type === "saved" ? t("Abre cualquier fecha y toca “Guardar” para tenerla aquí.", "Open any date and tap “Save” to keep it here.") : t("No hay fechas que coincidan. Buen momento para comprarte un ramo a ti.", "No dates match. A good time to buy yourself a bouquet.")}</p>
+        ${nm >= 0 ? `<button type="button" class="btn primary" data-goto="${nm}">${t("Ir a", "Go to")} ${MONTHS[nm]} →</button>` : `<button type="button" class="btn" data-reset>${t("Quitar filtros", "Clear filters")}</button>`}
       </div>`;
       return;
     }
@@ -1085,20 +1095,20 @@
     spot.innerHTML = `
       <button type="button" class="spot-photo" data-open="${ev.id}">
         ${photo(ev).replace(/alt="[^"]*"/, 'alt=""')}
-        <span class="spot-date"><b>${d.getDate()}</b><small>${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${wd(d)}</small></span>
+        <span class="spot-date"><b>${d.getDate()}</b><small>${t(MONTH_SHORT[d.getMonth()].toLowerCase(), MONTH_SHORT[d.getMonth()])} · ${wd(d)}</small></span>
         <span class="tag ${ev.type}">${TYPES[ev.type]}</span>
         <span class="spot-name">${esc(ev.name)}</span>
       </button>
       <p class="spot-meta"><strong>${esc(ev.flower)}</strong> · ${esc(ev.region.split(" · ")[0])} · ${relative(d)}</p>
       <p class="spot-story">${esc(ev.story)}</p>
       <div class="spot-actions">
-        <button type="button" class="btn primary" data-open="${ev.id}">Ver ficha</button>
-        <button type="button" class="btn" data-save="${ev.id}" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
+        <button type="button" class="btn primary" data-open="${ev.id}">${t("Ver ficha", "See details")}</button>
+        <button type="button" class="btn" data-save="${ev.id}" aria-pressed="${saved}">${saved ? t("♥ Guardada", "♥ Saved") : t("♡ Guardar", "♡ Save")}</button>
         <span class="grow"></span>
         ${items.length > 1 ? `<span class="pager">
-          <button type="button" data-ev-step="-1" aria-label="Fecha anterior del mes" ${idx === 0 ? "disabled" : ""}>‹</button>
+          <button type="button" data-ev-step="-1" aria-label="${t("Fecha anterior del mes", "Previous date this month")}" ${idx === 0 ? "disabled" : ""}>‹</button>
           <span>${idx + 1} / ${items.length}</span>
-          <button type="button" data-ev-step="1" aria-label="Fecha siguiente del mes" ${idx === items.length - 1 ? "disabled" : ""}>›</button>
+          <button type="button" data-ev-step="1" aria-label="${t("Fecha siguiente del mes", "Next date this month")}" ${idx === items.length - 1 ? "disabled" : ""}>›</button>
         </span>` : ""}
       </div>`;
   }
@@ -1181,9 +1191,9 @@
   function renderTicker() {
     const group = upcoming(10).map(({ ev, d, n }) =>
       `<button type="button" class="tk" data-id="${ev.id}" data-year="${d.getFullYear()}" style="--fc:${accentHex(ev)}">
-        ${photo(ev, 'loading="lazy"', true)}<span><b>${esc(ev.name)}</b><small>${d.getDate()} ${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${n === 0 ? "hoy" : n === 1 ? "mañana" : `en ${n} días`}</small></span></button>`
+        ${photo(ev, 'loading="lazy"', true)}<span><b>${esc(ev.name)}</b><small>${dayMonthShort(d)} · ${relative(d)}</small></span></button>`
     ).join("");
-    const label = `<span class="ticker-label">Próximas</span>`;
+    const label = `<span class="ticker-label">${t("Próximas", "Coming up")}</span>`;
     // Dos copias para que el bucle no tenga salto; la segunda queda oculta a lectores de pantalla
     document.getElementById("ticker").innerHTML =
       `<div class="ticker-group">${label}${group}</div>` +
@@ -1201,8 +1211,8 @@
     el.dataset.id = nx.ev.id;
     el.dataset.year = nx.d.getFullYear();
     el.style.setProperty("--fc", accentHex(nx.ev));
-    const lead = nx.n === 0 ? "Toca hoy" : nx.n === 1 ? "día para" : "días para";
-    el.innerHTML = `<span class="next-num">${nx.n === 0 ? "¡Hoy!" : nx.n}</span>
+    const lead = nx.n === 0 ? t("Toca hoy", "It’s today") : nx.n === 1 ? t("día para", "day to go") : t("días para", "days to go");
+    el.innerHTML = `<span class="next-num">${nx.n === 0 ? t("¡Hoy!", "Today!") : nx.n}</span>
       <span class="next-label">${lead} · ${fmtShort.format(nx.d)}</span>
       <span class="next-name">${esc(nx.ev.name)}</span>
       ${photo(nx.ev, 'class="next-photo"', true).replace(/alt="[^"]*"/, 'alt=""')}`;
@@ -1211,7 +1221,7 @@
 
   function renderAll(dir = 0) {
     document.getElementById("year-label").textContent = state.year;
-    document.getElementById("eyebrow").textContent = `Calendario de flores · ${state.year}`;
+    document.getElementById("eyebrow").textContent = `${t("Calendario de flores", "Flower calendar")} · ${state.year}`;
     renderChips();
     renderSwatches();
     renderWheel();
@@ -1244,11 +1254,11 @@
     try { history.replaceState(null, "", "#" + id); } catch (e) { /* sin historial */ }
   }
   function reminderText({ ev, d }) {
-    return `${d.getDate()} de ${MONTHS[d.getMonth()]} · ${ev.name}: ${ev.flower}${ev.tag ? " #" + ev.tag : ""} (vía Florario)`;
+    return `${dayMonth(d)} · ${ev.name}: ${ev.flower}${ev.tag ? " #" + ev.tag : ""} (${t("vía", "via")} Florario)`;
   }
-  const shareUrl = ev => `${location.origin}/#${ev.id}`;
+  const shareUrl = ev => `${location.origin}${BASE}#${ev.id}`;
   function shareText({ ev, d }) {
-    return `${d.getDate()} de ${MONTHS[d.getMonth()]} · ${ev.name}: ${ev.flower}. Míralo en Florario:`;
+    return `${dayMonth(d)} · ${ev.name}: ${ev.flower}. ${t("Míralo en Florario:", "See it on Florario:")}`;
   }
   function renderDetail() {
     const { ev, d } = current;
@@ -1259,25 +1269,25 @@
     dlgRoot.innerHTML = `
       <figure class="dlg-photo">
         ${photo(ev)}
-        <figcaption>Foto: <a href="${im.source}" target="_blank" rel="noopener">${esc(im.author)}</a> · ${im.license}</figcaption>
-        <button type="button" class="dlg-close" id="dlg-close" aria-label="Cerrar">×</button>
+        <figcaption>${t("Foto", "Photo")}: <a href="${im.source}" target="_blank" rel="noopener">${esc(im.author)}</a> · ${im.license}</figcaption>
+        <button type="button" class="dlg-close" id="dlg-close" aria-label="${t("Cerrar", "Close")}">×</button>
       </figure>
       <div class="dlg">
         <div class="dlg-meta"><span class="tag ${ev.type}">${TYPES[ev.type]}</span><span>${esc(ev.region)}</span></div>
         <h2 id="dlg-title">${esc(ev.name)}</h2>
         <p class="dlg-when">${fmtLong.format(d)} <span>· ${relative(d)}${whenExtra}</span></p>
-        <p><span class="dlg-flower">Qué se regala:</span> ${esc(ev.flower)}</p>
+        <p><span class="dlg-flower">${t("Qué se regala:", "What to give:")}</span> ${esc(ev.flower)}</p>
         <p>${esc(ev.story)}</p>
         ${ev.song ? `<div class="song"><span class="song-icon" aria-hidden="true">♪</span><b>“${esc(ev.song.title)}”</b><small>${esc(ev.song.by)}</small></div>` : ""}
         ${ev.variant ? `<p class="variant">${esc(ev.variant)}</p>` : ""}
         <div class="dlg-actions">
-          <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? "♥ Guardada" : "♡ Guardar"}</button>
-          <button type="button" class="btn" id="dlg-copy">Copiar recordatorio</button>
-          <a class="btn" href="https://wa.me/?text=${encodeURIComponent(shareText(current) + " " + shareUrl(ev))}" target="_blank" rel="noopener">Compartir por WhatsApp</a>
-          <button type="button" class="btn" id="dlg-share">${navigator.share ? "Compartir" : "Copiar enlace"}</button>
-          ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">Ver #${ev.tag} ↗</a>` : ""}
-          <a class="btn" href="/recordatorios/${ev.id}.ics" download title="Aviso 3 días antes, cada año">Recuérdamelo</a>
-          <a class="btn" href="/${ev.guia}/">${esc(GUIDE_NAMES[ev.guia] || "Leer la guía")} →</a>
+          <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? t("♥ Guardada", "♥ Saved") : t("♡ Guardar", "♡ Save")}</button>
+          <button type="button" class="btn" id="dlg-copy">${t("Copiar recordatorio", "Copy reminder")}</button>
+          <a class="btn" href="https://wa.me/?text=${encodeURIComponent(shareText(current) + " " + shareUrl(ev))}" target="_blank" rel="noopener">${t("Compartir por WhatsApp", "Share on WhatsApp")}</a>
+          <button type="button" class="btn" id="dlg-share">${navigator.share ? t("Compartir", "Share") : t("Copiar enlace", "Copy link")}</button>
+          ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">${t("Ver", "See")} #${ev.tag} ↗</a>` : ""}
+          <a class="btn" href="${ICS_BASE}${ev.id}.ics" download title="${t("Aviso 3 días antes, cada año", "Alert 3 days before, every year")}">${t("Recuérdamelo", "Remind me")}</a>
+          <a class="btn" href="${BASE}${ev.guia}/">${esc(GUIDE_NAMES[ev.guia] || t("Leer la guía", "Read the guide"))} →</a>
         </div>
         <p class="status" id="dlg-status" role="status"></p>
       </div>`;
@@ -1294,17 +1304,17 @@
       if (navigator.share) {
         navigator.share({ title: `${current.ev.name} · Florario`, text: shareText(current), url }).catch(() => {});
       } else {
-        const fallback = () => { status.innerHTML = `Copia este enlace: <code>${esc(url)}</code>`; };
-        try { navigator.clipboard.writeText(url).then(() => { status.textContent = "Enlace copiado."; }, fallback); }
+        const fallback = () => { status.innerHTML = `${t("Copia este enlace:", "Copy this link:")} <code>${esc(url)}</code>`; };
+        try { navigator.clipboard.writeText(url).then(() => { status.textContent = t("Enlace copiado.", "Link copied."); }, fallback); }
         catch (err) { fallback(); }
       }
     }
     if (t.id === "dlg-copy") {
       const text = reminderText(current);
       const status = document.getElementById("dlg-status");
-      const fallback = () => { status.innerHTML = `Copia este texto: <code>${esc(text)}</code>`; };
+      const fallback = () => { status.innerHTML = `${t("Copia este texto:", "Copy this text:")} <code>${esc(text)}</code>`; };
       try {
-        navigator.clipboard.writeText(text).then(() => { status.textContent = "Recordatorio copiado."; }, fallback);
+        navigator.clipboard.writeText(text).then(() => { status.textContent = t("Recordatorio copiado.", "Reminder copied."); }, fallback);
       } catch (err) { fallback(); }
     }
   });
@@ -1317,7 +1327,7 @@
   function showTip(g) {
     const ev = EVENTS.find(e => e.id === g.dataset.id);
     const d = dateFor(ev, state.year);
-    tip.innerHTML = `${photo(ev, "", true)}<div><b>${esc(ev.name)}</b><span>${d.getDate()} ${MONTH_SHORT[d.getMonth()].toLowerCase()} · ${esc(ev.flower)}</span></div>`;
+    tip.innerHTML = `${photo(ev, "", true)}<div><b>${esc(ev.name)}</b><span>${dayMonthShort(d)} · ${esc(ev.flower)}</span></div>`;
     tip.hidden = false;
     const r = g.getBoundingClientRect();
     const tw = tip.offsetWidth, th = tip.offsetHeight;

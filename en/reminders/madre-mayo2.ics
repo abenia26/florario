@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Mother’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-mayo2-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270509
+DTEND;VALUE=DATE:20270510
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=2SU
+SUMMARY:🌷 Mother’s Day: Carnations
+DESCRIPTION:Anna Jarvis promoted the day in the USA in 1908 and chose the c
+ arnation\, her mother’s favorite flower. From there it spread to much of
+  the Americas and Europe. Where: USA\, Colombia\, Peru\, Chile\, Venezuela
+ \, Brazil\, Italy and more. Guide: https://www.calendariodeflores.com/en/m
+ others-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order carnations.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

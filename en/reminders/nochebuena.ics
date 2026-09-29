@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · National Poinsettia Day (Mexico)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:nochebuena-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 National Poinsettia Day (Mexico): Poinsettia (cuetlaxóchitl)
+DESCRIPTION:The Christmas flower is Mexican: in Nahuatl it is called cuetla
+ xóchitl. On December 8 its origin is celebrated and the season for giving
+  and decorating with it begins. Where: Mexico. Guide: https://www.calendar
+ iodeflores.com/en/poinsettia/
+URL:https://www.calendariodeflores.com/en/poinsettia/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: National Poinsettia Day (Mexico). Order poinsettia (
+ cuetlaxóchitl).
+END:VALARM
+END:VEVENT
+END:VCALENDAR

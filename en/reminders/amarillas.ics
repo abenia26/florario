@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Yellow flowers
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:amarillas-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270921
+DTEND;VALUE=DATE:20270922
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Yellow flowers: Sunflowers\, tulips or yellow roses
+DESCRIPTION:In Floricienta\, the 2004 Argentine series\, the heroine dreams
+  of someone giving her yellow flowers. In September 2021 TikTok revived th
+ e song to welcome spring in the southern hemisphere\, and the trend hasn
+ ’t stopped since. Where: All of Latin America · it started in Argentina
+ \, Chile\, Peru and Uruguay. Guide: https://www.calendariodeflores.com/en/
+ yellow-flowers/
+URL:https://www.calendariodeflores.com/en/yellow-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Yellow flowers. Order sunflowers\, tulips or yellow 
+ roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

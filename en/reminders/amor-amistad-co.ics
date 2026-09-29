@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Amor y Amistad (Love and Friendship Day)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:amor-amistad-co-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270919
+RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=3SA
+SUMMARY:🌷 Amor y Amistad (Love and Friendship Day): Roses and sunflowers
+DESCRIPTION:Colombia has celebrated its own Valentine’s Day in September 
+ since the 1960s. It is for partners and friends alike\, secret Santa inclu
+ ded. Where: Colombia. Guide: https://www.calendariodeflores.com/en/amor-y-
+ amistad/
+URL:https://www.calendariodeflores.com/en/amor-y-amistad/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Amor y Amistad (Love and Friendship Day). Order rose
+ s and sunflowers.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

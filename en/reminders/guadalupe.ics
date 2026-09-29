@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Our Lady of Guadalupe
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:guadalupe-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Our Lady of Guadalupe: Roses
+DESCRIPTION:According to tradition\, in 1531 Juan Diego carried roses from 
+ Tepeyac hill in his cloak (tilma)\, in the middle of December. That is why
+  every December 12 millions of people bring roses to the Basilica. Where: 
+ Mexico. Guide: https://www.calendariodeflores.com/en/our-lady-of-guadalupe
+ /
+URL:https://www.calendariodeflores.com/en/our-lady-of-guadalupe/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Our Lady of Guadalupe. Order roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Sant Jordi
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:sant-jordi-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Sant Jordi: A red rose and a book
+DESCRIPTION:Legend has it that a rosebush sprang from the blood of the drag
+ on slain by Saint George (Sant Jordi). Barcelona fills with rose and book 
+ stalls\; the book was added in the 20th century and coincides with World B
+ ook Day. Where: Catalonia. Guide: https://www.calendariodeflores.com/en/sa
+ nt-jordi/
+URL:https://www.calendariodeflores.com/en/sant-jordi/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Sant Jordi. Order a red rose and a book.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

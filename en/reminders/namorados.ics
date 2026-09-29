@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Dia dos Namorados
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:namorados-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Dia dos Namorados: Red roses
+DESCRIPTION:Brazil’s Valentine’s Day falls on the eve of Saint Anthony
+ ’s Day\, the matchmaker saint. It became popular in 1949 with an adverti
+ sing campaign and today it is one of the biggest dates of the year there. 
+ Where: Brazil. Guide: https://www.calendariodeflores.com/en/valentines-day
+ /
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Dia dos Namorados. Order red roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

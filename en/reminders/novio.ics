@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Boyfriend Day (Día del Novio)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:novio-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Boyfriend Day (Día del Novio): Blue flowers or a Hot Wheels b
+ ouquet
+DESCRIPTION:It was born in 2014 as #NationalBoyfriendDay and in Latin Ameri
+ ca it became the answer to yellow flowers: blue flowers and bouquets made 
+ of Hot Wheels cars wrapped in paper and ribbons. Where: Mexico\, Peru\, Ch
+ ile\, Colombia\, Spain. Guide: https://www.calendariodeflores.com/en/blue-
+ flowers/
+URL:https://www.calendariodeflores.com/en/blue-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Boyfriend Day (Día del Novio). Order blue flowers o
+ r a hot wheels bouquet.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

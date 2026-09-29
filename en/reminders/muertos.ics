@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Day of the Dead
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:muertos-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Day of the Dead: Cempasúchil (Mexican marigold)
+DESCRIPTION:The color and scent of cempasúchil mark the path of the souls 
+ to the altar (ofrenda). Its orange petals are one of the visual symbols of
+  the celebration. Where: Mexico. Guide: https://www.calendariodeflores.com
+ /en/all-saints-day-of-the-dead/
+URL:https://www.calendariodeflores.com/en/all-saints-day-of-the-dead/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Day of the Dead. Order cempasúchil (mexican marigol
+ d).
+END:VALARM
+END:VEVENT
+END:VCALENDAR

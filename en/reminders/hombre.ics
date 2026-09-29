@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · International Men’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:hombre-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 International Men’s Day: Blue flowers\, sunflowers or Hot Wh
+ eels
+DESCRIPTION:It has been celebrated since 1999. On social media the idea tha
+ t men deserve flowers too became popular: blue roses\, sunflowers or Hot W
+ heels bouquets to break the habit of only giving flowers to women. Where: 
+ Latin America\, especially on social media. Guide: https://www.calendariod
+ eflores.com/en/blue-flowers/
+URL:https://www.calendariodeflores.com/en/blue-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: International Men’s Day. Order blue flowers\, sunf
+ lowers or hot wheels.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

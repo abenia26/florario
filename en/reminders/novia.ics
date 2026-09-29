@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Girlfriend Day (Día de la Novia)
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:novia-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Girlfriend Day (Día de la Novia): Roses
+DESCRIPTION:It comes from the American National Girlfriend Day and on socia
+ l media it works as a second Valentine’s Day. It isn’t official in any
+  country\, but florists already have it marked. Where: Mexico\, Peru\, Ecu
+ ador\, Costa Rica. Guide: https://www.calendariodeflores.com/en/girlfriend
+ -day/
+URL:https://www.calendariodeflores.com/en/girlfriend-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Girlfriend Day (Día de la Novia). Order roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

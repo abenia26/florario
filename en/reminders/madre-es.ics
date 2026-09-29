@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Mother’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:madre-es-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270502
+DTEND;VALUE=DATE:20270503
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=1SU
+SUMMARY:🌷 Mother’s Day: Carnations\, roses or peonies
+DESCRIPTION:In Spain it is celebrated on the first Sunday of May\, the mont
+ h Catholic tradition dedicates to the Virgin Mary. Carnations and peonies 
+ are the classics. Where: Spain and Portugal. Guide: https://www.calendario
+ deflores.com/en/mothers-day/
+URL:https://www.calendariodeflores.com/en/mothers-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Mother’s Day. Order carnations\, roses or peonies.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Purple flowers
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:moradas-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Purple flowers: Violets or any purple flower
+DESCRIPTION:The song tells of someone who sent violets to a woman every Nov
+ ember 9\, with no card\; in the end it was her own husband. On TikTok they
+  are given to your “purple person”: someone who arrived recently and i
+ s already essential. Where: Mexico\, Peru\, Colombia\, Spain. Guide: https
+ ://www.calendariodeflores.com/en/purple-flowers/
+URL:https://www.calendariodeflores.com/en/purple-flowers/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Purple flowers. Order violets or any purple flower.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

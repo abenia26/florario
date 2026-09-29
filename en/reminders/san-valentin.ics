@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Valentine’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:san-valentin-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Valentine’s Day: Red roses
+DESCRIPTION:The biggest day of the year for flowers. The red rose is the un
+ iversal code for “I like you”\; in several Latin American countries fr
+ iendship is celebrated too\, so giving flowers to friends also counts. Whe
+ re: Worldwide · in Mexico and other countries\, Day of Love and Friendshi
+ p. Guide: https://www.calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Valentine’s Day. Order red roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

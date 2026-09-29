@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · Rose Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:rose-day-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 Rose Day: Roses
+DESCRIPTION:It opens Valentine’s Week: each of the seven days before Vale
+ ntine’s Day has its own theme\, and the first one is for giving roses. I
+ t is everywhere in Bollywood edits and reels. Where: India. Guide: https:/
+ /www.calendariodeflores.com/en/valentines-day/
+URL:https://www.calendariodeflores.com/en/valentines-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: Rose Day. Order roses.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

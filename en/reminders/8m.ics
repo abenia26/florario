@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Florario//Flower calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Florario · International Women’s Day
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:P7D
+X-PUBLISHED-TTL:P7D
+BEGIN:VEVENT
+UID:8m-en@calendariodeflores.com
+DTSTAMP:20260929T000000Z
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+RRULE:FREQ=YEARLY
+SUMMARY:🌷 International Women’s Day: Mimosa or tulips
+DESCRIPTION:In Italy a sprig of mimosa has been given since 1946\; in Russi
+ a and Eastern Europe tulips are typical. In Spain and Latin America 8M is 
+ above all a day of protest: if you give flowers\, make them a recognition\
+ , not a substitute for listening. Where: Italy\, Russia and Eastern Europe
+ . Guide: https://www.calendariodeflores.com/en/womens-day/
+URL:https://www.calendariodeflores.com/en/womens-day/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P3D
+DESCRIPTION:In 3 days: International Women’s Day. Order mimosa or tulips.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

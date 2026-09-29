@@ -5,9 +5,12 @@
 //   "5-w0-2"  → 2.º domingo de mayo (mes-wDíaSemana-n, 0 = domingo), igual que las rule de index.html
 // data-names y data-ids (opcionales, separados por "|") van en el mismo orden que data-when.
 (() => {
+  // Idioma de la página (<html lang>): "es" o "en"
+  const en = document.documentElement.lang === "en";
+  const t = (es, eng) => en ? eng : es;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const fmt = new Intl.DateTimeFormat("es", { weekday: "short", day: "numeric", month: "short" });
+  const fmt = new Intl.DateTimeFormat(en ? "en" : "es", { weekday: "short", day: "numeric", month: "short" });
   const utc = d => Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
 
   function nthWeekday(y, m, wd, n) {
@@ -32,8 +35,8 @@
       }
     });
     if (!best) return;
-    const lead = best.n === 0 ? "Toca hoy" : best.n === 1 ? "día para" : "días para";
-    el.querySelector(".next-num").textContent = best.n === 0 ? "¡Hoy!" : best.n;
+    const lead = best.n === 0 ? t("Toca hoy", "It’s today") : best.n === 1 ? t("día para", "day to go") : t("días para", "days to go");
+    el.querySelector(".next-num").textContent = best.n === 0 ? t("¡Hoy!", "Today!") : best.n;
     el.querySelector(".next-label").textContent = `${lead} · ${fmt.format(best.d)}`;
     if (names[best.k]) el.querySelector(".next-name").textContent = names[best.k];
     if (ids[best.k] && el.tagName === "A") el.href = el.getAttribute("href").replace(/#.*$/, "") + "#" + ids[best.k];
@@ -43,16 +46,16 @@
   document.querySelectorAll("[data-share]").forEach(btn => {
     const status = btn.closest(".share")?.querySelector(".share-status");
     btn.hidden = false;
-    if (!navigator.share) btn.textContent = "Copiar enlace";
+    if (!navigator.share) btn.textContent = t("Copiar enlace", "Copy link");
     btn.addEventListener("click", () => {
       const { url, title } = btn.dataset;
       if (navigator.share) {
         navigator.share({ title, url }).catch(() => {});
         return;
       }
-      const fallback = () => { if (status) status.textContent = `Copia este enlace: ${url}`; };
+      const fallback = () => { if (status) status.textContent = `${t("Copia este enlace:", "Copy this link:")} ${url}`; };
       try {
-        navigator.clipboard.writeText(url).then(() => { if (status) status.textContent = "Enlace copiado."; }, fallback);
+        navigator.clipboard.writeText(url).then(() => { if (status) status.textContent = t("Enlace copiado.", "Link copied."); }, fallback);
       } catch (e) { fallback(); }
     });
   });
