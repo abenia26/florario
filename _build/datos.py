@@ -86,6 +86,11 @@ IMAGES = {
         "alt_corto": "Peonía rosa abierta",
         "author": "Acabashi", "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Cottage_garden_pink_peony_bloom_at_Boreham,_Essex,_England.jpg"},
+    "dalia": {"file": "dalia-roja-y-amarilla", "w": 960, "h": 960,
+        "alt": "Dalia de pétalos rojos con el centro amarillo, la flor nacional de México y de temporada en otoño",
+        "alt_corto": "Dalia roja y amarilla",
+        "author": "Diego Delso", "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dahlia_x_hortensis,_jard%C3%ADn_bot%C3%A1nico_de_Tallinn,_Estonia,_2012-08-13,_DD_01.JPG"},
     "lilium": {"file": "lilium-blanco-y-rosa", "w": 960, "h": 786,
         "alt": "Lilium blanco y rosa, flor del Día de la Madre en Argentina y de los ramos de condolencias",
         "alt_corto": "Lilium blanco y rosa",
@@ -288,6 +293,7 @@ FLOWERS = [
     {"slug": "mimosa", "name": "Mimosa", "img": "mimosa", "color": "amarillo", "match": ["mimosa"]},
     {"slug": "lirio-de-los-valles", "name": "Lirio de los valles", "img": "muguet", "color": "blanco", "match": ["lirio de los valles"]},
     {"slug": "nochebuena", "name": "Nochebuena", "img": "nochebuena", "color": "rojo", "match": ["nochebuena", "flor de Pascua"]},
+    {"slug": "dalia", "name": "Dalia", "img": "dalia", "color": "rojo", "match": ["dalia"]},
 ]
 
 # Guías (tarjetas, menú, pie). small = fechas en corto; desc = subtítulo de la tarjeta.

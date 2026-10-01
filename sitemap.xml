@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.calendariodeflores.com/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
   </url>
   <url>
@@ -62,6 +62,11 @@
     <loc>https://www.calendariodeflores.com/crisantemo/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/crisantemo.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/dalia/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/dalia.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/dia-de-la-madre/</loc>
@@ -287,7 +292,7 @@
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/flores/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
   </url>
   <url>
@@ -302,7 +307,7 @@
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
   </url>
   <url>
@@ -377,6 +382,11 @@
   <url>
     <loc>https://www.calendariodeflores.com/en/contact/</loc>
     <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/dahlia/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/dalia.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/daisy/</loc>
@@ -587,7 +597,7 @@
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/flowers/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
   </url>
   <url>

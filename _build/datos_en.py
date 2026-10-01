@@ -17,7 +17,7 @@ SLUGS = {
     "rosa": "rose", "girasol": "sunflower", "tulipan": "tulip", "peonia": "peony", "clavel": "carnation",
     "margarita": "daisy", "lilium": "lily", "hortensia": "hydrangea", "violeta": "violet",
     "crisantemo": "chrysanthemum", "cempasuchil": "cempasuchil", "mimosa": "mimosa",
-    "lirio-de-los-valles": "lily-of-the-valley", "nochebuena": "poinsettia",
+    "lirio-de-los-valles": "lily-of-the-valley", "nochebuena": "poinsettia", "dalia": "dahlia",
     # guías
     "flores-amarillas": "yellow-flowers", "flores-amarillas-21-de-marzo": "yellow-flowers-march-21",
     "flores-azules": "blue-flowers", "flores-moradas": "purple-flowers", "san-valentin": "valentines-day",
@@ -64,6 +64,8 @@ IMAGES = {
                "alt_corto": "Fuchsia carnations"},
     "peonia": {"alt": "An open pink peony, a May flower for Mother’s Day",
                "alt_corto": "Open pink peony"},
+    "dalia": {"alt": "A dahlia with red petals and a yellow center, the national flower of Mexico and in season in the fall",
+              "alt_corto": "Red and yellow dahlia"},
     "lilium": {"alt": "A white and pink lily, the flower of Mother’s Day in Argentina and of sympathy bouquets",
                "alt_corto": "White and pink lily"},
     "hortensia-azul": {"alt": "A blue and violet hydrangea, a blue flower for Boyfriend Day on October 3",
@@ -212,6 +214,7 @@ FLOWERS = {
     "mimosa": {"name": "Mimosa", "match": ["mimosa"]},
     "lirio-de-los-valles": {"name": "Lily of the valley", "match": ["lily of the valley"]},
     "nochebuena": {"name": "Poinsettia", "match": ["poinsettia"]},
+    "dalia": {"name": "Dahlia", "match": ["dahlia"]},
 }
 
 GUIDES = {
