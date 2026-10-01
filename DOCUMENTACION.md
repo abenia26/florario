@@ -398,3 +398,21 @@ Objetivo: cubrir búsquedas con mucho volumen que la web no tenía (flores muy b
 ### Verificación
 - Build del 1 oct 2026: 152 páginas, sin «PROBLEMAS» y ninguna página de flor por debajo de 600 palabras. El sitemap tiene 152 URL.
 - Los meses de temporada que dice el texto de cada flor coinciden con los de la tabla de temporada.
+
+---
+
+## Fase 14 · Títulos y respuestas para las búsquedas reales (1 oct 2026)
+
+Objetivo: convertir en clics las impresiones de Search Console. Casi todas venían de "cuándo se regalan flores azules a los hombres" y "cuándo es el día de las flores moradas", pero los títulos respondían a "por qué" y el H1 de las flores azules hablaba del "Día del Novio", que casi nadie busca.
+
+### Qué se hizo
+| Página | Cambio |
+|---|---|
+| `/flores-azules/` | Title, H1 y descripción con "día de las flores azules para hombres" y "3 de octubre"; entradilla que responde en la primera frase; sección "¿Cuándo es el día de las flores azules?" con tabla (3 oct y 19 nov) y sección de Perú; preguntas frecuentes nuevas (hombres, qué se regala el 3 de octubre, Perú, rosas azules). |
+| `/flores-moradas/` | Title y H1 "Día de las flores moradas"; respuesta directa al principio, tabla por país y preguntas sobre Perú, qué se regala el 9 de noviembre y flores violetas. |
+| `/octubre/`, `/noviembre/` | Title "Qué flores se regalan en octubre/noviembre". |
+| `/peru/` | Title "Fechas para regalar flores en Perú" y descripción con las fechas azul y morada. |
+| `/hortensia/` | Pregunta "¿Cuándo se regalan hortensias?". |
+| Portada | Title "Calendario de flores 2026-2027: fechas para regalar flores", descripción con las próximas fechas y pregunta sobre las flores azules para hombres. |
+
+Solo español: las consultas eran todas en español.

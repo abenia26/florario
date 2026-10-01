@@ -1136,10 +1136,10 @@ def render_home():
     tpl = open(os.path.join(BUILD, "plantilla-inicio.html"), encoding="utf-8").read()
     # Textos fijos de la plantilla: <!--es-->español<!--en-->english<!--/-->
     tpl = re.sub(r"<!--es-->(.*?)<!--en-->(.*?)<!--/-->", lambda m: m.group(2 if LANG == "en" else 1), tpl, flags=re.S)
-    title = full_title(T(f"Calendario de flores {YEAR_LABEL}: qué flor regalar y cuándo",
+    title = full_title(T(f"Calendario de flores {YEAR_LABEL}: fechas para regalar flores",
                          f"Flower calendar {YEAR_LABEL}: which flower to give and when"))
-    description = T(f"Calendario de flores {YEAR_LABEL}: todas las fechas para regalar flores en España y Latinoamérica, "
-                    "flores de temporada mes a mes y calendario en PDF para imprimir.",
+    description = T(f"Todas las fechas para regalar flores en {YEAR_LABEL}: flores azules (3 de octubre), moradas (9 de noviembre), "
+                    "amarillas, Día de la Madre y más, en España y Latinoamérica. Con flores de temporada y PDF para imprimir.",
                     f"Flower calendar {YEAR_LABEL}: every date for giving flowers in Spain and Latin America, "
                     "seasonal flowers month by month and a printable PDF calendar.")
     first, last = rolling_range(EVENTS)
@@ -1152,6 +1152,8 @@ def render_home():
          "Flores amarillas: girasoles, tulipanes o rosas amarillas. El trend nació con la canción “Flores amarillas” de Floricienta y se hizo viral en TikTok en 2021 para recibir la primavera del hemisferio sur. En México se repite el 21 de marzo."),
         ("¿Qué flores se regalan en octubre?",
          "El 3 de octubre, Día del Novio, se regalan flores azules o ramos de Hot Wheels. En Argentina el tercer domingo de octubre es el Día de la Madre, con rosas y liliums. En México, a finales de mes empieza la temporada del cempasúchil para el Día de Muertos."),
+        ("¿Cuándo se regalan flores azules a los hombres?",
+         "El 3 de octubre, Día del Novio, y otra vez el 19 de noviembre, Día Internacional del Hombre. Se regalan flores azules, como hortensias o rosas azules, o un ramo de Hot Wheels."),
         ("¿Qué flores se regalan el 9 de noviembre?",
          "Flores moradas, como violetas, lavanda o lisianthus, para tu “persona morada”. El trend sale de la canción “Un ramito de violetas” de Cecilia."),
         ("¿Qué flores son de temporada en otoño?",
