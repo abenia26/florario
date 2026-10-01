@@ -380,3 +380,21 @@ Objetivo: que la web se pueda leer en otro idioma para llegar a un público inte
 ### Verificación
 - Build con `FLORARIO_HOY=2026-09-29`: 122 páginas, sin «PROBLEMAS» (enlaces, anclas, JSON-LD, `alt`, H1 y traducciones completas).
 - Las páginas españolas salen idénticas a las de antes salvo lo añadido a propósito: `hreflang`, `og:locale:alternate` en_US y el selector de idioma. El `.ics` y el HTML del PDF español no cambian.
+
+---
+
+## Fase 13 · Más flores y guías (1 oct 2026)
+
+Objetivo: cubrir búsquedas con mucho volumen que la web no tenía (flores muy buscadas, colores, ocasiones y la temporada de Navidad), a partir de los datos de Search Console.
+
+### Qué se hizo
+| Parte | Cambio |
+|---|---|
+| **Flores nuevas (8)** | Dalia, orquídea, lavanda, gerbera, ranúnculo, alcatraz (cala), jazmín y gladiolo, en español y en inglés (`/en/dahlia/`, `/en/orchid/`, `/en/lavender/`, `/en/gerbera/`, `/en/ranunculus/`, `/en/calla-lily/`, `/en/jasmine/`, `/en/gladiolus/`). Sus nombres ya estaban en la tabla de temporada, así que ahora se enlazan solos desde los meses. |
+| **Guías nuevas (7)** | Flores de Navidad, flor de cada mes de nacimiento, flores blancas, rojas y rosas, flores para graduación y flores para boda, en los dos idiomas. |
+| **Fotos** | 8 fotos nuevas de Wikimedia Commons, con sus versiones web y sus créditos en `imagenes/CREDITOS.md`. |
+| **Temporada** | Se añade la cala a abril y mayo en España (florece en primavera), en `datos.py` y `datos_en.py`. |
+
+### Verificación
+- Build del 1 oct 2026: 152 páginas, sin «PROBLEMAS» y ninguna página de flor por debajo de 600 palabras. El sitemap tiene 152 URL.
+- Los meses de temporada que dice el texto de cada flor coinciden con los de la tabla de temporada.

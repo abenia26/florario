@@ -16,6 +16,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/alcatraz/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/alcatraz.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/amor-y-amistad/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
@@ -114,6 +119,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/flor-de-cada-mes-de-nacimiento/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/flores-amarillas-21-de-marzo/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
@@ -129,6 +139,16 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/flores-blancas/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/alcatraz.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-de-navidad/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/nochebuena.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/flores-moradas/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
@@ -137,6 +157,11 @@
     <loc>https://www.calendariodeflores.com/flores-para-aniversario/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-para-boda/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ranunculo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/flores-para-condolencias/</loc>
@@ -149,14 +174,44 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/flores-para-graduacion/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gerbera.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-rojas/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/flores-rosas/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/gerbera/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gerbera.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/girasol/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/gladiolo/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gladiolo.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/hortensia/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/jazmin/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/jazmin.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/julio/</loc>
@@ -167,6 +222,11 @@
     <loc>https://www.calendariodeflores.com/junio/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/lavanda/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lavanda.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/lilium/</loc>
@@ -219,6 +279,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/orquidea/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/orquidea.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/peonia/</loc>
     <lastmod>2026-09-28</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
@@ -235,6 +300,11 @@
   <url>
     <loc>https://www.calendariodeflores.com/prensa/</loc>
     <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/ranunculo/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ranunculo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/rosa/</loc>
@@ -297,7 +367,7 @@
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/guias/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
   </url>
   <url>
@@ -345,6 +415,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/en/birth-month-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/en/birthday-flowers/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
@@ -353,6 +428,11 @@
     <loc>https://www.calendariodeflores.com/en/blue-flowers/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/calla-lily/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/alcatraz.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/carnation/</loc>
@@ -368,6 +448,11 @@
     <loc>https://www.calendariodeflores.com/en/chile/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/peonia.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/christmas-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/nochebuena.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/chrysanthemum/</loc>
@@ -414,9 +499,24 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/en/gerbera/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gerbera.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/en/girlfriend-day/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/gladiolus/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gladiolo.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/graduation-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/gerbera.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/hydrangea/</loc>
@@ -429,6 +529,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-tulipanes.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/en/jasmine/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/jazmin.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/en/july/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
@@ -437,6 +542,11 @@
     <loc>https://www.calendariodeflores.com/en/june/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/lavender/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/lavanda.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/legal-notice/</loc>
@@ -488,6 +598,11 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/hortensia-azul.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/en/orchid/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/orquidea.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/en/our-lady-of-guadalupe/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
@@ -501,6 +616,11 @@
     <loc>https://www.calendariodeflores.com/en/peru/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/girasol.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/pink-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-rosa.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/poinsettia/</loc>
@@ -524,6 +644,16 @@
     <loc>https://www.calendariodeflores.com/en/purple-flowers/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/ranunculus/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ranunculo.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/red-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/rosa-roja.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/rose/</loc>
@@ -576,6 +706,16 @@
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/violeta.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.calendariodeflores.com/en/wedding-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ranunculo.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.calendariodeflores.com/en/white-flowers/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://www.calendariodeflores.com/imagenes/alcatraz.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.calendariodeflores.com/en/womens-day/</loc>
     <lastmod>2026-09-29</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/mimosa.jpg</image:loc></image:image>
@@ -602,7 +742,7 @@
   </url>
   <url>
     <loc>https://www.calendariodeflores.com/en/guides/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <image:image><image:loc>https://www.calendariodeflores.com/imagenes/ramo-rosas.jpg</image:loc></image:image>
   </url>
   <url>

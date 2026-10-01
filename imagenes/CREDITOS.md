@@ -14,6 +14,13 @@ Todas las fotos vienen de [Wikimedia Commons](https://commons.wikimedia.org/) y 
 | `clavel.jpg` | Clavel | Andy Mabbett | CC BY-SA 4.0 | [Bright pink carnation cultivar](https://commons.wikimedia.org/wiki/File:Bright_pink_carnation_cultivar_-_2020-05-11_-_Andy_Mabbett_-_01.jpg) |
 | `peonia.jpg` | Peonía | Acabashi | CC BY-SA 4.0 | [Cottage garden pink peony](https://commons.wikimedia.org/wiki/File:Cottage_garden_pink_peony_bloom_at_Boreham,_Essex,_England.jpg) |
 | `dalia.jpg` | Dalia (*Dahlia × hortensis*) | Diego Delso | CC BY-SA 3.0 | [Dahlia x hortensis, jardín botánico de Tallinn](https://commons.wikimedia.org/wiki/File:Dahlia_x_hortensis,_jard%C3%ADn_bot%C3%A1nico_de_Tallinn,_Estonia,_2012-08-13,_DD_01.JPG) |
+| `orquidea.jpg` | Orquídea (*Phalaenopsis*) | Uoaei1 | CC BY-SA 4.0 | [Phalaenopsis Cultivar Mini 01](https://commons.wikimedia.org/wiki/File:Phalaenopsis_Cultivar_Mini_01.jpg) |
+| `lavanda.jpg` | Lavanda | Ermell | CC BY-SA 4.0 | [Lavendelblüte-20220619-RM-160923](https://commons.wikimedia.org/wiki/File:Lavendelbl%C3%BCte-20220619-RM-160923.jpg) |
+| `gerbera.jpg` | Gerbera | JLPC | CC BY-SA 3.0 | [Gerbera FR 2014](https://commons.wikimedia.org/wiki/File:Gerbera_FR_2014.jpg) |
+| `ranunculo.jpg` | Ranúnculo | JLPC | CC BY-SA 3.0 | [Renoncule a FR 2013](https://commons.wikimedia.org/wiki/File:Renoncule_a_FR_2013.jpg) |
+| `alcatraz.jpg` | Alcatraz o cala (*Zantedeschia aethiopica*) | Alvesgaspar | CC BY 2.5 | [Jarro-2](https://commons.wikimedia.org/wiki/File:Jarro-2.jpg) |
+| `jazmin.jpg` | Jazmín (*Jasminum polyanthum*) | Didier Descouens | CC BY-SA 4.0 | [(MHNT) Jasminum polyanthum – flowers and buds](https://commons.wikimedia.org/wiki/File:(MHNT)_Jasminum_polyanthum_%E2%80%93_flowers_and_buds.jpg) |
+| `gladiolo.jpg` | Gladiolo (*Gladiolus dalenii*) | Timothy A. Gonsalves | CC BY-SA 4.0 | [Gladiolus dalenii flowers bud black](https://commons.wikimedia.org/wiki/File:Gladiolus_dalenii_flowers_bud_black_Ooty_Jul25_A7CR_06143.jpg) |
 | `lilium.jpg` | Lilium 'Marco Polo' | Derek Ramsey (Ram-Man) · Chanticleer Garden | CC BY-SA 3.0 | [Lilium 'Marco Polo'](https://commons.wikimedia.org/wiki/File:Lilium_%27Marco_Polo%27_Flower_2580px.jpg) |
 | `hortensia-azul.jpg` | Hortensia azul | Subhrajyoti07 | CC BY-SA 4.0 | [Blue Hydrangea](https://commons.wikimedia.org/wiki/File:Blue_Hydrangea_(common_names_hydrangea_or_hortensia).jpg) |
 | `crisantemo.jpg` | Crisantemo blanco | 阿橋 HQ | CC BY-SA 2.0 | [Chrysanthemum 'White Crane'](https://commons.wikimedia.org/wiki/File:%E8%8F%8A%E8%8A%B1-%E7%99%BD%E9%B6%B4_Chrysanthemum_morifolium_%27White_Crane%27_-%E5%8F%B0%E5%8C%97%E5%A3%AB%E6%9E%97%E5%AE%98%E9%82%B8_Taipei,_Taiwan-_(12010293154).jpg) |
