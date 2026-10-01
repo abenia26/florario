@@ -25,6 +25,9 @@
   /* Color de la guía: lo cambia la clase del <body> */
   --fc: #F2C230;
   --grad: linear-gradient(90deg, #E8475F, #F28C1B 50%, #E0A400);
+  /* Botón principal: color de la página con texto de contraste ≥ 4.5:1 (fucsia de marca por defecto) */
+  --btn: #B0306A;
+  --btn-on: #FFFFFF;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -72,13 +75,13 @@
 }
 
 /* Un color por guía, el de la flor que se regala */
-.c-amarillo { --fc: #F2C230; --grad: linear-gradient(90deg, #F28C1B, #E0A400); }
-.c-morado   { --fc: #8A4FD8; --grad: linear-gradient(90deg, #8A4FD8, #C0479E 60%, #E8475F); }
-.c-azul     { --fc: #3F72E0; --grad: linear-gradient(90deg, #3F72E0, #2BB3A3); }
-.c-rosa     { --fc: #EE7FA8; --grad: linear-gradient(90deg, #E8475F, #EE7FA8); }
-.c-rojo     { --fc: #D7263D; --grad: linear-gradient(90deg, #C8102E, #E8475F 55%, #F28C1B); }
-.c-naranja  { --fc: #F28C1B; --grad: linear-gradient(90deg, #E4572E, #F28C1B 55%, #E0A400); }
-.c-blanco   { --fc: #9DBF9E; --grad: linear-gradient(90deg, #2F6B45, #9DBF9E); }
+.c-amarillo { --fc: #F2C230; --btn: #F2C230; --btn-on: #1B2118; --grad: linear-gradient(90deg, #F28C1B, #E0A400); }
+.c-morado   { --fc: #8A4FD8; --btn: #8A4FD8; --btn-on: #FFFFFF; --grad: linear-gradient(90deg, #8A4FD8, #C0479E 60%, #E8475F); }
+.c-azul     { --fc: #3F72E0; --btn: #3A6AD8; --btn-on: #FFFFFF; --grad: linear-gradient(90deg, #3F72E0, #2BB3A3); }
+.c-rosa     { --fc: #EE7FA8; --btn: #EE7FA8; --btn-on: #1B2118; --grad: linear-gradient(90deg, #E8475F, #EE7FA8); }
+.c-rojo     { --fc: #D7263D; --btn: #D7263D; --btn-on: #FFFFFF; --grad: linear-gradient(90deg, #C8102E, #E8475F 55%, #F28C1B); }
+.c-naranja  { --fc: #F28C1B; --btn: #F28C1B; --btn-on: #1B2118; --grad: linear-gradient(90deg, #E4572E, #F28C1B 55%, #E0A400); }
+.c-blanco   { --fc: #9DBF9E; --btn: #2F6B45; --btn-on: #FFFFFF; --grad: linear-gradient(90deg, #2F6B45, #9DBF9E); }
 .c-todos    { --fc: #EE7FA8; --grad: linear-gradient(90deg, #E8475F, #F28C1B 22%, #E0A400 40%, #2BB3A3 60%, #3F72E0 80%, #8A4FD8); }
 
 /* ---------- Base ---------- */
@@ -127,7 +130,8 @@ a { color: inherit; }
   transition: border-color .15s, background .15s, transform .15s;
 }
 .btn:hover { border-color: var(--muted); }
-.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn.primary { background: var(--btn); color: var(--btn-on); border-color: var(--btn); font-weight: 600; }
+.btn.primary:hover { border-color: var(--btn); box-shadow: 0 6px 18px color-mix(in srgb, var(--btn) 40%, transparent); }
 .btn svg { width: 18px; height: 18px; flex: none; }
 
 .crumbs { margin: 4px 0 0; font-family: var(--mono); font-size: .76rem; letter-spacing: .04em; color: var(--muted); }
@@ -203,8 +207,8 @@ h1 em {
   width: 42px; height: 42px;
   display: grid; place-items: center;
   border-radius: 999px;
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--btn);
+  color: var(--btn-on);
   font-size: 1.1rem;
 }
 
@@ -283,7 +287,7 @@ h1 em {
 .prose h2 { margin: 0 0 12px; font-size: clamp(1.45rem, 3vw, 1.8rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.12; text-wrap: balance; }
 .prose h3 { margin: 22px 0 6px; font-size: 1.1rem; font-weight: 700; letter-spacing: -.01em; }
 .prose p { margin: 0; }
-.prose p + p, .prose p + ul, .prose ul + p, .prose p + .note, .prose .note + p, .prose .song + p, .prose p + .song { margin-top: 12px; }
+.prose p + p, .prose p + ul, .prose ul + p, .prose p + .note, .prose .note + p, .prose .song + p, .prose p + .song, .prose .table-wrap + p { margin-top: 12px; }
 .prose ul { margin: 12px 0 0; padding-left: 1.2em; }
 .prose li + li { margin-top: 6px; }
 .prose li::marker { color: var(--fc); }
@@ -297,7 +301,7 @@ h1 em {
   padding: 12px 14px; border-radius: 14px;
   background: color-mix(in srgb, var(--fc) var(--tint), var(--surface));
 }
-.song-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 999px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: .9rem; }
+.song-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 999px; background: var(--btn); color: var(--btn-on); display: grid; place-items: center; font-size: .9rem; }
 .song b { font-size: .98rem; }
 .song small { color: var(--muted); font-size: .84rem; }
 

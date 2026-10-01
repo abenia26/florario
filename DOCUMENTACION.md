@@ -416,3 +416,18 @@ Objetivo: convertir en clics las impresiones de Search Console. Casi todas vení
 | Portada | Title "Calendario de flores 2026-2027: fechas para regalar flores", descripción con las próximas fechas y pregunta sobre las flores azules para hombres. |
 
 Solo español: las consultas eran todas en español.
+
+---
+
+## Fase 15 · Botones con el color de cada fecha (1 oct 2026)
+
+Objetivo: dar más color y personalidad a la web para el público de 15 a 30 años sin cambiar la paleta base (crema, tinta oscura y pasteles), que ya encaja con la estética de Pinterest y TikTok.
+
+| Parte | Cambio |
+|---|---|
+| **Botón principal** (`.btn.primary`) | Deja de ser casi negro: toma el color de la página (`--btn` en cada clase `.c-*` de `guia.css`) con texto de contraste ≥ 4.5:1. El azul se oscurece a `#3A6AD8` y el blanco usa el verde tallo `#2F6B45`; amarillo, naranja y rosa llevan texto oscuro. Sin color propio (hubs, páginas de información) se usa el **fucsia de marca** `#B0306A`. |
+| **Flecha de la cuenta atrás y nota musical** | Mismo color que el botón. |
+| **Portada** | El botón "Ver ficha" y el de la ventana de cada fecha toman el color de esa fecha (`paintBtn()` en `plantilla-inicio.html`, que usa `textOn()` para el texto). |
+| **Tablas** | Espacio entre una tabla y el párrafo que la sigue (`.prose .table-wrap + p`). |
+
+Se mantienen neutros (tinta) el menú, el selector de idioma y los filtros, para que el color quede para lo que se puede pulsar en cada página.

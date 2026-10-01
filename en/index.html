@@ -526,7 +526,8 @@
     transition: border-color .15s, background .15s, transform .15s;
   }
   .btn:hover { border-color: var(--muted); }
-  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn.primary { background: var(--btn, #B0306A); color: var(--btn-on, #FFFFFF); border-color: var(--btn, #B0306A); font-weight: 600; }
+  .btn.primary:hover { box-shadow: 0 6px 18px color-mix(in srgb, var(--btn, #B0306A) 40%, transparent); }
   .btn svg { width: 18px; height: 18px; flex: none; }
   .btn.random:hover svg { transform: rotate(72deg); }
   .btn.random svg { transition: transform .4s cubic-bezier(.2, .9, .3, 1.3); }
@@ -953,7 +954,7 @@
     padding: 12px 14px; border-radius: 14px;
     background: color-mix(in srgb, var(--fc) var(--tint), var(--surface));
   }
-  .song-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 999px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: .9rem; }
+  .song-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 999px; background: var(--btn, var(--ink)); color: var(--btn-on, var(--bg)); display: grid; place-items: center; font-size: .9rem; }
   .song b { font-size: .95rem; }
   .song small { color: var(--muted); font-size: .82rem; }
   .variant { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--fc); padding-left: 12px; }
@@ -1796,6 +1797,13 @@
   const flowerHex = ev => COLORS[ev.color].hex;
   // El blanco no se ve como acento sobre fondo claro: se usa un verde tallo suave
   const accentHex = ev => ev.color === "blanco" ? "#9DBF9E" : flowerHex(ev);
+  // Botón principal con el color de la fecha y texto de contraste ≥ 4.5:1 (el azul y el blanco se oscurecen)
+  const BTN_HEX = { azul: "#3A6AD8", blanco: "#2F6B45" };
+  function paintBtn(el, ev) {
+    const hex = BTN_HEX[ev.color] || flowerHex(ev);
+    el.style.setProperty("--btn", hex);
+    el.style.setProperty("--btn-on", textOn(hex));
+  }
 
   // ---------- Flor SVG ----------
   function petals(hex, s, count) {
@@ -2019,6 +2027,7 @@
     const { ev, d } = items[idx];
     const saved = state.saved.has(ev.id);
     spot.style.setProperty("--fc", accentHex(ev));
+    paintBtn(spot, ev);
     spot.innerHTML = `
       <button type="button" class="spot-photo" data-open="${ev.id}">
         ${photo(ev).replace(/alt="[^"]*"/, 'alt=""')}
@@ -2193,6 +2202,7 @@
     const im = IMAGES[ev.img];
     const whenExtra = ev.rule ? ` · ${ev.ruleText}` : "";
     dialog.style.setProperty("--fc", accentHex(ev));
+    paintBtn(dialog, ev);
     dlgRoot.innerHTML = `
       <figure class="dlg-photo">
         ${photo(ev)}
