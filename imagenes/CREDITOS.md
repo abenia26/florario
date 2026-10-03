@@ -28,6 +28,12 @@ Todas las fotos vienen de [Wikimedia Commons](https://commons.wikimedia.org/) y 
 | `violeta.jpg` | Violeta | Uoaei1 | CC BY-SA 4.0 | [Viola odorata 20210226.jpg](https://commons.wikimedia.org/wiki/File:Viola_odorata_20210226.jpg) |
 | `nochebuena.jpg` | Nochebuena | Vengolis | CC BY-SA 4.0 | [Euphorbia pulcherrima 0111.jpg](https://commons.wikimedia.org/wiki/File:Euphorbia_pulcherrima_0111.jpg) |
 | `ramo-silvestre.jpg` | Ramo de flores silvestres | Petro Stelte | CC BY-SA 4.0 | [Flower-bouquet-wild-flowers](https://commons.wikimedia.org/wiki/File:Flower-bouquet-wild-flowers-Sitia-Crete-Greece.jpg) |
+| `ramo-girasol-mano.jpg` | Girasol en la mano | APK | CC BY-SA 4.0 | [Holding a sunflower.jpg](https://commons.wikimedia.org/wiki/File:Holding_a_sunflower.jpg) |
+| `ramo-azul-mano.jpg` | Ramo con flores azules en la mano | Shixart1985 | CC BY 2.0 | [A person holds a vibrant bouquet filled with various flowers](https://commons.wikimedia.org/wiki/File:A_person_holds_a_vibrant_bouquet_filled_with_various_flowers,_showcasing_blue,_orange,_pink,_and_white_blooms.jpg) |
+| `ramo-lavanda-mano.jpg` | Ramo de lavanda en las manos | Shixart1985 | CC BY 2.0 | [Woman holding a bouquet of lavender flowers in a cozy indoor](https://commons.wikimedia.org/wiki/File:Woman_holding_a_bouquet_of_lavender_flowers_in_a_cozy_indoor_setting_during_daylight_hours.jpg) |
+| `ramo-rosas-papel.jpg` | Rosas rojas envueltas en papel de periódico | পাপৰি বৰা | CC BY-SA 4.0 | [Bouquet of red roses.jpg](https://commons.wikimedia.org/wiki/File:Bouquet_of_red_roses.jpg) |
+| `ramo-claveles.jpg` | Ramo de claveles rosas | Kain Kalju | CC BY 2.0 | [Bouquet of pink carnations.jpg](https://commons.wikimedia.org/wiki/File:Bouquet_of_pink_carnations.jpg) |
+| `ramo-rosas-regalo.jpg` | Ramo de rosas rojas para regalo | Ninix8 | CC BY 4.0 | [Bouquet of Red Roses.jpg](https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg) |
 
 
 

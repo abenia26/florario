@@ -27,13 +27,29 @@ Todo lo que no se puede hacer desde el código porque necesita tus cuentas (Goog
    - Día 1: `/`, `/flores-azules/`, `/octubre/`, `/flores-moradas/`, `/noviembre/`, `/todos-los-santos-dia-de-muertos/`, `/cempasuchil/`, `/crisantemo/`, `/meses/`, `/flores/`
    - Día 2: `/mexico/`, `/espana/`, `/argentina/`, `/colombia/`, `/chile/`, `/peru/`, `/guias/`, `/hortensia/`, `/violeta/`, `/nochebuena/`
    - Día 3: `/diciembre/`, `/rosa/`, `/girasol/`, `/flores-amarillas/`, `/significado-colores-flores/`, `/flores-para-condolencias/`, `/flores-para-cumpleanos/`, `/flores-para-aniversario/`, `/dia-del-maestro/`, `/sobre-florario/`
-   - Después, el resto (el sitemap hará que Google las encuentre igualmente).
+   - Después, el resto (el sitemap hará que Google las encuentre igualmente). Lo que ya está pedido y lo que falta, en el *Registro de solicitudes de indexación* de más abajo.
 5. Prueba los datos estructurados de 3–4 páginas en <https://search.google.com/test/rich-results> (FAQ, Breadcrumb, Article, Event) y en <https://validator.schema.org/>.
 6. Vuelve cada semana a **Rendimiento → Consultas** y apunta la posición de: *calendario de flores*, *fechas para regalar flores*, *flores de temporada*, *flores azules 3 de octubre*, *flores moradas 9 de noviembre*.
 
 > Nota: Google ya no muestra resultados enriquecidos de FAQ para la mayoría de webs ni de “Event” para fechas festivas; el marcado sigue ayudando a entender la página, pero no esperes estrellas ni desplegables en el buscador.
 
 **Bing Webmaster Tools** (<https://www.bing.com/webmasters>): importa la propiedad desde Search Console en un clic. Bing alimenta también a otros buscadores y asistentes.
+
+### Registro de solicitudes de indexación
+
+Para no pedir dos veces la misma URL. Rutas sobre `https://www.calendariodeflores.com`. Actualízalo cada vez que acabes una tanda.
+
+**Hechas**
+
+- Del 28/09 al 02/10/2026, dadas en listas anteriores (76 URLs: tandas de los días 1–3 de arriba, la dalia, las 7 flores y 7 guías nuevas en ES y EN, y la reindexación de `/flores-azules/` y `/flores-moradas/` tras cambiar sus títulos): `/`, `/alcatraz/`, `/amor-y-amistad/`, `/argentina/`, `/calendario-de-flores-para-imprimir/`, `/cempasuchil/`, `/chile/`, `/colombia/`, `/crisantemo/`, `/dalia/`, `/dia-de-la-madre/`, `/dia-de-la-mujer/`, `/dia-de-la-novia/`, `/dia-del-maestro/`, `/dia-del-padre/`, `/diciembre/`, `/espana/`, `/flor-de-cada-mes-de-nacimiento/`, `/flores-amarillas-21-de-marzo/`, `/flores-amarillas/`, `/flores-azules/`, `/flores-blancas/`, `/flores-de-navidad/`, `/flores-moradas/`, `/flores-para-aniversario/`, `/flores-para-boda/`, `/flores-para-condolencias/`, `/flores-para-cumpleanos/`, `/flores-para-graduacion/`, `/flores-rojas/`, `/flores-rosas/`, `/gerbera/`, `/girasol/`, `/gladiolo/`, `/hortensia/`, `/jazmin/`, `/lavanda/`, `/mexico/`, `/nochebuena/`, `/noviembre/`, `/octubre/`, `/orquidea/`, `/peonia/`, `/peru/`, `/prensa/`, `/ranunculo/`, `/rosa/`, `/san-valentin/`, `/sant-jordi/`, `/septiembre/`, `/significado-colores-flores/`, `/sobre-florario/`, `/todos-los-santos-dia-de-muertos/`, `/violeta/`, `/virgen-de-guadalupe/`, `/meses/`, `/flores/`, `/guias/`, `/paises/`, `/en/`, `/en/birth-month-flowers/`, `/en/blue-flowers/`, `/en/calla-lily/`, `/en/christmas-flowers/`, `/en/dahlia/`, `/en/gerbera/`, `/en/gladiolus/`, `/en/graduation-flowers/`, `/en/jasmine/`, `/en/lavender/`, `/en/orchid/`, `/en/pink-flowers/`, `/en/ranunculus/`, `/en/red-flowers/`, `/en/wedding-flowers/`, `/en/white-flowers/`
+- 03/10/2026 (10): `/en/all-saints-day-of-the-dead/`, `/en/cempasuchil/`, `/en/chrysanthemum/`, `/en/purple-flowers/`, `/en/october/`, `/en/november/`, `/en/mexico/`, `/en/peru/`, `/en/poinsettia/`, `/en/our-lady-of-guadalupe/`
+
+**Pendientes, por orden**
+
+- Tanda siguiente (10): `/en/december/`, `/en/flowers/`, `/en/guides/`, `/en/months/`, `/en/countries/`, `/en/sympathy-flowers/`, `/en/birthday-flowers/`, `/en/rose/`, `/en/sunflower/`, `/en/flower-color-meanings/`
+- Tanda después (10): `/tulipan/`, `/margarita/`, `/clavel/`, `/lilium/`, `/enero/`, `/febrero/`, `/en/valentines-day/`, `/en/hydrangea/`, `/en/printable-flower-calendar/`, `/en/spain/`
+- Resto (38), sin prisa: `/abril/`, `/agosto/`, `/julio/`, `/junio/`, `/lirio-de-los-valles/`, `/marzo/`, `/mayo/`, `/mimosa/`, `/en/amor-y-amistad/`, `/en/anniversary-flowers/`, `/en/april/`, `/en/argentina/`, `/en/august/`, `/en/carnation/`, `/en/chile/`, `/en/colombia/`, `/en/daisy/`, `/en/fathers-day/`, `/en/february/`, `/en/girlfriend-day/`, `/en/january/`, `/en/july/`, `/en/june/`, `/en/lily-of-the-valley/`, `/en/lily/`, `/en/march/`, `/en/may/`, `/en/mimosa/`, `/en/mothers-day/`, `/en/peony/`, `/en/sant-jordi/`, `/en/september/`, `/en/teachers-day/`, `/en/tulip/`, `/en/violet/`, `/en/womens-day/`, `/en/yellow-flowers-march-21/`, `/en/yellow-flowers/`
+- No hace falta pedirlas (las encuentra el sitemap): `/aviso-legal/`, `/contacto/`, `/politica-de-privacidad/`, `/en/about/`, `/en/contact/`, `/en/legal-notice/`, `/en/press/`, `/en/privacy-policy/`
 
 ---
 

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legal notice | Florario</title>
 <meta name="description" content="Legal notice for Florario – Flower calendar: owner details, terms of use, intellectual property, photo licenses and liability.">
+<meta name="robots" content="max-image-preview:large">
 <meta name="author" content="Héctor Abenia">
 <meta name="theme-color" content="#F2C230">
 <link rel="canonical" href="https://www.calendariodeflores.com/en/legal-notice/">
@@ -18,10 +19,10 @@
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:title" content="Legal notice | Florario">
 <meta property="og:description" content="Legal notice for Florario – Flower calendar: owner details, terms of use, intellectual property, photo licenses and liability.">
-<meta property="og:image" content="https://www.calendariodeflores.com/imagenes/ramo-silvestre.jpg">
-<meta property="og:image:width" content="960">
-<meta property="og:image:height" content="640">
-<meta property="og:image:alt" content="A bouquet of daisies and wildflowers in a glass jar, a gift for any day">
+<meta property="og:image" content="https://www.calendariodeflores.com/imagenes/og/en/legal-notice.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Legal notice | Florario · Florario">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="article:modified_time" content="2026-09-29">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -30,6 +31,21 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/imagenes/logo-florario.png">
 <link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+document.addEventListener("click", e => {
+  const el = e.target.closest("a, button, #wheel .ev");
+  if (!el) return;
+  const h = el.getAttribute("href") || "";
+  const name = h.endsWith(".ics") ? "recordatorio_ics" : h.includes("calendar.google.com") ? "google_calendar"
+    : h.includes("wa.me/") ? "whatsapp" : h.endsWith(".pdf") ? "pdf" : h.includes("pinterest.com/pin/create") ? "pinterest"
+    : h.includes("-story.jpg") ? "story" : h.includes("fondo-calendario") || h.includes("wallpaper") ? "fondo_pantalla"
+    : el.matches(".chip, .sw") ? "filtro" : el.matches("#wheel .ev") ? "rueda" : el.matches("[data-share], #dlg-share") ? "compartir"
+    : el.matches("#saved-ics-btn") ? "ics_guardadas" : el.matches("[data-cm]") ? "tarjeta" : null;
+  if (name) window.va("event", { name, data: { pagina: location.pathname } });
+}, { capture: true, passive: true });
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <link rel="stylesheet" href="/guia.css">
 <link rel="stylesheet" href="/comun.css">
 <script type="application/ld+json">
@@ -99,7 +115,7 @@
   <header class="site-head">
     <div class="site-head-in">
       <a class="brand" href="/en/"><svg viewBox="-12 -12 24 24" aria-hidden="true"><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(0.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(36.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(72.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(108.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(144.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(180.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(216.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(252.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(288.0)" fill="#F2C230"/><ellipse class="petal" cx="0" cy="-5.50" rx="2.42" ry="5.50" transform="rotate(324.0)" fill="#F2C230"/><circle class="pistil" r="2.64"/></svg><span><b>Florario</b><small>Flower calendar</small></span></a>
-      <nav class="site-nav" aria-label="Main menu"><ul><li><a href="/en/#fechas">Dates</a></li><li><a href="/en/months/">By month</a></li><li><a href="/en/flowers/">By flower</a></li><li><a href="/en/countries/">Countries</a></li><li><a href="/en/flower-color-meanings/">Colors</a></li><li><a href="/en/guides/">Guides</a></li></ul></nav>
+      <nav class="site-nav" aria-label="Main menu"><ul><li><a href="/en/#fechas">Dates</a></li><li><a href="/en/guides/">Guides</a></li><li><a href="/en/months/">Months</a></li><li><a href="/en/flowers/">Flowers</a></li><li><a href="/en/countries/">Countries</a></li><li><a href="/en/flower-color-meanings/">Colors</a></li></ul></nav>
       <nav class="lang" aria-label="Language"><a href="/aviso-legal/" hreflang="es" lang="es" title="Español">ES</a><a href="/en/legal-notice/" hreflang="en" lang="en" title="English" aria-current="true">EN</a></nav>
     </div>
   </header>
@@ -119,6 +135,7 @@
         </div>
         
       </div>
+      
       
       <div class="layout layout-single">
         
@@ -155,6 +172,7 @@
         
         
         
+        
         </div>
       </div>
     </article>
@@ -177,9 +195,10 @@
     </div>
     
     
-    <p class="foot-legal"><span>© 2026 Florario – Flower calendar</span><span>Last updated: <time datetime="2026-10-01">October 1, 2026</time></span></p>
+    <p class="foot-legal"><span>© 2026 Florario – Flower calendar</span><span>Last updated: <time datetime="2026-10-03">October 3, 2026</time></span></p>
   </footer>
 </div>
+
 <script src="/guia.js" defer></script>
 </body>
 </html>

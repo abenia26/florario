@@ -16,7 +16,7 @@ La web es HTML estático, pero las páginas se generan con un script de Python s
 ```
 python _build/build.py          # páginas, portada, sitemap, .ics, widget
 python _build/build.py --pdf    # además, los PDF y sus vistas previas JPG (necesita Chrome o Edge)
-python _build/pines.py          # imágenes para Pinterest en marketing/pines/
+python _build/pines.py          # imágenes para compartir: og 1200×630, pines, stories y fondos de pantalla
 python _build/indexnow.py       # avisa a Bing/Yandex de las URL del sitemap (IndexNow)
 ```
 
@@ -30,6 +30,7 @@ python _build/indexnow.py       # avisa a Bing/Yandex de las URL del sitemap (In
 | `_build/build.py` | Generador: escribe `index.html`, las carpetas de cada página, `sitemap.xml`, `recordatorios/*.ics`, `descargas/` y comprueba enlaces, anclas, JSON-LD, `alt` y H1. |
 | `comun.css` | Cabecera fija con menú, pie con enlaces internos, tablas de fechas y temporada. |
 | `guia.css`, `guia.js` | Estilos, cuenta atrás y botón de compartir de las páginas interiores. |
+| `_build/pines.py`, `_build/pines.json` | Genera las imágenes para compartir de cada página (`imagenes/og/`: vista previa de WhatsApp y redes; `imagenes/pines/`: pin 1000×1500 y story 1080×1920 de guías y meses) y el fondo de pantalla 9:16 del calendario (`descargas/fondo-calendario-de-flores-AAAA.jpg`). Necesita Chrome y Pillow. `pines.json` guarda una huella de cada imagen para no rehacer las que no cambian. |
 | `fuentes/` | Bricolage Grotesque y DM Mono en woff2 (subconjunto latin, licencia OFL), alojadas en la propia web. |
 | `imagenes/web/` | Fotos en AVIF y WebP (960, 640, 480 y miniatura 160). Créditos en `imagenes/CREDITOS.md`. |
 | `.github/workflows/regenerar.yml` | Regeneración diaria automática (GitHub Actions): si algo cambia, commit, push (despliega en Vercel) y aviso por IndexNow. |
@@ -44,6 +45,14 @@ python _build/indexnow.py       # avisa a Bing/Yandex de las URL del sitemap (In
 **La web se regenera sola cada día** (GitHub Actions, 06:30 UTC). La tabla de la portada, las de países y meses y el año del title se calculan con la fecha del build: empiezan por la próxima fecha y, desde el 1 de octubre, el title pasa a “2026-2027”. En enero el trabajo genera también el PDF del año nuevo. Solo hay commit cuando algo cambia, con tu identidad de git. Se puede lanzar a mano desde GitHub: *Actions → Regenerar la web → Run workflow*. Para probar otra fecha: `FLORARIO_HOY=2026-12-15 python _build/build.py`.
 
 **Si añades o cambias una página, una fecha o una flor, hazlo en los dos idiomas:** la página en `_build/paginas/` y en `_build/paginas/en/`, y los datos en `datos.py` y en `datos_en.py` (con su slug inglés en `SLUGS`). El build falla si a una página le falta su traducción, para que el selector de idioma nunca lleve a un 404. En `build.py`, los textos fijos nuevos van como `T("español", "english")`.
+
+**Las imágenes para compartir no se generan solas:** si añades una página o cambias su H1, su antetítulo o su foto, ejecuta `python _build/pines.py` y vuelve a generar. El build avisa si falta alguna. En enero, GitHub Actions genera el fondo de pantalla del año nuevo (`pines.py --fondos`).
+
+**Analítica:** Vercel Web Analytics, sin cookies (el script va en `ANALYTICS` de `build.py`). En el plan Hobby solo cuenta visitas; los eventos de clics que ya se envían solo aparecen con el plan Pro.
+
+**Fotos dentro del texto:** `<!--@FOTO:clave-->` en un fragmento pone una foto de `IMAGES` con su crédito (y la suma a los créditos del pie).
+
+**Mensajes para la tarjeta:** en las guías que los tienen van en la cabecera del fragmento (`"mensajes": [["tono", ["mensaje", …]], …]`) y el marcador `<!--@MENSAJES-->` los pinta con su botón Copiar y Tarjeta. Máximo 140 caracteres por mensaje.
 
 **Cuando cambies el contenido de una página,** pon su `"updated"` a la fecha del día en la cabecera del fragmento. Esa fecha se usa en la firma, el JSON-LD y el `lastmod` del sitemap. El build avisa si un fragmento tiene cambios sin confirmar en git y su `updated` es anterior a hoy.
 

@@ -99,6 +99,19 @@ IMAGES = {
                    "alt_corto": "Red poinsettia plants"},
     "ramo-silvestre": {"alt": "A bouquet of daisies and wildflowers in a glass jar, a gift for any day",
                        "alt_corto": "Bouquet of daisies and wildflowers in a glass jar"},
+    # Ramos reales (envueltos o en mano) de las guías principales, en «Según tu presupuesto»
+    "ramo-girasol-mano": {"alt": "A hand holding a single sunflower against a blue sky: one yellow flower is a gift too",
+        "alt_corto": "Sunflower held in hand"},
+    "ramo-azul-mano": {"alt": "A person holding a bouquet of blue, white, orange and pink flowers",
+        "alt_corto": "Bouquet with blue flowers in hand"},
+    "ramo-lavanda-mano": {"alt": "A smiling woman holding a bouquet of lavender",
+        "alt_corto": "Lavender bouquet in hand"},
+    "ramo-rosas-papel": {"alt": "A bouquet of red roses with baby’s breath wrapped in newspaper",
+        "alt_corto": "Red roses wrapped in newspaper"},
+    "ramo-claveles": {"alt": "A bouquet of pink carnations, the traditional Mother’s Day flower",
+        "alt_corto": "Bouquet of pink carnations"},
+    "ramo-rosas-regalo": {"alt": "A bouquet of red roses wrapped in pink paper and tulle, ready to give",
+        "alt_corto": "Gift bouquet of red roses"},
 }
 
 # name = nombre del país; "in" = "in Spain"… para frases como "Flower dates in Mexico".

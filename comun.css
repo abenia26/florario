@@ -41,7 +41,7 @@
 .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; line-height: 1.05; }
 .brand svg { width: 28px; height: 28px; flex: none; }
 .brand b { display: block; font-weight: 800; font-size: 1.2rem; letter-spacing: -.02em; }
-.brand small { display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.brand small { display: block; font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 .site-nav ul { display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; }
 .site-nav a {
   display: block;
@@ -72,9 +72,10 @@
 @media (max-width: 720px) {
   .site-head { padding-block: 8px 6px; }
   /* El menú baja a su propia fila; la marca y el idioma se quedan arriba */
-  .site-nav { order: 1; width: 100%; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; }
-  .site-nav::-webkit-scrollbar { display: none; }
-  .site-nav a { padding: 6px 10px; font-size: .88rem; }
+  /* Los 6 enlaces caben enteros a 390 px; si no, saltan a otra fila (nunca scroll horizontal) */
+  .site-nav { order: 1; width: 100%; margin: 0 -6px; }
+  .site-nav ul { flex-wrap: wrap; justify-content: space-between; gap: 0; }
+  .site-nav a { padding: 6px 7px; font-size: .84rem; }
 }
 @media (max-width: 520px) { .site-head { margin: 0 -16px; padding-inline: 16px; } }
 
@@ -82,6 +83,7 @@
 .byline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 16px 0 0; font-size: .88rem; color: var(--muted); }
 .byline a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line); }
 .byline .dot { opacity: .5; }
+@media (max-width: 600px) { .byline { gap: 2px 6px; margin-top: 10px; font-size: .76rem; line-height: 1.4; } }
 .author-box {
   display: grid;
   grid-template-columns: 48px 1fr;
@@ -117,7 +119,7 @@
 .dtable { width: 100%; border-collapse: collapse; font-size: .92rem; }
 .dtable caption { padding: 12px 16px 4px; text-align: left; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .dtable th, .dtable td { padding: 11px 14px; text-align: left; vertical-align: top; }
-.dtable thead th { font-family: var(--mono); font-size: .7rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.dtable thead th { font-family: var(--mono); font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
 .dtable tbody tr + tr > * { border-top: 1px solid var(--line); }
 .dtable tbody tr.mhead > * { padding: 16px 14px 6px; border-top: 0; }
 .dtable tbody tr.mhead + tr > * { border-top: 0; }
@@ -196,6 +198,11 @@
 .site-foot .foot-inline { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .site-foot details summary { cursor: pointer; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
 .site-foot details ul { margin-top: 10px; gap: 4px; }
+/* Móvil: los enlaces del pie van en línea en lugar de uno por fila */
+@media (max-width: 600px) {
+  .foot-grid { grid-template-columns: 1fr; gap: 18px; }
+  .foot-grid nav ul, .site-foot .foot-inline { display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: .86rem; line-height: 1.45; }
+}
 .foot-legal { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .82rem; }
 
 /* ---------- Imágenes ---------- */

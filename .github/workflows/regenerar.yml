@@ -34,6 +34,9 @@ jobs:
           if [ -f "descargas/calendario-de-flores-$Y.pdf" ] && [ -f "descargas/calendario-de-flores-$N.pdf" ]; then
             python _build/build.py
           else
+            # Año nuevo: también su fondo de pantalla para el móvil (necesita Pillow)
+            pip install --quiet pillow
+            python _build/pines.py --fondos
             python _build/build.py --pdf
           fi
 

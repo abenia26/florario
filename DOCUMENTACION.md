@@ -374,7 +374,7 @@ Objetivo: que la web se pueda leer en otro idioma para llegar a un público inte
 ### Decisiones
 - **Traducción propia y no automática** (Google Translate): una traducción automática no se indexa, falla con nombres de fechas y flores, y no daría tráfico de otros países.
 - **Nombres propios en español** donde así se conocen: Sant Jordi, Amor y Amistad, cempasúchil, «Flores amarillas», «Un ramito de violetas». Se explican entre paréntesis la primera vez.
-- **Las páginas de país en inglés no llevan `hreflang`**, porque `/mexico/`, `/espana/`… ya son las versiones es-XX de la portada y un mismo URL no puede estar en dos grupos.
+- ~~**Las páginas de país en inglés no llevan `hreflang`**, porque `/mexico/`, `/espana/`… ya son las versiones es-XX de la portada y un mismo URL no puede estar en dos grupos.~~ Cambiado en la fase 16: cada página de país forma pareja con su traducción (`/mexico/` ↔ `/en/mexico/`).
 - **Aviso legal y privacidad** en inglés indican que, si hay discrepancia, prevalece la versión española.
 
 ### Verificación
@@ -431,3 +431,38 @@ Objetivo: dar más color y personalidad a la web para el público de 15 a 30 añ
 | **Tablas** | Espacio entre una tabla y el párrafo que la sigue (`.prose .table-wrap + p`). |
 
 Se mantienen neutros (tinta) el menú, el selector de idioma y los filtros, para que el color quede para lo que se puede pulsar en cada página.
+
+---
+
+## Fase 16 · Mejoras de la auditoría para el público de 15 a 30 años (3 oct 2026)
+
+Objetivo: aplicar la auditoría de UX, contenido y SEO pensada para quien llega desde el móvil (TikTok, Instagram, Pinterest, Google). Todo se comprobó a 390 × 844 con Chrome sin interfaz.
+
+### Obligatorias
+| Punto | Qué se hizo | Comprobación |
+|---|---|---|
+| **Contenido para pasar a la acción** | En flores amarillas, azules y moradas, San Valentín, Día de la Madre y Día de la Novia (ES y EN), tres secciones nuevas: «Qué escribir en la tarjeta» (12 mensajes en 4 tonos con botón Copiar), «Según tu presupuesto» (una flor, ramo pequeño, ramo grande, sin precios) y «Hazlo tú» (materiales y pasos: ramo de Hot Wheels, girasoles de papel, flores de limpiapipas, envolver el ramo, tarro decorado y caja de flores). Los mensajes van en la cabecera del fragmento (`"mensajes"`) y el marcador `<!--@MENSAJES-->` los pinta; el build avisa si alguno pasa de 140 caracteres. | Los tres H2 en las 12 páginas y en el índice. |
+| **La respuesta primero en móvil** | Entradillas que empiezan por la fecha en todas las guías con fecha (27 en total contando las dos lenguas). En móvil: foto en franja de 124 px, ficha en tarjetas que se deslizan en horizontal, índice plegado (`guia.js` lo abre en escritorio), «Ver en el calendario» al final, firma en una línea y miga de pan en una línea. «En esta página» ya no es un H2. | Primer H2 de las 52 guías por debajo de 1.000 px (antes, 1.692–1.899). |
+| **Compartir** | WhatsApp y Compartir bajo la ficha; barra fija inferior en móvil (WhatsApp · Recuérdamelo) que aparece al hacer scroll y se esconde en el pie; `navigator.share` con texto (fecha, flor y gancho). `_build/pines.py` genera ahora, y publica, la imagen `og` 1200 × 630 de cada página (`imagenes/og/`) y el pin 1000 × 1500 y la story 1080 × 1920 de cada guía y mes (`imagenes/pines/`), con «Guárdalo en Pinterest» y «Descargar para tu story». El build avisa si falta alguna. | WhatsApp en la segunda pantalla de todas las guías. |
+| **Portada más corta** | En móvil: 5 próximas fechas, 2 meses de temporada y 6 guías y 6 flores, con botón «Ver todas» (el HTML completo sigue en la página); meses en dos columnas; pie con los enlaces en línea; foto de la próxima fecha en la tarjeta «¡Hoy!»; «Flor al azar» y el año, bajo la rueda. Menú: «Guías» en segunda posición y los 6 enlaces caben a 390 px (en inglés, «Months» y «Flowers»). «Toca hoy» → «Es hoy». Se corrigió la foto de «Cualquier día», que salía estirada por el atributo `height`. | Portada: 23.572 → ~11.630 px (ES) y ~11.550 (EN); con otras fechas de build, menos de 11.900. |
+| **Recuérdamelo en Android** | Junto a cada `.ics`, «Añadir a Google Calendar» con repetición anual (`recur=RRULE…`, también las fechas móviles como el 3.er domingo de octubre). Ficha de la portada con 3 acciones visibles: Recuérdamelo (`.ics` o Google Calendar), WhatsApp y Más (Guardar, Copiar texto, Compartir, #hashtag). Se arregló un fallo antiguo: la variable `t` del botón tapaba la función de traducción y «Copiar» no avisaba. | Día de la Madre en Argentina: 18/10/2026 y `BYDAY=3SU`. |
+| **Metadatos** | 121 descriptions reescritas (≤ 155 caracteres, empezando por la respuesta) y 18 titles (≤ 60). «| Florario» solo se añade si cabe en 60. El build avisa de cualquier title o description demasiado largos. | Sin avisos de longitud en las 152 páginas. |
+
+### Posibles
+- **Hreflang de los países:** cada `/pais/` y su `/en/pais/` se citan mutuamente; la portada queda como pareja es/en. Las páginas de país tienen contenido propio, así que no son variantes es-XX de la portada. El build comprueba que todos los `hreflang` son recíprocos.
+- **Calendario para imprimir:** descarga del PDF y del **fondo de pantalla 9:16** (nuevo, `descargas/fondo-calendario-de-flores-AAAA.jpg`) en la primera pantalla; sin el botón «Ver en el calendario». En enero, GitHub Actions genera el fondo del año nuevo (`pines.py --fondos`).
+- **«¿A quién se lo regalas?»** en la portada: pareja, amiga o amigo, mamá, papá o a mí. Usa el campo `para` de cada fecha en `datos.py`.
+- **Generador de tarjeta** en las guías con mensajes: imagen 1080 × 1920 en `<canvas>` con el mensaje y una flor del color elegido, para descargar o compartir.
+- **Fechas guardadas al calendario:** con «♥ Guardadas», un botón genera en el navegador un `.ics` con esas fechas (mismo formato que `/recordatorios/`).
+- **Google Discover:** `max-image-preview:large` en todas las páginas y la imagen `og` de 1200 px también en el JSON-LD.
+
+### Menos importantes
+- Degradados del H1 con todos los colores a 3:1 o más sobre el fondo, en claro y en oscuro (tokens `--g-*` por tema).
+- Etiquetas en mono a .75rem como mínimo; antetítulo de la portada «2026-2027»; zona táctil de 32 px en las flores de la rueda (capa de círculos por debajo, para no tapar a las vecinas); «Hot Wheels» con mayúsculas en los avisos de los `.ics`.
+
+### Lo que faltaba (hecho después, el mismo día)
+- **Analítica sin cookies (punto 7):** Vercel Web Analytics, activada en el proyecto `florario-wq96`. El script (`/_vercel/insights/script.js`, en `ANALYTICS` de `build.py`) va en todas las páginas menos el widget, que se inserta en webs ajenas. Cuenta visitas, páginas, país, dispositivo y web de origen, sin cookies. Un único detector de clics manda eventos (`recordatorio_ics`, `google_calendar`, `whatsapp`, `pdf`, `pinterest`, `story`, `fondo_pantalla`, `filtro`, `rueda`, `compartir`, `ics_guardadas`, `tarjeta`), pero **el plan Hobby de Vercel solo registra las visitas**: los eventos aparecerán en el panel si el proyecto pasa a Pro. Política de privacidad (ES y EN) actualizada; de paso se corrigió que decía que las fuentes venían de Google Fonts, cuando están alojadas en `/fuentes/`.
+- **Perfiles sociales (punto 15):** Florario no tiene perfiles propios todavía, así que no se añade nada al pie ni a `sameAs` de Organization. Cuando existan, van en `org_ld()` de `build.py` y en el pie.
+- **Fotos de ramos reales (punto 12):** seis fotos de Wikimedia Commons (CC BY, CC BY-SA), una por guía principal, en «Según tu presupuesto»: girasol en la mano, ramo con flores azules en la mano, lavanda en las manos, rosas envueltas en papel de periódico, claveles rosas y rosas envueltas para regalo. Se insertan con `<!--@FOTO:clave-->`, que añade el crédito bajo la foto y en el pie; `"pos"` en `IMAGES` fija el encuadre. Créditos en `imagenes/CREDITOS.md`.
+- Para la verificación hay medidores en `_build/salida/medir*.html` (no se publican): abren cada página en un iframe de 390 × 844 y devuelven posiciones y alturas.
+

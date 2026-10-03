@@ -158,6 +158,11 @@ def pending(v):
     return isinstance(v, str) and v.startswith("[")
 
 
+def lower_first(s):
+    """Minúscula solo en la primera letra: "Flores azules o un ramo de Hot Wheels" → "flores azules o un ramo de Hot Wheels"."""
+    return s[:1].lower() + s[1:]
+
+
 def words(s):
     return len(re.findall(r"\w+", strip_tags(s)))
 
@@ -232,9 +237,12 @@ def events_sorted(evs, y=YEAR):
     return sorted(evs, key=lambda e: date_for(e, y))
 
 
+TITLE_MAX, DESC_MAX = 60, 155  # a partir de ahí Google suele cortarlos
+
+
 def full_title(t):
-    """Añade la marca solo si el title sigue cabiendo en ~65 caracteres."""
-    return f"{t} | Florario" if len(t) + 11 <= 65 else t
+    """Añade la marca solo si el title sigue cabiendo en 60 caracteres."""
+    return f"{t} | Florario" if len(t) + 11 <= TITLE_MAX else t
 
 
 def page_url(slug):
@@ -309,11 +317,11 @@ def color_hex(c):
 
 # ---------------------------------------------------------------- cabecera y pie
 def nav_items():
-    return [("fechas", href("") + "#fechas", T("Fechas", "Dates")), ("meses", href(T("meses", "months")), T("Por mes", "By month")),
-            ("flores", href(T("flores", "flowers")), T("Por flor", "By flower")),
+    return [("fechas", href("") + "#fechas", T("Fechas", "Dates")), ("guias", href(T("guias", "guides")), T("Guías", "Guides")),
+            ("meses", href(T("meses", "months")), T("Por mes", "Months")),
+            ("flores", href(T("flores", "flowers")), T("Por flor", "Flowers")),
             ("paises", href(T("paises", "countries")), T("Países", "Countries")),
-            ("colores", href(T("significado-colores-flores", "flower-color-meanings")), T("Colores", "Colors")),
-            ("guias", href(T("guias", "guides")), T("Guías", "Guides"))]
+            ("colores", href(T("significado-colores-flores", "flower-color-meanings")), T("Colores", "Colors"))]
 
 
 def lang_switch(slug):
@@ -341,6 +349,11 @@ def header(active=None, slug=""):
 # Descargas: los PDF, sus vistas previas y los .ics tienen nombre propio en cada idioma.
 def pdf_href(y, ext="pdf"):
     return T(f"/descargas/calendario-de-flores-{y}.{ext}", f"/en/downloads/flower-calendar-{y}.{ext}")
+
+
+def wallpaper_href(y):
+    """Fondo de pantalla 9:16 del calendario (lo genera _build/pines.py)."""
+    return T(f"/descargas/fondo-calendario-de-flores-{y}.jpg", f"/en/downloads/flower-calendar-wallpaper-{y}.jpg")
 
 
 def ics_href(ev_id=None):
@@ -470,18 +483,9 @@ def ld_script(graph):
 
 
 def hreflang_links(slug):
-    """Versiones de la página en cada idioma. La portada y las páginas de país españolas forman un
-    grupo propio (cada país es la versión es-XX de la portada), al que se suma la portada inglesa."""
-    s = es_slug(slug)
-    country_slugs = [c["slug"] for c in datos.COUNTRIES.values()]
-    if s == "" or s in country_slugs:
-        if LANG == "en" and s:
-            return ""  # /en/mexico/ no tiene pareja: /mexico/ ya es la versión es-MX de la portada
-        out = [f'<link rel="alternate" hreflang="es" href="{URL}/">',
-               f'<link rel="alternate" hreflang="x-default" href="{URL}/">']
-        out += [f'<link rel="alternate" hreflang="{c["hreflang"]}" href="{URL}/{c["slug"]}/">' for c in datos.COUNTRIES.values()]
-        out.append(f'<link rel="alternate" hreflang="en" href="{URL}/en/">')
-        return "\n".join(out)
+    """Versiones de la página en cada idioma: cada página (también la portada y las de país) y su
+    traducción se citan mutuamente, con la española como x-default. Las páginas de país tienen
+    contenido propio (las fechas de ese país), así que no son variantes es-XX de la portada."""
     return "\n".join([f'<link rel="alternate" hreflang="es" href="{URL}{lang_url(slug, "es")}">',
                       f'<link rel="alternate" hreflang="en" href="{URL}{lang_url(slug, "en")}">',
                       f'<link rel="alternate" hreflang="x-default" href="{URL}{lang_url(slug, "es")}">'])
@@ -493,14 +497,58 @@ FAVICON = ('<link rel="icon" href="/favicon.ico" sizes="48x48">\n'
            '<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">\n'
            '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
            '<link rel="apple-touch-icon" href="/imagenes/logo-florario.png">')
+# Vercel Web Analytics: visitas sin cookies (el script lo sirve Vercel en /_vercel/insights/; en local da 404
+# y no pasa nada). Los clics importantes se mandan como eventos; en el plan Hobby de Vercel solo se
+# registran las visitas, los eventos aparecen en el panel con el plan Pro.
+ANALYTICS = '''<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+document.addEventListener("click", e => {
+  const el = e.target.closest("a, button, #wheel .ev");
+  if (!el) return;
+  const h = el.getAttribute("href") || "";
+  const name = h.endsWith(".ics") ? "recordatorio_ics" : h.includes("calendar.google.com") ? "google_calendar"
+    : h.includes("wa.me/") ? "whatsapp" : h.endsWith(".pdf") ? "pdf" : h.includes("pinterest.com/pin/create") ? "pinterest"
+    : h.includes("-story.jpg") ? "story" : h.includes("fondo-calendario") || h.includes("wallpaper") ? "fondo_pantalla"
+    : el.matches(".chip, .sw") ? "filtro" : el.matches("#wheel .ev") ? "rueda" : el.matches("[data-share], #dlg-share") ? "compartir"
+    : el.matches("#saved-ics-btn") ? "ics_guardadas" : el.matches("[data-cm]") ? "tarjeta" : null;
+  if (name) window.va("event", { name, data: { pagina: location.pathname } });
+}, { capture: true, passive: true });
+</script>
+<script defer src="/_vercel/insights/script.js"></script>'''
 # Fuentes alojadas en /fuentes/ (el @font-face está en comun.css). Se precarga la del texto.
 FONTS = '<link rel="preload" href="/fuentes/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>'
 
 
+def og_path(slug):
+    """Imagen 1200×630 de la página para WhatsApp, X, Facebook… (la genera _build/pines.py)."""
+    return f"/imagenes/og/{PREFIX}{slug or 'portada'}.jpg"
+
+
+MISSING_IMAGES = []
+
+
+def og_url(slug, note=True):
+    """URL de la imagen og de la página, o None (y apunta el aviso) si aún no se ha generado."""
+    p = og_path(slug)
+    if os.path.exists(os.path.join(ROOT, p.lstrip("/"))):
+        return URL + p
+    if note:
+        MISSING_IMAGES.append(p)
+    return None
+
+
 def head_meta(title, description, slug, img, og_type="article", og_title=None, extra="",
               modified=None, locale=None, og_image=None):
-    """og_image = {"url", "w", "h", "alt"} para una imagen que no está en IMAGES (vista previa del PDF)."""
-    if og_image is None:
+    """og_image = {"url", "w", "h", "alt"} para una imagen que no está en IMAGES (vista previa del PDF).
+    Si la página tiene su imagen 1200×630 generada, se usa esa."""
+    if len(title) > TITLE_MAX:
+        WARN.append(f"/{PREFIX}{slug + '/' if slug else ''}: title de {len(title)} caracteres (máximo {TITLE_MAX}): {title}")
+    if len(description) > DESC_MAX:
+        WARN.append(f"/{PREFIX}{slug + '/' if slug else ''}: description de {len(description)} caracteres (máximo {DESC_MAX})")
+    og = og_url(slug)
+    if og:
+        og_image = {"url": og, "w": 1200, "h": 630, "alt": f'{title} · Florario'}
+    elif og_image is None:
         im = IMAGES[img]
         og_image = {"url": jpg_url(img), "w": im["w"], "h": im["h"], "alt": im["alt"]}
     if LANG == "en":
@@ -515,6 +563,7 @@ def head_meta(title, description, slug, img, og_type="article", og_title=None, e
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
+<meta name="robots" content="max-image-preview:large">
 <meta name="author" content="{esc(SITE["author"])}">
 <meta name="theme-color" content="#F2C230">
 <link rel="canonical" href="{page_url(slug)}">
@@ -533,6 +582,7 @@ def head_meta(title, description, slug, img, og_type="article", og_title=None, e
 <meta property="article:modified_time" content="{(modified or UPDATED).isoformat()}">
 {FAVICON}
 {FONTS}
+{ANALYTICS}
 {extra}'''
 
 
@@ -670,15 +720,25 @@ def faq_html(faq):
     return "\n".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faq)
 
 
+def ev_rrule(ev):
+    """Regla de repetición anual de una fecha (la misma en el .ics y en Google Calendar)."""
+    if "rule" in ev:
+        r = ev["rule"]
+        return f'RRULE:FREQ=YEARLY;BYMONTH={r["m"]};BYDAY={r["n"]}{["SU", "MO", "TU", "WE", "TH", "FR", "SA"][r["wd"]]}'
+    return "RRULE:FREQ=YEARLY"
+
+
 def gcal_link(ev):
-    d = next_date(ev) - dt.timedelta(days=3)
-    e = d + dt.timedelta(days=1)
+    """Evento de día completo en Google Calendar el mismo día de la fecha, repetido cada año (también
+    las fechas móviles, como el 3.er domingo de octubre). En Android es la alternativa al .ics."""
     from urllib.parse import quote
-    text = quote(T(f'Comprar flores: {ev["name"]} ({fmt(next_date(ev), year=False)})',
-                   f'Buy flowers: {ev["name"]} ({fmt(next_date(ev), year=False)})'))
-    det = quote(f'{ev["flower"]}. {ev["story"]} {T("Más en", "More at")} {page_url(ev["guia"])}')
+    d = next_date(ev)
+    e = d + dt.timedelta(days=1)
+    text = quote(f'🌷 {ev["name"]}: {ev["flower"]}')
+    det = quote(f'{ev["story"]} {T("Encarga las flores con unos días de margen.", "Order the flowers a few days ahead.")} '
+                f'{page_url(ev["guia"])}')
     return (f"https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text={text}"
-            f"&amp;dates={d:%Y%m%d}/{e:%Y%m%d}&amp;details={det}")
+            f"&amp;dates={d:%Y%m%d}/{e:%Y%m%d}&amp;details={det}&amp;recur={quote(ev_rrule(ev))}")
 
 
 def gcal_subscribe():
@@ -691,14 +751,16 @@ def remind_box(evs, heading="h2"):
         btns.append(f'<a class="btn primary" href="{ics_href()}" download>{T("Todas las fechas (.ics)", "All dates (.ics)")}</a>')
         btns.append(f'<a class="btn" href="{gcal_subscribe()}" target="_blank" rel="noopener">{T("Suscribirme en Google Calendar ↗", "Subscribe in Google Calendar ↗")}</a>')
     else:
+        # Cada fecha con su .ics (iPhone, Outlook…) y su enlace a Google Calendar (Android)
         for ev in evs:
-            label = ev["name"] if len(evs) > 1 else T("Añadir a mi calendario", "Add to my calendar")
-            btns.append(f'<a class="btn primary" href="{ics_href(ev["id"])}" download>{esc(label)} (.ics)</a>')
-        btns.append(f'<a class="btn" href="{gcal_link(evs[0])}" target="_blank" rel="noopener">Google Calendar ↗</a>')
+            label = (f'{ev["name"]} · ' if len(evs) > 1 else "") + T("Calendario del móvil (.ics)", "Phone calendar (.ics)")
+            btns.append(f'<a class="btn primary" href="{ics_href(ev["id"])}" download>{esc(label)}</a>')
+            btns.append(f'<a class="btn" href="{gcal_link(ev)}" target="_blank" rel="noopener">'
+                        f'{esc(ev["name"]) + " · " if len(evs) > 1 else ""}{T("Añadir a Google Calendar ↗", "Add to Google Calendar ↗")}</a>')
     return f'''<section class="remind" id="recuerdamelo" aria-labelledby="recuerdamelo-t">
           <{heading} id="recuerdamelo-t">{T("Recuérdamelo 3 días antes", "Remind me 3 days before")}</{heading}>
-          <p>{T("Descarga el recordatorio y ábrelo con el calendario del móvil: se repite cada año y te avisa tres días antes para que te dé tiempo a encargar el ramo.",
-                "Download the reminder and open it with your phone’s calendar: it repeats every year and alerts you three days before, so you have time to order the bouquet.")}</p>
+          <p>{T("En iPhone, descarga el recordatorio (.ics) y ábrelo con el calendario: se repite cada año y te avisa tres días antes para que te dé tiempo a encargar el ramo. En Android, añádelo a Google Calendar: también se repite cada año, con el aviso que tengas por defecto.",
+                "On iPhone, download the reminder (.ics) and open it with your calendar: it repeats every year and alerts you three days before, so you have time to order the bouquet. On Android, add it to Google Calendar: it also repeats every year, with your default alert.")}</p>
           <div class="remind-actions">{"".join(btns)}</div>
         </section>'''
 
@@ -743,13 +805,66 @@ def byline(published=None, updated=None, author=True):
     return '<p class="byline">' + '<span class="dot">·</span>'.join(f"<span>{p}</span>" for p in parts) + "</p>"
 
 
-def share_box(text, url):
-    """WhatsApp (enlace normal, funciona sin JavaScript) y compartir nativo o copiar enlace (guia.js)."""
+def wa_link(text, url):
     from urllib.parse import quote
-    wa = "https://wa.me/?text=" + quote(f"{text} {url}")
+    return "https://wa.me/?text=" + quote(f"{text} {url}")
+
+
+def share_text(meta, evs):
+    """Texto para WhatsApp y el menú nativo: fecha + flor + frase gancho (o el título si la página no tiene fecha)."""
+    ev = EV.get((meta.get("cal_link") or "").lstrip("#")) or (evs[0] if evs else None)
+    hook = T("Que no se te pase 🌷", "Don’t let it slip by 🌷")
+    if ev and meta["tipo"] == "guia":
+        w = when_text(ev)
+        return f'{w[:1].upper() + w[1:]}: {ev["name"]}, {lower_first(ev["flower"])}. {hook}'
+    return f'{meta.get("og_title") or meta["title"]}. {hook}'
+
+
+def share_btn(title, text, url):
+    return (f'<button type="button" class="btn" data-share data-url="{esc(url)}" data-title="{esc(title)}" '
+            f'data-text="{esc(text)}" hidden>{T("Compartir", "Share")}</button>')
+
+
+WA_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>')
+
+
+def share_top(title, text, url):
+    """WhatsApp y Compartir justo debajo de la ficha: visibles en la segunda pantalla del móvil."""
+    return (f'<div class="share-top"><a class="btn wa" href="{wa_link(text, url)}" target="_blank" rel="noopener">{WA_ICON}{T("Pásaselo por WhatsApp", "Send it on WhatsApp")}</a>'
+            f'{share_btn(title, text, url)}</div>')
+
+
+def sticky_bar(text, url, remind_href):
+    """Barra fija inferior en móvil (aparece al hacer scroll, guia.js): WhatsApp · Recuérdamelo."""
+    return (f'<div class="sticky-bar" hidden><a class="btn wa" href="{wa_link(text, url)}" target="_blank" rel="noopener">{WA_ICON}WhatsApp</a>'
+            f'<a class="btn primary" href="{remind_href}">{T("Recuérdamelo", "Remind me")}</a></div>')
+
+
+def pin_paths(slug):
+    """Pin de Pinterest (1000×1500) y story (1080×1920) de una página, generados por _build/pines.py."""
+    base = f"/imagenes/pines/{PREFIX}{slug}"
+    return f"{base}-pin.jpg", f"{base}-story.jpg"
+
+
+def has_pins(slug):
+    return all(os.path.exists(os.path.join(ROOT, p.lstrip("/"))) for p in pin_paths(slug))
+
+
+def share_box(title, url, text=None, slug=None):
+    """WhatsApp (enlace normal, funciona sin JavaScript), compartir nativo o copiar enlace (guia.js) y,
+    si existen sus imágenes, guardar el pin en Pinterest y descargar la story."""
+    from urllib.parse import quote
+    text = text or title
+    pins = ""
+    if slug is not None and has_pins(slug):
+        pin, story = pin_paths(slug)
+        p_url = ("https://www.pinterest.com/pin/create/button/?url=" + quote(url, safe="") + "&amp;media="
+                 + quote(URL + pin, safe="") + "&amp;description=" + quote(f"{title} · Florario", safe=""))
+        pins = (f'<a class="btn" href="{p_url}" target="_blank" rel="noopener">{T("Guárdalo en Pinterest", "Save it on Pinterest")}</a>'
+                f'<a class="btn" href="{story}" download>{T("Descargar para tu story", "Download for your story")}</a>')
     return (f'<div class="share"><p>{T("¿Conoces a alguien que siempre llega tarde a estas fechas? Pásaselo.", "Know someone who’s always late for these dates? Send it to them.")}</p>'
-            f'<div class="share-actions"><a class="btn" href="{wa}" target="_blank" rel="noopener">{T("Compartir por WhatsApp", "Share on WhatsApp")}</a>'
-            f'<button type="button" class="btn" data-share data-url="{esc(url)}" data-title="{esc(text)}" hidden>{T("Compartir", "Share")}</button></div>'
+            f'<div class="share-actions"><a class="btn wa" href="{wa_link(text, url)}" target="_blank" rel="noopener">{WA_ICON}{T("Compartir por WhatsApp", "Share on WhatsApp")}</a>'
+            f'{share_btn(title, text, url)}{pins}</div>'
             f'<p class="share-status" role="status"></p></div>')
 
 
@@ -854,6 +969,14 @@ def auto_blocks(meta, body):
             f'alt="{T(f"Portada del calendario de flores {y} para imprimir: corona de flores con los doce meses", f"Cover of the printable {y} flower calendar: a wreath of flowers with the twelve months")}" loading="lazy" decoding="async"></a>'
             f'<figcaption><a href="{pdf_href(y)}" download>{T(f"Calendario de flores {y} · PDF A4", f"{y} flower calendar · PDF, A4")}</a></figcaption></figure>'
             for y in (YEAR, YEAR + 1))
+        figs += "".join(
+            f'<figure class="pdf-preview wallpaper"><a href="{wallpaper_href(y)}" download>'
+            f'<img src="{wallpaper_href(y)}" width="1080" height="1920" alt="{T(f"Fondo de pantalla del calendario de flores {y} para el móvil", f"Phone wallpaper of the {y} flower calendar")}" loading="lazy" decoding="async"></a>'
+            f'<figcaption><a href="{wallpaper_href(y)}" download>{T(f"Fondo de pantalla {y} · móvil 9:16", f"{y} wallpaper · phone, 9:16")}</a></figcaption></figure>'
+            for y in (YEAR, YEAR + 1) if os.path.exists(os.path.join(ROOT, wallpaper_href(y).lstrip("/"))))
+        for y in (YEAR, YEAR + 1):
+            if not os.path.exists(os.path.join(ROOT, wallpaper_href(y).lstrip("/"))):
+                MISSING_IMAGES.append(wallpaper_href(y))
         body = body.replace("<!--@PREVIEWS-->", f'<div class="pdf-previews">{figs}</div>')
     if "<!--@FECHAS_MES-->" in body:
         m = MONTHS.index(slug) + 1
@@ -875,6 +998,26 @@ def auto_blocks(meta, body):
     if "<!--@FECHAS-->" in body:
         evs = [EV[i] for i in meta.get("eventos", [])]
         body = body.replace("<!--@FECHAS-->", date_table(evs, "", group_by_month=False, rolling=True))
+    # <!--@FOTO:clave-->: foto de IMAGES dentro del texto, con su crédito (render_article la suma a los del pie)
+    for key in re.findall(r"<!--@FOTO:([\w-]+)-->", body):
+        im = IMAGES[key]
+        body = body.replace(f"<!--@FOTO:{key}-->", (
+            f'<figure class="inline-photo"{f' style="--pos:{im["pos"]}"' if im.get("pos") else ""}>{picture(key, im["alt"], sizes="(min-width: 960px) 640px, calc(100vw - 32px)")}'
+            f'<figcaption>{esc(im["alt_corto"])} · {T("Foto", "Photo")}: <a href="{im["source"]}" target="_blank" rel="noopener">'
+            f'{esc(im["author"])}</a> · {im["license"]}</figcaption></figure>'))
+    if "<!--@MENSAJES-->" in body:
+        # "mensajes" de la cabecera: [["Para tu pareja", ["mensaje", …]], …]. El botón Copiar lo activa guia.js.
+        groups = []
+        for tone, msgs in meta.get("mensajes", []):
+            for msg in msgs:
+                if len(msg) > 140:
+                    WARN.append(f'{meta["file"]}: mensaje de {len(msg)} caracteres (máximo 140): {msg[:40]}…')
+            items = "".join(f'<li><q>{esc(msg)}</q><button type="button" class="copy" data-copy hidden>{T("Copiar", "Copy")}</button></li>'
+                            for msg in msgs)
+            groups.append(f'<h3>{esc(tone)}</h3><ul class="msgs">{items}</ul>')
+        if not groups:
+            WARN.append(f'{meta["file"]}: tiene <!--@MENSAJES--> pero la cabecera no trae "mensajes".')
+        body = body.replace("<!--@MENSAJES-->", "".join(groups))
     if "<!--@TEMPORADA_FLOR-->" in body:
         f = FLOWER[slug]
         rows = []
@@ -895,6 +1038,7 @@ def toc_from(body):
 def render_article(meta, body):
     slug = meta["slug"]
     tipo = meta["tipo"]
+    inline_imgs = re.findall(r"<!--@FOTO:([\w-]+)-->", body)
     body = auto_blocks(meta, body)
     evs = [EV[i] for i in meta.get("eventos", [])]
     if tipo == "mes" and not evs:
@@ -919,7 +1063,8 @@ def render_article(meta, body):
         graph.append(author_ld())
         graph.append({"@type": "Article", "@id": page_url(slug) + "#articulo",
                       "headline": strip_tags(meta.get("headline", meta["h1"]))[:110],
-                      "description": meta["description"], "image": jpg_url(img) if img else None,
+                      "description": meta["description"],
+                      "image": [u for u in (og_url(slug, note=False), jpg_url(img) if img else None) if u] or None,
                       "inLanguage": LANG, "datePublished": meta["published"].isoformat(),
                       "dateModified": meta["updated"].isoformat(), "mainEntityOfPage": page_url(slug),
                       "author": {"@id": author_id()}, "publisher": {"@id": ORG_ID},
@@ -956,8 +1101,12 @@ def render_article(meta, body):
                      extra='<link rel="stylesheet" href="/guia.css">\n<link rel="stylesheet" href="/comun.css">\n' + ld_script(graph))
 
     # Cuerpo
-    used_imgs = [img] if img else []
+    used_imgs = ([img] if img else []) + inline_imgs
     nxt = meta.get("next_html") or (next_widget(evs) if evs else "")
+    if tipo == "descarga":
+        nxt = (f'<div class="dl-top"><a class="btn primary" href="{pdf_href(PRINT_YEAR)}" download>{T(f"Descargar el PDF {PRINT_YEAR}", f"Download the {PRINT_YEAR} PDF")}</a>'
+               + (f'<a class="btn" href="{wallpaper_href(PRINT_YEAR)}" download>{T(f"Fondo de pantalla {PRINT_YEAR}", f"{PRINT_YEAR} phone wallpaper")}</a>'
+                  if os.path.exists(os.path.join(ROOT, wallpaper_href(PRINT_YEAR).lstrip("/"))) else "") + '</div>')
     hero_photo = ""
     bloom_color = meta.get("color", "c-amarillo")[2:]
     if bloom_color not in COLORS:
@@ -1001,14 +1150,23 @@ def render_article(meta, body):
       <a class="btn primary" href="{href("")}">{T("Abrir el calendario de flores", "Open the flower calendar")}</a>
     </section>'''
     on_page = T("En esta página", "On this page")
+    # El índice sale plegado (en móvil empuja el texto hacia abajo); guia.js lo abre en escritorio.
+    # En móvil, "Ver en el calendario" va al final del artículo (.cal-end) en lugar de encima del texto.
+    cal_btn = "" if tipo == "descarga" else f'<a class="btn primary" href="{href("")}{cal_link}">{T("Ver en el calendario", "See it in the calendar")}</a>'
     toc_nav = f'''<nav class="toc" aria-label="{on_page}">
-          <details open>
+          <details>
             <summary>{on_page}</summary>
-            <h2>{on_page}</h2>
             <ol>{toc}</ol>
           </details>
-          <a class="btn primary" href="{href("")}{cal_link}">{T("Ver en el calendario", "See it in the calendar")}</a>
+          {cal_btn}
         </nav>''' if toc and is_article else ""
+    cal_end = f'<p class="cal-end">{cal_btn}</p>' if toc_nav and cal_btn else ""
+    shares = tipo != "info" or meta.get("share")
+    if tipo in ("guia", "mes") and not has_pins(slug):
+        MISSING_IMAGES.extend(pin_paths(slug))
+    s_title, s_text = meta.get("og_title") or meta["title"], share_text(meta, evs)
+    top_share = share_top(s_title, s_text, page_url(slug)) if is_article else ""
+    bar = sticky_bar(s_text, page_url(slug), "#recuerdamelo" if remind else f'{href("")}#recuerdamelo') if is_article else ""
     crumb_html = "".join(f'<li><a href="{u.replace(URL, "") or "/"}">{esc(n)}</a></li>' for n, u in crumbs[:-1])
     hero_cls = "hero" if img else "hero hero-text"
     page = f'''<!doctype html>
@@ -1036,12 +1194,14 @@ def render_article(meta, body):
         {hero_photo}
       </div>
       {facts}
+      {top_share}
       <div class="layout{"" if toc_nav else " layout-single"}">
         {toc_nav}
         <div class="prose">
         {body.strip()}
         {remind}
-        {share_box(meta.get("og_title") or meta["title"], page_url(slug)) if tipo != "info" or meta.get("share") else ""}
+        {share_box(s_title, page_url(slug), s_text, slug) if shares else ""}
+        {cal_end}
         {faq_block}
         {author_box() if is_article else ""}
         </div>
@@ -1053,6 +1213,7 @@ def render_article(meta, body):
 
   {footer(href(slug), meta.get("fuentes", []), used_imgs)}
 </div>
+{bar}
 <script src="/guia.js" defer></script>
 </body>
 </html>
@@ -1138,8 +1299,8 @@ def render_home():
     tpl = re.sub(r"<!--es-->(.*?)<!--en-->(.*?)<!--/-->", lambda m: m.group(2 if LANG == "en" else 1), tpl, flags=re.S)
     title = full_title(T(f"Calendario de flores {YEAR_LABEL}: fechas para regalar flores",
                          f"Flower calendar {YEAR_LABEL}: which flower to give and when"))
-    description = T(f"Todas las fechas para regalar flores en {YEAR_LABEL}: flores azules (3 de octubre), moradas (9 de noviembre), "
-                    "amarillas, Día de la Madre y más, en España y Latinoamérica. Con flores de temporada y PDF para imprimir.",
+    description = T(f"Fechas para regalar flores en {YEAR_LABEL}: flores azules (3 de octubre), moradas (9 de noviembre), "
+                    "amarillas, Día de la Madre y más, con PDF para imprimir.",
                     f"Flower calendar {YEAR_LABEL}: every date for giving flowers in Spain and Latin America, "
                     "seasonal flowers month by month and a printable PDF calendar.")
     first, last = rolling_range(EVENTS)
@@ -1194,6 +1355,7 @@ def render_home():
     data_js = "\n".join([
         f"  const LANG = {json.dumps(LANG)};",
         f"  const BASE = {json.dumps(href(''))};",
+        f"  const YEAR_LABEL = {json.dumps(YEAR_LABEL)};",
         f"  const ICS_BASE = {json.dumps(ics_href('ID').replace('ID.ics', ''))};",
         f"  const MONTHS = {json.dumps([month_name(i) for i in range(12)], ensure_ascii=False)};",
         f"  const MONTH_SHORT = {json.dumps([s.upper() for s in MONTH_SHORT], ensure_ascii=False)};",
@@ -1264,12 +1426,7 @@ def ics_fold(line):
 
 def ics_vevent(ev):
     d = next_date(ev)
-    if "rule" in ev:
-        r = ev["rule"]
-        day = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"][r["wd"]]
-        rrule = f'RRULE:FREQ=YEARLY;BYMONTH={r["m"]};BYDAY={r["n"]}{day}'
-    else:
-        rrule = "RRULE:FREQ=YEARLY"
+    rrule = ev_rrule(ev)
     stamp = dt.datetime.combine(UPDATED, dt.time()).strftime("%Y%m%dT%H%M%SZ")
     # El UID cambia con el idioma para que quien se suscriba a los dos calendarios no vea eventos pisados
     uid = ev["id"] + ("" if LANG == "es" else f"-{LANG}")
@@ -1279,7 +1436,7 @@ def ics_vevent(ev):
              f'DESCRIPTION:{ics_escape(ev["story"] + T(" Dónde: ", " Where: ") + ev["region"] + T(". Guía: ", ". Guide: ") + page_url(ev["guia"]))}',
              f'URL:{page_url(ev["guia"])}', "TRANSP:TRANSPARENT",
              "BEGIN:VALARM", "ACTION:DISPLAY", "TRIGGER:-P3D",
-             f'DESCRIPTION:{ics_escape(T("En 3 días: ", "In 3 days: ") + ev["name"] + T(". Encarga ", ". Order ") + ev["flower"].lower() + ".")}',
+             f'DESCRIPTION:{ics_escape(T("En 3 días: ", "In 3 days: ") + ev["name"] + T(". Encarga ", ". Order ") + lower_first(ev["flower"]) + ".")}',
              "END:VALARM", "END:VEVENT"]
     return lines
 
@@ -1662,8 +1819,30 @@ def render_sitemap(pages):
 
 
 # ---------------------------------------------------------------- comprobaciones
+def check_hreflang(pages):
+    """Cada alternate hreflang debe apuntar a una página que le devuelva el enlace (y a sí misma)."""
+    problems, alts = [], {}
+    for p in pages:
+        url = f'{URL}/{p["slug"]}/' if p["slug"] else f"{URL}/"
+        rel = os.path.join(ROOT, p["slug"], "index.html") if p["slug"] else os.path.join(ROOT, "index.html")
+        alts[url] = dict((l, u) for l, u in re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">',
+                                                        open(rel, encoding="utf-8").read()))
+    for url, links in alts.items():
+        if not links:
+            problems.append(f"{url}: sin hreflang")
+            continue
+        if url not in links.values():
+            problems.append(f"{url}: su hreflang no se incluye a sí misma")
+        for lang, target in links.items():
+            if target not in alts:
+                problems.append(f"{url}: hreflang {lang} apunta a {target}, que no existe")
+            elif url not in alts[target].values():
+                problems.append(f"{url}: hreflang {lang} → {target} no es recíproco")
+    return problems
+
+
 def check_site(pages):
-    problems = []
+    problems = check_hreflang(pages)
     for p in pages:
         rel = os.path.join(ROOT, p["slug"], "index.html") if p["slug"] else os.path.join(ROOT, "index.html")
         h = open(rel, encoding="utf-8").read()
@@ -1702,7 +1881,7 @@ def check_site(pages):
 # ---------------------------------------------------------------- main
 def render_hubs_es(pages, by_type):
     pages.append(render_hub("meses", "Flores por mes: qué regalar y qué está de temporada",
-                            "Qué flores regalar cada mes del año y cuáles están de temporada en España, México y el Cono Sur, con todas las fechas para regalar flores de enero a diciembre.",
+                            "Qué flores regalar cada mes y cuáles están de temporada en España, México y el Cono Sur, con todas las fechas para regalar flores del año.",
                             "Flores <em>por mes</em>", "Calendario de flores · por mes",
                             "Elige un mes para ver sus fechas para regalar flores, qué flores están de temporada en cada región y consejos para ese momento del año.",
                             MONTHS, "meses",
@@ -1710,7 +1889,7 @@ def render_hubs_es(pages, by_type):
                             "<p>Las estaciones van al revés a cada lado del ecuador: en marzo, mientras en España empiezan los tulipanes, en Argentina y Chile llegan las dalias y los crisantemos del otoño. Por eso cada mes separa las flores de temporada por región. Y en Colombia y Ecuador, con clima de montaña todo el año, casi todas las flores de corte se encuentran en cualquier mes.</p>",
                             "ramo-tulipanes", by_type("mes")))
     pages.append(render_hub("flores", "Flores: significado, temporada y cuándo regalarlas",
-                            "Guía de flores para regalar: rosa, girasol, tulipán, peonía, clavel, crisantemo, cempasúchil, violeta y más, con su significado, su temporada y las fechas en que se regalan.",
+                            "Rosa, girasol, tulipán, peonía, clavel, cempasúchil, violeta y más: qué significa cada flor, cuándo está de temporada y en qué fechas se regala.",
                             "Qué significa <em>cada flor</em>", "Calendario de flores · por flor",
                             "Cada flor tiene su página con su significado, sus colores, en qué meses está de temporada, las fechas del año en que se regala y cómo hacer que dure más en el jarrón.",
                             [f["slug"] for f in FLOWERS], "flores",
@@ -1718,7 +1897,7 @@ def render_hubs_es(pages, by_type):
                             "<p>Una misma flor puede decir cosas distintas según el país y el color: el crisantemo es la flor de Todos los Santos en España, pero en otros lugares se regala sin ese sentido; la rosa roja es amor en San Valentín y en Sant Jordi, y la amarilla, amistad. Cada página explica esos matices y recoge las fechas del calendario en las que esa flor es la protagonista.</p>",
                             "ramo-silvestre", by_type("flor")))
     pages.append(render_hub("guias", "Guías para regalar flores en cada fecha y ocasión",
-                            "Guías de Florario: flores amarillas, azules y moradas, San Valentín, Día de la Madre, Día del Padre, 8M, Día del Maestro, cumpleaños, aniversarios, condolencias y más.",
+                            "Guías para regalar flores: amarillas, azules y moradas, San Valentín, Día de la Madre y del Padre, 8M, cumpleaños, aniversarios y condolencias.",
                             "Guías para <em>regalar flores</em>", "Calendario de flores · guías",
                             "El origen de cada fecha y de cada trend, qué flores regalar, qué significa cada color y cómo acertar en ocasiones sin fecha fija, como cumpleaños, aniversarios o condolencias.",
                             [g["slug"] for g in GUIDES], "guias",
@@ -1726,7 +1905,7 @@ def render_hubs_es(pages, by_type):
                             "<p>Cada guía cuenta de dónde viene la fecha (una canción, una leyenda, una ley o un hashtag), en qué países se celebra, qué flores se regalan y cuáles son una buena alternativa si no encuentras las típicas. Al pie de cada una están las fuentes consultadas: al menos dos medios de países distintos para cada trend.</p>",
                             "ramo-rosas", by_type("guia")))
     pages.append(render_hub("paises", "Fechas para regalar flores por país",
-                            "Qué fechas para regalar flores se celebran en España, México, Argentina, Colombia, Chile y Perú: Día de la Madre, Día del Padre, trends de flores y más, con la fecha de cada país.",
+                            "Fechas para regalar flores en España, México, Argentina, Colombia, Chile y Perú: Día de la Madre, Día del Padre y trends, con la fecha de cada país.",
                             "Fechas para regalar flores <em>por país</em>", "Calendario de flores · por país",
                             "El Día de la Madre, el Día del Padre y los trends de flores no caen el mismo día en todos los países. Elige el tuyo para ver solo sus fechas, calculadas para este año y el siguiente.",
                             [c["slug"] for c in COUNTRIES.values()], "paises",
@@ -1737,7 +1916,7 @@ def render_hubs_es(pages, by_type):
 
 def render_hubs_en(pages, by_type):
     pages.append(render_hub("months", "Flowers by month: what to give and what’s in season",
-                            "Which flowers to give each month of the year and which are in season in Spain, Mexico and the Southern Cone, with every date for giving flowers from January to December.",
+                            "Which flowers to give each month and which are in season in Spain, Mexico and the Southern Cone, with every date for giving flowers of the year.",
                             "Flowers <em>by month</em>", "Flower calendar · by month",
                             "Pick a month to see its dates for giving flowers, which flowers are in season in each region and tips for that time of year.",
                             MONTHS, "meses",
@@ -1745,7 +1924,7 @@ def render_hubs_en(pages, by_type):
                             "<p>The seasons are reversed on each side of the equator: in March, while tulips are starting in Spain, Argentina and Chile get the dahlias and chrysanthemums of autumn. That is why each month splits its seasonal flowers by region. And in Colombia and Ecuador, with a mountain climate all year round, almost every cut flower can be found in any month.</p>",
                             "ramo-tulipanes", by_type("mes")))
     pages.append(render_hub("flowers", "Flowers: meaning, season and when to give them",
-                            "A guide to flowers for giving: rose, sunflower, tulip, peony, carnation, chrysanthemum, cempasúchil, violet and more, with their meaning, their season and the dates on which they are given.",
+                            "Rose, sunflower, tulip, peony, carnation, cempasúchil, violet and more: what each flower means, when it’s in season and the dates it’s given on.",
                             "What <em>each flower</em> means", "Flower calendar · by flower",
                             "Each flower has its own page with its meaning, its colors, the months when it is in season, the dates of the year on which it is given and how to make it last longer in the vase.",
                             [f["slug"] for f in FLOWERS], "flores",
@@ -1753,7 +1932,7 @@ def render_hubs_en(pages, by_type):
                             "<p>The same flower can say different things depending on the country and the color: the chrysanthemum is the All Saints’ Day flower in Spain, but elsewhere it is given without that meaning; the red rose is love on Valentine’s Day and Sant Jordi, and the yellow one means friendship. Each page explains these nuances and lists the calendar dates on which that flower takes center stage.</p>",
                             "ramo-silvestre", by_type("flor")))
     pages.append(render_hub("guides", "Guides to giving flowers for every date and occasion",
-                            "Florario guides: yellow, blue and purple flowers, Valentine’s Day, Mother’s Day, Father’s Day, Women’s Day, Teachers’ Day, birthdays, anniversaries, sympathy flowers and more.",
+                            "Guides to giving flowers: yellow, blue and purple flowers, Valentine’s, Mother’s and Father’s Day, Women’s Day, birthdays, anniversaries and sympathy.",
                             "Guides to <em>giving flowers</em>", "Flower calendar · guides",
                             "The origin of each date and each trend, which flowers to give, what each color means and how to get it right on occasions without a fixed date, such as birthdays, anniversaries or condolences.",
                             [g["slug"] for g in GUIDES], "guias",
@@ -1761,7 +1940,7 @@ def render_hubs_en(pages, by_type):
                             "<p>Each guide explains where the date comes from (a song, a legend, a law or a hashtag), in which countries it is celebrated, which flowers are given and which ones are a good alternative if you can’t find the typical ones. At the bottom of each guide are the sources consulted: at least two media outlets from different countries for each trend.</p>",
                             "ramo-rosas", by_type("guia")))
     pages.append(render_hub("countries", "Dates for giving flowers by country",
-                            "Which dates for giving flowers are celebrated in Spain, Mexico, Argentina, Colombia, Chile and Peru: Mother’s Day, Father’s Day, flower trends and more, with each country’s date.",
+                            "Dates for giving flowers in Spain, Mexico, Argentina, Colombia, Chile and Peru: Mother’s Day, Father’s Day and trends, with each country’s date.",
                             "Dates for giving flowers <em>by country</em>", "Flower calendar · by country",
                             "Mother’s Day, Father’s Day and the flower trends don’t fall on the same day in every country. Pick one to see only its dates, worked out for this year and next.",
                             [c["slug"] for c in COUNTRIES.values()], "paises",
@@ -1816,6 +1995,9 @@ def main():
         print(f'  {p["tipo"]:8} {p["words"]:5} palabras  /{p["slug"]}{"/" if p["slug"] else ""}')
     if thin:
         print("Páginas de flor o mes por debajo de 600 palabras:", ", ".join(thin))
+    if MISSING_IMAGES:
+        WARN.append(f"Faltan {len(MISSING_IMAGES)} imágenes para compartir (og, pin o story), p. ej. {MISSING_IMAGES[0]}: "
+                    "ejecuta python _build/pines.py y vuelve a generar.")
     for w in WARN:
         print("AVISO:", w)
     missing = []

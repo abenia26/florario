@@ -23,6 +23,8 @@
     --blob-3: rgba(138, 79, 216, .16);
     --blob-4: rgba(43, 179, 163, .16);
     --tint: 16%;
+    /* Colores del degradado del H1: ≥ 3:1 sobre el fondo en cada tema */
+    --g-orange: #CE720C; --g-yellow: #B08100;
     --font: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --mono: "DM Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
     --radius: 16px;
@@ -47,6 +49,8 @@
       --blob-3: rgba(138, 79, 216, .16);
       --blob-4: rgba(43, 179, 163, .10);
       --tint: 20%;
+    --g-orange: #F28C1B; --g-yellow: #E0A400;
+      --g-orange: #F28C1B; --g-yellow: #E0A400;
       color-scheme: dark;
     }
   }
@@ -153,7 +157,7 @@
   }
   h1 em {
     font-style: normal;
-    background: linear-gradient(90deg, #E8475F, #F28C1B 50%, #E0A400);
+    background: linear-gradient(90deg, #E8475F, var(--g-orange) 50%, var(--g-yellow));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -233,7 +237,7 @@
   .petal { stroke: var(--petal-edge); stroke-width: .7; }
   .pistil { fill: var(--pistil); }
   .ev { cursor: pointer; outline: none; }
-  .ev .hit { fill: transparent; }
+  .ev .hit, .ev.pad circle { fill: transparent; }
   .ev .fl { transform-box: fill-box; transform-origin: center; transition: transform .18s ease, opacity .2s; animation: bloom .7s cubic-bezier(.2, .9, .3, 1.3) both; animation-delay: calc(var(--i) * 28ms); }
   .ev:hover .fl, .ev:focus-visible .fl { transform: scale(1.45); }
   .ev:focus-visible .hit { stroke: var(--stem); stroke-width: 1.4; }
@@ -274,7 +278,7 @@
   .ticker-track { display: flex; width: max-content; animation: marquee 80s linear infinite; }
   .ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
   .ticker-group { display: flex; gap: 10px; padding-right: 10px; align-items: center; }
-  .ticker-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-inline: 8px 4px; white-space: nowrap; }
+  .ticker-label { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-inline: 8px 4px; white-space: nowrap; }
   @keyframes marquee { to { transform: translateX(-50%); } }
   .tk {
     display: inline-flex; align-items: center; gap: 10px;
@@ -319,6 +323,12 @@
     transition: background .15s, border-color .15s;
   }
   .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cc, var(--ink)); }
+  .para-chip::before { display: none; }
+  .para-chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chips.para { gap: 6px 8px; }
+  .saved-ics { flex-basis: 100%; margin: 0; }
+  .para-note { flex-basis: 100%; margin: 0; font-size: .9rem; color: var(--muted); }
+  .para-note a { color: var(--ink); text-underline-offset: 3px; }
   .chip[data-type="all"]::before { background: conic-gradient(#E8475F, #F2C230, #2BB3A3, #3F72E0, #8A4FD8, #E8475F); }
   .chip[data-type="saved"]::before { display: none; }
   .chip:hover { border-color: var(--cc, var(--muted)); }
@@ -342,7 +352,7 @@
   .sw:hover { transform: rotate(20deg); }
   .sw[aria-pressed="true"] { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; background: var(--soft); }
   .sw svg { width: 22px; height: 22px; }
-  .filters-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+  .filters-label { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
 
   /* ---------- Explorer ---------- */
   .explorer { padding-top: 28px; scroll-margin-top: 80px; }
@@ -544,7 +554,7 @@
     border: 1px solid color-mix(in srgb, #EE7FA8 35%, var(--line));
   }
   @media (min-width: 760px) { .anyday { grid-template-columns: 200px 1fr; gap: 32px; } }
-  .anyday-photo { width: 100%; max-width: 200px; aspect-ratio: 1; object-fit: cover; border-radius: 22px; transform: rotate(-3deg); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); border: 4px solid var(--surface); }
+  .anyday-photo { width: 100%; height: auto; max-width: 200px; aspect-ratio: 1; object-fit: cover; border-radius: 22px; transform: rotate(-3deg); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); border: 4px solid var(--surface); }
   .anyday h2 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; text-wrap: balance; }
   .anyday p { margin: 0; max-width: 62ch; color: var(--muted); }
   .anyday p + p { margin-top: 8px; }
@@ -642,6 +652,14 @@
   .song small { color: var(--muted); font-size: .82rem; }
   .variant { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--fc); padding-left: 12px; }
   .dlg-actions { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; }
+  .dlg-menu { display: contents; }
+  .dlg-menu summary { list-style: none; cursor: pointer; }
+  .dlg-menu summary::-webkit-details-marker { display: none; }
+  .dlg-menu summary::after { content: "▾"; font-size: .8em; opacity: .7; }
+  .dlg-menu[open] summary::after { content: "▴"; }
+  .dlg-pop { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 8px; padding: 10px; border-radius: 16px; background: var(--soft); }
+  .dlg-guide { margin: 0; font-weight: 600; }
+  .dlg-guide a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--fc); text-decoration-thickness: 2px; }
   .status { font-size: .82rem; color: var(--muted); min-height: 1.2em; margin: 0; }
   .status code { font-family: var(--mono); user-select: all; color: var(--ink); }
 
@@ -655,6 +673,34 @@
     .day .dn { left: 2px; bottom: 2px; font-size: .64rem; padding: 0 4px; border-radius: 5px; }
     .day .more { top: 2px; right: 2px; }
     .dlg { padding: 18px 18px 18px; }
+  }
+  /* ---------- Móvil: portada más corta ---------- */
+  .more-btn { display: none; }
+  @media (max-width: 600px) {
+    /* Cabecera: la tarjeta de la próxima fecha lleva su foto arriba; "Flor al azar" y el año bajan bajo la rueda */
+    .hero-copy, .hero-actions { display: contents; }
+    .wheel-wrap { order: 1; }
+    .hero-row { order: 2; justify-content: center; }
+    .hero-row .btn, .year-nav { box-shadow: none; }
+    .next { grid-template-columns: auto 1fr; gap: 0 14px; padding: 8px 8px 12px 14px; margin-top: 6px; }
+    .next .next-photo { grid-column: 1 / -1; grid-row: 1; width: calc(100% + 6px); height: 112px; margin: 0 0 10px -6px; border: 0; border-radius: 14px; box-shadow: none; }
+    .next-num { grid-row: 2 / span 2; }
+    .next-label { grid-column: 2; grid-row: 2; }
+    .next-name { grid-column: 2; grid-row: 3; }
+    .tiles { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .tile { padding: 12px; }
+    .anyday-photo { max-width: 120px; border-radius: 18px; }
+    /* Filtros: cada grupo de chips en una fila que se desliza (sin scroll horizontal en la página) */
+    .filters { gap: 10px; }
+    .chips.para { display: block; width: 100%; }
+    .chips.para .filters-label { display: block; margin-bottom: 6px; }
+    #para-chips, #type-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; width: calc(100% + 32px); margin-inline: -16px; padding: 2px 16px 4px; }
+    #para-chips::-webkit-scrollbar, #type-chips::-webkit-scrollbar { display: none; }
+    #para-chips .chip, #type-chips .chip { flex: none; }
+    /* Listas largas: solo las primeras; el resto sigue en el HTML y se despliega con el botón */
+    .clip .is-more { display: none !important; }
+    .clip + .more-btn, .clip .more-btn { display: flex; }
+    .more-btn { width: 100%; justify-content: center; margin-top: 12px; font-weight: 600; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -671,7 +717,7 @@
   <main>
   <section class="hero" aria-labelledby="title">
     <div class="hero-copy">
-      <p class="eyebrow" id="eyebrow"><!--es-->Calendario de flores<!--en-->Flower calendar<!--/--> <!--@YEAR--></p>
+      <p class="eyebrow" id="eyebrow"><!--es-->Calendario de flores<!--en-->Flower calendar<!--/--> · <!--@YEAR_LABEL--></p>
       <h1 id="title"><!--es-->Todas las excusas del año para <em>regalar flores</em><!--en-->Every excuse of the year to <em>give flowers</em><!--/--></h1>
       <p class="lede"><!--es-->Porque «no sabía que era hoy» ya no cuela. Las <!--@N_EVENTS--> fechas para regalar flores en España y Latinoamérica, las flores de temporada de cada mes y una cuenta atrás para que llegues a tiempo. Toca un mes de la rueda o una flor para ver qué se regala, dónde y por qué.<!--en-->Because “I didn’t know it was today” no longer works. The <!--@N_EVENTS--> dates for giving flowers in Spain and Latin America, the seasonal flowers of each month and a countdown so you’re never late. Tap a month on the wheel or a flower to see what is given, where and why.<!--/--></p>
       <!--@BYLINE-->
@@ -697,7 +743,13 @@
   </section>
 
   <section class="filters" aria-label="<!--es-->Filtros<!--en-->Filters<!--/-->">
+    <div class="chips para" role="group" aria-labelledby="para-label">
+      <span class="filters-label" id="para-label"><!--es-->¿A quién se lo regalas?<!--en-->Who is it for?<!--/--></span>
+      <span id="para-chips" class="chips"></span>
+    </div>
+    <p class="para-note" id="para-note" hidden><!--es-->Y para ti, cualquier día vale: <a href="#para-ti">cómprate flores sin esperar a una fecha</a>.<!--en-->And for you, any day works: <a href="#para-ti">buy yourself flowers without waiting for a date</a>.<!--/--></p>
     <div class="chips" id="type-chips" role="group" aria-label="<!--es-->Tipo de fecha<!--en-->Type of date<!--/-->"></div>
+    <p class="saved-ics" id="saved-ics" hidden><button type="button" class="btn primary" id="saved-ics-btn"></button></p>
     <div class="swatches" role="group" aria-label="<!--es-->Color de flor<!--en-->Flower color<!--/-->">
       <span class="filters-label">Color</span>
       <span id="color-swatches" class="swatches"></span>
@@ -760,7 +812,7 @@
     </nav>
   </section>
 
-  <section class="anyday" aria-labelledby="anyday-title">
+  <section class="anyday" id="para-ti" aria-labelledby="anyday-title">
     <picture><source type="image/avif" srcset="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.avif"><img class="anyday-photo" src="/imagenes/web/ramo-de-margaritas-y-flores-silvestres-480.webp" width="480" height="320" alt="<!--es-->Ramo de margaritas y flores silvestres en un bote de cristal, para regalarte flores a ti cualquier día<!--en-->A bouquet of daisies and wildflowers in a glass jar, to give yourself flowers on any day<!--/-->" loading="lazy" decoding="async"></picture>
     <div>
       <p class="eyebrow"><!--es-->Fuera del calendario<!--en-->Off the calendar<!--/--></p>
@@ -816,7 +868,7 @@
   // ---------- Estado ----------
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const state = { year: today.getFullYear(), month: today.getMonth(), sel: null, type: "all", colors: new Set(), saved: loadSaved() };
+  const state = { year: today.getFullYear(), month: today.getMonth(), sel: null, type: "all", para: "all", colors: new Set(), saved: loadSaved() };
 
   function loadSaved() {
     try { return new Set(JSON.parse(localStorage.getItem("florario:saved") || "[]")); }
@@ -900,6 +952,7 @@
     if (state.type === "saved" && !state.saved.has(ev.id)) return false;
     if (state.type !== "all" && state.type !== "saved" && ev.type !== state.type) return false;
     if (state.colors.size && !state.colors.has(ev.color)) return false;
+    if (state.para !== "all" && !(ev.para || []).includes(state.para)) return false;
     return true;
   }
   function monthItems(y, m) {
@@ -916,6 +969,58 @@
     document.getElementById("type-chips").innerHTML = opts.map(([k, label]) =>
       `<button type="button" class="chip" data-type="${k}" aria-pressed="${state.type === k}">${label}<span class="n">${counts[k]}</span></button>`
     ).join("");
+    // Con "Guardadas" elegido, un botón para llevarse todas las fechas guardadas al calendario
+    const box = document.getElementById("saved-ics");
+    box.hidden = !(state.type === "saved" && counts.saved);
+    document.getElementById("saved-ics-btn").textContent = counts.saved === 1
+      ? t("Añadir mi fecha guardada al calendario (.ics)", "Add my saved date to my calendar (.ics)")
+      : t(`Añadir mis ${counts.saved} fechas guardadas al calendario (.ics)`, `Add my ${counts.saved} saved dates to my calendar (.ics)`);
+  }
+
+  // .ics con las fechas guardadas, generado en el navegador (mismo formato que los de /recordatorios/)
+  function savedIcs() {
+    const p = n => String(n).padStart(2, "0");
+    const ymd = x => `${x.getFullYear()}${p(x.getMonth() + 1)}${p(x.getDate())}`;
+    const escI = s => s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+    const enc = new TextEncoder();
+    // Líneas de 75 bytes como máximo; las siguientes empiezan por un espacio (RFC 5545)
+    const fold = l => { const out = []; let cur = ""; for (const ch of l) { if (enc.encode(cur + ch).length > (out.length ? 74 : 75)) { out.push(cur); cur = ""; } cur += ch; } out.push(cur); return out.join("\r\n "); };
+    const now = new Date();
+    const stamp = `${now.getUTCFullYear()}${p(now.getUTCMonth() + 1)}${p(now.getUTCDate())}T${p(now.getUTCHours())}${p(now.getUTCMinutes())}00Z`;
+    const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Florario//" + t("Mis fechas//ES", "My dates//EN"), "CALSCALE:GREGORIAN",
+                   "METHOD:PUBLISH", `X-WR-CALNAME:${escI(t("Florario · Mis fechas", "Florario · My dates"))}`];
+    for (const ev of EVENTS.filter(e => state.saved.has(e.id))) {
+      let d = dateFor(ev, today.getFullYear());
+      if (d < today) d = dateFor(ev, today.getFullYear() + 1);
+      const end = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
+      const rrule = ev.rule ? `RRULE:FREQ=YEARLY;BYMONTH=${ev.rule.m};BYDAY=${ev.rule.n}${["SU", "MO", "TU", "WE", "TH", "FR", "SA"][ev.rule.wd]}` : "RRULE:FREQ=YEARLY";
+      const url = `${location.origin}${BASE}${ev.guia}/`;
+      lines.push("BEGIN:VEVENT", `UID:${ev.id}${LANG === "es" ? "" : "-" + LANG}@calendariodeflores.com`, `DTSTAMP:${stamp}`,
+        `DTSTART;VALUE=DATE:${ymd(d)}`, `DTEND;VALUE=DATE:${ymd(end)}`, rrule,
+        `SUMMARY:${escI("🌷 " + ev.name + ": " + ev.flower)}`,
+        `DESCRIPTION:${escI(ev.story + t(" Dónde: ", " Where: ") + ev.region + t(". Guía: ", ". Guide: ") + url)}`,
+        `URL:${url}`, "TRANSP:TRANSPARENT", "BEGIN:VALARM", "ACTION:DISPLAY", "TRIGGER:-P3D",
+        `DESCRIPTION:${escI(t("En 3 días: ", "In 3 days: ") + ev.name + t(". Encarga ", ". Order ") + ev.flower.charAt(0).toLowerCase() + ev.flower.slice(1) + ".")}`,
+        "END:VALARM", "END:VEVENT");
+    }
+    lines.push("END:VCALENDAR");
+    const blob = new Blob([lines.map(fold).join("\r\n") + "\r\n"], { type: "text/calendar;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = t("florario-mis-fechas.ics", "florario-my-dates.ics");
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  // ¿A quién se lo regalas? (campo "para" de cada fecha en datos.py)
+  const PARA = [["all", t("A cualquiera", "Anyone")], ["pareja", t("Pareja", "Partner")], ["amigos", t("Amiga o amigo", "Friend")],
+                ["mama", t("Mamá", "Mom")], ["papa", t("Papá", "Dad")], ["yo", t("A mí", "Me")]];
+  function renderPara() {
+    document.getElementById("para-chips").innerHTML = PARA.map(([k, label]) => {
+      const n = k === "all" ? EVENTS.length : EVENTS.filter(e => (e.para || []).includes(k)).length;
+      return `<button type="button" class="chip para-chip" data-para="${k}" aria-pressed="${state.para === k}">${label}<span class="n">${n}</span></button>`;
+    }).join("");
+    document.getElementById("para-note").hidden = state.para !== "yo";
   }
   function renderSwatches() {
     const used = [...new Set(EVENTS.map(e => e.color))];
@@ -977,7 +1082,7 @@
     // Flores: se apilan en anillos si caen a menos de 5 días de otra
     const placed = EVENTS.map(ev => ({ ev, d: dateFor(ev, y) })).map(o => ({ ...o, i: doy(o.d) })).sort((a, b) => a.i - b.i);
     const last = RINGS.map(() => -99);
-    let stems = "", flowers = "";
+    let stems = "", flowers = "", pads = "";
     placed.forEach((o, idx) => {
       let ring = last.findIndex(l => o.i - l >= 5);
       if (ring === -1) ring = RINGS.length - 1;
@@ -991,8 +1096,11 @@
       const label = `${o.ev.name}, ${dayMonth(o.d)}. ${o.ev.flower}.`;
       flowers += `<g class="ev${dim}" data-id="${o.ev.id}" transform="translate(${x.toFixed(1)} ${yy.toFixed(1)})" tabindex="0" role="button" aria-label="${esc(label)}" style="--i:${idx}">
         <circle class="hit" r="11"/><g class="fl">${petals(flowerHex(o.ev), 8, o.ev.petals || 6)}</g></g>`;
+      // Zona táctil grande (r 19,5 ≈ 32 px con la rueda a 390 px) en una capa por debajo de las flores:
+      // tocar una flor abre esa flor; tocar el hueco de alrededor abre la más cercana
+      pads += `<g class="ev pad" data-id="${o.ev.id}" aria-hidden="true"><circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="19.5"/></g>`;
     });
-    document.getElementById("wheel").innerHTML = s + stems + flowers;
+    document.getElementById("wheel").innerHTML = s + stems + pads + flowers;
   }
 
   // ---------- Explorador por meses ----------
@@ -1157,7 +1265,7 @@
     if (t.classList.contains("mo")) return setMonth(Number(t.dataset.month));
     if (t.dataset.step) return setMonth(state.month + Number(t.dataset.step));
     if (t.dataset.goto) return setMonth(Number(t.dataset.goto));
-    if (t.hasAttribute("data-reset")) { state.type = "all"; state.colors.clear(); return renderAll(); }
+    if (t.hasAttribute("data-reset")) { state.type = "all"; state.para = "all"; state.colors.clear(); return renderAll(); }
     if (t.classList.contains("day")) {
       // Si el día tiene varias fechas, cada toque pasa a la siguiente
       const ids = t.dataset.ids.split(" ");
@@ -1220,7 +1328,7 @@
     el.dataset.id = nx.ev.id;
     el.dataset.year = nx.d.getFullYear();
     el.style.setProperty("--fc", accentHex(nx.ev));
-    const lead = nx.n === 0 ? t("Toca hoy", "It’s today") : nx.n === 1 ? t("día para", "day to go") : t("días para", "days to go");
+    const lead = nx.n === 0 ? t("Es hoy", "It’s today") : nx.n === 1 ? t("día para", "day to go") : t("días para", "days to go");
     el.innerHTML = `<span class="next-num">${nx.n === 0 ? t("¡Hoy!", "Today!") : nx.n}</span>
       <span class="next-label">${lead} · ${fmtShort.format(nx.d)}</span>
       <span class="next-name">${esc(nx.ev.name)}</span>
@@ -1230,8 +1338,10 @@
 
   function renderAll(dir = 0) {
     document.getElementById("year-label").textContent = state.year;
-    document.getElementById("eyebrow").textContent = `${t("Calendario de flores", "Flower calendar")} · ${state.year}`;
+    // El año en curso se muestra como en el title ("2026-2027" desde octubre); otro año, tal cual
+    document.getElementById("eyebrow").textContent = `${t("Calendario de flores", "Flower calendar")} · ${state.year === today.getFullYear() ? YEAR_LABEL : state.year}`;
     renderChips();
+    renderPara();
     renderSwatches();
     renderWheel();
     renderExplorer(dir);
@@ -1269,6 +1379,18 @@
   function shareText({ ev, d }) {
     return `${dayMonth(d)} · ${ev.name}: ${ev.flower}. ${t("Míralo en Florario:", "See it on Florario:")}`;
   }
+  // Google Calendar: evento de día completo ese día, repetido cada año (también las fechas móviles)
+  function gcalUrl(ev, d) {
+    const p = n => String(n).padStart(2, "0");
+    const ymd = x => `${x.getFullYear()}${p(x.getMonth() + 1)}${p(x.getDate())}`;
+    const end = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
+    const rrule = ev.rule ? `RRULE:FREQ=YEARLY;BYMONTH=${ev.rule.m};BYDAY=${ev.rule.n}${["SU", "MO", "TU", "WE", "TH", "FR", "SA"][ev.rule.wd]}` : "RRULE:FREQ=YEARLY";
+    const details = `${ev.story} ${t("Encarga las flores con unos días de margen.", "Order the flowers a few days ahead.")} ${location.origin}${BASE}${ev.guia}/`;
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE"
+      + `&text=${encodeURIComponent(`🌷 ${ev.name}: ${ev.flower}`)}&dates=${ymd(d)}/${ymd(end)}`
+      + `&details=${encodeURIComponent(details)}&recur=${encodeURIComponent(rrule)}`;
+  }
+  let moreOpen = false;  // "Más" sigue abierto al pulsar Guardar (la ficha se vuelve a pintar)
   function renderDetail() {
     const { ev, d } = current;
     const saved = state.saved.has(ev.id);
@@ -1291,24 +1413,35 @@
         ${ev.song ? `<div class="song"><span class="song-icon" aria-hidden="true">♪</span><b>“${esc(ev.song.title)}”</b><small>${esc(ev.song.by)}</small></div>` : ""}
         ${ev.variant ? `<p class="variant">${esc(ev.variant)}</p>` : ""}
         <div class="dlg-actions">
-          <button type="button" class="btn primary" id="dlg-save" aria-pressed="${saved}">${saved ? t("♥ Guardada", "♥ Saved") : t("♡ Guardar", "♡ Save")}</button>
-          <button type="button" class="btn" id="dlg-copy">${t("Copiar recordatorio", "Copy reminder")}</button>
-          <a class="btn" href="https://wa.me/?text=${encodeURIComponent(shareText(current) + " " + shareUrl(ev))}" target="_blank" rel="noopener">${t("Compartir por WhatsApp", "Share on WhatsApp")}</a>
-          <button type="button" class="btn" id="dlg-share">${navigator.share ? t("Compartir", "Share") : t("Copiar enlace", "Copy link")}</button>
-          ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">${t("Ver", "See")} #${ev.tag} ↗</a>` : ""}
-          <a class="btn" href="${ICS_BASE}${ev.id}.ics" download title="${t("Aviso 3 días antes, cada año", "Alert 3 days before, every year")}">${t("Recuérdamelo", "Remind me")}</a>
-          <a class="btn" href="${BASE}${ev.guia}/">${esc(GUIDE_NAMES[ev.guia] || t("Leer la guía", "Read the guide"))} →</a>
+          <details class="dlg-menu" id="dlg-remind">
+            <summary class="btn primary">${t("Recuérdamelo", "Remind me")}</summary>
+            <div class="dlg-pop">
+              <a class="btn" href="${ICS_BASE}${ev.id}.ics" download title="${t("Aviso 3 días antes, cada año", "Alert 3 days before, every year")}">${t("Calendario del móvil (.ics)", "Phone calendar (.ics)")}</a>
+              <a class="btn" href="${gcalUrl(ev, d)}" target="_blank" rel="noopener">${t("Google Calendar ↗", "Google Calendar ↗")}</a>
+            </div>
+          </details>
+          <a class="btn" href="https://wa.me/?text=${encodeURIComponent(shareText(current) + " " + shareUrl(ev))}" target="_blank" rel="noopener">WhatsApp</a>
+          <details class="dlg-menu" id="dlg-more"${moreOpen ? " open" : ""}>
+            <summary class="btn">${t("Más", "More")}</summary>
+            <div class="dlg-pop">
+              <button type="button" class="btn" id="dlg-save" aria-pressed="${saved}">${saved ? t("♥ Guardada", "♥ Saved") : t("♡ Guardar", "♡ Save")}</button>
+              <button type="button" class="btn" id="dlg-copy">${t("Copiar texto", "Copy text")}</button>
+              <button type="button" class="btn" id="dlg-share">${navigator.share ? t("Compartir", "Share") : t("Copiar enlace", "Copy link")}</button>
+              ${ev.tag ? `<a class="btn" href="https://www.tiktok.com/tag/${ev.tag}" target="_blank" rel="noopener">#${ev.tag} ↗</a>` : ""}
+            </div>
+          </details>
         </div>
         <p class="status" id="dlg-status" role="status"></p>
+        <p class="dlg-guide"><a href="${BASE}${ev.guia}/">${t("Leer la guía", "Read the guide")}: ${esc(GUIDE_NAMES[ev.guia] || ev.name)} →</a></p>
       </div>`;
   }
   dialog.addEventListener("click", e => {
     if (e.target === dialog) { dialog.close(); return; }
-    const t = e.target.closest("button");
-    if (!t) return;
-    if (t.id === "dlg-close") dialog.close();
-    if (t.id === "dlg-save") toggleSaved(current.ev.id);
-    if (t.id === "dlg-share") {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+    if (btn.id === "dlg-close") dialog.close();
+    if (btn.id === "dlg-save") { moreOpen = true; toggleSaved(current.ev.id); moreOpen = false; }
+    if (btn.id === "dlg-share") {
       const status = document.getElementById("dlg-status");
       const url = shareUrl(current.ev);
       if (navigator.share) {
@@ -1319,15 +1452,20 @@
         catch (err) { fallback(); }
       }
     }
-    if (t.id === "dlg-copy") {
+    if (btn.id === "dlg-copy") {
       const text = reminderText(current);
       const status = document.getElementById("dlg-status");
       const fallback = () => { status.innerHTML = `${t("Copia este texto:", "Copy this text:")} <code>${esc(text)}</code>`; };
       try {
-        navigator.clipboard.writeText(text).then(() => { status.textContent = t("Recordatorio copiado.", "Reminder copied."); }, fallback);
+        navigator.clipboard.writeText(text).then(() => { status.textContent = t("Texto copiado.", "Text copied."); }, fallback);
       } catch (err) { fallback(); }
     }
   });
+  // Solo un menú abierto a la vez en la ficha ("Recuérdamelo" o "Más")
+  dialog.addEventListener("toggle", e => {
+    if (e.target.matches?.(".dlg-menu") && e.target.open)
+      dialog.querySelectorAll(".dlg-menu[open]").forEach(m => { if (m !== e.target) m.open = false; });
+  }, true);
   dialog.addEventListener("close", () => {
     try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* sin historial */ }
   });
@@ -1375,6 +1513,13 @@
     state.type = c.dataset.type;
     renderChips(); renderWheel(); renderExplorer();
   });
+  document.getElementById("saved-ics-btn").addEventListener("click", savedIcs);
+  document.getElementById("para-chips").addEventListener("click", e => {
+    const c = e.target.closest(".chip");
+    if (!c) return;
+    state.para = c.dataset.para;
+    renderPara(); renderWheel(); renderExplorer();
+  });
   document.getElementById("color-swatches").addEventListener("click", e => {
     const c = e.target.closest(".sw");
     if (!c) return;
@@ -1395,6 +1540,36 @@
     do { pick = list[Math.floor(Math.random() * list.length)]; } while (list.length > 1 && current && pick.id === current.ev.id);
     openDetail(pick.id);
   });
+
+  // ---------- Listas largas (solo en móvil, por CSS) ----------
+  // Marca como .is-more lo que sobra y añade un botón "Ver todas". El HTML completo sigue en la página.
+  function collapse(box, extra, label) {
+    if (!box || !extra.length) return;
+    extra.forEach(el => el.classList.add("is-more"));
+    box.classList.add("clip");
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn more-btn";
+    btn.textContent = label;
+    btn.addEventListener("click", () => { box.classList.remove("clip"); btn.remove(); });
+    box.after(btn);
+  }
+  {
+    // Próximas fechas: las 5 primeras (y sus cabeceras de mes)
+    const rows = [...document.querySelectorAll("#fechas .dtable tbody tr")];
+    const fifth = rows.filter(r => r.id.startsWith("f-"))[4];
+    collapse(document.querySelector("#fechas .dtable-wrap"), rows.slice(rows.indexOf(fifth) + 1),
+      t(`Ver las ${EVENTS.length} fechas`, `See all ${EVENTS.length} dates`));
+    // Temporada: este mes y el siguiente
+    const keep = [0, 1].map(k => String((today.getMonth() + k) % 12));
+    collapse(document.querySelector("#temporada .season-wrap"),
+      [...document.querySelectorAll("#temporada .season tbody tr")].filter(r => !keep.includes(r.dataset.m)),
+      t("Ver los 12 meses", "See all 12 months"));
+    for (const [sel, es, en] of [["#guias", "guías", "guides"], ["#por-flor", "flores", "flowers"]]) {
+      const cards = [...document.querySelectorAll(`${sel} .gcards > a`)];
+      collapse(document.querySelector(`${sel} .gcards`), cards.slice(6), t(`Ver las ${cards.length} ${es}`, `See all ${cards.length} ${en}`));
+    }
+  }
 
   // ---------- Inicio ----------
   document.getElementById("random-bloom").innerHTML = petals("#EE7FA8", 11, 6);
