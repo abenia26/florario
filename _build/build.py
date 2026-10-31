@@ -1293,6 +1293,33 @@ def home_faq_en():
     ]
 
 
+def season_banner(days=7):
+    """Aviso de la portada para la próxima fecha con guía si cae en los próximos `days` días.
+    La regeneración diaria lo cambia solo: Todos los Santos, luego flores moradas, etc."""
+    soon = sorted(((next_date(e), e) for e in EVENTS if e.get("guia")), key=lambda x: x[0])
+    soon = [(d, e) for d, e in soon if (d - HOY).days <= days]
+    if not soon:
+        return ""
+    d, ev = soon[0]
+    same = [(x, e) for x, e in soon if e["guia"] == ev["guia"]]
+    names = T(" y ", " and ").join(dict.fromkeys(e["name"] for _, e in same))
+    dates = sorted({x for x, _ in same})
+    if len(dates) > 1 and all(x.month == d.month for x in dates):
+        when = T(" y ".join(str(x.day) for x in dates) + f" de {MONTHS[d.month - 1]}",
+                 f"{month_name(d.month - 1)} " + " and ".join(str(x.day) for x in dates))
+    else:
+        when = fmt(d, year=False)
+    left = (d - HOY).days
+    lead = {0: T("Hoy", "Today"), 1: T("Mañana", "Tomorrow")}.get(left, "")
+    head = f"{lead}, {fmt(d, year=False)}" if lead else when
+    cta = T("Qué flores llevar y por qué", "Which flowers to take and why") if ev.get("type") == "memoria"         else T("Qué flores regalar y por qué", "Which flowers to give and why")
+    gcolor = next((g.get("color") for g in GUIDES if g["slug"] == ev["guia"]), None)
+    color = COLORS[gcolor if gcolor in COLORS else ev["color"]]["hex"]
+    return (f'<a class="season-banner" href="{href(ev["guia"])}" style="--fc:{color}">'
+            f'<span class="sb-when">{esc(head)}</span><b>{esc(names)}</b>'
+            f'<span class="sb-cta">{cta} <span aria-hidden="true">→</span></span></a>')
+
+
 def render_home():
     tpl = open(os.path.join(BUILD, "plantilla-inicio.html"), encoding="utf-8").read()
     # Textos fijos de la plantilla: <!--es-->español<!--en-->english<!--/-->
@@ -1373,6 +1400,7 @@ def render_home():
         "YEAR_LABEL": YEAR_LABEL,
         "FECHAS_T": fechas_t,
         "BYLINE": byline(PUBLISHED, UPDATED),
+        "AVISO": season_banner(),
         "N_EVENTS": str(len(EVENTS)),
         "FECHAS": date_table(EVENTS, "", rolling=True),
         "TEMPORADA": season_table(),

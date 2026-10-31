@@ -464,6 +464,19 @@ document.addEventListener("click", e => {
   .year-nav output { font-family: var(--mono); font-size: .9rem; min-width: 3.2em; text-align: center; }
 
   /* ---------- Hero ---------- */
+  .season-banner {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+    margin-top: 12px; padding: 12px 18px;
+    border: 1px solid color-mix(in srgb, var(--fc) 45%, var(--line));
+    border-radius: 16px;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--fc) 28%, var(--surface)), var(--surface) 80%);
+    color: var(--ink); text-decoration: none;
+    transition: transform .2s;
+  }
+  .season-banner:hover { transform: translateY(-1px); }
+  .season-banner .sb-when { font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: color-mix(in srgb, var(--fc) 60%, var(--ink)); }
+  .season-banner b { font-size: 1.05rem; }
+  .season-banner .sb-cta { margin-left: auto; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
   .hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -1048,6 +1061,7 @@ document.addEventListener("click", e => {
   </header>
 
   <main>
+  <a class="season-banner" href="/en/all-saints-day-of-the-dead/" style="--fc:#F28C1B"><span class="sb-when">Tomorrow, November 1</span><b>All Saints’ Day and Day of the Dead</b><span class="sb-cta">Which flowers to take and why <span aria-hidden="true">→</span></span></a>
   <section class="hero" aria-labelledby="title">
     <div class="hero-copy">
       <p class="eyebrow" id="eyebrow">Flower calendar · 2026-2027</p>
