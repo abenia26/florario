@@ -433,8 +433,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:muertos-en@calendariodeflores.com
 DTSTAMP:20261031T000000Z
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261103
+DTSTART;VALUE=DATE:20271102
+DTEND;VALUE=DATE:20271103
 RRULE:FREQ=YEARLY
 SUMMARY:🌷 Day of the Dead: Cempasúchil (Mexican marigold)
 DESCRIPTION:The color and scent of cempasúchil mark the path of the souls 
