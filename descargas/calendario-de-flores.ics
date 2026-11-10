@@ -448,8 +448,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:moradas@calendariodeflores.com
 DTSTAMP:20261104T000000Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
+DTSTART;VALUE=DATE:20271109
+DTEND;VALUE=DATE:20271110
 RRULE:FREQ=YEARLY
 SUMMARY:🌷 Flores moradas: Violetas o cualquier flor morada
 DESCRIPTION:La canción cuenta que alguien enviaba violetas a una mujer cad
