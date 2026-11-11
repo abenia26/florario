@@ -1691,7 +1691,7 @@ def render_pdfs(print_pdf):
         name = f"pdf-{y}" if LANG == "es" else f"pdf-{LANG}-{y}"
         src = os.path.join(BUILD, "salida", f"{name}.html")
         os.makedirs(os.path.dirname(src), exist_ok=True)
-        with open(src, "w", encoding="utf-8") as f:
+        with open(src, "w", encoding="utf-8", newline="\n") as f:
             f.write(render_pdf_html(y))
         # Sin --pdf solo se imprimen los PDF que falten (p. ej. los del idioma nuevo)
         out = os.path.join(ROOT, *pdf_href(y).lstrip("/").split("/"))
@@ -1730,7 +1730,7 @@ def render_preview(browser, src, y, max_kb=250):
     out = os.path.join(ROOT, *pdf_href(y, "jpg").lstrip("/").split("/"))
     for q in (.82, .74, .66, .58):
         conv = os.path.join(tmp, "a-jpeg.html")
-        with open(conv, "w", encoding="utf-8") as f:
+        with open(conv, "w", encoding="utf-8", newline="\n") as f:
             f.write(f'''<!doctype html><body><script>
 const img = new Image();
 img.onload = () => {{
