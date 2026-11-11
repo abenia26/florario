@@ -877,8 +877,9 @@ def author_box():
 # ---------------------------------------------------------------- páginas con texto
 def read_fragment(path):
     raw = open(path, encoding="utf-8").read()
-    # {{year}}, {{year_next}} y {{print_year}} también valen en la cabecera (title, description…)
+    # {{year}}, {{year_next}}, {{year_label}} y {{print_year}} también valen en la cabecera (title, description…)
     raw = (raw.replace("{{year}}", str(YEAR)).replace("{{year_next}}", str(YEAR + 1))
+           .replace("{{year_label}}", YEAR_LABEL)
            .replace("{{print_year}}", str(PRINT_YEAR)))
     _, fm, body = raw.split("---\n", 2)
     meta = json.loads(fm)
