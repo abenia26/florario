@@ -399,10 +399,10 @@ DTSTART;VALUE=DATE:20271017
 DTEND;VALUE=DATE:20271018
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=3SU
 SUMMARY:🌷 Mother’s Day: Roses and lilies
-DESCRIPTION:Argentina celebrates mothers in spring\, on the third Sunday of
-  October\, so it coincides with the best flower season of the southern hem
- isphere. Where: Argentina. Guide: https://www.calendariodeflores.com/en/mo
- thers-day/
+DESCRIPTION:Argentina celebrates mothers on the third Sunday of October. In
+  1931 Pope Pius XI set October 11 as the feast of the Divine Motherhood of
+  Mary\, and the celebration later moved to that Sunday. Where: Argentina. 
+ Guide: https://www.calendariodeflores.com/en/mothers-day/
 URL:https://www.calendariodeflores.com/en/mothers-day/
 TRANSP:TRANSPARENT
 BEGIN:VALARM

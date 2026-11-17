@@ -273,7 +273,7 @@ EVENTS = [
      "story": "Nació en 2014 como #NationalBoyfriendDay y en Latinoamérica se volvió la respuesta a las flores amarillas: flores azules y ramos hechos con carritos Hot Wheels entre papel y listones."},
     {"id": "madre-ar", "para": ["mama"], "rule": {"m": 10, "wd": 0, "n": 3}, "ruleText": "3.er domingo de octubre", "name": "Día de la Madre", "flower": "Rosas y liliums", "color": "rosa", "petals": 6, "type": "clasico", "img": "lilium",
      "region": "Argentina", "paises": ["AR"], "guia": "dia-de-la-madre",
-     "story": "Argentina celebra a las madres en primavera, el tercer domingo de octubre, así que coincide con la mejor época de flores del hemisferio sur."},
+     "story": "Argentina celebra a las madres el tercer domingo de octubre. En 1931 Pío XI fijó el 11 de octubre como fiesta de la Divina Maternidad de María, y la celebración pasó después a ese domingo."},
     {"id": "todos-santos", "para": [], "m": 11, "d": 1, "name": "Todos los Santos", "flower": "Crisantemos", "color": "blanco", "petals": 12, "type": "memoria", "img": "crisantemo",
      "region": "España y buena parte de Latinoamérica", "paises": ["ES", "CO", "CL", "PE"], "guia": "todos-los-santos-dia-de-muertos",
      "story": "Las familias limpian y adornan las tumbas de sus seres queridos. El crisantemo es la flor de esta fecha: llevarlo es una forma de decir que se les recuerda."},

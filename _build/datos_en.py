@@ -166,7 +166,7 @@ EVENTS = {
     "novio": {"name": "Boyfriend Day (Día del Novio)", "flower": "Blue flowers or a Hot Wheels bouquet", "region": "Mexico, Peru, Chile, Colombia, Spain",
               "story": "It was born in 2014 as #NationalBoyfriendDay and in Latin America it became the answer to yellow flowers: blue flowers and bouquets made of Hot Wheels cars wrapped in paper and ribbons."},
     "madre-ar": {"name": "Mother’s Day", "ruleText": "3rd Sunday of October", "flower": "Roses and lilies", "region": "Argentina",
-                 "story": "Argentina celebrates mothers in spring, on the third Sunday of October, so it coincides with the best flower season of the southern hemisphere."},
+                 "story": "Argentina celebrates mothers on the third Sunday of October. In 1931 Pope Pius XI set October 11 as the feast of the Divine Motherhood of Mary, and the celebration later moved to that Sunday."},
     "todos-santos": {"name": "All Saints’ Day", "flower": "Chrysanthemums", "region": "Spain and much of Latin America",
                      "story": "Families clean and decorate the graves of their loved ones. The chrysanthemum is the flower of the day: bringing one is a way of saying they are remembered."},
     "muertos": {"name": "Day of the Dead", "flower": "Cempasúchil (Mexican marigold)", "region": "Mexico",
